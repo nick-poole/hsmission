@@ -1,8 +1,11 @@
-# missionhaiti
+# hsmission
 
+## Color Pallete
 
-#00209f	
-#d21034	
-#ffffff	
-#f1b517	
-#016a16
+--blue: #00209f;
+--red: #d21034;
+--yellow: #f1b517;
+--green: #016a16;
+
+--white: #fff;
+--black: ;
