@@ -97,6 +97,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+  background-color: #5b7b78;
 }
 
 /*========== NAV ==========*/
@@ -132,7 +133,7 @@ img {
 }
 .nav__logo, .nav__toggle {
   color: var(--body-color);
-  color: var(--blue);
+  font-size: var(--big-font-size);
 }
 .nav__link {
   color: var(--first-color-dark);
@@ -161,7 +162,101 @@ img {
   top: calc(var(--header-height) + 1rem);
 }
 
-/*========== INLANDS ==========*/
+/*========== SLIDES ==========*/
+.slide {
+  height: 100vh;
+  position: relative;
+}
+.slide__bg, .slide__bg-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+.slide__container {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 0.25fr;
+  align-content: center;
+}
+.slide__subtitle, .slide__title, .slide__description {
+  color: var(--body-color);
+}
+.slide__subtitle {
+  font-size: var(--big-font-size);
+  font-weight: var(--font-medium);
+}
+.slide__title, .slide__title-1, .slide__title-2 {
+  font-size: var(--biggest-font-size);
+}
+.slide__title-1 {
+  color: var(--blue);
+}
+.slide__title-2 {
+  color: var(--red);
+}
+.slide__description {
+  margin-bottom: 1rem;
+}
+.slide__btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--yellow);
+  color: var(--first-color);
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+}
+.slide__btn:hover {
+  background-color: var(--first-color-lighter);
+}
+.slide__btn-icon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+.slide__video {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.75rem;
+}
+.slide__video-content {
+  display: inline-flex;
+  padding: 0.15rem;
+  background-color: var(--body-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slide__video-icon {
+  font-size: 1.8rem;
+  color: var(--first-color);
+}
+.slide__popup {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--first-color-lighter);
+  padding: 1rem 0.75rem;
+  border-radius: 1rem;
+}
+.slide__popup-close {
+  position: absolute;
+  top: -0.75rem;
+  right: -0.75rem;
+  display: inline-flex;
+  padding: 0.35rem;
+  background-color: var(--first-color);
+  color: var(--first-color-lighter);
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 /* Show popup*/
 .show-popup {
   display: block;

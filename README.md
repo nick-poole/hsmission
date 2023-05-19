@@ -8,7 +8,6 @@
     --text-color: #5b7b78;
     --body-color: #f5fffe;
 
-
 --blue: #00209f;
 --red: #d21034;
 --yellow: #f1b517;
@@ -21,4 +20,7 @@
 
 ### 5/19/23
 
-- BRANCH: hero - INTRODUCE: Header & nav && integrate show/hide menu toggle in `main.js`
+- BRANCH: hero - COMPLETE: Hero section
+
+- BRANCH: hero - INTRODUCE: Header & nav
+   >Integrate show/hide menu toggle in `main.js`
