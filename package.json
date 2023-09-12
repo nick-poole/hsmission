@@ -1,0 +1,19 @@
+{
+  "name": "hsmission",
+  "version": "1.0.0",
+  "description": "Website for the Haitian Sensation Mission Nonprofit, designed primarily to collect donations via the Zeffy platform.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nick-poole/hsmission"
+  },
+  "author": "Nick Poole <napoole@protonmail.com>",
+  "scripts": {},
+
+  "dependencies": {
+  },
+
+  "devDependencies": {
+    "sass": "^1.66.1"
+  },
+  "private": true
+}
