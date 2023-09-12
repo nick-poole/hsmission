@@ -8,10 +8,8 @@
   },
   "author": "Nick Poole <napoole@protonmail.com>",
   "scripts": {},
-
   "dependencies": {
   },
-
   "devDependencies": {
     "sass": "^1.66.1"
   },

@@ -21,24 +21,30 @@
 
   <body>
     <!--========== HEADER ==========-->
-    <header class="header">
-      <nav class="nav container flex">
+    <header class="header" id="header">
+      <nav class="nav container">
         <a href="#" class="nav__logo">
-          Haitian Sensation
+          Haitian<br>
+          Sensation<br>
           <span>Mission</span>
         </a>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Mission</a></li>
-            <li class="nav__item"><a href="#" class="nav__link-donate">Donate</a></li>
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#mission" class="nav__link">Mission</a></li>
+            <li class="nav__item"><a href="#donate" class="nav__link">Donate</a></li>
           </ul>
+
+
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-circle-line"></i>
+          </div>
         </div>
 
         <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
+          <i class="ri-menu-3-line"></i>
         </div>
       </nav>
     </header>
@@ -46,7 +52,7 @@
     <!--========== MAIN ==========-->
     <main class="main">
       <!--==================== HOME ====================-->
-      <section class="home section" id="home">
+      <!-- <section class="home section" id="home">
         <img src="assets/images/claudia-altamimi-1kCf62phlgU-unsplash.jpg">
         <h2>Join Our Mission</h2>
         <h1>Haitian</h1>
@@ -54,7 +60,7 @@
 
         <img src="assets/images/pexels-kelly-2898214.jpg" alt="">
         <img src="assets/images/zach-vessels-CF36ZpibOzY-unsplash.jpg" alt="">
-      </section>
+      </section> -->
 
       <!--==================== ABOUT ====================-->
       <section class="about section" id="about">
@@ -86,14 +92,13 @@
     </footer>
 
     <!--========== SCROLL UP ==========-->
-    <script src="#"></script>
-
+    <!-- <script src="#"></script> -->
 
     <!--=============== SCROLLREVEAL ===============-->
     <!-- <script src=""></script> -->
 
     <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+    <script src="dist/js/main.js"></script>
 
   </body>
 
