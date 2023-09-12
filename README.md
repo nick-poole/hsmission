@@ -19,6 +19,10 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ## Commit Log
 
+### 9/12/23
+
+- FEAT(headernav): Add blur-header after Y Scroll
+
 ### 9/11/23
 
 - FIX(main): Readjust home background img position and nav toggle size
