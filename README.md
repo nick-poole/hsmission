@@ -21,6 +21,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/11/23
 
+- FIX(main): Readjust home background img position and nav toggle size
+
 - FEAT(home): Create and style home section
 
 - FEAT(headernav): Create and style headernav and integrate Hide/Show functionality

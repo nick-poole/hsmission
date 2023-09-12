@@ -3,7 +3,8 @@
 
 /*=============== VARIABLES ===============*/
 :root {
-    --header-height: 3.5rem;
+    //--header-height: 3.5rem;
+    --header-height: 4.5rem;
 
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
@@ -165,7 +166,7 @@ img {
     &__toggle,
     &__close {
         display: flex;
-        font-size: 1.25rem;
+        font-size: 2rem;
         color: var(--title-color);
         cursor: pointer;
     }
@@ -230,7 +231,11 @@ img {
         width: 100%;
         height: 650px;
         object-fit: cover;
-        object-position: center;
+
+        object-position: 50% 50%;
+        //object-position: -24rem -2rem;
+        //object-position: 0rem 0rem;
+        //object-position: center;
     }
 
     &__shadow {
