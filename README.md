@@ -21,6 +21,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/12/23
 
+- FEAT(about): Create/style about section and add mission.md
+
 - FEAT(headernav): Add blur-header after Y Scroll
 
 ### 9/11/23
