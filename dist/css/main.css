@@ -409,7 +409,58 @@ img {
 }
 
 /*=============== EXPLORE/DONATE ===============*/
+.donate {
+  position: relative;
+}
+.donate__image {
+  position: absolute;
+  overflow: hidden;
+}
+.donate__img {
+  width: 100%;
+  height: 333px;
+  object-fit: cover;
+  object-position: center;
+}
+.donate__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, hsl(0, 0%, 0%) 5%, hsla(0, 0%, 0%, 0) 40%, hsla(0, 0%, 0%, 0) 60%, hsl(0, 0%, 0%) 92%);
+}
+.donate__content {
+  position: relative;
+  padding-top: 16rem;
+  text-align: center;
+  row-gap: 2.5rem;
+}
+.donate__user {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  margin-top: 3rem;
+}
+.donate__profile {
+  width: 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.donate__name {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
 /*=============== JOIN ===============*/
+.join {
+  margin: 10rem 0 0 0;
+}
+
 /*=============== FOOTER ===============*/
 .footer {
   padding-block: 2.5rem;
