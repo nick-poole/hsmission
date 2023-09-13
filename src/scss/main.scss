@@ -507,6 +507,7 @@ img {
     &__img {
         width: 100%;
         height: 333px;
+        height: auto;
         object-fit: cover;
         object-position: center;
     }
@@ -528,7 +529,7 @@ img {
 
     &__content {
         position: relative;
-        padding-top: 16rem;
+        padding-top: 20rem;
         text-align: center;
         row-gap: 2.5rem;
     }
@@ -579,7 +580,45 @@ img {
 
 /*=============== JOIN ===============*/
 .join {
-    margin: 10rem 0 0 0;
+    //margin: 10rem 0 0 0;
+
+    &__container {
+        row-gap: 3rem;
+        padding-bottom: 2.5rem;
+    }
+
+    &__data {
+        text-align: center;
+    }
+    &__description {
+        margin-bottom: 2rem;
+    }
+
+    &__button {
+        cursor: pointer;
+    }
+
+    &__image {
+        position: relative;
+        justify-self: center;
+        overflow: hidden;
+    }
+    &__img {
+        width: 300px;
+        transition: transform 0.4s;
+        -webkit-transition: transform 0.4s;
+        -moz-transition: transform 0.4s;
+        -ms-transition: transform 0.4s;
+        -o-transition: transform 0.4s;
+    }
+    // &__shadow {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+    // }
 }
 
 /*=============== FOOTER ===============*/
@@ -735,7 +774,99 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 340px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .footer__data {
+        grid-template-columns: max-content;
+    }
+}
 
 /* For medium devices */
+@media screen and (min-width: 576px) {
+    .home__container,
+    .about__container,
+    .donate__content,
+    .join__container {
+        grid-template-columns: 380px;
+        justify-content: center;
+    }
+
+    .footer__data {
+        grid-template-columns: repeat(3, max-content);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home__cards {
+        grid-template-columns: repeat(2, 240px);
+    }
+
+    .about,
+    .join {
+        &__container {
+            grid-template-columns: repeat(2, 350px);
+            align-items: center;
+        }
+
+        &__data,
+        &__data .section__title {
+            text-align: initial;
+        }
+    }
+
+    // .join {
+    //     &__container {
+    //         grid-template-columns: repeat(2, 350px);
+    //         align-items: center;
+    //     }
+
+    //     &__data,
+    //     &__data .section__title {
+    //         text-align: initial;
+    //     }
+    // }
+
+    .mission__container {
+        grid-template-columns: repeat(2, 240px);
+    }
+
+    .donate {
+        &__img {
+            width: 100vw;
+        }
+
+        &__content {
+            padding-top: 25rem;
+        }
+    }
+
+    .join {
+        &__image {
+            order: -1;
+        }
+    }
+
+    .footer {
+        &__content {
+            grid-template-columns: repeat(2, max-content);
+            justify-content: space-between;
+        }
+        &__group {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__social {
+            margin-right: 5rem;
+        }
+
+        &__copy {
+            order: -1;
+        }
+    }
+}
 
 /* For large devices */
