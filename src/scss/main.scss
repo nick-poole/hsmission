@@ -185,9 +185,36 @@ img {
     }
 
     &__link {
+        position: relative;
         color: var(--title-color);
         font-family: var(--second-font);
         font-weight: var(--font-semi-bold);
+
+        &::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: var(--title-color);
+            position: absolute;
+            left: 0;
+            bottom: -0.5rem;
+            transition: width 0.3s;
+            -webkit-transition: width 0.3s;
+            -moz-transition: width 0.3s;
+            -ms-transition: width 0.3s;
+            -o-transition: width 0.3s;
+        }
+
+        &:hover::after {
+            width: 70%;
+        }
+    }
+}
+
+/* Active link */
+.active-link {
+    &::after {
+        width: 70%;
     }
 }
 
@@ -229,8 +256,6 @@ img {
     left: 0;
     z-index: -1;
 }
-
-/* Active link */
 
 /*=============== HOME ===============*/
 .home {
