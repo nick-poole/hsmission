@@ -21,6 +21,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/13/23
 
+- FEAT(headernav): Integrate scrollUp link and showScroll with javascript functionality.
+
 - FEAT(donate): Create/style donate section.
 
 ### 9/12/23

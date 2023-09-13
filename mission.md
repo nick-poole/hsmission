@@ -15,13 +15,13 @@ We will continue to "fight the fight" against poverty and malnutrition so that t
 
 "As a small boy in Haiti, i was inspired by watching my mother care for and cook for homeless people in front of a Catholic Church. From that point on, I've had a passion in my heart to help others, especially the people of Haiti."
 
-"All donations will assist in improving the education for Haitian children as well as aiding in financial need of the less fortunate in the country of Haiti. Haitians have very little but are grateful for all that they have.bxMy wish is for these problems to diminish and for life to be viewed from a different perspective."
+"All donations will assist in improving the education for Haitian children as well as aiding in financial need of the less fortunate in the country of Haiti. Haitians have very little but are grateful for all that they have.bxMy wish is for these problems to diminish and for life to be viewed from a different perspective.
 
 Our Mission has adopted a village in Pelerin, Haiti. With your help, we can make a difference in this small village of approximately 2000 residents. We would like to focus on building a Learning Center where the people of Pelerin can learn a trade to help support themselves and their families in the future. your support will help us to give a hand up instead of a hand out.
 
 Another goal of our Mission Team is to make sure each child has a meal during the school day. Approximately 300 children attend school in this village but roughly only 70 can afford the 20 cents it costs to eat lunch daily. We want to guarantee no child goes hungry as long asa we can help.
 
-Haitians have very little but are proud of all they have. you cannot visit Haiti and not be awakened by faith and gratitude of this culture. Whether you visit their country or help from home, Haiti needs our support. Together, We can make a difference.
+Haitians have very little but are proud of all they have. you cannot visit Haiti and not be awakened by faith and gratitude of this culture. Whether you visit their country or help from home, Haiti needs our support. Together, We can make a difference."
 
 ## Phrases
 

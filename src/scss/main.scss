@@ -648,10 +648,65 @@ img {
 }
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: hsl(0, 0%, 10%);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 0.5rem;
+    background-color: hsl(0, 0%, 20%);
+
+    &:hover {
+        background-color: hsl(0, 0%, 30%);
+    }
+
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+    display: flex;
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    padding: 6px;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    color: var(--title-color);
+    font-size: 1.5rem;
+    z-index: var(--z-tooltip);
 
-/* Show Scroll Up */
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    transition: bottom 0.4s, transform 0.4s;
+    -webkit-transition: bottom 0.4s, transform 0.4s;
+    -moz-transition: bottom 0.4s, transform 0.4s;
+    -ms-transition: bottom 0.4s, transform 0.4s;
+    -o-transition: bottom 0.4s, transform 0.4s;
+
+    &:hover {
+        transform: translateY(-0.25rem);
+        -webkit-transform: translateY(-0.25rem);
+        -moz-transform: translateY(-0.25rem);
+        -ms-transform: translateY(-0.25rem);
+        -o-transform: translateY(-0.25rem);
+    }
+}
+
+/* Show ScrollUp */
+.show-scroll {
+    bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
