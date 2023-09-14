@@ -21,6 +21,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/13/23
 
+- REFACTOR(partials): Refactors main.SCSS into partials and added bak file.
+
 - FEAT(media): Integrate initial media queries for large screens.
 
 - FEAT(media): Integrate initial media queries for small and medium devices

@@ -1,0 +1,89 @@
+/*=============== FOOTER ===============*/
+.footer {
+    padding-block: 2.5rem;
+    background-color: var(--container-color);
+
+    &__content {
+        row-gap: 3.5rem;
+    }
+
+    &__logo {
+        display: inline-block;
+        color: var(--title-color);
+        font-size: var(--h2-font-size);
+        font-family: var(--second-font);
+        font-weight: var(--font-semi-bold);
+        margin-bottom: 1rem;
+    }
+
+    &__data {
+        grid-template-columns: repeat(2, max-content);
+        gap: 2.5rem 3.5rem;
+    }
+
+    &__title {
+        font-size: var(--h3-font-size);
+        margin-bottom: 1rem;
+    }
+
+    &__links {
+        display: grid;
+        row-gap: 0.75rem;
+    }
+    &__link {
+        color: var(--text-color);
+        transition: color 0.4s;
+        -webkit-transition: color 0.4s;
+        -moz-transition: color 0.4s;
+        -ms-transition: color 0.4s;
+        -o-transition: color 0.4s;
+
+        &:hover {
+            color: var(--title-color);
+        }
+    }
+
+    &__group,
+    &__social {
+        display: flex;
+    }
+
+    &__group {
+        margin-top: 5rem;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+
+    &__social {
+        column-gap: 1.5rem;
+
+        &-link {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            transition: 0.4s ease-in;
+            -webkit-transition: 0.4s ease-in;
+            -moz-transition: 0.4s ease-in;
+            -ms-transition: 0.4s ease-in;
+            -o-transition: 0.4s ease-in;
+
+            &:hover {
+                color: var(--title-color);
+                transform: translateY(-0.25rem);
+                -webkit-transform: translateY(-0.25rem);
+                -moz-transform: translateY(-0.25rem);
+                -ms-transform: translateY(-0.25rem);
+                -o-transform: translateY(-0.25rem);
+            }
+        }
+        &-link .hs-link {
+            width: 20px;
+            margin-top: 7px;
+        }
+    }
+    &__copy {
+        font-size: var(--smaller-font-size);
+        color: var(--text-color-light);
+        text-align: center;
+    }
+}

@@ -1,0 +1,57 @@
+/*=============== MISSION ===============*/
+.mission {
+    &__container {
+        padding-top: 1.5rem;
+        grid-template-columns: 340px;
+        justify-content: center;
+        row-gap: 2.5rem;
+    }
+
+    &__image {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        &:hover .mission__img {
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+        }
+    }
+
+    &__img {
+        transition: transform 0.4s;
+        -webkit-transition: transform 0.4s;
+        -moz-transition: transform 0.4s;
+        -ms-transition: transform 0.4s;
+        -o-transition: transform 0.4s;
+    }
+    &__shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+    }
+
+    &__title {
+        font-size: var(--h3-font-size);
+        margin-bottom: 0.5rem;
+    }
+
+    &__obj {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.25rem;
+        font-size: var(--small-font-size);
+        font-family: var(--second-font);
+        font-weight: 500;
+
+        & i {
+            font-size: 1rem;
+        }
+    }
+}
