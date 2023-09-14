@@ -19,6 +19,10 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ## Commit Log
 
+### 9/14/23
+
+- FEAT(articles): Create articles directory, article template, and, article partial and instituted principal styling.
+
 ### 9/13/23
 
 - REFACTOR(partials): Refactors main.SCSS into partials and added bak file.
