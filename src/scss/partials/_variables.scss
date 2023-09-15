@@ -12,12 +12,16 @@
     --text-color: hsl(0, 0%, 70%);
     --text-color-light: hsl(0, 0%, 60%);
     --body-color: hsl(0, 0%, 0%);
+    --body-color: var(--hf-blue);
     --container-color: hsl(0, 0%, 8%);
 
     --white: #fff;
     --hf-blue: #00209f;
+    --hf-blue: #002e5a;
     --hf-red: #d21034;
+    --hf-red: #d30731;
     --hf-yellow: #f1b517;
+    --hf-yellow: #f3b419;
     --hf-green: #016a16;
 
     // /*========== Colors ==========*/
