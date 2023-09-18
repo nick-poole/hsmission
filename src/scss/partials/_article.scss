@@ -197,7 +197,7 @@
     &__card {
         margin: 0 auto;
         width: 300px;
-        max-height: 400px;
+        height: 300px;
         overflow: hidden;
         border: 5px solid var(--hf-yellow);
 
@@ -229,7 +229,7 @@
 
         &-img {
             width: 100%;
-            height: 200px;
+            height: 150px;
             object-fit: cover;
             display: block;
 

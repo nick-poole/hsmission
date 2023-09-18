@@ -19,6 +19,10 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ## Commit Log
 
+### 9/18/23
+
+- FEAT(articles): Adjust related article responsive behavior and enhance header logo with img.
+
 ### 9/17/23
 
 - FEAT(footer): Update footer and integrate legal/terms and legal/privacy documents

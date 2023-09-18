@@ -50,8 +50,10 @@
         }
 
         &__data {
+            text-align: start;
             &-group {
-                width: 60%;
+                width: 95%;
+                max-width: 850px;
             }
         }
 
@@ -149,6 +151,11 @@
             justify-content: space-around;
         }
     }
+
+    #our-story,
+    #education {
+        display: none;
+    }
 }
 
 /* For large devices */
@@ -188,6 +195,10 @@
 
     .nav {
         height: calc(var(--header-height) + 0.5rem);
+
+        &.container {
+            width: 90%;
+        }
     }
 
     .blur-header::after {
@@ -323,5 +334,38 @@
     .scrollup {
         right: 3rem;
         font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    :root {
+        //--header-height: 3.5rem;
+        --header-height: 5.5rem;
+    }
+
+    .nav {
+        &.container {
+            max-width: 1600px;
+        }
+        &__logo,
+        &__link {
+            font-size: var(--h3-font-size);
+        }
+        &__logo {
+            margin: 0.5rem 0 0.5rem 1rem;
+            &-img {
+                max-width: 95px;
+            }
+        }
+    }
+
+    .related {
+        &__cards {
+            grid-template-columns: repeat(4, 300px);
+        }
+    }
+
+    #education {
+        display: block;
     }
 }

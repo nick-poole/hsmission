@@ -19,6 +19,19 @@
         color: var(--title-color);
         font-family: var(--second-font);
         font-weight: var(--font-semi-bold);
+
+        &-container {
+            flex-direction: row;
+        }
+        &-img {
+            max-width: 70px;
+            width: auto;
+            height: auto;
+            margin-right: 0.5rem;
+        }
+        &-span {
+            color: var(--hf-yellow);
+        }
     }
 
     &__toggle,
@@ -149,13 +162,12 @@
     right: 1rem;
     bottom: -50%;
     padding: 6px;
-    background-color: hsla(0, 0%, 100%, 0.1);
+    background-color: var(--hf-red);
     color: var(--title-color);
     font-size: 1.5rem;
     z-index: var(--z-tooltip);
 
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    border: 3px solid var(--hf-yellow);
 
     transition: bottom 0.4s, transform 0.4s;
     -webkit-transition: bottom 0.4s, transform 0.4s;
@@ -170,6 +182,11 @@
         -ms-transform: translateY(-0.25rem);
         -o-transform: translateY(-0.25rem);
     }
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 /* Show ScrollUp */
