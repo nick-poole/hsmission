@@ -31,8 +31,14 @@
         }
     }
 
-    .footer__data {
-        grid-template-columns: repeat(3, max-content);
+    .footer {
+        &__data {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__container {
+            margin: 0 3rem;
+        }
     }
 }
 
@@ -78,7 +84,6 @@
             }
         }
     }
-
     .about,
     .join {
         &__container {
@@ -126,9 +131,16 @@
 
     .footer {
         &__content {
-            grid-template-columns: repeat(2, max-content);
             justify-content: space-between;
         }
+
+        &__info {
+            flex-direction: row;
+            justify-content: flex-start;
+
+            gap: 2.5rem;
+        }
+
         &__group {
             flex-direction: row;
             justify-content: space-between;
@@ -179,8 +191,8 @@
     }
 
     .footer {
-        &__data {
-            grid-template-columns: repeat(4, max-content);
+        &__contact {
+            margin: 0;
         }
     }
 }
@@ -309,12 +321,19 @@
     .footer {
         padding-block: 5rem 3rem;
 
+        &__content {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        &-info {
+            gap: 1rem;
+        }
         &__title {
             margin-bottom: 1.5rem;
         }
 
         &__group {
-            margin-top: 7rem;
+            margin-top: 1rem;
         }
 
         &__social {

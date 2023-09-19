@@ -3,21 +3,88 @@
     padding-block: 2.5rem;
     background-color: var(--container-color);
 
+    &__container {
+        margin: 0 1rem;
+        max-width: 1600px;
+    }
+
     &__content {
         row-gap: 3.5rem;
     }
 
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__plate {
+        width: 285px;
+    }
+
     &__logo {
-        display: inline-block;
+        //display: inline-block;
         color: var(--title-color);
         font-size: var(--h2-font-size);
         font-family: var(--second-font);
         font-weight: var(--font-semi-bold);
         margin-bottom: 1rem;
+
+        &-container {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        &-img {
+            max-width: 160px;
+            width: auto;
+            height: auto;
+            margin-right: 0.5rem;
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: var(--h2-font-size);
+        }
+        &-span {
+            color: var(--hf-yellow);
+        }
+    }
+
+    &__contact {
+        // margin: 0 0 0 1rem;
+        &-list {
+            width: 100%;
+        }
+
+        &-hs_logo {
+            width: 25px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            margin: 1rem 0 1rem 0;
+
+            & i {
+                font-size: 1.5rem;
+            }
+        }
+
+        &-value {
+            margin-left: 1rem;
+        }
+        &-link {
+            color: var(--hf-yellow);
+            font-size: var(--small-font-size);
+        }
     }
 
     &__data {
-        grid-template-columns: repeat(2, max-content);
+        grid-template-columns: repeat(2, 200px);
         gap: 2.5rem 3.5rem;
     }
 

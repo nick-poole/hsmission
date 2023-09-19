@@ -157,10 +157,13 @@
 
 .related {
     background-color: #7b7b7b;
+    background-color: #fff;
     &__title {
         font-size: 2rem;
         margin-bottom: 1rem;
+        padding: 3rem 0 2rem 0;
         text-align: center;
+        color: var(--hf-blue);
     }
 
     &__cards {
@@ -173,10 +176,6 @@
             list-style-type: none;
             padding: 0;
         }
-
-        // li {
-
-        // }
     }
 
     &__link {
@@ -197,12 +196,14 @@
     &__card {
         margin: 0 auto;
         width: 300px;
-        height: 300px;
+        height: 270px;
         overflow: hidden;
-        border: 5px solid var(--hf-yellow);
-
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.06);
         transition: box-shadow 0.3s ease-in-out;
+        -webkit-transition: box-shadow 0.3s ease-in-out;
+        -moz-transition: box-shadow 0.3s ease-in-out;
+        -ms-transition: box-shadow 0.3s ease-in-out;
+        -o-transition: box-shadow 0.3s ease-in-out;
 
         &:hover {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -213,8 +214,8 @@
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+
         &-img-wrapper {
-            width: 280px;
             height: 200px;
             width: 100%;
             position: relative;
@@ -229,7 +230,7 @@
 
         &-img {
             width: 100%;
-            height: 150px;
+            height: 130px;
             object-fit: cover;
             display: block;
 
@@ -245,43 +246,91 @@
         }
 
         &-title {
-            position: absolute;
-            bottom: -0.2rem;
-            left: 0rem;
-            //background-color: rgba(0, 0, 0, 0.6);
-            color: #fff;
+            background-color: #fff;
+            color: var(--hf-blue);
 
             white-space: nowrap;
             overflow: hidden;
 
-            max-width: 90%;
+            max-width: 85%;
 
-            padding: 5px;
-            z-index: 3;
+            padding: 0 0 0 0.5rem;
+            // z-index: 3;
+        }
+
+        &-area {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            height: 120px;
         }
 
         &-text {
-            padding: 0.2rem 1rem 1rem 0.5rem;
-            color: #fff;
+            font-size: var(--small-font-size);
+            padding: 0.2rem 1rem 0rem 0.5rem;
+            color: var(--text-color);
 
             max-height: 150px; // Adjust accordingly
             overflow: hidden;
         }
 
-        &-shadow {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: linear-gradient(180deg, transparent, transparent 50%, rgba(0, 0, 0, 0.9));
-        }
+        // &-shadow {
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        //     top: 0;
+        //     left: 0;
+        //     background: linear-gradient(180deg, transparent, transparent 50%, rgba(0, 0, 0, 0.9));
+        // }
     }
 }
 
 .learn__more {
-    display: inline-block;
+    display: block;
+    text-align: end;
     font-size: 1rem;
     color: var(--hf-yellow);
-    margin: 0 0 0 2.5rem;
+    margin: 0.1rem 1rem 1rem 2.5rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    & i {
+        margin-left: 0.2rem;
+    }
+}
+
+#join {
+    .related {
+        &__card {
+            background-color: var(--hf-yellow);
+            &-title {
+                background-color: var(--hf-blue);
+                color: #fff;
+            }
+            &-text {
+                color: var(--hf-blue);
+            }
+        }
+    }
+
+    & .learn {
+        display: flex;
+        justify-content: end;
+
+        &__more {
+            margin: 0 0 0 1rem;
+            padding: 0.2rem 1rem 0 3.5rem;
+            background-color: #fff;
+            color: var(--hf-blue);
+
+            &:hover {
+                background-color: var(--hf-blue);
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
 }
