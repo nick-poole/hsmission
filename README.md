@@ -21,6 +21,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/19/23
 
+- FIX(main): Resolve footer container margin issue so no ScrollX exists on html document
+
 - FEAT(articles): Adjust temp article structure and footer responsive design
 
 ### 9/18/23

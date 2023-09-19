@@ -22,7 +22,6 @@
     }
 
     &__logo {
-        //display: inline-block;
         color: var(--title-color);
         font-size: var(--h2-font-size);
         font-family: var(--second-font);
@@ -53,7 +52,6 @@
     }
 
     &__contact {
-        // margin: 0 0 0 1rem;
         &-list {
             width: 100%;
         }
@@ -84,8 +82,7 @@
     }
 
     &__data {
-        grid-template-columns: repeat(2, 200px);
-        gap: 2.5rem 3.5rem;
+        grid-template-columns: repeat(2, 150px);
     }
 
     &__title {
@@ -116,7 +113,7 @@
     }
 
     &__group {
-        margin-top: 5rem;
+        margin-top: 1rem;
         flex-direction: column;
         align-items: center;
         row-gap: 2rem;

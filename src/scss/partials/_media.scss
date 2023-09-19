@@ -36,9 +36,9 @@
             grid-template-columns: 1fr 1fr;
         }
 
-        &__container {
-            margin: 0 3rem;
-        }
+        // &__container {
+        //     margin: 0 3rem;
+        // }
     }
 }
 
@@ -321,13 +321,18 @@
     .footer {
         padding-block: 5rem 3rem;
 
+        &__container {
+            padding: 0 2rem;
+        }
+
         &__content {
             grid-template-columns: 2fr 1fr;
         }
 
-        &-info {
-            gap: 1rem;
-        }
+        // &__info {
+        //     gap: 1rem;
+        // }
+
         &__title {
             margin-bottom: 1.5rem;
         }
