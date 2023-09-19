@@ -1,6 +1,9 @@
 /*=============== DONATE ===============*/
 .donate {
     position: relative;
+    padding-bottom: 2rem;
+
+    background-color: var(--hf-yellow);
 
     &__image {
         position: absolute;
@@ -9,10 +12,9 @@
 
     &__img {
         width: 100%;
-        height: 333px;
-        height: auto;
+        height: 400px;
         object-fit: cover;
-        object-position: center;
+        object-position: top center;
     }
 
     &__shadow {
@@ -23,10 +25,10 @@
         height: 100%;
         background: linear-gradient(
             180deg,
-            hsl(0, 0%, 0%) 5%,
-            hsla(0, 0%, 0%, 0) 40%,
+            var(--hf-blue) 5%,
+            hsla(0, 0%, 0%, 0) 20%,
             hsla(0, 0%, 0%, 0) 60%,
-            hsl(0, 0%, 0%) 92%
+            var(--hf-yellow) 92%
         );
     }
 
@@ -37,28 +39,20 @@
         row-gap: 2.5rem;
     }
 
-    &__user {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        column-gap: 0.5rem;
-        margin-top: 3rem;
+    &__section-title {
+        // width: max-content;
+        // padding: 0.5rem;
+        // background-color: var(--hf-blue);
+        // color: #fff;
+        // border-radius: 10px;
+        // -webkit-border-radius: 10px;
+        // -moz-border-radius: 10px;
+        // -ms-border-radius: 10px;
+        // -o-border-radius: 10px;
     }
 
-    &__profile {
-        width: 30px;
-
-        //50%
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-    }
-
-    &__name {
-        font-size: var(--small-font-size);
-        color: var(--title-color);
+    &__description {
+        color: var(--hf-blue);
     }
 }
 
