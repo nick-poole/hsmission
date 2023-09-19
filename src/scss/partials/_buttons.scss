@@ -37,6 +37,9 @@
 .join {
     &__button {
         cursor: pointer;
+
+        background-color: var(--hf-yellow);
+        color: var(--hf-blue);
     }
 }
 
