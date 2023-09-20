@@ -46,12 +46,13 @@
     }
 
     &__section {
-        gap: 20px;
-        margin-bottom: 20px;
-
         &-text {
             text-align: left;
             color: #fff;
+
+            a {
+                color: var(--hf-yellow);
+            }
         }
 
         &-title {
@@ -59,19 +60,16 @@
         }
 
         &-image {
-            max-width: 250px;
+            height: auto;
             width: 100%;
-            float: left;
-            margin: 0 20px 20px 0;
 
-            &.float-left {
-                float: left;
-            }
+            margin: 1rem auto;
 
-            &.float-right {
-                float: right;
-                margin: 0 0 10px 20px;
-            }
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
         }
 
         &-clearfix::after {
