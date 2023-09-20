@@ -49,6 +49,7 @@
         &-text {
             text-align: left;
             color: #fff;
+            margin-bottom: 1rem;
 
             a {
                 color: var(--hf-yellow);
@@ -84,6 +85,7 @@
         color: var(--title-color);
         width: 100%;
         max-width: 900px;
+        text-align: start;
     }
 
     &__cards {

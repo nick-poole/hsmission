@@ -21,6 +21,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/20/23
 
+- FEAT(zeffy): Continue progress on responsive layout structure for donate dot html
+
 - FEAT(zeffy): Initiate build out on donate dot html from template article.
 
 - FEAT(footer): Build footer onto article template and ensure proper document linkage.

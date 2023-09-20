@@ -1,33 +1,6 @@
 .zeffy {
     background-color: #fff;
 
-    &-btn {
-        background-color: var(--hf-yellow);
-        border: none;
-
-        color: white;
-        cursor: pointer;
-        left: calc(50% - 75px);
-        margin: 10px;
-        min-height: 50px;
-        min-width: 150px;
-        padding: 5px 10px;
-        // text-transform: uppercase;
-        top: calc(50% - 25px);
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-    }
-}
-
-.zeffy {
     &__bg {
         position: absolute;
         top: 0;
@@ -43,4 +16,85 @@
         color: var(--hf-yellow);
         background-color: var(--hf-blue);
     }
+
+    &__donate {
+        background-color: #fff;
+
+        &-image {
+            background-color: var(--hf-yellow);
+            padding: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            background-color: var(--hf-red);
+            padding: 1rem 0.5rem;
+            text-align: center;
+        }
+
+        p {
+            color: var(--hf-blue);
+            margin: 1rem 1rem 0 1rem;
+            padding-bottom: 1rem;
+        }
+
+        &-description {
+            color: var(--hf-blue);
+        }
+
+        &-title {
+            width: max-content;
+            background-color: #fff;
+            color: var(--hf-red);
+            margin: 0 auto;
+            padding: 1rem;
+
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+
+        &-prompt {
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--hf-yellow);
+        }
+
+        &-button {
+            background-color: var(--hf-blue);
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        &-btn {
+            color: white;
+            cursor: pointer;
+            left: calc(50% - 75px);
+            margin: 1rem auto;
+            min-height: 50px;
+            min-width: 150px;
+            padding: 0.5rem 1.5rem;
+
+            top: calc(50% - 25px);
+
+            background-color: var(--hf-red);
+
+            border: 3px solid #fff;
+
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+    }
+}
+
+.section-2 {
+    margin-top: 3rem;
 }
