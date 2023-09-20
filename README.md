@@ -19,6 +19,10 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ## Commit Log
 
+### 9/20/23
+
+- FEAT(mission): Refit and style mission cards for responsive purposes.
+
 ### 9/19/23
 
 - FEAT(donate): Reframe join section responsive layout

@@ -302,6 +302,25 @@
     }
 }
 
+.mission {
+    .learn__more {
+        display: block;
+        text-align: end;
+        font-size: 1rem;
+        background-color: var(--hf-yellow);
+        color: #fff;
+        margin: 0.1rem 1rem 0.2rem 2.5rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        & i {
+            margin-left: 0.2rem;
+        }
+    }
+}
+
 #join {
     .related {
         &__card {
