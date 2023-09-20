@@ -156,8 +156,11 @@
 }
 
 .related {
-    background-color: #7b7b7b;
-    background-color: #fff;
+    background-color: #f8f9fa;
+    background-color: #f0f2f5;
+    // background-color: #fff;
+
+    padding-bottom: 3rem;
     &__title {
         font-size: 2rem;
         margin-bottom: 1rem;

@@ -21,6 +21,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/20/23
 
+- FEAT(footer): Build footer onto article template and ensure proper document linkage.
+
 - FEAT(mission): Refit and style mission cards for responsive purposes.
 
 ### 9/19/23
