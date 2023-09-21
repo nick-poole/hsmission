@@ -133,28 +133,6 @@
     }
 }
 
-.donate {
-    &__prompt {
-        margin: 0 auto;
-        text-align: center;
-        padding: 2rem;
-        background-color: var(--hf-yellow);
-        margin: 2rem 0 0 0;
-    }
-
-    &__message {
-        margin-bottom: 1rem;
-        color: var(--hf-blue);
-    }
-
-    &__button {
-        background-color: var(--hf-blue);
-        display: block;
-        margin: 0 auto;
-        cursor: pointer;
-    }
-}
-
 .related {
     background-color: #f8f9fa;
     background-color: #f0f2f5;

@@ -10,13 +10,13 @@
 
     &__description {
         margin-bottom: 2rem;
+        color: #fff;
+        text-align: start;
     }
 
     &__image {
-        position: relative;
         justify-self: center;
-        overflow: hidden;
-        //height: 100%;
+
         width: 100%;
     }
 
@@ -27,14 +27,11 @@
         -moz-transition: transform 0.4s;
         -ms-transition: transform 0.4s;
         -o-transition: transform 0.4s;
-    }
 
-    &__shadow {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
     }
 }

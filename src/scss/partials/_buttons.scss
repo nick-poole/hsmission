@@ -1,9 +1,9 @@
 /*=============== BUTTON ===============*/
 .button {
-    background-color: hsla(0, 0%, 100%, 0.2);
     width: fit-content;
     padding: 1.25rem 1.5rem;
-    color: var(--title-color);
+    background-color: var(--hf-yellow);
+    color: var(--hf-blue);
     display: inline-flex;
     align-items: center;
     column-gap: 0.5rem;
@@ -32,6 +32,16 @@
         -ms-transform: translateY(-0.25rem);
         -o-transform: translateY(-0.25rem);
     }
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.about__button.button {
+    background-color: hsla(0, 0%, 100%, 0.2);
+    color: #fff;
 }
 
 .join {

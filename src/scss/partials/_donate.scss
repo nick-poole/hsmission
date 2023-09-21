@@ -39,6 +39,13 @@
         row-gap: 2.5rem;
     }
 
+    &__data {
+        p {
+            color: var(--hf-blue);
+            font-weight: var(--font-semi-bold);
+        }
+    }
+
     &__section-title {
         // width: max-content;
         // padding: 0.5rem;
@@ -49,22 +56,5 @@
         // -moz-border-radius: 10px;
         // -ms-border-radius: 10px;
         // -o-border-radius: 10px;
-    }
-
-    &__description {
-        color: var(--hf-blue);
-    }
-    &__title {
-        width: max-content;
-        background-color: #fff;
-        color: var(--hf-red);
-        margin: 0 auto;
-        padding: 1rem;
-
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
     }
 }
