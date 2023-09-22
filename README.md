@@ -21,6 +21,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/21/23
 
+- FEAT(temparticle): Complete responsive layout for template article.
+
 - FEAT(home): Reselect home images and mobile responsive format.
 
 ### 9/20/23
