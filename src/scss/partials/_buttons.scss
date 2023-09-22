@@ -57,13 +57,30 @@
     background-color: var(--hf-yellow);
     padding: 3rem;
 
-    h3 {
+    &__hook {
         color: var(--hf-blue);
-        width: fit-content;
+        width: 80%;
         margin: 2rem auto;
+        text-align: center;
+
+        font-size: 1.5rem;
     }
 
-    .donate__button {
+    &__line {
+        background-color: #fff;
+        color: var(--hf-blue);
+        width: fit-content;
+        margin: 1rem auto;
+        padding: 0.5rem;
+
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    &__sinker {
         display: block;
         width: fit-content;
 
