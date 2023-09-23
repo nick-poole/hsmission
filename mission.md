@@ -32,3 +32,5 @@ See how you are helping change lives.
 Heal: Returning to Remember
 Help: Raise Support
 Hope: Rebuilding Dreams
+
+The learning center project in Pelerin is one of their current focuses, aiming to uplift and educate young minds, setting them on a path of success.

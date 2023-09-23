@@ -72,6 +72,8 @@
         grid-template-columns: 1fr;
 
         &-image {
+            display: flex;
+            align-items: baseline;
             width: 100%;
             max-width: 450px;
             height: auto;
@@ -126,11 +128,18 @@
                 }
             }
 
-            .red-text {
-                text-align: center;
+            img {
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+            }
+
+            .yellow-text {
                 padding: 0.3rem;
 
-                color: var(--hf-red);
+                color: var(--hf-yellow);
 
                 font-size: 1.2rem;
                 font-weight: var(--font-semi-bold);
@@ -138,7 +147,7 @@
 
             blockquote {
                 position: relative;
-                margin: 10% auto 0 auto;
+                margin: 10% auto 10% auto;
                 padding: 1rem 30px 1.2rem 75px;
 
                 font-family: var(--second-font);
@@ -148,7 +157,12 @@
                     font-style: italic;
                     font-weight: var(--font-semi-bold);
                     color: var(--hf-red);
+
+                    &.span-green {
+                        color: var(--hf-green);
+                    }
                 }
+
                 font-size: 2rem;
                 line-height: 1.6;
 
@@ -370,6 +384,31 @@
         }
     }
 }
+/*========== ADJUSTMENTS ==========*/
+
+// #index-home .home__bg {
+//     object-position: 50% 50%;
+// }
+
+#ourStory .article__bg {
+    object-position: 35% 50%;
+}
+
+/*========== Header Adjustments ==========*/
+#education-body {
+    & .header {
+        background-color: var(--container-color);
+    }
+
+    & .blur-header::after {
+        background-color: var(--container-color);
+        backdrop-filter: none;
+    }
+
+    #education {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .article {
@@ -412,13 +451,16 @@
         &__section {
             &.sect-1,
             &.sect-3,
-            &.sect-5 {
+            &.sect-5,
+            &.sect-7,
+            &.sect-9 {
                 grid-template-columns: auto minmax(400px, 1fr);
             }
 
             &.sect-2,
             &.sect-4,
-            &.sect-6 {
+            &.sect-6,
+            &.sect-8 {
                 grid-template-columns: minmax(400px, 1fr) auto;
             }
             gap: 3rem;

@@ -21,7 +21,9 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/23/23
 
-- FEAT(about): Compile our-history article with text and images.
+- FEAT(education): Compile education article with text and images.
+
+- FEAT(about): Compile our-story article with text and images.
 
 ### 9/22/23
 
