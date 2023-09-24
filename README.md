@@ -2,6 +2,8 @@
 
 ![Project Screenshot](path/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/18c1a6f1-aab2-4bd4-a549-5da430a227a6/deploy-status)](https://app.netlify.com/sites/hsmission/deploys)
+
 ## Description
 
 Haitian Sensation Mission is a website dedicated to the cause of supporting and uplifting the lives of the Haitian community. Proceeds from the platform go towards various charitable works in Haiti, aiming to make a profound difference in the lives of many. This project leverages the power of SASS for stylish and responsive design and vanilla JavaScript for interactive functionalities.
