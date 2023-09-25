@@ -23,6 +23,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/25/23
 
+- FEAT(water): Compile clean water article with images and text.
+
 - FEAT(main): Update Sitemap(dot)xml
 
 ### 9/24/23

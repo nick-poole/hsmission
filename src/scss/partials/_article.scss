@@ -394,8 +394,25 @@
     object-position: 35% 50%;
 }
 
+#cleanWater .article__bg {
+    object-position: 0% 50%;
+}
+
+#education-body .article__bg {
+    object-position: 60% 50%;
+}
+
 /*========== Header Adjustments ==========*/
+#cleanWater,
 #education-body {
+    & .article__bg {
+        top: 0rem;
+    }
+
+    & .article__data {
+        margin-top: 30rem;
+    }
+
     & .header {
         background-color: var(--container-color);
     }

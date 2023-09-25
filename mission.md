@@ -50,6 +50,13 @@ The cholera epidemic beginning in October 2010 led to 658,563 reported cases and
 
 Haiti stands out, but for a concerning reason: it has the lowest rates of access to clean water and proper sanitation facilities in the entire Western Hemisphere. Imagine, only about 7 out of 10 people have access to safe drinking water. Dive deeper into sanitation, and the numbers are even more alarming: merely 17% of Haitians can access proper toilets. Comparing this to the rest of Latin America and the Caribbean, where an average of 80% have such access, the discrepancy becomes jarringly clear.
 
+`
+<a href="https://www.freepik.com/free-vector/haiti-map-design-with-flag-light-background-vector_2189465.htm#query=haitian&position=4&from_view=keyword&track=sph">Image by flatart</a> on Freepik`
+
 ## 2
 
  #2
+
+ How France extorted Haiti for one of the greatest heists in geopolitical history
+ `
+https://qz.com/africa/1877241/how-france-extorted-haiti-for-the-greatest-heist-in-history`
