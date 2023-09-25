@@ -1,6 +1,6 @@
 # Haitian Sensation Mission
 
-![Project Screenshot](path/)
+![Project Screenshot](path/dist/assets/images/hsmission__project-screenshot.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/18c1a6f1-aab2-4bd4-a549-5da430a227a6/deploy-status)](https://app.netlify.com/sites/hsmission/deploys)
 
@@ -20,6 +20,14 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 - All the donors and supporters of the Haitian Sensation Mission.
 
 ## Commit Log
+
+### 9/25/23
+
+- FEAT(main): Update Sitemap(dot)xml
+
+### 9/24/23
+
+- Project live @ haitiansensationmission(dot)org
 
 ### 9/23/23
 

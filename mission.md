@@ -34,3 +34,22 @@ Help: Raise Support
 Hope: Rebuilding Dreams
 
 The learning center project in Pelerin is one of their current focuses, aiming to uplift and educate young minds, setting them on a path of success.
+
+## Clean Water
+
+Haiti has the lowest rates of access to improved water and sanitation in the western hemisphere.
+Only 69% of the Haitian population had access to an improved water source in 2010.
+Only 17% had access to improved sanitation facilities in 2010.
+Regional average sanitation coverage for Latin America and Caribbean is 80%.
+Sanitation coverage in Haiti decreased from 26% in 1990 to 17% in 2008.
+Urban vs. Rural divide: 85% of urban population vs. 51% of rural population had access to improved water sources in 2010.
+
+The cholera epidemic beginning in October 2010 led to 658,563 reported cases and 8,111 deaths by June 2, 2013.
+
+## Paragraph 1
+
+Haiti stands out, but for a concerning reason: it has the lowest rates of access to clean water and proper sanitation facilities in the entire Western Hemisphere. Imagine, only about 7 out of 10 people have access to safe drinking water. Dive deeper into sanitation, and the numbers are even more alarming: merely 17% of Haitians can access proper toilets. Comparing this to the rest of Latin America and the Caribbean, where an average of 80% have such access, the discrepancy becomes jarringly clear.
+
+## 2
+
+ #2

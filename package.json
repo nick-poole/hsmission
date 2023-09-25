@@ -1,7 +1,7 @@
 {
   "name": "hsmission",
   "version": "1.0.0",
-  "description": "Website for the Haitian Sensation Mission Nonprofit, designed primarily to collect donations via the Zeffy platform.",
+  "description": "Website for the Haitian Sensation Mission Nonprofit, designed to inform readers about challenges facing Haiti and collect donations via the Zeffy platform.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nick-poole/hsmission"
