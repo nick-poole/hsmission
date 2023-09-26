@@ -1,32 +1,24 @@
 .zeffy {
     background-color: #fff;
 
-    &__bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 650px;
-        object-fit: cover;
-
-        object-position: 40% 50%;
-    }
-
     &.article__section-title {
         color: var(--hf-yellow);
         background-color: var(--hf-blue);
     }
 
+    &__image {
+        width: 100%;
+        background-color: var(--hf-yellow);
+        padding: 3rem 1.5rem;
+        img {
+            max-width: 800px;
+
+            margin: 0 auto;
+        }
+    }
     &__donate {
         background-color: #fff;
         margin: 0 auto;
-
-        &-image {
-            background-color: var(--hf-yellow);
-            padding: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
 
         h2 {
             background-color: var(--hf-red);
@@ -63,6 +55,10 @@
             text-align: center;
             padding: 2rem;
             background-color: var(--hf-yellow);
+
+            h2 {
+                color: #fff;
+            }
         }
 
         &-button {
@@ -94,8 +90,4 @@
             -o-border-radius: 10px;
         }
     }
-}
-
-.section-2 {
-    margin-top: 3rem;
 }

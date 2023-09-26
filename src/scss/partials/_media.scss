@@ -63,10 +63,6 @@
         grid-template-columns: repeat(2, 240px);
     }
 
-    .zeffy__sections {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .about {
         &__container {
             grid-template-columns: repeat(2, 400px);
@@ -255,18 +251,6 @@
             }
         }
     }
-
-    // .zeffy {
-    //     &__article {
-    //         &__img {
-    //             float: none;
-    //         }
-    //         &.article__container {
-    //             max-width: 720px;
-    //             margin: 0 auto;
-    //         }
-    //     }
-    // }
 
     .button {
         column-gap: 1.5rem;

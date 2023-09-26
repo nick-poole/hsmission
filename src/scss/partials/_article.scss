@@ -422,11 +422,9 @@
     object-position: 60% 50%;
 }
 
-// .dual-img {
-//     display: flex;
-
-//     flex-direction: column;
-// }
+#donationPage .article__bg {
+    object-position: 40% 50%;
+}
 
 /*===== RELATED CARD SHOW/NO SHOW =====*/
 
@@ -455,10 +453,6 @@
         background-color: var(--container-color);
         backdrop-filter: none;
     }
-
-    // #education {
-    //     display: none;
-    // }
 }
 
 @media screen and (min-width: 768px) {

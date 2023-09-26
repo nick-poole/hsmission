@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="dist/css/main.output.css">
   </head>
 
-  <body>
+  <body id="donationPage">
     <!--========== HEADER ==========-->
     <header class="header" id="header">
       <nav class="nav container">
@@ -74,73 +74,92 @@
       <!--========== Article ==========-->
       <div class="article section" id="article">
         <!--========== HERO BG IMG ==========-->
-        <img src="dist/assets/images/topsphere-media-boy-zoom.jpg" class="zeffy__bg">
+        <img src="dist/assets/images/topsphere-media-boy-zoom.jpg" class="article__bg">
         <div class="home__shadow"></div>
 
-        <article class="zeffy__article article__container container">
+        <article class="article__container container">
           <div class="article__data grid">
             <div class="article__data-group">
               <h3 class="article__subtitle">Impact a life today</h3>
               <h1 class="article__title">Make A Donation</h1>
-              <p class="article__description">By supporting to our mission, you're not just giving funds; you're
+              <p class="article__description">By supporting our mission, you're not just giving funds; you're
                 providing hope,
                 opportunities, and a brighter future for those who need it most.
               </p>
             </div>
+
+            <img src="../dist/assets/images/small-boy.jpg" alt="">
           </div>
 
-          <div class="zeffy__sections grid">
-
+          <div class="article__content grid">
             <!--========== SECTION 1 ==========-->
-            <section class="article__section section-2">
-              <img src="dist/assets/images/small-girl-1024x682.jpg" alt="" class="article__section-image float-right">
+            <section class="article__section sect-1">
+              <div class="article__section-image">
+                <img src="dist/assets/images/small-girl-1024x682.jpg" alt="" class="article__section-img">
+              </div>
 
-              <h2 class="zeffy article__section-title">Your Support is Appreciated</h2>
+              <div class="article__section-area">
+                <h2 class="zeffy article__section-title">Your Support is Appreciated</h2>
 
-              <p class="article__section-text">It's not every day that one gets the chance to directly impact the course
-                of someone's life. Each act of kindness, every gesture of goodwill, resonates in ways we might not
-                always
-                see or understand immediately.</p>
-              <div class="article__section-clearfix"></div>
+                <p>It's not every day that one gets the chance to directly impact the course
+                  of someone's life. Each act of kindness, every gesture of goodwill, resonates in ways we might not
+                  always
+                  see or understand immediately.</p>
+              </div>
             </section>
 
             <!--========== SECTION 2 ==========-->
-            <section class="article__section">
-              <img src="dist/assets/images/helping-people-1599806_1920.jpg" alt=""
-                class="article__section-image float-left">
+            <section class="article__section sect-2">
+              <div class="article__section-image">
+                <img src="dist/assets/images/helping-people-1599806_1920.jpg" alt="" class="article__section-img">
+              </div>
 
-              <h2 class="zeffy article__section-title">You Make A Difference</h2>
+              <div class="article__section-area">
+                <h2 class="zeffy article__section-title">You Make A Difference</h2>
 
-              <p class="article__section-text">Every donation becomes part of a bigger movement —
-                a wave of change, hope, and a brighter future for Haiti. It's not just about the tangible resources or
-                funds; it's about building bridges, fostering communities, and ensuring that the young minds of today
-                have
-                the tools they need to shape tomorrow.
-              </p>
-              <div class="article__section-clearfix"></div>
+                <p>
+                  Every donation becomes part of a bigger movement —
+                  a wave of change, hope, and a brighter future for Haiti. It's not just about the tangible resources
+                  or
+                  funds; it's about building bridges, fostering communities, and ensuring that the young minds of
+                  today
+                  have
+                  the tools they need to shape tomorrow.
+                </p>
+              </div>
             </section>
 
             <!--========== SECTION 3 ==========-->
-            <section class="article__section">
-              <img src="dist/assets/images/mother-2427504_1920.jpg
-           " alt="" class="article__section-image float-right">
+            <section class="article__section sect-3">
+              <div class="article__section-image">
+                <img src="dist/assets/images/mother-2427504_1920.jpg
+           " alt="" class="article__section-img">
+              </div>
 
-              <h2 class="zeffy article__section-title">You Can Help.</h2>
 
-              <p class="article__section-text">
-                Every contribution, no matter how small, has the power to transform lives
-                in Haiti. With your support, we can continue our mission to empower, educate, and uplift communities
-                that need it the most. Your donation goes directly to initiatives like clean water projects, educational
-                programs, disaster relief efforts, and community-building. </p>
-              <div class="article__section-clearfix"></div>
+              <div class="article__section-area">
+                <h2 class="zeffy article__section-title">You Can Help.</h2>
+                <p>
+                  Every contribution, no matter how small, has the power to transform lives
+                  in Haiti. With your support, we can continue our mission to empower, educate, and uplift communities
+                  that need it the most. Your donation goes directly to initiatives like clean water projects,
+                  educational
+                  programs, disaster relief efforts, and community-building.
+                </p>
+              </div>
+
             </section>
           </div>
         </article>
       </div>
 
-      <div class="zeffy__donate">
+      <figure class="zeffy__image">
         <img src="dist/assets/logos/zeffy.svg" alt="" class="zeffy__donate-image">
+      </figure>
+
+      <section class="zeffy__donate">
         <h2>Direct Impact with Every Donation</h2>
+
 
         <p> Each donation is a testament to your commitment to change, and
           we honor that trust by using every cent effectively. Through our partnership with
@@ -158,7 +177,7 @@
           Additionally, all contributions are tax-deductible. Please keep your donation receipt for
           financial purposes.
         </p>
-      </div>
+      </section>
 
       <div class="zeffy__donate-prompt">
         <h2 class="donate-title">Join Our Mission</h2>
@@ -243,7 +262,7 @@
 
               <ul class="footer__links">
                 <li>
-                  <a href="our-story.html" class="footer__link"
+                  <a href="articles/our-story.html" class="footer__link"
                     aria-label="Learn the story behind Haitian Sensation Mission">Our Story</a>
                 </li>
 
@@ -257,8 +276,9 @@
                 </li>
 
                 <li>
-                  <a href="history.html" class="footer__link"
-                    aria-label="Learn more about Haiti's modern struggles">Istwa (History)</a>
+                  <a href="articles/history.html" class="footer__link"
+                    aria-label="Learn more about Haiti's modern struggles">Istwa
+                    (History)</a>
                 </li>
 
               </ul>

@@ -55,8 +55,6 @@ Haiti stands out, but for a concerning reason: it has the lowest rates of access
 
 ## 2
 
- #2
-
  How France extorted Haiti for one of the greatest heists in geopolitical history
  `
 https://qz.com/africa/1877241/how-france-extorted-haiti-for-the-greatest-heist-in-history`
