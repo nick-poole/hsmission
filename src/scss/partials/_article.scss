@@ -58,13 +58,27 @@
     &__title {
         font-size: var(--biggest-font-size);
         margin-bottom: 1rem;
+        color: var(--hf-yellow);
     }
     &__description {
-        //margin-bottom: 2rem;
-        color: var(--title-color);
         width: 100%;
         max-width: 900px;
+        //margin-bottom: 2rem;
+        padding: 0.5rem;
+
+        // background-color: var(--container-color);
+        color: #fff;
+
         text-align: start;
+        // font-style: italic;
+        line-height: 2;
+        font-weight: var(--font-semi-bold);
+
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
     }
 
     &__section {
@@ -73,7 +87,7 @@
 
         &-image {
             display: flex;
-            align-items: baseline;
+            align-items: center;
             width: 100%;
             max-width: 450px;
             height: auto;
@@ -143,6 +157,11 @@
 
                 font-size: 1.2rem;
                 font-weight: var(--font-semi-bold);
+            }
+
+            .text-bold {
+                font-weight: var(--font-semi-bold);
+                font-style: italic;
             }
 
             blockquote {
@@ -253,6 +272,7 @@
     &__cards {
         display: grid;
         grid-template-columns: 300px;
+
         justify-content: center;
         gap: 1.5rem;
 
@@ -402,6 +422,20 @@
     object-position: 60% 50%;
 }
 
+// .dual-img {
+//     display: flex;
+
+//     flex-direction: column;
+// }
+
+/*===== RELATED CARD SHOW/NO SHOW =====*/
+
+#cleanWater {
+    #clean-water {
+        display: none;
+    }
+}
+
 /*========== Header Adjustments ==========*/
 #cleanWater,
 #education-body {
@@ -422,9 +456,9 @@
         backdrop-filter: none;
     }
 
-    #education {
-        display: none;
-    }
+    // #education {
+    //     display: none;
+    // }
 }
 
 @media screen and (min-width: 768px) {
@@ -480,9 +514,10 @@
             &.sect-8 {
                 grid-template-columns: minmax(400px, 1fr) auto;
             }
-            gap: 3rem;
 
-            margin-bottom: 3rem;
+            gap: 1.5rem;
+
+            margin-bottom: 1rem;
 
             &:nth-of-type(odd) .article__section-group {
                 order: 2;
@@ -501,7 +536,10 @@
             }
 
             &-image {
+                width: 100%;
+                height: auto;
                 margin: 0;
+                padding: 0 1rem;
                 &-img {
                     object-fit: cover;
                     object-position: center;

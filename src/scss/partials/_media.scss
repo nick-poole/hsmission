@@ -418,6 +418,7 @@
     .related {
         &__cards {
             grid-template-columns: repeat(4, 300px);
+            grid-auto-flow: row;
         }
     }
 
