@@ -21,6 +21,10 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ## Commit Log
 
+### 9/30/23
+
+- FIX(main): Revise donate page routing issue with about link 
+
 ### 9/25/23
 
 - FEAT(water): Revise text/images and added blockquotes.
