@@ -167,7 +167,7 @@
             blockquote {
                 position: relative;
                 margin: 10% auto 10% auto;
-                padding: 1rem 30px 1.2rem 75px;
+                padding: 1rem 10px 1.2rem 50px;
 
                 font-family: var(--second-font);
 
@@ -199,10 +199,10 @@
                     font-family: Arial;
                     content: "\201C";
                     color: var(--hf-red);
-                    font-size: 4em;
+                    font-size: 3em;
                     position: absolute;
                     left: 10px;
-                    top: -45px;
+                    top: -30px;
                 }
                 &::after {
                     content: "";
@@ -426,14 +426,6 @@
     object-position: 40% 50%;
 }
 
-/*===== RELATED CARD SHOW/NO SHOW =====*/
-
-#cleanWater {
-    #clean-water {
-        display: none;
-    }
-}
-
 /*========== Header Adjustments ==========*/
 #cleanWater,
 #education-body {
@@ -594,5 +586,37 @@
                 text-decoration: none;
             }
         }
+    }
+}
+
+/*===== RELATED CARD SHOW/NO SHOW =====*/
+
+#cleanWater {
+    #clean-water {
+        display: none;
+    }
+}
+
+#natural-disasters {
+    #earthquake {
+        display: none;
+    }
+}
+
+#education-body {
+    #education {
+        display: none;
+    }
+}
+
+#ourStory {
+    #our-story {
+        display: none;
+    }
+}
+
+#istwa {
+    #join {
+        display: none;
     }
 }

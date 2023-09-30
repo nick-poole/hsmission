@@ -23,7 +23,9 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 9/30/23
 
-- FIX(main): Revise donate page routing issue with about link 
+- FEAT(disasters): Compile 2010 earthquake article with images and text.
+
+- FIX(main): Revise donate page routing issue with about link
 
 ### 9/25/23
 
