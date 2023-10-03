@@ -21,6 +21,10 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ## Commit Log
 
+### 10/2/23
+
+- FEAT(main): Configure favicon into index, donate, and article pages.
+
 ### 9/30/23
 
 - FEAT(disasters): Compile 2010 earthquake article with images and text.
