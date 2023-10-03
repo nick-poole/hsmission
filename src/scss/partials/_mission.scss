@@ -4,15 +4,16 @@
 
     padding: 3rem 0;
     &__container {
-        max-width: 1200px;
-        margin: 0 auto;
+        width: 90%;
+        max-width: 1500px;
+        margin: 3rem auto 0 auto;
         padding: 0 1rem;
 
         // padding-top: 1.5rem;
         grid-template-columns: 1fr;
         justify-content: center;
         row-gap: 2.5rem;
-        margin-inline: revert;
+        //margin-inline: revert;
     }
     &__item {
         background-color: #fff;
@@ -107,6 +108,23 @@
         span {
             color: var(--hf-blue);
             font-style: italic;
+        }
+    }
+
+    .learn__more {
+        display: block;
+        text-align: end;
+        font-size: 1rem;
+        background-color: var(--hf-yellow);
+        color: #fff;
+        margin: 1rem 1rem 0.2rem 2.5rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        & i {
+            margin-left: 0.2rem;
         }
     }
 }

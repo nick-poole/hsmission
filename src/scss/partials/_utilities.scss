@@ -23,6 +23,14 @@
     margin-bottom: 1.5rem;
 }
 
+.bold {
+    font-weight: var(--font-semi-bold);
+}
+
+#aside-link {
+    text-decoration: underline;
+}
+
 /* for ScrollReveal */
 .main {
     overflow: hidden;

@@ -1,5 +1,8 @@
 /*=============== JOIN ===============*/
 .join {
+    .section__title {
+        color: var(--hf-yellow);
+    }
     &__container {
         row-gap: 3rem;
         padding: 3.5rem 0;
@@ -23,7 +26,6 @@
 
     &__image {
         justify-self: center;
-
         max-width: 400px;
     }
 
