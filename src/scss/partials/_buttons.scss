@@ -40,6 +40,8 @@
 }
 
 .about__button.button {
+    display: block;
+    margin: 0 auto;
     background-color: hsla(0, 0%, 100%, 0.2);
     color: #fff;
 }

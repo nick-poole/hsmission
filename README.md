@@ -1,6 +1,6 @@
 # Haitian Sensation Mission
 
-![Project Screenshot](path/dist/assets/images/hsmission__project-screenshot.png)
+![Project Screenshot](dist/assets/images/hsmission__project-screenshot.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/18c1a6f1-aab2-4bd4-a549-5da430a227a6/deploy-status)](https://app.netlify.com/sites/hsmission/deploys)
 
@@ -22,6 +22,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 ## Commit Log
 
 ### 10/3/23
+
+- FEAT(main): Create History section on index page.
 
 - FEAT(partials): Separate related styles from article scss into created related scss partial
 
