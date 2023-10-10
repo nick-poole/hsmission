@@ -21,6 +21,10 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ## Commit Log
 
+### 10/10/23
+
+- FEAT(seo): Rewrite meta descriptions and create OpenGraph tags on all pages. Create robots.txt @ root
+
 ### 10/9/23
 
 - FEAT(history): Rewrite history article and incorporate new images and links.
