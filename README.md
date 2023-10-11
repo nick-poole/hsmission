@@ -23,6 +23,8 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ### 10/10/23
 
+- FEAT(about): Incorporate changes to our story including sweet sensations
+
 - FEAT(seo): Rewrite meta descriptions and create OpenGraph tags on all pages. Create robots.txt @ root
 
 ### 10/9/23
