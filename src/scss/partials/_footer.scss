@@ -151,3 +151,29 @@
         text-align: center;
     }
 }
+
+#TermsPage,
+#PrivacyPage {
+    background-color: var(--body-color);
+
+    header {
+        margin: 1rem;
+    }
+    main {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    p,
+    li,
+    hr,
+    a {
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: var(--hf-yellow);
+    }
+}

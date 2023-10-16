@@ -21,6 +21,10 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 ## Commit Log
 
+### 10/16/23
+
+- FEAT(main): Alter organization name from LLC to Inc. & update legal pages with centered layout.
+
 ### 10/10/23
 
 - FEAT(main): Update footer email address
