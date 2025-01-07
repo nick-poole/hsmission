@@ -1,312 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="index, follow" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Donate | HS Mission</title>
 
-    <title>Donate | HS Mission</title>
+		<meta
+			name="description"
+			content="Join our mission for a stronger Haiti! Your support enhances education, health, and safety. Every contribution makes a difference!" />
+		<meta name="robots" content="index, follow" />
 
-    <meta name="description"
-      content="Join our mission for a stronger Haiti! Your support enhances education, health, and safety. Every contribution makes a difference!">
-    <meta name="robots" content="index, follow">
+		<!--========== FAVICON ==========-->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png" />
+		<link rel="manifest" href="favicon.ico/site.webmanifest" />
+		<link rel="mask-icon" href="favicon.ico/safari-pinned-tab.svg" color="#f3b419" />
+		<meta name="msapplication-TileColor" content="#f3b419" />
+		<meta name="theme-color" content="#ffffff" />
 
-    <!--========== FAVICON ==========-->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
-    <link rel="manifest" href="favicon.ico/site.webmanifest">
-    <link rel="mask-icon" href="favicon.ico/safari-pinned-tab.svg" color="#f3b419">
-    <meta name="msapplication-TileColor" content="#f3b419">
-    <meta name="theme-color" content="#ffffff">
+		<!--========== OPEN GRAPH ==========-->
+		<meta property="og:title" content="Donate | Haitian Sensation Mission" />
+		<meta
+			property="og:description"
+			content="Join our mission for a stronger Haiti! Your support enhances education, health, and safety. Every contribution makes a difference!" />
+		<meta
+			property="og:image"
+			content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-boy-zoom.jpg" />
+		<meta property="og:url" content="https://haitiansensationmission.org/donate.html" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="haitiansensationmission.org" />
 
-    <!--========== OPEN GRAPH ==========-->
-    <meta property="og:title" content="Donate | Haitian Sensation Mission" />
-    <meta property="og:description"
-      content="Join our mission for a stronger Haiti! Your support enhances education, health, and safety. Every contribution makes a difference!" />
-    <meta property="og:image"
-      content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-boy-zoom.jpg" />
-    <meta property="og:url" content="https://haitiansensationmission.org/donate.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="haitiansensationmission.org" />
+		<!--=============== REMIXICONS ===============-->
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <!--=============== REMIXICONS ===============-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+		<!--=============== ZEFFY ===============-->
+		<script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>
 
-    <!--=============== ZEFFY ===============-->
-    <script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>
+		<!-- ===== CSS ===== -->
+		<link rel="stylesheet" href="dist/css/main.output.css" />
+	</head>
 
-    <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="dist/css/main.output.css">
-  </head>
+	<body id="donationPage">
+		<!--========== HEADER ==========-->
+		<header class="header" id="header">
+			<nav class="nav container">
+				<a href="index.html" class="nav__logo">
+					<div class="nav__logo-container flex">
+						<img src="dist/assets/images/haiti-5323242.png" alt="" class="nav__logo-img" />
+						<div>
+							Haitian
+							<br />
+							Sensation
+							<br />
+							<span class="nav__logo-span">Mission</span>
+						</div>
+					</div>
+				</a>
 
-  <body id="donationPage">
-    <!--========== HEADER ==========-->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="index.html" class="nav__logo">
-          <div class="nav__logo-container flex">
-            <img src="dist/assets/images/haiti-5323242.png" alt="" class="nav__logo-img">
-            <div>
-              Haitian<br>
-              Sensation<br>
-              <span class="nav__logo-span">Mission</span>
-            </div>
-          </div>
-        </a>
+				<div class="nav__menu" id="nav-menu">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="index.html#home" class="nav__link active-link">Home</a>
+						</li>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
+						<li class="nav__item">
+							<a href="articles/our-story.html" class="nav__link">Our Story</a>
+						</li>
 
-              <a href="index.html#home" class="nav__link active-link">Home</a>
-            </li>
+						<li class="nav__item">
+							<a href="index.html#mission" class="nav__link">Mission</a>
+						</li>
 
-            <li class="nav__item">
-              <a href="articles/our-story.html" class="nav__link">Our Story</a>
-            </li>
+						<li class="nav__item">
+							<a href="donate.html" class="nav__link">Donate</a>
+						</li>
+					</ul>
 
-            <li class="nav__item">
-              <a href="index.html#mission" class="nav__link">Mission</a>
-            </li>
+					<div class="nav__close" id="nav-close">
+						<i class="ri-close-circle-line"></i>
+					</div>
+				</div>
 
-            <li class="nav__item">
-              <a href="donate.html" class="nav__link">Donate</a>
-            </li>
-          </ul>
+				<div class="nav__toggle" id="nav-toggle">
+					<i class="ri-menu-3-line"></i>
+				</div>
+			</nav>
+		</header>
 
-          <div class="nav__close" id="nav-close">
-            <i class="ri-close-circle-line"></i>
-          </div>
-        </div>
+		<!--========== MAIN ==========-->
+		<main class="main">
+			<!--========== Article ==========-->
+			<div class="article section" id="article">
+				<!--========== HERO BG IMG ==========-->
+				<img src="dist/assets/images/topsphere-media-boy-zoom.jpg" class="article__bg" />
+				<div class="home__shadow"></div>
 
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="ri-menu-3-line"></i>
-        </div>
-      </nav>
-    </header>
+				<article class="article__container container">
+					<div class="article__data grid">
+						<div class="article__data-group">
+							<h3 class="article__subtitle">Impact a life today</h3>
+							<h1 class="article__title">Make A Donation</h1>
+							<p class="article__description">
+								By supporting our mission, you're not just giving funds; you're providing hope,
+								opportunities, and a brighter future for those who need it most.
+							</p>
+						</div>
 
-    <!--========== MAIN ==========-->
-    <main class="main">
-      <!--========== Article ==========-->
-      <div class="article section" id="article">
-        <!--========== HERO BG IMG ==========-->
-        <img src="dist/assets/images/topsphere-media-boy-zoom.jpg" class="article__bg">
-        <div class="home__shadow"></div>
+						<img src="../dist/assets/images/small-boy.jpg" alt="" />
+					</div>
 
-        <article class="article__container container">
-          <div class="article__data grid">
-            <div class="article__data-group">
-              <h3 class="article__subtitle">Impact a life today</h3>
-              <h1 class="article__title">Make A Donation</h1>
-              <p class="article__description">By supporting our mission, you're not just giving funds; you're
-                providing hope,
-                opportunities, and a brighter future for those who need it most.
-              </p>
-            </div>
+					<div class="article__content grid">
+						<!--========== SECTION 1 ==========-->
+						<section class="article__section sect-1">
+							<div class="article__section-image">
+								<img
+									src="dist/assets/images/small-girl-1024x682.jpg"
+									alt=""
+									class="article__section-img" />
+							</div>
 
-            <img src="../dist/assets/images/small-boy.jpg" alt="">
-          </div>
+							<div class="article__section-area">
+								<h2 class="zeffy article__section-title">Your Support is Appreciated</h2>
 
-          <div class="article__content grid">
-            <!--========== SECTION 1 ==========-->
-            <section class="article__section sect-1">
-              <div class="article__section-image">
-                <img src="dist/assets/images/small-girl-1024x682.jpg" alt="" class="article__section-img">
-              </div>
+								<p>
+									It's not every day that one gets the chance to directly impact the course of
+									someone's life. Each act of kindness, every gesture of goodwill, resonates in ways
+									we might not always see or understand immediately.
+								</p>
+							</div>
+						</section>
 
-              <div class="article__section-area">
-                <h2 class="zeffy article__section-title">Your Support is Appreciated</h2>
+						<!--========== SECTION 2 ==========-->
+						<section class="article__section sect-2">
+							<div class="article__section-image">
+								<img
+									src="dist/assets/images/zach-vessels-mother-child.jpg"
+									alt=""
+									class="article__section-img" />
+							</div>
 
-                <p>It's not every day that one gets the chance to directly impact the course
-                  of someone's life. Each act of kindness, every gesture of goodwill, resonates in ways we might not
-                  always
-                  see or understand immediately.</p>
-              </div>
-            </section>
+							<div class="article__section-area">
+								<h2 class="zeffy article__section-title">You Make A Difference</h2>
 
-            <!--========== SECTION 2 ==========-->
-            <section class="article__section sect-2">
-              <div class="article__section-image">
-                <img src="dist/assets/images/zach-vessels-mother-child.jpg" alt="" class="article__section-img">
-              </div>
+								<p>
+									Every donation becomes part of a bigger movement — a wave of change, hope, and a
+									brighter future for Haiti. It's not just about the tangible resources or funds; it's
+									about building bridges, fostering communities, and ensuring that the young minds of
+									today have the tools they need to shape tomorrow.
+								</p>
+							</div>
+						</section>
 
-              <div class="article__section-area">
-                <h2 class="zeffy article__section-title">You Make A Difference</h2>
+						<!--========== SECTION 3 ==========-->
+						<section class="article__section sect-3">
+							<div class="article__section-image">
+								<img
+									src="dist/assets/images/mother-2427504_1920.jpg
+           "
+									alt=""
+									class="article__section-img" />
+							</div>
 
-                <p>
-                  Every donation becomes part of a bigger movement —
-                  a wave of change, hope, and a brighter future for Haiti. It's not just about the tangible resources
-                  or
-                  funds; it's about building bridges, fostering communities, and ensuring that the young minds of
-                  today
-                  have
-                  the tools they need to shape tomorrow.
-                </p>
-              </div>
-            </section>
+							<div class="article__section-area">
+								<h2 class="zeffy article__section-title">You Can Help.</h2>
+								<p>
+									Your donation goes directly to initiatives like clean water projects, educational
+									programs, disaster relief efforts, and community-building. With your support, we can
+									continue our mission to empower, educate, and uplift communities that need it the
+									most.
+								</p>
 
-            <!--========== SECTION 3 ==========-->
-            <section class="article__section sect-3">
-              <div class="article__section-image">
-                <img src="dist/assets/images/mother-2427504_1920.jpg
-           " alt="" class="article__section-img">
-              </div>
+								<p class="yellow-text">
+									Every contribution, no matter how small, has the power to transform lives in Haiti.
+								</p>
+							</div>
+						</section>
+					</div>
+				</article>
+			</div>
 
-              <div class="article__section-area">
-                <h2 class="zeffy article__section-title">You Can Help.</h2>
-                <p>
-                  Your donation goes directly to initiatives like clean water projects,
-                  educational
-                  programs, disaster relief efforts, and community-building. With your support, we can continue our
-                  mission to empower, educate, and uplift communities
-                  that need it the most.
-                </p>
+			<figure class="zeffy__image">
+				<img src="dist/assets/logos/zeffy.svg" alt="" class="zeffy__donate-image" />
+			</figure>
 
-                <p class="yellow-text">Every contribution, no matter how small, has the power to transform lives
-                  in Haiti.</p>
-              </div>
+			<section class="zeffy__donate">
+				<h2>Direct Impact with Every Donation</h2>
 
-            </section>
-          </div>
-        </article>
-      </div>
+				<p>
+					Each donation is a testament to your commitment to change, and we honor that trust by using every
+					cent effectively. Through our partnership with
+					<a href="https://zeffy.com/" class="text__link">Zeffy</a>
+					we ensure that 100% of your donation directly supports our initiatives in Haiti.
+				</p>
 
-      <figure class="zeffy__image">
-        <img src="dist/assets/logos/zeffy.svg" alt="" class="zeffy__donate-image">
-      </figure>
+				<p>
+					While our collaboration ensures that every cent of your primary donation directly aids our mission
+					in Haiti, any contribution to Zeffy helps sustain the platform we rely on. If you're comfortable,
+					consider leaving even a small amount to support their commitment to charities like ours. Your
+					generosity, both towards our cause and to Zeffy, is deeply appreciated.
 
-      <section class="zeffy__donate">
-        <h2>Direct Impact with Every Donation</h2>
+					<span class="bold">Additionally, all contributions are tax-deductible.</span>
+				</p>
 
+				<p class="receipt">Please keep your donation receipt for financial purposes.</p>
+			</section>
 
-        <p> Each donation is a testament to your commitment to change, and
-          we honor that trust by using every cent effectively. Through our partnership with
-          <a href="https://zeffy.com/" class="text__link">Zeffy</a>
-          we ensure that 100% of your donation
-          directly supports our initiatives in Haiti.
-        </p>
+			<div class="zeffy__donate-prompt">
+				<h2 class="donate-title">Join Our Mission</h2>
 
-        <p>
-          While our collaboration ensures that every cent of your primary donation directly aids our mission in
-          Haiti, any contribution to Zeffy helps sustain the platform we rely on. If you're comfortable, consider
-          leaving even a small amount to support their commitment to charities like ours. Your generosity, both
-          towards our cause and to Zeffy, is deeply appreciated.
+				<button
+					class="zeffy__donate-btn"
+					zeffy-form-link="https://www.zeffy.com/en-US/embed/donation-form/d63a0f78-eef6-4e29-8fb9-f90e4c7703a0?modal=true">
+					Donate
+					<i class="ri-hand-coin-fill"></i>
+				</button>
+			</div>
+		</main>
 
-          <span class="bold"> Additionally, all contributions are tax-deductible.</span>
-        </p>
+		<!--==================== FOOTER ====================-->
+		<footer class="footer">
+			<div class="footer__container container grid">
+				<div class="footer__content grid">
+					<div class="footer__info">
+						<div class="footer__plate">
+							<a href="index.html" class="footer__logo">
+								<div class="footer__logo-container flex">
+									<img src="dist/assets/images/haiti-5323242.png" alt="" class="footer__logo-img" />
+									<div class="footer__logo-text">
+										Haitian
+										<br />
+										Sensation
+										<br />
+										<span class="footer__logo-span">MISSION</span>
+									</div>
+								</div>
+							</a>
 
-        <p class="receipt">Please keep your donation receipt for
-          financial purposes.</p>
-      </section>
+							<p class="footer__description">Missionary Work Starts at Home</p>
+						</div>
 
-      <div class="zeffy__donate-prompt">
-        <h2 class="donate-title">Join Our Mission</h2>
+						<div class="footer__contact">
+							<ul class="footer__contact-list">
+								<li class="footer__contact-item">
+									<img
+										src="dist/assets/logos/Logo-White.png"
+										alt=""
+										class="footer__contact-hs_logo" />
+									<span class="footer__contact-value">
+										<a
+											href="https://haitiansensationcoffee.com/"
+											target="_blank"
+											class="footer__contact-link"
+											aria-label="Visit the Haitian Sensation Restaurant Website">
+											Haitian Sensation Restaurant
+										</a>
+									</span>
+								</li>
 
-        <button class="zeffy__donate-btn"
-          zeffy-form-link="https://www.zeffy.com/en-US/embed/donation-form/d63a0f78-eef6-4e29-8fb9-f90e4c7703a0?modal=true">
-          Donate
-          <i class="ri-hand-coin-fill"></i>
-        </button>
-      </div>
-    </main>
+								<li class="footer__contact-item">
+									<i class="ri-map-pin-line"></i>
+									<span class="footer__contact-value">
+										<a
+											href="https://maps.app.goo.gl/2fJai8uEyM8sqJM58"
+											target="_blank"
+											class="footer__contact-link"
+											aria-label="Address of Haitian Sensation Restaurant">
+											76 Shenango Ave, Sharon, PA 16146
+										</a>
+									</span>
+								</li>
 
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-      <div class="footer__container container  grid">
-        <div class="footer__content grid">
-          <div class="footer__info">
-            <div class="footer__plate">
-              <a href="index.html" class="footer__logo">
-                <div class="footer__logo-container flex">
-                  <img src="dist/assets/images/haiti-5323242.png" alt="" class="footer__logo-img">
-                  <div class="footer__logo-text">
-                    Haitian<br>
-                    Sensation<br>
-                    <span class="footer__logo-span">MISSION</span>
-                  </div>
-                </div>
-              </a>
+								<li class="footer__contact-item">
+									<i class="ri-mail-send-fill"></i>
+									<span class="footer__contact-value">
+										<a
+											href="mailto:joseph@haitiansensationmission.org"
+											target="_blank"
+											aria-label="Email Haitian Sensation Mission"
+											class="footer__contact-link">
+											joseph@haitiansensationmission.org
+										</a>
+									</span>
+								</li>
 
-              <p class="footer__description">
-                Missionary Work Starts at Home
-              </p>
-            </div>
+								<li class="footer__contact-item">
+									<i class="ri-phone-fill"></i>
+									<span class="footer__contact-value">
+										<a
+											href="tel:+17249835318"
+											class="footer__contact-link"
+											aria-label="Phone number of Haitian Sensation Mission">
+											(724) 983-5318
+										</a>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-            <div class="footer__contact">
-              <ul class="footer__contact-list">
+					<div class="footer__data grid">
+						<div>
+							<h3 class="footer__title">About</h3>
 
-                <li class="footer__contact-item">
-                  <img src="dist/assets/logos/Logo-White.png" alt="" class="footer__contact-hs_logo">
-                  <span class="footer__contact-value">
-                    <a href="https://haitiansensationcoffee.com/" target="_blank" class="footer__contact-link"
-                      aria-label="Visit the Haitian Sensation Restaurant Website">Haitian
-                      Sensation Restaurant
-                    </a>
-                  </span>
-                </li>
+							<ul class="footer__links">
+								<li>
+									<a
+										href="articles/our-story.html"
+										class="footer__link"
+										aria-label="Learn the story behind Haitian Sensation Mission">
+										Our Story
+									</a>
+								</li>
 
-                <li class="footer__contact-item">
-                  <i class="ri-map-pin-line"></i>
-                  <span class="footer__contact-value">
-                    <a href="https://maps.app.goo.gl/2fJai8uEyM8sqJM58" target="_blank" class="footer__contact-link"
-                      aria-label="Address of Haitian Sensation Restaurant">
-                      76 Shenango Ave,
-                      Sharon, PA 16146
-                    </a>
-                  </span>
-                </li>
+								<li>
+									<a
+										href="https://haitiansensationcoffee.com/gallery/"
+										class="footer__link"
+										aria-label="View our photo gallery">
+										Photos
+									</a>
+								</li>
 
-                <li class="footer__contact-item">
-                  <i class="ri-mail-send-fill"></i>
-                  <span class="footer__contact-value">
-                    <a href="mailto:joseph@haitiansensationmission.org" target="_blank"
-                      aria-label="Email Haitian Sensation Mission"
-                      class="footer__contact-link">joseph@haitiansensationmission.org</a>
-                  </span>
-                </li>
+								<li>
+									<a href="donate.html" class="footer__link">Donate</a>
+								</li>
 
-                <li class="footer__contact-item">
-                  <i class="ri-phone-fill"></i>
-                  <span class="footer__contact-value">
-                    <a href="tel:+17249835318" class="footer__contact-link"
-                      aria-label="Phone number of Haitian Sensation Mission">(724) 983-5318</a> </span>
-                </li>
-              </ul>
-            </div>
-          </div>
+								<li>
+									<a
+										href="articles/history.html"
+										class="footer__link"
+										aria-label="Learn more about Haiti's modern struggles">
+										Istwa (History)
+									</a>
+								</li>
+							</ul>
+						</div>
 
-          <div class="footer__data grid">
-            <div>
-              <h3 class="footer__title">About</h3>
-
-              <ul class="footer__links">
-                <li>
-                  <a href="articles/our-story.html" class="footer__link"
-                    aria-label="Learn the story behind Haitian Sensation Mission">Our Story</a>
-                </li>
-
-                <li>
-                  <a href="https://haitiansensationcoffee.com/gallery/" class="footer__link"
-                    aria-label="View our photo gallery">Photos</a>
-                </li>
-
-                <li>
-                  <a href="donate.html" class="footer__link">Donate</a>
-                </li>
-
-                <li>
-                  <a href="articles/history.html" class="footer__link"
-                    aria-label="Learn more about Haiti's modern struggles">Istwa
-                    (History)</a>
-                </li>
-
-              </ul>
-            </div>
-
-            <!-- <div>
+						<!-- <div>
               <h3 class="footer__title">Get Involved</h3>
 
               <ul class="footer__links">
@@ -329,76 +363,91 @@
               </ul>
             </div> -->
 
-            <div>
-              <h3 class="footer__title">Legal</h3>
+						<div>
+							<h3 class="footer__title">Legal</h3>
 
-              <ul class="footer__links">
-                <li>
-                  <a href="legal/privacy.html" class="footer__link" aria-label="View Privacy Policy">Privacy
-                    Policy</a>
-                </li>
+							<ul class="footer__links">
+								<li>
+									<a href="legal/privacy.html" class="footer__link" aria-label="View Privacy Policy">
+										Privacy Policy
+									</a>
+								</li>
 
-                <li>
-                  <a href="legal/terms.html" class="footer__link" aria-label="View Terms and Conditions">Terms &amp;
-                    Conditions</a>
-                </li>
+								<li>
+									<a
+										href="legal/terms.html"
+										class="footer__link"
+										aria-label="View Terms and Conditions">
+										Terms &amp; Conditions
+									</a>
+								</li>
 
-                <li>
-                  <a href="https://nickpoole.dev/" class="footer__link"
-                    aria-label="Website developed by Nick Poole. Visit his website at nick poole dot dev">Webmaster</a>
-                </li>
+								<li>
+									<a
+										href="https://nickpoole.dev/"
+										class="footer__link"
+										aria-label="Website developed by Nick Poole. Visit his website at nick poole dot dev">
+										Webmaster
+									</a>
+								</li>
 
-                <li>
-                  <a href="sitemap.xml" class="footer__link">Sitemap</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+								<li>
+									<a href="sitemap.xml" class="footer__link">Sitemap</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
-        <div class="footer__group">
-          <div class="footer__social">
-            <a href="https://www.facebook.com/haitiansensationcoffee/" target="_blank" class="footer__social-link"
-              aria-label="Visit Haitian Sensation on Facebook">
-              <i class="ri-facebook-box-fill"></i>
-            </a>
+				<div class="footer__group">
+					<div class="footer__social">
+						<a
+							href="https://www.facebook.com/haitiansensationcoffee/"
+							target="_blank"
+							class="footer__social-link"
+							aria-label="Visit Haitian Sensation on Facebook">
+							<i class="ri-facebook-box-fill"></i>
+						</a>
 
-            <a href="https://www.instagram.com/haitian_sensation_coffee/" target="_blank" class="footer__social-link"
-              aria-label="Check out Haitian Sensation on Instagram">
-              <i class="ri-instagram-fill"></i>
-            </a>
+						<a
+							href="https://www.instagram.com/haitian_sensation_coffee/"
+							target="_blank"
+							class="footer__social-link"
+							aria-label="Check out Haitian Sensation on Instagram">
+							<i class="ri-instagram-fill"></i>
+						</a>
 
-            <a href="https://twitter.com/haitijoecoffee" target="_blank" class="footer__social-link"
-              aria-label="Follow Haiti Joe Coffee on Twitter">
-              <i class="ri-twitter-x-fill"></i>
-            </a>
+						<a
+							href="https://twitter.com/haitijoecoffee"
+							target="_blank"
+							class="footer__social-link"
+							aria-label="Follow Haiti Joe Coffee on Twitter">
+							<i class="ri-twitter-x-fill"></i>
+						</a>
 
-            <a href="https://haitiansensationcoffee.com/" target="_blank" class="footer__social-link">
-              <img src="dist/assets/logos/Logo-White.png" alt="" class="footer__social-link hs-link"
-                aria-label="Visit the Haitian Sensation Restaurant Website">
-            </a>
-          </div>
+						<a href="https://haitiansensationcoffee.com/" target="_blank" class="footer__social-link">
+							<img
+								src="dist/assets/logos/Logo-White.png"
+								alt=""
+								class="footer__social-link hs-link"
+								aria-label="Visit the Haitian Sensation Restaurant Website" />
+						</a>
+					</div>
 
-          <span class="footer__copy">
-            &copy; 2023 Haitian Sensation Missions, Inc. - All Rights Reserved
-          </span>
+					<span class="footer__copy">&copy; 2025 Haitian Sensation Missions, Inc. - All Rights Reserved</span>
+				</div>
+			</div>
+		</footer>
 
-        </div>
+		<!--========== SCROLL UP ==========-->
+		<a href="#article" class="scrollup" id="scroll-up" aria-label="Return to the top of the page">
+			<i class="ri-arrow-up-fill"></i>
+		</a>
 
-      </div>
-    </footer>
+		<!--=============== SCROLLREVEAL ===============-->
+		<!-- <script src=""></script> -->
 
-    <!--========== SCROLL UP ==========-->
-    <a href="#article" class="scrollup" id="scroll-up" aria-label="Return to the top of the page">
-      <i class="ri-arrow-up-fill"></i>
-    </a>
-
-    <!--=============== SCROLLREVEAL ===============-->
-    <!-- <script src=""></script> -->
-
-
-    <!--=============== MAIN JS ===============-->
-    <script src="dist/js/main.js"></script>
-  </body>
-
+		<!--=============== MAIN JS ===============-->
+		<script src="dist/js/main.js"></script>
+	</body>
 </html>
