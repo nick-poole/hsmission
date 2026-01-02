@@ -44,6 +44,7 @@
 	</head>
 
 	<body>
+		<a href="#main" class="skip-link">Skip to main content</a>
 		<!--========== HEADER ==========-->
 		<header class="header" id="header">
 			<nav class="nav container">
@@ -68,19 +69,19 @@
 						<li class="nav__item"><a href="donate.html" class="nav__link">Donate</a></li>
 					</ul>
 
-					<div class="nav__close" id="nav-close">
+					<div class="nav__close" id="nav-close" aria-label="Close navigation menu">
 						<i class="ri-close-circle-line"></i>
 					</div>
 				</div>
 
-				<div class="nav__toggle" id="nav-toggle">
+				<div class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-controls="nav-menu">
 					<i class="ri-menu-3-line"></i>
 				</div>
 			</nav>
 		</header>
 
 		<!--========== MAIN ==========-->
-		<main class="main">
+		<main class="main" id="main">
 			<!--==================== HOME ====================-->
 			<section class="home section" id="index-home">
 				<img src="dist/assets/images/topsphere-media-2400.jpg" class="home__bg" />
@@ -195,7 +196,7 @@
 
 				<ul class="mission__container container grid">
 					<li class="mission__item">
-						<a href="articles/natural-disasters.html" class="mission__link" aria-label="">
+						<a href="articles/natural-disasters.html" class="mission__link" aria-label="Learn more about disaster relief efforts in Haiti">
 							<div class="mission__image">
 								<img src="dist/assets/images/2019trip-hatian-boy.jpg" alt="" class="mission__img" />
 								<div class="mission__shadow"></div>
@@ -221,7 +222,7 @@
 					</li>
 
 					<li class="mission__item">
-						<a href="articles/wells-to-wellness.html" class="mission__link" aria-label="">
+						<a href="articles/wells-to-wellness.html" class="mission__link" aria-label="Learn more about clean water initiatives in Haiti">
 							<div class="mission__image">
 								<img src="dist/assets/images/drinking-water.jpg" alt="" class="mission__img" />
 								<div class="mission__shadow"></div>
@@ -247,7 +248,7 @@
 					</li>
 
 					<li class="mission__item">
-						<a href="articles/education.html" class="mission__link" aria-label="">
+						<a href="articles/education.html" class="mission__link" aria-label="Learn more about educational outreach programs in Haiti">
 							<div class="mission__image">
 								<img src="dist/assets/images/classroom-1024x682.jpg" alt="" class="mission__img" />
 								<div class="mission__shadow"></div>
@@ -324,10 +325,10 @@
 
 			<!--==================== JOIN ====================-->
 			<section class="join section">
-				<h1 class="section__title">Be the Change Haiti Needs</h1>
+				<h2 class="section__title">Be the Change Haiti Needs</h2>
 				<div class="join__container container grid">
 					<div class="join__data">
-						<h2 class="join__section-title">Your Mission Starts Here</h2>
+						<h3 class="join__section-title">Your Mission Starts Here</h3>
 
 						<p class="join__description">
 							Your support transforms lives in Haiti.
@@ -378,7 +379,7 @@
 								<li class="footer__contact-item">
 									<img
 										src="dist/assets/logos/Logo-White.png"
-										alt=""
+										alt="Haitian Sensation Restaurant logo"
 										class="footer__contact-hs_logo" />
 									<span class="footer__contact-value">
 										<a
@@ -456,7 +457,7 @@
 								</li>
 
 								<li>
-									<a href="donate.html" class="footer__link">Donate</a>
+									<a href="donate.html" class="footer__link" aria-label="Make a donation to support our mission">Donate</a>
 								</li>
 
 								<li>
@@ -464,7 +465,7 @@
 										href="articles/history.html"
 										class="footer__link"
 										aria-label="Learn more about Haiti's modern struggles">
-										Istwa (History)
+										<span lang="ht">Istwa</span> (History)
 									</a>
 								</li>
 							</ul>
@@ -522,7 +523,7 @@
 								</li>
 
 								<li>
-									<a href="sitemap.xml" class="footer__link">Sitemap</a>
+									<a href="sitemap.xml" class="footer__link" aria-label="View website sitemap">Sitemap</a>
 								</li>
 							</ul>
 						</div>
@@ -558,7 +559,7 @@
 						<a href="https://haitiansensationcoffee.com/" target="_blank" class="footer__social-link">
 							<img
 								src="dist/assets/logos/Logo-White.png"
-								alt=""
+								alt="Haitian Sensation Restaurant logo"
 								class="footer__social-link hs-link"
 								aria-label="Visit the Haitian Sensation Restaurant Website" />
 						</a>
