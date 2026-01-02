@@ -1,41 +1,56 @@
 /*===== REUSABLE CSS CLASSES =====*/
 .container {
-    max-width: 1120px;
-    margin-inline: 1.5rem;
+	max-width: 1120px;
+	margin-inline: 1.5rem;
 }
 
 .grid {
-    display: grid;
-    gap: 1.5rem;
+	display: grid;
+	gap: 1.5rem;
 }
 
 .flex {
-    display: flex;
+	display: flex;
 }
 
 .section {
-    padding-block: 5rem 1rem;
+	padding-block: 5rem 1rem;
 }
 
 .section__title {
-    text-align: center;
-    font-size: var(--h1-font-size);
-    margin-bottom: 1.5rem;
+	text-align: center;
+	font-size: var(--h1-font-size);
+	margin-bottom: 1.5rem;
 }
 
 .bold {
-    font-weight: var(--font-semi-bold);
+	font-weight: var(--font-semi-bold);
 }
 
 #aside-link {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .text-bold.aside-link {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* for ScrollReveal */
 .main {
-    overflow: hidden;
+	overflow: hidden;
+}
+
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #000;
+	color: #fff;
+	padding: 8px 16px;
+	text-decoration: none;
+	z-index: 10000;
+}
+
+.skip-link:focus {
+	top: 0;
 }
