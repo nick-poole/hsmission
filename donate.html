@@ -45,6 +45,7 @@
 	</head>
 
 	<body id="donationPage">
+		<a href="#main" class="skip-link">Skip to main content</a>
 		<!--========== HEADER ==========-->
 		<header class="header" id="header">
 			<nav class="nav container">
@@ -80,19 +81,19 @@
 						</li>
 					</ul>
 
-					<div class="nav__close" id="nav-close">
+					<div class="nav__close" id="nav-close" aria-label="Close navigation menu">
 						<i class="ri-close-circle-line"></i>
 					</div>
 				</div>
 
-				<div class="nav__toggle" id="nav-toggle">
+				<div class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-controls="nav-menu">
 					<i class="ri-menu-3-line"></i>
 				</div>
 			</nav>
 		</header>
 
 		<!--========== MAIN ==========-->
-		<main class="main">
+		<main class="main" id="main">
 			<!--========== Article ==========-->
 			<div class="article section" id="article">
 				<!--========== HERO BG IMG ==========-->
@@ -214,6 +215,7 @@
 
 				<button
 					class="zeffy__donate-btn"
+					aria-label="Make a donation to Haitian Sensation Mission through Zeffy"
 					zeffy-form-link="https://www.zeffy.com/en-US/embed/donation-form/d63a0f78-eef6-4e29-8fb9-f90e4c7703a0?modal=true">
 					Donate
 					<i class="ri-hand-coin-fill"></i>
@@ -248,7 +250,7 @@
 								<li class="footer__contact-item">
 									<img
 										src="dist/assets/logos/Logo-White.png"
-										alt=""
+										alt="Haitian Sensation Restaurant logo"
 										class="footer__contact-hs_logo" />
 									<span class="footer__contact-value">
 										<a
@@ -326,7 +328,7 @@
 								</li>
 
 								<li>
-									<a href="donate.html" class="footer__link">Donate</a>
+									<a href="donate.html" class="footer__link" aria-label="Make a donation to support our mission">Donate</a>
 								</li>
 
 								<li>
@@ -334,7 +336,7 @@
 										href="articles/history.html"
 										class="footer__link"
 										aria-label="Learn more about Haiti's modern struggles">
-										Istwa (History)
+										<span lang="ht">Istwa</span> (History)
 									</a>
 								</li>
 							</ul>
@@ -392,7 +394,7 @@
 								</li>
 
 								<li>
-									<a href="sitemap.xml" class="footer__link">Sitemap</a>
+									<a href="sitemap.xml" class="footer__link" aria-label="View website sitemap">Sitemap</a>
 								</li>
 							</ul>
 						</div>
@@ -428,7 +430,7 @@
 						<a href="https://haitiansensationcoffee.com/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="footer__social-link">
 							<img
 								src="dist/assets/logos/Logo-White.png"
-								alt=""
+								alt="Haitian Sensation Restaurant logo"
 								class="footer__social-link hs-link"
 								aria-label="Visit the Haitian Sensation Restaurant Website" />
 						</a>
