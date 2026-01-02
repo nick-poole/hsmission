@@ -48,3 +48,6 @@ Thumbs.db
 # dotenv environment variable files
 .env
 .env.test
+
+# Temporary articles
+articles/temp-article.html
