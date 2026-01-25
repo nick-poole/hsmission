@@ -87,4 +87,345 @@
             -o-border-radius: 10px;
         }
     }
+
+    /*=============== TRUST BADGES ===============*/
+    &__trust-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin: 1.5rem 0;
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        font-size: var(--small-font-size);
+        color: #fff;
+
+        i {
+            color: var(--hf-yellow);
+        }
+    }
+
+    &__hero-btn {
+        margin-top: 1rem;
+        background-color: var(--hf-red);
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #b80628;
+        }
+    }
+
+    /*=============== SECTION TITLE ===============*/
+    &__section-title {
+        font-size: var(--h1-font-size);
+        color: var(--hf-blue);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    &__section-intro {
+        text-align: center;
+        color: var(--hf-blue);
+        max-width: 700px;
+        margin: 0 auto 2rem;
+    }
+
+    /*=============== IMPACT SECTION ===============*/
+    &__impact {
+        background-color: #fff;
+        padding: 4rem 1.5rem;
+    }
+
+    &__impact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__impact-card {
+        background-color: #f8f9fa;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        border-left: 4px solid var(--hf-yellow);
+
+        h3 {
+            color: var(--hf-blue);
+            margin-bottom: 0.75rem;
+            font-size: var(--h3-font-size);
+        }
+
+        p {
+            color: #555;
+            font-size: var(--normal-font-size);
+            line-height: 1.6;
+        }
+    }
+
+    &__impact-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--hf-blue);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+
+        i {
+            font-size: 1.75rem;
+            color: var(--hf-yellow);
+        }
+    }
+
+    &__cta-wrapper {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    &__mid-btn,
+    &__final-btn {
+        background-color: var(--hf-red);
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #b80628;
+        }
+    }
+
+    /*=============== TRUST SECTION ===============*/
+    &__trust {
+        background-color: var(--hf-yellow);
+        padding: 4rem 1.5rem;
+    }
+
+    &__trust-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__trust-text {
+        p {
+            color: var(--hf-blue);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+
+            a {
+                color: var(--hf-blue);
+                font-weight: var(--font-semi-bold);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__trust-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            color: var(--hf-blue);
+            font-weight: var(--font-medium);
+
+            i {
+                color: var(--hf-green);
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &__trust-image {
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    /*=============== FAQ SECTION ===============*/
+    &__faq {
+        background-color: #fff;
+        padding: 4rem 1.5rem;
+    }
+
+    &__faq-grid {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__faq-item {
+        border-bottom: 1px solid #e0e0e0;
+
+        &[open] {
+            summary i {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 0;
+        cursor: pointer;
+        list-style: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        span {
+            color: var(--hf-blue);
+            font-weight: var(--font-semi-bold);
+            font-size: var(--normal-font-size);
+            padding-right: 1rem;
+        }
+
+        i {
+            color: var(--hf-red);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    &__faq-answer {
+        padding: 0 0 1.25rem 0;
+
+        p {
+            color: #555;
+            line-height: 1.7;
+        }
+    }
+
+    /*=============== LEARN MORE / INTERNAL LINKS ===============*/
+    &__learn-more {
+        background-color: var(--hf-blue);
+        padding: 4rem 1.5rem;
+
+        .donate__section-title {
+            color: #fff;
+        }
+
+        > .container > p {
+            color: var(--text-color-light);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__links-list {
+        list-style: none;
+        padding: 0;
+        max-width: 600px;
+        margin: 0 auto;
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            i {
+                color: var(--hf-yellow);
+            }
+        }
+    }
+
+    /*=============== FINAL CTA ===============*/
+    &__final-cta {
+        background-color: var(--hf-red);
+        padding: 4rem 1.5rem;
+        text-align: center;
+
+        h2 {
+            color: #fff;
+            font-size: var(--h1-font-size);
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .donate__final-btn {
+            background-color: #fff;
+            color: var(--hf-red);
+
+            &:hover {
+                background-color: var(--hf-yellow);
+                color: var(--hf-blue);
+            }
+        }
+    }
+}
+
+/*=============== RESPONSIVE - DONATE PAGE ===============*/
+@media screen and (min-width: 768px) {
+    .donate {
+        &__impact-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__trust-content {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__trust-text {
+            .donate__section-title {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .donate {
+        &__impact-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &__impact,
+        &__trust,
+        &__faq,
+        &__learn-more,
+        &__final-cta {
+            padding: 5rem 2rem;
+        }
+    }
 }
