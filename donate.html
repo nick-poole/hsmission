@@ -3,8 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="robots" content="index, follow" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+		<link rel="preconnect" href="https://zeffy-scripts.s3.ca-central-1.amazonaws.com" crossorigin />
+		<link rel="preconnect" href="https://www.zeffy.com" crossorigin />
 
 		<title>Donate to Help Haiti | Clean Water & Education | Haitian Sensation Mission</title>
 
@@ -47,13 +52,14 @@
 		<link rel="canonical" href="https://haitiansensationmission.org/donate.html" />
 
 		<!--=============== REMIXICONS ===============-->
-		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-		<!--=============== ZEFFY ===============-->
-		<script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
 
 		<!-- ===== CSS ===== -->
 		<link rel="stylesheet" href="dist/css/main.output.css" />
+
+		<!--=============== ZEFFY ===============-->
+		<script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js" defer></script>
 
 		<!--========== STRUCTURED DATA - ORGANIZATION ==========-->
 		<script type="application/ld+json">
@@ -144,8 +150,8 @@
 		<a href="#main" class="skip-link">Skip to main content</a>
 		<!--========== HEADER ==========-->
 		<header class="header" id="header">
-			<nav class="nav container">
-				<a href="index.html" class="nav__logo">
+			<nav class="nav container" aria-label="Primary">
+				<a href="index.html" class="nav__logo" aria-label="Haitian Sensation Mission home">
 					<div class="nav__logo-container flex">
 						<img src="dist/assets/images/haiti-5323242.png" alt="" class="nav__logo-img" />
 						<div>
@@ -173,23 +179,23 @@
 						</li>
 
 						<li class="nav__item">
-							<a href="donate.html" class="nav__link active-link">Donate</a>
+							<a href="donate.html" class="nav__link active-link" aria-current="page">Donate</a>
 						</li>
 					</ul>
 
 					<button type="button" class="nav__close" id="nav-close" aria-label="Close navigation menu">
-						<i class="ri-close-circle-line"></i>
+						<i class="ri-close-circle-line" aria-hidden="true"></i>
 					</button>
 				</div>
 
 				<button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-controls="nav-menu">
-					<i class="ri-menu-3-line"></i>
+					<i class="ri-menu-3-line" aria-hidden="true"></i>
 				</button>
 			</nav>
 		</header>
 
 		<!--========== MAIN ==========-->
-		<main class="main" id="main">
+		<main class="main" id="main" tabindex="-1">
 			<!--========== HERO SECTION ==========-->
 			<div class="article section" id="article">
 				<!--========== HERO BG IMG ==========-->
@@ -210,26 +216,27 @@
 							<!--========== TRUST BADGES ==========-->
 							<div class="donate__trust-badges">
 								<span class="donate__badge">
-									<i class="ri-shield-check-fill"></i>
+									<i class="ri-shield-check-fill" aria-hidden="true"></i>
 									501(c)(3) Nonprofit
 								</span>
 								<span class="donate__badge">
-									<i class="ri-hand-heart-fill"></i>
+									<i class="ri-hand-heart-fill" aria-hidden="true"></i>
 									100% Goes to Mission
 								</span>
 								<span class="donate__badge">
-									<i class="ri-lock-fill"></i>
+									<i class="ri-lock-fill" aria-hidden="true"></i>
 									Secure Donation
 								</span>
 							</div>
 
 							<!--========== CTA #1 - ABOVE THE FOLD ==========-->
 							<button
+								type="button"
 								class="button donate__hero-btn"
 								aria-label="Donate now to support Haiti through Haitian Sensation Mission"
 								zeffy-form-link="https://www.zeffy.com/en-US/embed/donation-form/d63a0f78-eef6-4e29-8fb9-f90e4c7703a0?modal=true">
 								Donate Now to Support Haiti
-								<i class="ri-hand-coin-fill"></i>
+								<i class="ri-hand-coin-fill" aria-hidden="true"></i>
 							</button>
 						</div>
 
@@ -251,7 +258,7 @@
 						<!--========== IMPACT CARD 1 ==========-->
 						<div class="donate__impact-card">
 							<div class="donate__impact-icon">
-								<i class="ri-drop-fill"></i>
+								<i class="ri-drop-fill" aria-hidden="true"></i>
 							</div>
 							<h3>Clean Water Access</h3>
 							<p>
@@ -263,7 +270,7 @@
 						<!--========== IMPACT CARD 2 ==========-->
 						<div class="donate__impact-card">
 							<div class="donate__impact-icon">
-								<i class="ri-book-open-fill"></i>
+								<i class="ri-book-open-fill" aria-hidden="true"></i>
 							</div>
 							<h3>Educational Programs</h3>
 							<p>
@@ -275,7 +282,7 @@
 						<!--========== IMPACT CARD 3 ==========-->
 						<div class="donate__impact-card">
 							<div class="donate__impact-icon">
-								<i class="ri-heart-pulse-fill"></i>
+								<i class="ri-heart-pulse-fill" aria-hidden="true"></i>
 							</div>
 							<h3>Disaster Relief</h3>
 							<p>
@@ -287,7 +294,7 @@
 						<!--========== IMPACT CARD 4 ==========-->
 						<div class="donate__impact-card">
 							<div class="donate__impact-icon">
-								<i class="ri-community-fill"></i>
+								<i class="ri-community-fill" aria-hidden="true"></i>
 							</div>
 							<h3>Community Empowerment</h3>
 							<p>
@@ -300,11 +307,12 @@
 					<!--========== CTA #2 - MID PAGE ==========-->
 					<div class="donate__cta-wrapper">
 						<button
+							type="button"
 							class="button donate__mid-btn"
 							aria-label="Make a donation to support Haiti relief and education"
 							zeffy-form-link="https://www.zeffy.com/en-US/embed/donation-form/d63a0f78-eef6-4e29-8fb9-f90e4c7703a0?modal=true">
 							Make a Donation Today
-							<i class="ri-hand-coin-fill"></i>
+							<i class="ri-hand-coin-fill" aria-hidden="true"></i>
 						</button>
 					</div>
 				</div>
@@ -326,23 +334,23 @@
 
 							<ul class="donate__trust-list">
 								<li>
-									<i class="ri-checkbox-circle-fill"></i>
+									<i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
 									Registered 501(c)(3) nonprofit organization
 								</li>
 								<li>
-									<i class="ri-checkbox-circle-fill"></i>
+									<i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
 									EIN: 82-3623088
 								</li>
 								<li>
-									<i class="ri-checkbox-circle-fill"></i>
+									<i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
 									100% of donations fund our programs
 								</li>
 								<li>
-									<i class="ri-checkbox-circle-fill"></i>
+									<i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
 									Secure payment processing via Zeffy
 								</li>
 								<li>
-									<i class="ri-checkbox-circle-fill"></i>
+									<i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
 									Tax-deductible contributions
 								</li>
 							</ul>
@@ -382,11 +390,12 @@
 				<h2 class="donate-title">Complete Your Donation</h2>
 
 				<button
+					type="button"
 					class="zeffy__donate-btn"
 					aria-label="Complete your donation to Haitian Sensation Mission through Zeffy"
 					zeffy-form-link="https://www.zeffy.com/en-US/embed/donation-form/d63a0f78-eef6-4e29-8fb9-f90e4c7703a0?modal=true">
 					Donate Now
-					<i class="ri-hand-coin-fill"></i>
+					<i class="ri-hand-coin-fill" aria-hidden="true"></i>
 				</button>
 			</div>
 
@@ -399,7 +408,7 @@
 						<details class="donate__faq-item">
 							<summary class="donate__faq-question">
 								<span>Is my donation tax-deductible?</span>
-								<i class="ri-add-line"></i>
+								<i class="ri-add-line" aria-hidden="true"></i>
 							</summary>
 							<div class="donate__faq-answer">
 								<p>
@@ -413,7 +422,7 @@
 						<details class="donate__faq-item">
 							<summary class="donate__faq-question">
 								<span>How is my donation used?</span>
-								<i class="ri-add-line"></i>
+								<i class="ri-add-line" aria-hidden="true"></i>
 							</summary>
 							<div class="donate__faq-answer">
 								<p>
@@ -427,7 +436,7 @@
 						<details class="donate__faq-item">
 							<summary class="donate__faq-question">
 								<span>Is my payment information secure?</span>
-								<i class="ri-add-line"></i>
+								<i class="ri-add-line" aria-hidden="true"></i>
 							</summary>
 							<div class="donate__faq-answer">
 								<p>
@@ -441,7 +450,7 @@
 						<details class="donate__faq-item">
 							<summary class="donate__faq-question">
 								<span>Can I set up a recurring monthly donation?</span>
-								<i class="ri-add-line"></i>
+								<i class="ri-add-line" aria-hidden="true"></i>
 							</summary>
 							<div class="donate__faq-answer">
 								<p>
@@ -466,31 +475,31 @@
 					<ul class="donate__links-list">
 						<li>
 							<a href="articles/our-story.html">
-								<i class="ri-arrow-right-fill"></i>
+								<i class="ri-arrow-right-fill" aria-hidden="true"></i>
 								Read our story and how the mission began
 							</a>
 						</li>
 						<li>
 							<a href="articles/wells-to-wellness.html">
-								<i class="ri-arrow-right-fill"></i>
+								<i class="ri-arrow-right-fill" aria-hidden="true"></i>
 								Discover our clean water initiatives in Haiti
 							</a>
 						</li>
 						<li>
 							<a href="articles/education.html">
-								<i class="ri-arrow-right-fill"></i>
+								<i class="ri-arrow-right-fill" aria-hidden="true"></i>
 								Learn about educational outreach programs
 							</a>
 						</li>
 						<li>
 							<a href="articles/natural-disasters.html">
-								<i class="ri-arrow-right-fill"></i>
+								<i class="ri-arrow-right-fill" aria-hidden="true"></i>
 								Understand Haiti's ongoing disaster recovery
 							</a>
 						</li>
 						<li>
 							<a href="articles/history.html">
-								<i class="ri-arrow-right-fill"></i>
+								<i class="ri-arrow-right-fill" aria-hidden="true"></i>
 								Explore Haiti's history and why support matters
 							</a>
 						</li>
@@ -505,11 +514,12 @@
 					<p>Your donation today creates lasting change for Haitian communities.</p>
 
 					<button
+						type="button"
 						class="button donate__final-btn"
 						aria-label="Help Haiti by making a donation now"
 						zeffy-form-link="https://www.zeffy.com/en-US/embed/donation-form/d63a0f78-eef6-4e29-8fb9-f90e4c7703a0?modal=true">
 						Help Haiti – Donate Now
-						<i class="ri-hand-coin-fill"></i>
+						<i class="ri-hand-coin-fill" aria-hidden="true"></i>
 					</button>
 				</div>
 			</section>
@@ -557,26 +567,18 @@
 								</li>
 
 								<li class="footer__contact-item">
-									<i class="ri-mail-send-fill"></i>
+									<i class="ri-mail-send-fill" aria-hidden="true"></i>
 									<span class="footer__contact-value">
-										<a
-											href="mailto:joseph@haitiansensationmission.org"
-											target="_blank"
-											rel="noopener noreferrer"
-											aria-label="Email Haitian Sensation Mission"
-											class="footer__contact-link">
+										<a href="mailto:joseph@haitiansensationmission.org" class="footer__contact-link">
 											joseph@haitiansensationmission.org
 										</a>
 									</span>
 								</li>
 
 								<li class="footer__contact-item">
-									<i class="ri-phone-fill"></i>
+									<i class="ri-phone-fill" aria-hidden="true"></i>
 									<span class="footer__contact-value">
-										<a
-											href="tel:+17248130241"
-											class="footer__contact-link"
-											aria-label="Phone number of Haitian Sensation Mission">
+										<a href="tel:+17248130241" class="footer__contact-link">
 											(724) 813-0241
 										</a>
 									</span>
@@ -591,34 +593,19 @@
 
 							<ul class="footer__links">
 								<li>
-									<a
-										href="articles/our-story.html"
-										class="footer__link"
-										aria-label="Learn the story behind Haitian Sensation Mission">
-										Our Story
-									</a>
+									<a href="articles/our-story.html" class="footer__link">Our Story</a>
 								</li>
 
 								<li>
-									<a
-										href="https://haitiansensationcoffee.com/gallery/"
-										class="footer__link"
-										aria-label="View our photo gallery">
-										Photos
-									</a>
+									<a href="https://haitiansensationcoffee.com/gallery/" class="footer__link" target="_blank" rel="noopener noreferrer">Photos</a>
 								</li>
 
 								<li>
-									<a href="donate.html" class="footer__link" aria-label="Make a donation to support our mission">Donate</a>
+									<a href="donate.html" class="footer__link">Donate</a>
 								</li>
 
 								<li>
-									<a
-										href="articles/history.html"
-										class="footer__link"
-										aria-label="Learn more about Haiti's modern struggles">
-										<span lang="ht">Istwa</span> (History)
-									</a>
+									<a href="articles/history.html" class="footer__link"><span lang="ht">Istwa</span> (History)</a>
 								</li>
 							</ul>
 						</div>
@@ -628,31 +615,19 @@
 
 							<ul class="footer__links">
 								<li>
-									<a href="legal/privacy.html" class="footer__link" aria-label="View Privacy Policy">
-										Privacy Policy
-									</a>
+									<a href="legal/privacy.html" class="footer__link">Privacy Policy</a>
 								</li>
 
 								<li>
-									<a
-										href="legal/terms.html"
-										class="footer__link"
-										aria-label="View Terms and Conditions">
-										Terms &amp; Conditions
-									</a>
+									<a href="legal/terms.html" class="footer__link">Terms &amp; Conditions</a>
 								</li>
 
 								<li>
-									<a
-										href="https://nickpoole.dev/"
-										class="footer__link"
-										aria-label="Website developed by Nick Poole. Visit his website at nick poole dot dev">
-										Webmaster
-									</a>
+									<a href="https://nickpoole.dev/" class="footer__link" target="_blank" rel="noopener noreferrer">Webmaster</a>
 								</li>
 
 								<li>
-									<a href="sitemap.xml" class="footer__link" aria-label="View website sitemap">Sitemap</a>
+									<a href="sitemap.xml" class="footer__link">Sitemap</a>
 								</li>
 							</ul>
 						</div>
@@ -667,7 +642,7 @@
 							rel="noopener noreferrer"
 							class="footer__social-link"
 							aria-label="Visit Haitian Sensation on Facebook">
-							<i class="ri-facebook-box-fill"></i>
+							<i class="ri-facebook-box-fill" aria-hidden="true"></i>
 						</a>
 
 						<a
@@ -676,7 +651,7 @@
 							rel="noopener noreferrer"
 							class="footer__social-link"
 							aria-label="Follow Haiti Joe Coffee on Twitter">
-							<i class="ri-twitter-x-fill"></i>
+							<i class="ri-twitter-x-fill" aria-hidden="true"></i>
 						</a>
 
 						<a
@@ -691,17 +666,17 @@
 						</a>
 					</div>
 
-					<span class="footer__copy">&copy; 2026 Haitian Sensation Missions, Inc. - All Rights Reserved</span>
+					<span class="footer__copy">&copy; <span id="current-year">2026</span> Haitian Sensation Missions, Inc. - All Rights Reserved</span>
 				</div>
 			</div>
 		</footer>
 
 		<!--========== SCROLL UP ==========-->
-		<a href="#article" class="scrollup" id="scroll-up" aria-label="Return to the top of the page">
-			<i class="ri-arrow-up-fill"></i>
-		</a>
+		<button type="button" class="scrollup" id="scroll-up" aria-label="Return to the top of the page">
+			<i class="ri-arrow-up-fill" aria-hidden="true"></i>
+		</button>
 
 		<!--=============== MAIN JS ===============-->
-		<script src="dist/js/main.js"></script>
+		<script src="dist/js/main.js" defer></script>
 	</body>
 </html>
