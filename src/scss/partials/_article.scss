@@ -49,6 +49,7 @@
     &__subtitle {
         font-size: var(--h3-font-size);
         margin: 0 0 0.5rem 0;
+        color: #ffffff;
     }
 
     &__title {
@@ -164,6 +165,28 @@
                 }
             }
         }
+    }
+}
+
+/*========== Breadcrumb ==========*/
+.breadcrumb {
+    font-size: var(--small-font-size);
+    margin: 0 0 0.75rem 0;
+    color: var(--text-color-light);
+
+    a {
+        color: var(--hf-yellow);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    span[aria-hidden="true"] {
+        margin: 0 0.35rem;
+        color: var(--text-color);
     }
 }
 

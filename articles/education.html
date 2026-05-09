@@ -47,7 +47,7 @@
 			content="https://haitiansensationmission.org/dist/assets/images/zach-vessels-school-girls.jpg" />
 
 		<!--========== CANONICAL ==========-->
-		<link rel="canonical" href="https://haitiansensationmission.org/articles/education.html" />
+		<link rel="canonical" href="https://haitiansensationmission.org/articles/education" />
 
 		<!--=============== REMIXICONS ===============-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap" />
@@ -94,6 +94,28 @@
 				"Educational outreach",
 				"Disaster relief",
 				"Community development"
+			]
+		}
+		</script>
+
+		<!--========== STRUCTURED DATA - BREADCRUMB ==========-->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://haitiansensationmission.org/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Education",
+					"item": "https://haitiansensationmission.org/articles/education"
+				}
 			]
 		}
 		</script>
@@ -159,6 +181,9 @@
 					<div class="article__data grid">
 						<div class="article__data-group">
 							<p class="article__subtitle">Bridging Gaps, Building Futures</p>
+							<nav aria-label="Breadcrumb" class="breadcrumb">
+								<a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span>Education</span>
+							</nav>
 							<h1 class="article__title">Educational Outreach</h1>
 							<p class="article__description">
 								Education in Haiti is a fragile lifeline. Every classroom we support, every meal we
@@ -289,7 +314,7 @@
 									Hunger in Haitian schools is not an isolated issue. Alarmingly, nearly half of
 									Haiti's population is undernourished,
 									<a href="https://www.wfpusa.org/countries/haiti/" target="_blank" rel="noopener noreferrer">
-										as reported by the World Food Programme<span class="sr-only"> (opens in new tab)</span>
+										as reported by the World Food Programme<span class="visually-hidden"> (opens in new tab)</span>
 									</a>
 									. For many students, the meal provided at school is their only source of nutrition.
 									However, there's a glimmer of hope. With just a few cents—the equivalent of pocket
