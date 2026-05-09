@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-User-agent: facebookexternalhit
-Allow: /
-
 Sitemap: https://haitiansensationmission.org/sitemap.xml

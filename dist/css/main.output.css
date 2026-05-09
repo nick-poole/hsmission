@@ -594,36 +594,36 @@ img {
 	-ms-transform: scale(1.2);
 	-o-transform: scale(1.2);
 }
-#ourStory .article__bg {
+#our-story-page .article__bg {
 	-o-object-position: 35% 50%;
 	object-position: 35% 50%;
 }
-#cleanWater .article__bg {
+#wells-to-wellness-page .article__bg {
 	-o-object-position: 0% 50%;
 	object-position: 0% 50%;
 }
-#education-body .article__bg {
+#education-page .article__bg {
 	-o-object-position: 60% 50%;
 	object-position: 60% 50%;
 }
-#donationPage .article__bg {
+#donate-page .article__bg {
 	-o-object-position: 40% 50%;
 	object-position: 40% 50%;
 }
-#cleanWater .article__bg,
-#education-body .article__bg {
+#wells-to-wellness-page .article__bg,
+#education-page .article__bg {
 	top: 0rem;
 }
-#cleanWater .article__data,
-#education-body .article__data {
+#wells-to-wellness-page .article__data,
+#education-page .article__data {
 	margin-top: 30rem;
 }
-#cleanWater .header,
-#education-body .header {
+#wells-to-wellness-page .header,
+#education-page .header {
 	background-color: var(--container-color);
 }
-#cleanWater .blur-header::after,
-#education-body .blur-header::after {
+#wells-to-wellness-page .blur-header::after,
+#education-page .blur-header::after {
 	background-color: var(--container-color);
 	-webkit-backdrop-filter: none;
 	backdrop-filter: none;
@@ -723,19 +723,19 @@ img {
 	color: #fff;
 	text-decoration: none;
 }
-#cleanWater #clean-water {
+#wells-to-wellness-page #clean-water {
 	display: none;
 }
 #natural-disasters #earthquake {
 	display: none;
 }
-#education-body #education {
+#education-page #education {
 	display: none;
 }
-#ourStory #our-story {
+#our-story-page #our-story {
 	display: none;
 }
-#istwa #join {
+#history-page #join {
 	display: none;
 }
 .related {
@@ -763,7 +763,7 @@ img {
 	display: block;
 	text-decoration: none;
 	color: #000;
-	border: 5px solid var(--lib-blue);
+	border: 5px solid var(--hf-blue-light, #004a8f);
 	background-color: var(--hf-blue);
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -1324,35 +1324,35 @@ img {
 	color: var(--text-color-light);
 	text-align: center;
 }
-#TermsPage,
-#PrivacyPage {
+#terms-page,
+#privacy-page {
 	background-color: var(--body-color);
 }
-#TermsPage header,
-#PrivacyPage header {
+#terms-page header,
+#privacy-page header {
 	margin: 1rem;
 }
-#TermsPage main,
-#PrivacyPage main {
+#terms-page main,
+#privacy-page main {
 	max-width: 80%;
 	margin: 0 auto;
 }
-#TermsPage h1,
-#TermsPage h2,
-#TermsPage p,
-#TermsPage li,
-#TermsPage hr,
-#TermsPage a,
-#PrivacyPage h1,
-#PrivacyPage h2,
-#PrivacyPage p,
-#PrivacyPage li,
-#PrivacyPage hr,
-#PrivacyPage a {
+#terms-page h1,
+#terms-page h2,
+#terms-page p,
+#terms-page li,
+#terms-page hr,
+#terms-page a,
+#privacy-page h1,
+#privacy-page h2,
+#privacy-page p,
+#privacy-page li,
+#privacy-page hr,
+#privacy-page a {
 	margin-bottom: 1rem;
 }
-#TermsPage a,
-#PrivacyPage a {
+#terms-page a,
+#privacy-page a {
 	color: var(--hf-yellow);
 }
 @media screen and (max-width: 340px) {

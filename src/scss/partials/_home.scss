@@ -9,7 +9,6 @@
         width: 100%;
         height: 650px;
         object-fit: cover;
-
         object-position: 55% 50%;
     }
 
@@ -67,27 +66,7 @@
 
         &-img {
             width: 100%;
-
-            // transition: transform 0.4s;
-            // -webkit-transition: transform 0.4s;
-            // -moz-transition: transform 0.4s;
-            // -ms-transition: transform 0.4s;
-            // -o-transition: transform 0.4s;
-
             border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
         }
-
-        // &-shadow {
-        //     position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        //     top: 0;
-        //     left: 0;
-        //     background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(209, 100%, 18%) 125%);
-        // }
     }
 }

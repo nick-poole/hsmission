@@ -38,6 +38,7 @@ pids/
 .Trashes
 ehthumbs.db
 Thumbs.db
+.directory
 
 # Sass cache
 .sass-cache/

@@ -16,13 +16,13 @@
 			content="Haiti's education hurdles impede children's futures. Discover their struggles and how your help can foster change." />
 
 		<!--========== FAVICON ==========-->
-		<link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico/favicon-16x16.png" />
-		<link rel="manifest" href="../favicon.ico/site.webmanifest" />
-		<link rel="mask-icon" href="../favicon.ico/safari-pinned-tab.svg" color="#f3b419" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+		<link rel="manifest" href="../favicon/site.webmanifest" />
+		<link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#f3b419" />
 		<meta name="msapplication-TileColor" content="#f3b419" />
-		<meta name="theme-color" content="#ffffff" />
+		<meta name="theme-color" content="#002e5a" />
 
 		<!--========== OPEN GRAPH ==========-->
 		<meta property="og:title" content="Educational Outreach | Haitian Sensation Mission" />
@@ -99,7 +99,7 @@
 		</script>
 	</head>
 
-	<body id="education-body">
+	<body id="education-page">
 		<a href="#main" class="skip-link">Skip to main content</a>
 		<!--========== HEADER ==========-->
 		<header class="header" id="header">
@@ -128,7 +128,7 @@
 						</li>
 
 						<li class="nav__item">
-							<a href="../index.html#mission" class="nav__link active-link" aria-current="true">Mission</a>
+							<a href="../index.html#mission" class="nav__link active-link">Mission</a>
 						</li>
 
 						<li class="nav__item">
@@ -152,15 +152,18 @@
 			<!--========== Article ==========-->
 			<div class="article section" id="article">
 				<!--========== HERO BG IMG ==========-->
-				<img src="../dist/assets/images/zach-vessels-school-girls.jpg" class="article__bg" />
+				<img src="../dist/assets/images/zach-vessels-school-girls.jpg" alt="" class="article__bg" />
 				<div class="home__shadow"></div>
 
 				<article class="article__container container grid">
 					<div class="article__data grid">
 						<div class="article__data-group">
 							<p class="article__subtitle">Bridging Gaps, Building Futures</p>
-								<h1 class="article__title">Educational Outreach</h1>
-							<p class="article__description"></p>
+							<h1 class="article__title">Educational Outreach</h1>
+							<p class="article__description">
+								Education in Haiti is a fragile lifeline. Every classroom we support, every meal we
+								provide, every uniform we fund opens a door that poverty would otherwise keep closed.
+							</p>
 						</div>
 
 						<img src="../dist/assets/images/bus-group-1024x576.jpg" alt="Haitian students with school bus" />
@@ -269,8 +272,8 @@
 							<div class="article__section-image">
 								<img
 									src="../dist/assets/images/schoolyard-snack_2000px-768x1024.jpg"
-									alt=""
-									class="article__section-image" />
+									alt="Haitian schoolchildren sharing a snack in the schoolyard"
+									class="article__section-img" />
 							</div>
 
 							<div class="article__section-area">
@@ -413,7 +416,6 @@
 					<i class="ri-hand-coin-fill" aria-hidden="true"></i>
 				</a>
 			</div>
-		</main>
 
 		<section class="related">
 			<h2 class="related__title">Related Articles</h2>
@@ -558,6 +560,7 @@
 				</li>
 			</ul>
 		</section>
+		</main>
 
 		<!--==================== FOOTER ====================-->
 		<footer class="footer">
@@ -689,10 +692,14 @@
 							<i class="ri-twitter-x-fill" aria-hidden="true"></i>
 						</a>
 
-						<a href="https://haitiansensationcoffee.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+						<a
+							href="https://haitiansensationcoffee.com/"
+							target="_blank" rel="noopener noreferrer"
+							class="footer__social-link"
+							aria-label="Visit the Haitian Sensation Restaurant Website">
 							<img
 								src="../dist/assets/logos/Logo-White.png"
-								alt="Visit the Haitian Sensation Restaurant Website"
+								alt=""
 								class="footer__social-link hs-link" />
 						</a>
 					</div>

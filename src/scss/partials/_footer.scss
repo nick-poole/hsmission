@@ -46,6 +46,7 @@
             justify-content: center;
             font-size: var(--h2-font-size);
         }
+
         &-span {
             color: var(--hf-yellow);
         }
@@ -65,7 +66,7 @@
             flex-direction: row;
             justify-content: start;
             align-items: center;
-            margin: 1rem 0 1rem 0;
+            margin: 1rem 0;
 
             & i {
                 font-size: 1.5rem;
@@ -75,6 +76,7 @@
         &-value {
             margin-left: 1rem;
         }
+
         &-link {
             color: var(--hf-yellow);
             font-size: var(--small-font-size);
@@ -94,13 +96,10 @@
         display: grid;
         row-gap: 0.75rem;
     }
+
     &__link {
         color: var(--text-color);
         transition: color 0.4s;
-        -webkit-transition: color 0.4s;
-        -moz-transition: color 0.4s;
-        -ms-transition: color 0.4s;
-        -o-transition: color 0.4s;
 
         &:hover {
             color: var(--title-color);
@@ -125,55 +124,23 @@
         &-link {
             color: var(--text-color);
             font-size: 1.5rem;
-            transition: 0.4s ease-in;
-            -webkit-transition: 0.4s ease-in;
-            -moz-transition: 0.4s ease-in;
-            -ms-transition: 0.4s ease-in;
-            -o-transition: 0.4s ease-in;
+            transition: color 0.4s ease-in, transform 0.4s ease-in;
 
             &:hover {
                 color: var(--title-color);
                 transform: translateY(-0.25rem);
-                -webkit-transform: translateY(-0.25rem);
-                -moz-transform: translateY(-0.25rem);
-                -ms-transform: translateY(-0.25rem);
-                -o-transform: translateY(-0.25rem);
             }
         }
+
         &-link .hs-link {
             width: 20px;
             margin-top: 7px;
         }
     }
+
     &__copy {
         font-size: var(--smaller-font-size);
         color: var(--text-color-light);
         text-align: center;
-    }
-}
-
-#TermsPage,
-#PrivacyPage {
-    background-color: var(--body-color);
-
-    header {
-        margin: 1rem;
-    }
-    main {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    h1,
-    h2,
-    p,
-    li,
-    hr,
-    a {
-        margin-bottom: 1rem;
-    }
-
-    a {
-        color: var(--hf-yellow);
     }
 }

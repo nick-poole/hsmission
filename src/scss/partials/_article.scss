@@ -1,3 +1,4 @@
+/*=============== ARTICLE ===============*/
 .article {
     position: relative;
 
@@ -8,7 +9,6 @@
         width: 100%;
         height: 650px;
         object-fit: cover;
-
         object-position: 50% 90%;
     }
 
@@ -24,16 +24,13 @@
     &__container {
         position: relative;
         grid-template-columns: 1fr;
-
         padding-top: 3rem;
         row-gap: 1rem;
     }
 
     &__data {
         margin-top: 30rem;
-
         grid-template-columns: 1fr;
-
         align-items: start;
         text-align: center;
 
@@ -43,45 +40,32 @@
 
         img {
             display: none;
-            margin: auto auto;
+            margin: auto;
             width: 100%;
-
             border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
         }
     }
+
     &__subtitle {
         font-size: var(--h3-font-size);
-
         margin: 0 0 0.5rem 0;
     }
+
     &__title {
         font-size: var(--biggest-font-size);
         margin-bottom: 1rem;
         color: var(--hf-yellow);
     }
+
     &__description {
         width: 100%;
         max-width: 900px;
-        //margin-bottom: 2rem;
         padding: 0.5rem;
-
-        //background-color: #fff;
         color: var(--text-color-light);
-
         text-align: start;
         font-style: italic;
         line-height: 2;
-        // font-weight: var(--font-semi-bold);
-
         border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
     }
 
     &__section {
@@ -94,41 +78,27 @@
             width: 100%;
             max-width: 450px;
             height: auto;
-
             margin: 1rem auto;
             overflow: hidden;
 
             img {
-                // padding-bottom: 3rem;
                 width: 100%;
-                //max-width: 500px;
-
                 border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
-                -o-border-radius: 10px;
             }
         }
 
         &-area {
             h2 {
-                // background-color: var(--hf-red);
-                color: #fff;
-                // padding: 0.5rem;
+                color: var(--white);
                 margin-bottom: 1rem;
-
                 border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
-                -o-border-radius: 10px;
             }
 
             p {
-                color: #fff;
+                color: var(--white);
                 line-height: 2;
                 margin-bottom: 2rem;
+
                 a {
                     color: var(--hf-yellow);
                 }
@@ -136,7 +106,6 @@
 
             a {
                 text-decoration: none;
-
                 color: var(--hf-yellow);
 
                 &:hover {
@@ -147,17 +116,11 @@
 
             img {
                 border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
-                -o-border-radius: 10px;
             }
 
             .yellow-text {
                 padding: 0.3rem;
-
                 color: var(--hf-yellow);
-
                 font-size: 1.2rem;
                 font-weight: var(--font-semi-bold);
             }
@@ -169,10 +132,15 @@
 
             blockquote {
                 position: relative;
-                margin: 10% auto 10% auto;
+                margin: 10% auto;
                 padding: 1rem 10px 1.2rem 50px;
-
                 font-family: var(--second-font);
+                font-size: 2rem;
+                line-height: 1.6;
+                background: var(--white);
+                color: var(--hf-blue);
+                border-left: 30px solid var(--hf-yellow);
+                border-radius: 0 10px 10px 0;
 
                 span {
                     padding-right: 0.2rem;
@@ -185,21 +153,8 @@
                     }
                 }
 
-                font-size: 2rem;
-                line-height: 1.6;
-
-                background: #fff;
-                color: var(--hf-blue);
-
-                border-left: 30px solid var(--hf-yellow);
-                border-radius: 0 10px 10px 0;
-                -webkit-border-radius: 0 10px 10px 0;
-                -moz-border-radius: 0 10px 10px 0;
-                -ms-border-radius: 0 10px 10px 0;
-                -o-border-radius: 0 10px 10px 0;
-
                 &::before {
-                    font-family: Arial;
+                    font-family: Arial, sans-serif;
                     content: "\201C";
                     color: var(--hf-red);
                     font-size: 3em;
@@ -207,85 +162,33 @@
                     left: 10px;
                     top: -30px;
                 }
-                &::after {
-                    content: "";
-                }
             }
         }
     }
-
-    &__cards {
-        grid-template-columns: 240px;
-        justify-content: center;
-        margin-top: 3rem;
-    }
-
-    &__card {
-        position: relative;
-        overflow: hidden;
-
-        &-img {
-            transition: transform 0.4s;
-            -webkit-transition: transform 0.4s;
-            -moz-transition: transform 0.4s;
-            -ms-transition: transform 0.4s;
-            -o-transition: transform 0.4s;
-        }
-
-        &-shadow {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
-        }
-
-        &-title {
-            position: absolute;
-            left: 1rem;
-            bottom: 1rem;
-            font-size: var(--h3-font-size);
-            z-index: 1;
-        }
-
-        &:hover .home__card-img {
-            transform: scale(1.2);
-            -webkit-transform: scale(1.2);
-            -moz-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            -o-transform: scale(1.2);
-        }
-    }
 }
 
-/*========== ADJUSTMENTS ==========*/
-
-// #index-home .home__bg {
-//     object-position: 50% 50%;
-// }
-
-#ourStory .article__bg {
+/*========== Per-page hero positioning ==========*/
+#our-story-page .article__bg {
     object-position: 35% 50%;
 }
 
-#cleanWater .article__bg {
+#wells-to-wellness-page .article__bg {
     object-position: 0% 50%;
 }
 
-#education-body .article__bg {
+#education-page .article__bg {
     object-position: 60% 50%;
 }
 
-#donationPage .article__bg {
+#donate-page .article__bg {
     object-position: 40% 50%;
 }
 
-/*========== Header Adjustments ==========*/
-#cleanWater,
-#education-body {
+/*========== Header background for light hero pages ==========*/
+#wells-to-wellness-page,
+#education-page {
     & .article__bg {
-        top: 0rem;
+        top: 0;
     }
 
     & .article__data {
@@ -306,12 +209,11 @@
     .article {
         &__container {
             justify-content: initial;
-
             padding-top: 6.5rem;
         }
+
         &__data {
             margin-top: 28rem;
-
             grid-template-columns: 1.5fr 1fr;
             gap: 0;
             text-align: start;
@@ -326,15 +228,11 @@
         &__subtitle {
             font-size: var(--h2-font-size);
         }
+
         &__description {
             text-align: left;
             width: 80%;
         }
-
-        // &__content{
-        //     display: grid;
-        //     grid-template-areas: ;
-        // }
     }
 }
 
@@ -343,7 +241,11 @@
         &__data {
             margin-bottom: 3rem;
         }
+
         &__section {
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+
             &.sect-1,
             &.sect-3,
             &.sect-5,
@@ -359,10 +261,6 @@
                 grid-template-columns: minmax(400px, 1fr) auto;
             }
 
-            gap: 1.5rem;
-
-            margin-bottom: 1rem;
-
             &:nth-of-type(odd) .article__section-group {
                 order: 2;
             }
@@ -371,24 +269,15 @@
                 order: 1;
             }
 
-            &-title {
-                font-size: var(--h1-font-size);
-            }
-
-            &-text {
-                font-size: var(--h3-font-size);
-            }
-
             &-image {
                 width: 100%;
                 height: auto;
                 margin: 0;
                 padding: 0 1rem;
+
                 &-img {
                     object-fit: cover;
                     object-position: center;
-
-                    // max-height: 260px;
                 }
             }
         }
@@ -399,10 +288,12 @@
     .related {
         &__card {
             background-color: var(--hf-yellow);
+
             &-title {
                 background-color: var(--hf-blue);
-                color: #fff;
+                color: var(--white);
             }
+
             &-text {
                 color: var(--hf-blue);
             }
@@ -416,46 +307,23 @@
         &__more {
             margin: 0 0 0 1rem;
             padding: 0.2rem 1rem 0 3.5rem;
-            background-color: #fff;
+            background-color: var(--white);
             color: var(--hf-blue);
 
             &:hover {
                 background-color: var(--hf-blue);
-                color: #fff;
+                color: var(--white);
                 text-decoration: none;
             }
         }
     }
 }
 
-/*===== RELATED CARD SHOW/NO SHOW =====*/
-
-#cleanWater {
-    #clean-water {
-        display: none;
-    }
-}
-
-#natural-disasters {
-    #earthquake {
-        display: none;
-    }
-}
-
-#education-body {
-    #education {
-        display: none;
-    }
-}
-
-#ourStory {
-    #our-story {
-        display: none;
-    }
-}
-
-#istwa {
-    #join {
-        display: none;
-    }
+/*===== Hide the related-card matching the current page =====*/
+#wells-to-wellness-page #clean-water,
+#natural-disasters-page #earthquake,
+#education-page #education,
+#our-story-page #our-story,
+#history-page #join {
+    display: none;
 }

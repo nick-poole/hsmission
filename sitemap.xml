@@ -1,37 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://haitiansensationmission.org/</loc>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://haitiansensationmission.org/donate.html</loc>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://haitiansensationmission.org/articles/our-story.html</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://haitiansensationmission.org/articles/natural-disasters.html</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://haitiansensationmission.org/articles/wells-to-wellness.html</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://haitiansensationmission.org/articles/education.html</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://haitiansensationmission.org/articles/history.html</loc>
-  <priority>0.80</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://haitiansensationmission.org/</loc>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://haitiansensationmission.org/donate.html</loc>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>https://haitiansensationmission.org/articles/our-story.html</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://haitiansensationmission.org/articles/natural-disasters.html</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://haitiansensationmission.org/articles/wells-to-wellness.html</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://haitiansensationmission.org/articles/education.html</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://haitiansensationmission.org/articles/history.html</loc>
+        <priority>0.80</priority>
+    </url>
 </urlset>

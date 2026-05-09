@@ -1,5 +1,6 @@
 /*=============== BREAKPOINTS ===============*/
-/* For small devices */
+
+/* Small devices */
 @media screen and (max-width: 340px) {
     .container {
         margin-inline: 1rem;
@@ -10,7 +11,7 @@
     }
 }
 
-/* For medium devices */
+/* Medium devices */
 @media screen and (min-width: 576px) {
     .home__container,
     .join__container {
@@ -43,17 +44,13 @@
         }
     }
 
-    .related {
-        &__cards {
-            grid-template-columns: 300px 300px;
-            justify-content: center;
-        }
+    .related__cards {
+        grid-template-columns: 300px 300px;
+        justify-content: center;
     }
 
-    .footer {
-        &__data {
-            grid-template-columns: 1fr 1fr;
-        }
+    .footer__data {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -69,6 +66,7 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
         &__container {
             grid-template-columns: 1.5fr 1fr;
             align-items: center;
@@ -84,15 +82,8 @@
         }
     }
 
-    // .mission__container {
-    //     grid-template-columns: repeat(2, 350px);
-    // }
-
-    .mission {
-        &__container {
-            //grid-template-columns: 4, 200px;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
+    .mission__container {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .donate {
@@ -117,7 +108,6 @@
         &__info {
             flex-direction: row;
             justify-content: flex-start;
-
             gap: 2.5rem;
         }
 
@@ -146,7 +136,7 @@
         }
 
         &__description {
-            margin: 0 2rem 2rem 2rem;
+            margin: 0 2rem 2rem;
         }
 
         &__image {
@@ -158,20 +148,18 @@
         &__data .section__title {
             text-align: initial;
         }
-
-        // &__description {
-        //     width: 80%;
-        // }
     }
 
     .history {
         &__container {
             grid-template-columns: 1fr 50%;
         }
+
         &__data {
             order: -1;
         }
     }
+
     .donate {
         &__img {
             width: 100vw;
@@ -199,15 +187,13 @@
         }
     }
 
-    .related {
-        &__cards {
-            grid-template-columns: 300px 300px 300px;
-            justify-content: space-around;
-        }
+    .related__cards {
+        grid-template-columns: 300px 300px 300px;
+        justify-content: space-around;
     }
 }
 
-/* For large devices */
+/* Large devices */
 @media screen and (min-width: 1023px) {
     .nav {
         &__close,
@@ -221,17 +207,8 @@
         }
     }
 
-    .mission {
-        &__container {
-            //grid-template-columns: 4, 200px;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-    }
-
-    .footer {
-        &__contact {
-            margin: 0;
-        }
+    .footer__contact {
+        margin: 0;
     }
 }
 
@@ -239,6 +216,7 @@
     .container {
         margin-inline: auto;
     }
+
     .section {
         padding-block: 5rem 2rem;
     }
@@ -264,18 +242,14 @@
             padding-top: 6.5rem;
         }
 
-        // &__shadow {
-        //     height: 980px;
-        // }
-
         &__data {
             text-align: initial;
-            //width: 480px;
         }
 
         &__subtitle {
             font-size: var(--h2-font-size);
         }
+
         &__description {
             width: 780px;
             margin-bottom: 2.5rem;
@@ -285,11 +259,9 @@
             grid-template-columns: repeat(4, 260px);
         }
 
-        &__card {
-            &-title {
-                left: 1.5rem;
-                bottom: 1.5rem;
-            }
+        &__card-title {
+            left: 1.5rem;
+            bottom: 1.5rem;
         }
     }
 
@@ -308,21 +280,14 @@
             font-size: var(--h3-font-size);
             text-align: left;
         }
-
-        // &__img {
-        //     width: 480px;
-        // }
     }
 
     .mission {
         &__container {
-            // grid-template-columns: repeat(4, 1fr);
             column-gap: 2rem;
             padding-top: 4rem;
         }
-        &__title {
-            font-size: var(--h2-font-size);
-        }
+
         &__obj {
             font-size: var(--normal-font-size);
         }
@@ -336,6 +301,7 @@
         &__data {
             margin-top: 5rem;
         }
+
         &__content {
             padding-top: 28rem;
             grid-template-columns: 1fr 1fr;
@@ -357,10 +323,6 @@
             gap: 3rem;
         }
 
-        // &__data {
-        //     min-width: 450px;
-        // }
-
         &__image {
             max-width: 800px;
             width: 100%;
@@ -370,9 +332,6 @@
         &__section-title {
             font-size: 3rem;
         }
-        // &__description {
-        //     margin-bottom: 3rem;
-        // }
     }
 
     .footer {
@@ -385,6 +344,7 @@
         &__content {
             grid-template-columns: 2fr 1fr;
         }
+
         &__title {
             margin-bottom: 1.5rem;
         }
@@ -422,37 +382,32 @@
         &.container {
             max-width: 1600px;
         }
+
         &__logo,
         &__link {
             font-size: var(--h3-font-size);
         }
+
         &__logo {
             margin: 0.5rem 0 0.5rem 1rem;
+
             &-img {
                 max-width: 95px;
             }
         }
     }
-    // .mission{
-    //     &__container{
 
-    //     }
-    // }
-
-    .donate {
-        &__img {
-            object-position: 50% 20%;
-        }
+    .donate__img {
+        object-position: 50% 20%;
     }
 
-    .related {
-        &__cards {
-            grid-template-columns: repeat(4, 300px);
-            grid-auto-flow: row;
-        }
+    .related__cards {
+        grid-template-columns: repeat(4, 300px);
+        grid-auto-flow: row;
     }
 
-    #education {
+    /* Restore education related-card on very wide screens */
+    #education-page #education {
         display: block;
     }
 }
@@ -462,6 +417,7 @@
         &__data {
             margin-top: 10rem;
         }
+
         &__shadow {
             background: linear-gradient(
                 180deg,
