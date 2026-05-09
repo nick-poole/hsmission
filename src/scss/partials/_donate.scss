@@ -2,7 +2,6 @@
 .donate {
     position: relative;
     padding-bottom: 2rem;
-
     background-color: var(--hf-yellow);
 
     &__image {
@@ -42,34 +41,21 @@
             width: fit-content;
             padding: 0.5rem;
             margin: 0 0 2rem 0;
-
             font-size: 1.7rem;
             text-align: left;
-
             background-color: var(--hf-blue);
-            color: #fff;
-
-            border-left: 10px solid #fff;
-            border-radius: 0 10px 10px 0px;
-            -webkit-border-radius: 0 10px 10px 0px;
-            -moz-border-radius: 0 10px 10px 0px;
-            -ms-border-radius: 0 10px 10px 0px;
-            -o-border-radius: 0 10px 10px 0px;
+            color: var(--white);
+            border-left: 10px solid var(--white);
+            border-radius: 0 10px 10px 0;
         }
 
         img {
             border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
         }
     }
 
-    &__data {
-        p {
-            color: var(--hf-blue);
-        }
+    &__data p {
+        color: var(--hf-blue);
     }
 
     &__description {
@@ -79,12 +65,8 @@
             padding: 0.5rem;
             font-weight: var(--font-semi-bold);
             color: var(--hf-red);
-            background-color: #fff;
+            background-color: var(--white);
             border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
         }
     }
 
@@ -105,25 +87,30 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 50px;
         font-size: var(--small-font-size);
-        color: #fff;
+        color: var(--white);
 
         i {
             color: var(--hf-yellow);
         }
     }
 
-    &__hero-btn {
-        margin-top: 1rem;
+    &__hero-btn,
+    &__mid-btn,
+    &__final-btn {
         background-color: var(--hf-red);
-        color: #fff;
+        color: var(--white);
         padding: 1rem 2rem;
         font-size: 1rem;
         border: none;
         cursor: pointer;
 
         &:hover {
-            background-color: #b80628;
+            background-color: var(--hf-red-dark);
         }
+    }
+
+    &__hero-btn {
+        margin-top: 1rem;
     }
 
     /*=============== SECTION TITLE ===============*/
@@ -143,7 +130,7 @@
 
     /*=============== IMPACT SECTION ===============*/
     &__impact {
-        background-color: #fff;
+        background-color: var(--white);
         padding: 4rem 1.5rem;
     }
 
@@ -155,7 +142,7 @@
     }
 
     &__impact-card {
-        background-color: #f8f9fa;
+        background-color: var(--surface-light);
         padding: 2rem;
         border-radius: 10px;
         text-align: center;
@@ -195,20 +182,6 @@
         margin-top: 2rem;
     }
 
-    &__mid-btn,
-    &__final-btn {
-        background-color: var(--hf-red);
-        color: #fff;
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        border: none;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #b80628;
-        }
-    }
-
     /*=============== TRUST SECTION ===============*/
     &__trust {
         background-color: var(--hf-yellow);
@@ -222,17 +195,15 @@
         align-items: center;
     }
 
-    &__trust-text {
-        p {
-            color: var(--hf-blue);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
+    &__trust-text p {
+        color: var(--hf-blue);
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
 
-            a {
-                color: var(--hf-blue);
-                font-weight: var(--font-semi-bold);
-                text-decoration: underline;
-            }
+        a {
+            color: var(--hf-blue);
+            font-weight: var(--font-semi-bold);
+            text-decoration: underline;
         }
     }
 
@@ -255,17 +226,15 @@
         }
     }
 
-    &__trust-image {
-        img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
+    &__trust-image img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
     /*=============== FAQ SECTION ===============*/
     &__faq {
-        background-color: #fff;
+        background-color: var(--white);
         padding: 4rem 1.5rem;
     }
 
@@ -275,12 +244,10 @@
     }
 
     &__faq-item {
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: 1px solid var(--border-subtle);
 
-        &[open] {
-            summary i {
-                transform: rotate(45deg);
-            }
+        &[open] summary i {
+            transform: rotate(45deg);
         }
     }
 
@@ -325,7 +292,7 @@
         padding: 4rem 1.5rem;
 
         .donate__section-title {
-            color: #fff;
+            color: var(--white);
         }
 
         > .container > p {
@@ -352,7 +319,7 @@
             padding: 1rem;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
-            color: #fff;
+            color: var(--white);
             text-decoration: none;
             transition: background-color 0.3s ease;
 
@@ -373,7 +340,7 @@
         text-align: center;
 
         h2 {
-            color: #fff;
+            color: var(--white);
             font-size: var(--h1-font-size);
             margin-bottom: 0.5rem;
         }
@@ -384,7 +351,7 @@
         }
 
         .donate__final-btn {
-            background-color: #fff;
+            background-color: var(--white);
             color: var(--hf-red);
 
             &:hover {
@@ -406,10 +373,8 @@
             grid-template-columns: 1fr 1fr;
         }
 
-        &__trust-text {
-            .donate__section-title {
-                text-align: left;
-            }
+        &__trust-text .donate__section-title {
+            text-align: left;
         }
     }
 }

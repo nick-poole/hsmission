@@ -1,23 +1,20 @@
+/*=============== ZEFFY ===============*/
 .zeffy {
-    background-color: #fff;
-
-    &.article__section-title {
-        color: var(--hf-yellow);
-        background-color: var(--hf-blue);
-    }
+    background-color: var(--white);
 
     &__image {
         width: 100%;
         background-color: var(--hf-yellow);
         padding: 3rem 1.5rem;
+
         img {
             max-width: 800px;
-
             margin: 0 auto;
         }
     }
+
     &__donate {
-        background-color: #fff;
+        background-color: var(--white);
         margin: 0 auto;
 
         h2 {
@@ -29,13 +26,8 @@
         p {
             width: 80%;
             color: var(--hf-blue);
-            margin: 1rem auto 0 auto;
+            margin: 1rem auto 0;
             padding-bottom: 1rem;
-        }
-        .receipt {
-            text-align: center;
-            font-weight: var(--font-semi-bold);
-            color: var(--hf-red);
         }
 
         &-description {
@@ -44,16 +36,11 @@
 
         &-title {
             width: max-content;
-            background-color: #fff;
+            background-color: var(--white);
             color: var(--hf-red);
             margin: 0 auto;
             padding: 1rem;
-
             border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
         }
 
         &-prompt {
@@ -63,37 +50,20 @@
             background-color: var(--hf-yellow);
 
             h2 {
-                color: #fff;
+                color: var(--white);
             }
         }
 
-        &-button {
-            background-color: var(--hf-blue);
-            display: block;
-            margin: 0 auto;
-            cursor: pointer;
-        }
-
         &-btn {
-            color: white;
+            color: var(--white);
             cursor: pointer;
-            left: calc(50% - 75px);
             margin: 1rem auto;
             min-height: 50px;
             min-width: 150px;
             padding: 0.5rem 1.5rem;
-
-            top: calc(50% - 25px);
-
             background-color: var(--hf-red);
-
-            border: 3px solid #fff;
-
+            border: 3px solid var(--white);
             border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
         }
     }
 }

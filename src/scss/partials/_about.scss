@@ -5,6 +5,7 @@
         color: var(--hf-yellow);
         font-size: 2rem;
     }
+
     &__container {
         row-gap: 1rem;
     }
@@ -15,30 +16,19 @@
 
     &__description {
         margin: 2rem 0;
-        color: #fff;
+        color: var(--white);
         text-align: start;
     }
 
     &__image {
         justify-self: center;
-
         width: 100%;
-        margin: auto auto;
+        margin: auto;
     }
 
     &__img {
-        margin: 0 0 0 0;
         transition: transform 0.4s;
-        -webkit-transition: transform 0.4s;
-        -moz-transition: transform 0.4s;
-        -ms-transition: transform 0.4s;
-        -o-transition: transform 0.4s;
-
         border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
     }
 }
 
