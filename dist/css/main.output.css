@@ -2070,3 +2070,5 @@ img {
 		padding: 5rem 2rem;
 	}
 }
+
+.breadcrumb{font-size:var(--small-font-size);margin:0 0 .75rem 0;color:var(--text-color-light)}.breadcrumb a{color:var(--hf-yellow);text-decoration:none}.breadcrumb a:hover,.breadcrumb a:focus{text-decoration:underline}.breadcrumb span[aria-hidden=true]{margin:0 .35rem;color:var(--text-color)}

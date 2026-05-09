@@ -47,7 +47,7 @@
 			content="https://haitiansensationmission.org/dist/assets/images/wells-to-wellness_cover.jpg" />
 
 		<!--========== CANONICAL ==========-->
-		<link rel="canonical" href="https://haitiansensationmission.org/articles/wells-to-wellness.html" />
+		<link rel="canonical" href="https://haitiansensationmission.org/articles/wells-to-wellness" />
 
 		<!--=============== REMIXICONS ===============-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap" />
@@ -94,6 +94,28 @@
 				"Educational outreach",
 				"Disaster relief",
 				"Community development"
+			]
+		}
+		</script>
+
+		<!--========== STRUCTURED DATA - BREADCRUMB ==========-->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://haitiansensationmission.org/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Clean Water",
+					"item": "https://haitiansensationmission.org/articles/wells-to-wellness"
+				}
 			]
 		}
 		</script>
@@ -159,6 +181,9 @@
 					<div class="article__data grid">
 						<div class="article__data-group">
 							<p class="article__subtitle">Haiti's Water Crisis</p>
+							<nav aria-label="Breadcrumb" class="breadcrumb">
+								<a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span>Clean Water</span>
+							</nav>
 								<h1 class="article__title">From Wells to Wellness</h1>
 							<p class="article__description">
 								Haiti faces the harshest water crisis in the Western Hemisphere, leading to severe

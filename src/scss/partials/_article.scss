@@ -167,6 +167,28 @@
     }
 }
 
+/*========== Breadcrumb ==========*/
+.breadcrumb {
+    font-size: var(--small-font-size);
+    margin: 0 0 0.75rem 0;
+    color: var(--text-color-light);
+
+    a {
+        color: var(--hf-yellow);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    span[aria-hidden="true"] {
+        margin: 0 0.35rem;
+        color: var(--text-color);
+    }
+}
+
 /*========== Per-page hero positioning ==========*/
 #our-story-page .article__bg {
     object-position: 35% 50%;

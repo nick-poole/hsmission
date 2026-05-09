@@ -49,7 +49,7 @@
 			content="https://haitiansensationmission.org/dist/assets/images/bill-hamway-madam-felix.jpg" />
 
 		<!--========== CANONICAL ==========-->
-		<link rel="canonical" href="https://haitiansensationmission.org/articles/history.html" />
+		<link rel="canonical" href="https://haitiansensationmission.org/articles/history" />
 
 		<!--=============== REMIXICONS ===============-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap" />
@@ -96,6 +96,28 @@
 				"Educational outreach",
 				"Disaster relief",
 				"Community development"
+			]
+		}
+		</script>
+
+		<!--========== STRUCTURED DATA - BREADCRUMB ==========-->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://haitiansensationmission.org/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Haiti's History",
+					"item": "https://haitiansensationmission.org/articles/history"
+				}
 			]
 		}
 		</script>
@@ -161,6 +183,9 @@
 					<div class="article__data grid">
 						<div class="article__data-group">
 							<p class="article__subtitle">Learn Haiti's True Story</p>
+							<nav aria-label="Breadcrumb" class="breadcrumb">
+								<a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span>Haiti's History</span>
+							</nav>
 								<h1 class="article__title">Understanding Haiti</h1>
 							<p class="article__description">
 								The true story of Haiti is one of the world's most glaring omissions in modern history,
