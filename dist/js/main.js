@@ -1,74 +1,69 @@
-//=============== SHOW MENU ===============
-const navMenu = document.getElementById("nav-menu"),
-    navToggle = document.getElementById("nav-toggle"),
-    navClose = document.getElementById("nav-close");
+/* Haitian Sensation Mission - main.js */
+(() => {
+    "use strict";
 
-//===== SHOW MENU =====*/
-if (navToggle) {
-    navToggle.addEventListener("click", () => {
-        navMenu.classList.add("show-menu");
-    });
-}
-
-//===== HIDE MENU =====*/
-if (navClose) {
-    navClose.addEventListener("click", () => {
-        navMenu.classList.remove("show-menu");
-    });
-}
-
-//=========== REMOVE MENU onClick ===========
-const navLink = document.querySelectorAll(".nav__link");
-
-const linkAction = () => {
     const navMenu = document.getElementById("nav-menu");
+    const navToggle = document.getElementById("nav-toggle");
+    const navClose = document.getElementById("nav-close");
 
-    navMenu.classList.remove("show-menu");
-};
-navLink.forEach((n) => n.addEventListener("click", linkAction));
+    const setMenu = (open) => {
+        if (!navMenu) return;
+        navMenu.classList.toggle("show-menu", open);
+        if (navToggle) navToggle.setAttribute("aria-expanded", String(open));
+    };
 
-//============= ADD BLUR TO HEADER =============
-const scrollHeader = () => {
-    const header = document.getElementById("header");
+    if (navToggle) navToggle.addEventListener("click", () => setMenu(true));
+    if (navClose) navClose.addEventListener("click", () => setMenu(false));
 
-    //____window object,
-    this.scrollY >= 50
-        ? //add _____________ class
-          header.classList.add("blur-header")
-        : header.classList.remove("blur-header");
-};
-window.addEventListener("scroll", scrollHeader);
-
-//=============== SHOW SCROLL UP ===============
-const scrollUp = () => {
-    const scrollUp = document.getElementById("scroll-up");
-
-    //____when window object >= 350vh
-    this.scrollY >= 350
-        ? scrollUp.classList.add("show-scroll")
-        : scrollUp.classList.remove("show-scroll");
-};
-window.addEventListener("scroll", scrollUp);
-
-//========== SCROLL SECTIONS ACTIVE LINK ==========
-const sections = document.querySelectorAll("section[id]");
-
-const scrollActive = () => {
-    const scrollDown = window.scrollY;
-
-    sections.forEach((current) => {
-        const sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop - 58,
-            sectionId = current.getAttribute("id"),
-            sectionsClass = document.querySelector(".nav__menu a[href*=" + sectionId + "]");
-
-        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-            sectionsClass.classList.add("active-link");
-        } else {
-            sectionsClass.classList.remove("active-link");
-        }
+    document.querySelectorAll(".nav__link").forEach((link) => {
+        link.addEventListener("click", () => setMenu(false));
     });
-};
-window.addEventListener("scroll", scrollActive);
 
-//============ SCROLL REVEAL ANIMATION ============
+    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+
+    const header = document.getElementById("header");
+    const scrollUpEl = document.getElementById("scroll-up");
+    const sections = Array.from(document.querySelectorAll("section[id]"));
+
+    const navAnchorFor = (id) =>
+        document.querySelector(`.nav__menu a[href$="#${id}"]`);
+
+    const onScroll = () => {
+        const y = window.scrollY;
+
+        if (header) header.classList.toggle("blur-header", y >= 50);
+        if (scrollUpEl) scrollUpEl.classList.toggle("show-scroll", y >= 350);
+
+        sections.forEach((section) => {
+            const top = section.offsetTop - 58;
+            const bottom = top + section.offsetHeight;
+            const link = navAnchorFor(section.id);
+            if (!link) return;
+            link.classList.toggle("active-link", y > top && y <= bottom);
+        });
+    };
+
+    let ticking = false;
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(() => {
+                onScroll();
+                ticking = false;
+            });
+        },
+        { passive: true }
+    );
+    onScroll();
+
+    if (scrollUpEl && scrollUpEl.tagName === "BUTTON") {
+        scrollUpEl.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+    const yearEl = document.getElementById("current-year");
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
