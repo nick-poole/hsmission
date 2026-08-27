@@ -1,0 +1,18 @@
+# Legacy .html paths and moved articles → clean URLs (Netlify/Cloudflare Pages format)
+/index.html                       /                             301
+/donate.html                      /donate                       301
+/articles/history                 /why-haiti-is-poor            301
+/articles/history.html            /why-haiti-is-poor            301
+/articles/education               /programs/education           301
+/articles/education.html          /programs/education           301
+/articles/wells-to-wellness       /programs/clean-water         301
+/articles/wells-to-wellness.html  /programs/clean-water         301
+/articles/natural-disasters       /programs/disaster-relief     301
+/articles/natural-disasters.html  /programs/disaster-relief     301
+/articles/community               /programs/community-outreach  301
+/articles/community.html          /programs/community-outreach  301
+/articles/our-story               /about/our-story              301
+/articles/our-story.html          /about/our-story              301
+/legal/privacy.html               /legal/privacy                301
+/legal/terms.html                 /legal/terms                  301
+/articles/*                       /                             301

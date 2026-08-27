@@ -2,18 +2,18 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content="noindex, follow" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
-		<title>Haitian Sensation Mission | Haiti Clean Water & Education</title>
+		<title>Thank You | Haitian Sensation Mission</title>
 
-		<meta name="description" content="Haitian Sensation Mission is a 501(c)(3) Haiti nonprofit delivering clean water, education, and disaster relief. See how we create lasting change." />
+		<meta name="description" content="Thank you for your donation to Haitian Sensation Mission. 100% of your gift funds clean water, education, and disaster relief programs in Haiti." />
 
-		<!--========== FAVICON ==========-->
+<!--========== FAVICON ==========-->
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
@@ -23,34 +23,30 @@
 		<meta name="theme-color" content="#002e5a" />
 
 		<!--========== OPEN GRAPH ==========-->
-		<meta property="og:title" content="Haitian Sensation Mission | Haiti Clean Water & Education" />
-		<meta property="og:description" content="Haitian Sensation Mission is a 501(c)(3) Haiti nonprofit delivering clean water, education, and disaster relief. See how we create lasting change." />
-		<meta
-			property="og:image"
-			content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
-		<meta property="og:url" content="https://haitiansensationmission.org/" />
+		<meta property="og:title" content="Thank You | Haitian Sensation Mission" />
+		<meta property="og:description" content="Thank you for your donation to Haitian Sensation Mission. 100% of your gift funds clean water, education, and disaster relief programs in Haiti." />
+		<meta property="og:image" content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
+		<meta property="og:url" content="https://haitiansensationmission.org/thank-you" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="haitiansensationmission.org" />
 
 		<!--========== TWITTER CARD ==========-->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Haitian Sensation Mission | Haiti Clean Water & Education" />
-		<meta name="twitter:description" content="Haitian Sensation Mission is a 501(c)(3) Haiti nonprofit delivering clean water, education, and disaster relief. See how we create lasting change." />
-		<meta
-			name="twitter:image"
-			content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
+		<meta name="twitter:title" content="Thank You | Haitian Sensation Mission" />
+		<meta name="twitter:description" content="Thank you for your donation to Haitian Sensation Mission. 100% of your gift funds clean water, education, and disaster relief programs in Haiti." />
+		<meta name="twitter:image" content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
 
 		<!--========== CANONICAL ==========-->
-		<link rel="canonical" href="https://haitiansensationmission.org/" />
+		<link rel="canonical" href="https://haitiansensationmission.org/thank-you" />
 
-		<!--=============== REMIXICONS ===============-->
+		<!--=============== FONTS & ICONS ===============-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
 
 		<!-- ===== CSS ===== -->
 		<link rel="stylesheet" href="/dist/css/main.output.css" />
 
-			<!--========== STRUCTURED DATA ==========-->
+		<!--========== STRUCTURED DATA ==========-->
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -100,24 +96,31 @@
 					"email": "joseph@haitiansensationmission.org"
 				},
 				{
-					"@type": "WebSite",
-					"@id": "https://haitiansensationmission.org/#website",
-					"url": "https://haitiansensationmission.org",
-					"name": "Haitian Sensation Mission",
-					"description": "Official website of Haitian Sensation Mission, a 501(c)(3) Haiti nonprofit organization",
-					"publisher": {
-						"@id": "https://haitiansensationmission.org/#organization"
-					}
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://haitiansensationmission.org"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "Thank You",
+							"item": "https://haitiansensationmission.org/thank-you"
+						}
+					]
 				}
 			]
 		}
 		</script>
 	</head>
 
-	<body id="home-page">
+	<body id="thankyou-page">
 		<a href="#main" class="skip-link">Skip to main content</a>
 		<!--========== HEADER ==========-->
-		<header class="header" id="header">
+<header class="header" id="header">
 			<nav class="nav container" aria-label="Primary">
 				<a href="/" class="nav__logo" aria-label="Haitian Sensation Mission home">
 					<div class="nav__logo-container flex">
@@ -138,7 +141,7 @@
 						<li class="nav__item"><a href="/programs" class="nav__link">Programs</a></li>
 						<li class="nav__item"><a href="/about" class="nav__link">About</a></li>
 						<li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
-						<li class="nav__item"><a href="/donate" class="nav__link nav__link--cta">Donate</a></li>
+						<li class="nav__item"><a href="/donate" class="nav__link nav__link--cta active-link" aria-current="page">Donate</a></li>
 					</ul>
 
 					<button type="button" class="nav__close" id="nav-close" aria-label="Close navigation menu">
@@ -154,245 +157,42 @@
 
 		<!--========== MAIN ==========-->
 		<main class="main" id="main" tabindex="-1">
-			<!--==================== HOME ====================-->
-			<section class="home section" id="home">
-				<img src="/dist/assets/images/topsphere-media-2400.jpg" alt="Close-up side profile of a young Haitian boy" class="home__bg" />
-				<div class="home__shadow"></div>
+			<nav aria-label="Breadcrumb" class="breadcrumb breadcrumb--flow">
+				<ol class="breadcrumb__list">
+					<li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
+					<li class="breadcrumb__item" aria-current="page">Thank You</li>
+				</ol>
+			</nav>
 
-				<div class="home__container container grid">
-					<div class="home__data">
-						<div class="page-heading">
-							<h1 class="home__title">
-							Join Our Mission:
-							<span>Empowering Haiti</span>
-						</h1>
-							<p class="home__subtitle">A 501(c)(3) Haiti Nonprofit Organization</p>
-						</div>
-
-						<p class="home__description">
-							Haitian Sensation Mission is a Haiti nonprofit organization dedicated to clean water, education,
-							and disaster relief. We work directly with Haitian communities to create meaningful, lasting change.
-						</p>
-
-						<a href="/donate" class="button">
-							Support Our Work
-							<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-						</a>
-
-						<div class="home__cards grid">
-							<figure class="home__card">
-								<img src="/dist/assets/images/8_2000px-1024x682.jpg" alt="Mission volunteers on their way to a project site" class="home__card-img" />
-
-								<div class="home__card-shadow"></div>
-							</figure>
-
-							<figure class="home__card">
-								<img src="/dist/assets/images/48_2000px-1024x682.jpg" alt="Mission team distributing supplies in rural Haiti" class="home__card-img" />
-
-								<div class="home__card-shadow"></div>
-							</figure>
-
-							<figure class="home__card">
-								<img
-									src="/dist/assets/images/2019trip-mission-group1.jpg"
-									alt="2019 Haiti mission trip volunteer group photo"
-									class="home__card-img" />
-
-								<div class="home__card-shadow"></div>
-							</figure>
-
-							<figure class="home__card">
-								<img src="/dist/assets/images/30_2000px-1024x682.jpg" alt="Haitian Sensation Mission volunteer holding a young Haitian boy in his arms" class="home__card-img" />
-
-								<div class="home__card-shadow"></div>
-							</figure>
-						</div>
+			<article class="page">
+				<header>
+					<div class="page-heading">
+						<h1>Thank You for Your Donation</h1>
+						<p class="page__subtitle">Your generosity reaches Haiti directly</p>
+						
 					</div>
-				</div>
-			</section>
+				</header>
 
-			<!--==================== ABOUT ====================-->
-			<section class="about section" id="about">
-				<h2 class="section__title">Our Story</h2>
-				<div class="about__container container grid">
-					<div class="about__image">
-						<img src="/dist/assets/images/home-team-1024x512.jpg" alt="Haitian Sensation Mission team members" class="about__img" loading="lazy" />
-					</div>
-					<div class="about__data">
-						<p class="about__description">
-							Haitian Sensation Mission is a 501(c)(3) nonprofit helping Haiti through direct community action.
-							We focus on what matters most: clean water access, quality education, and disaster recovery.
-							Every initiative we undertake is designed to create real, measurable impact in Haitian communities.
-						</p>
-
-						<a href="/about/our-story" class="about__button button">
-							Read Our Story
-							<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<!--==================== HISTORY ====================-->
-			<section class="history section" id="history">
-				<h2 class="section__title">Why Haiti Needs Support</h2>
-				<div class="history__container container grid">
-					<div class="history__image">
-						<img src="/dist/assets/images/bill-hamway-madam-felix.jpg" alt="Haitian elder woman in rural Haiti" class="history__img" loading="lazy" />
-					</div>
-					<div class="history__data">
-						<p class="history__description">
-							Haiti's challenges run deep—rooted in colonial exploitation, economic isolation, and recurring
-							natural disasters. Understanding this context is essential to understanding why our work matters.
-							The Haitian people are resilient, but they need partners committed to long-term change.
-						</p>
-
-						<a href="/why-haiti-is-poor" class="about__button button">
-							Learn Haiti's History
-							<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<!--==================== MISSION ====================-->
-			<section class="mission section" id="mission">
-				<h2 class="section__title">
-					How We Help Haiti
-				</h2>
-
-				<ul class="mission__container container grid">
-					<li class="mission__item">
-						<a href="/programs/disaster-relief" class="mission__link" aria-label="Learn more about disaster relief efforts in Haiti">
-							<div class="mission__image">
-								<img src="/dist/assets/images/2019trip-hatian-boy.jpg" alt="Young Haitian boy in earthquake-damaged building" class="mission__img" loading="lazy" />
-								<div class="mission__shadow"></div>
-							</div>
-
-							<div class="mission__area">
-								<i class="ri-earthquake-fill" aria-hidden="true"></i>
-								<h3 class="mission__area-title">
-									Disaster
-									<br />
-									Relief
-								</h3>
-							</div>
-
-							<div class="mission__obj">
-								<span>Rebuilding after crisis</span>
-							</div>
-							<span class="learn__more" aria-hidden="true">
-								Learn More
-								<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-							</span>
-						</a>
-					</li>
-
-					<li class="mission__item">
-						<a href="/programs/clean-water" class="mission__link" aria-label="Learn more about clean water initiatives in Haiti">
-							<div class="mission__image">
-								<img src="/dist/assets/images/drinking-water.jpg" alt="Child drinking clean water in Haiti" class="mission__img" loading="lazy" />
-								<div class="mission__shadow"></div>
-							</div>
-
-							<div class="mission__area">
-								<i class="ri-drop-fill" aria-hidden="true"></i>
-								<h3 class="mission__area-title">
-									Clean Water
-									<br />
-									Initiatives
-								</h3>
-							</div>
-
-							<div class="mission__obj">
-								<span>Safe water for Haitian families</span>
-							</div>
-							<span class="learn__more" aria-hidden="true">
-								Learn More
-								<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-							</span>
-						</a>
-					</li>
-
-					<li class="mission__item">
-						<a href="/programs/education" class="mission__link" aria-label="Learn more about educational outreach programs in Haiti">
-							<div class="mission__image">
-								<img src="/dist/assets/images/classroom-1024x682.jpg" alt="Haitian students in classroom" class="mission__img" loading="lazy" />
-								<div class="mission__shadow"></div>
-							</div>
-
-							<div class="mission__area">
-								<i class="ri-book-2-fill" aria-hidden="true"></i>
-								<h3 class="mission__area-title">Educational Outreach</h3>
-							</div>
-
-							<div class="mission__obj">
-								<span>Opportunity through learning</span>
-							</div>
-							<span class="learn__more" aria-hidden="true">
-								Learn More
-								<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-							</span>
-						</a>
-					</li>
-
-				</ul>
-			</section>
-
-			<!--==================== DONATE ====================-->
-			<section class="donate" id="donate">
-				<div class="donate__container">
-					<div class="donate__image">
-						<img src="/dist/assets/images/27_2000px-1024x682.jpg" alt="A group of young Haitian children" class="donate__img" loading="lazy" />
-						<div class="donate__shadow"></div>
-					</div>
-
-					<div class="donate__content container grid">
-						<div class="donate__data">
-							<h2 class="section__title">
-								Support Our
-								<br />
-								Haiti Nonprofit
-							</h2>
-
-							<p class="donate__description">
-								100% of contributions go directly to our programs in Haiti. Your support funds clean water
-								systems, school supplies, and emergency relief for families who need it most.
-							</p>
-						</div>
-
-						<img src="/dist/assets/images/zach-vessels-schoolboy1.jpg" alt="Haitian schoolboy in uniform" loading="lazy" />
-					</div>
-				</div>
-			</section>
-
-			<!--==================== JOIN ====================-->
-			<section class="join section">
-				<h2 class="section__title">Be Part of the Mission</h2>
-				<div class="join__container container grid">
-					<div class="join__data">
-						<h3 class="join__section-title">Your Support Makes This Possible</h3>
-
-						<p class="join__description">
-							Whether through giving, sharing our story, or simply learning more—you can help us
-							continue this work. Every action moves Haiti forward.
-						</p>
-
-						<a href="/donate" class="button join__button" aria-label="Learn how you can support our Haiti nonprofit">
-							See How to Help
-							<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-						</a>
-					</div>
-
-					<div class="join__image">
-						<img src="/dist/assets/images/24_2000px-1024x682.jpg" alt="Mission volunteer and Haitian child playing music together" class="join__img" loading="lazy" />
-					</div>
-				</div>
-			</section>
+				<section aria-labelledby="ty-next">
+					<h2 id="ty-next">What Happens Next</h2>
+					<p>
+						Your donation was processed securely by Zeffy, and a tax receipt will arrive in your email inbox.
+						Haitian Sensation Mission is a registered 501(c)(3) nonprofit (EIN: 82-3623088), and 100% of your
+						gift funds our programs in Haiti.
+					</p>
+					<p>While you're here, see the work your generosity makes possible:</p>
+					<ul class="page__facts">
+						<li><a href="/programs/clean-water">Clean water wells for Haitian villages</a></li>
+						<li><a href="/programs/education">Education for Haiti's children</a></li>
+						<li><a href="/programs/disaster-relief">Disaster relief and rebuilding</a></li>
+					</ul>
+				</section>
+				<!-- GA4: fire donation conversion event on this page when analytics is added (see README action items) -->
+			</article>
 		</main>
 
 		<!--==================== FOOTER ====================-->
-		<footer class="footer">
+<footer class="footer">
 			<div class="footer__container container grid">
 				<div class="footer__content grid">
 					<div class="footer__info">

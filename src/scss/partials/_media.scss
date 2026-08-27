@@ -59,6 +59,11 @@
         grid-template-columns: repeat(2, 280px);
     }
 
+    .footer__data {
+        grid-template-columns: repeat(4, max-content);
+        column-gap: 2.5rem;
+    }
+
     .join {
         &__data {
             height: 100%;

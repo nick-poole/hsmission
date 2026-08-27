@@ -84,7 +84,7 @@
     }
 
     &__data {
-        grid-template-columns: repeat(2, 150px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     &__title {

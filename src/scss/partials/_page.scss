@@ -1,0 +1,230 @@
+/*=============== FOUNDATION ADDITIONS ===============*/
+/* Breadcrumb, heading-order helper, and simple content-page layout for the
+   new scaffold pages. Reuses existing design tokens only. */
+
+/* Eyebrow text renders above the H1 visually while the H1 stays first in
+   the DOM (heading-order requirement). */
+.page-heading {
+    display: flex;
+    flex-direction: column;
+
+    .article__subtitle,
+    .home__subtitle,
+    .page__subtitle {
+        order: -1;
+    }
+}
+
+/* Breadcrumb trail. Overlay variant sits on top of article hero images so it
+   adds no layout shift; flow variant is for pages without a hero. */
+.breadcrumb {
+    position: absolute;
+    top: calc(var(--header-height) + 0.75rem);
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.35rem;
+        max-width: 1120px;
+        margin-inline: 1.5rem;
+        list-style: none;
+        padding: 0;
+        font-size: var(--small-font-size);
+        color: var(--text-color-light);
+    }
+
+    &__item {
+        &:not(:first-child)::before {
+            content: "/";
+            margin-right: 0.35rem;
+            color: var(--text-color-light);
+        }
+    }
+
+    &__link {
+        color: var(--hf-yellow);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &--flow {
+        position: static;
+        padding-top: calc(var(--header-height) + 1.25rem);
+    }
+}
+
+/* Freshness line under page titles */
+.article__updated,
+.page__updated {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    margin-bottom: 0.75rem;
+}
+
+/* Simple content-page layout (scaffold pages: /about, /contact, hubs, etc.) */
+.page {
+    max-width: 900px;
+    margin-inline: auto;
+    padding: 2rem 1.5rem 4rem;
+
+    h1 {
+        font-size: var(--biggest-font-size);
+        color: var(--hf-yellow);
+        margin-bottom: 0.75rem;
+    }
+
+    &__subtitle {
+        font-size: var(--h3-font-size);
+        color: var(--title-color);
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        color: var(--white);
+        margin: 2.5rem 0 1rem;
+    }
+
+    p {
+        color: var(--text-color-light);
+        line-height: 2;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: var(--hf-yellow);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__facts {
+        display: grid;
+        row-gap: 0.75rem;
+        margin: 0 0 1rem;
+        padding-left: 1.25rem;
+        list-style: disc;
+        color: var(--text-color-light);
+        line-height: 1.8;
+    }
+
+    &__cards {
+        grid-template-columns: 1fr;
+        margin-block: 1rem;
+
+        li {
+            padding: 1.25rem;
+            background-color: var(--hf-blue-light);
+            border-radius: 10px;
+
+            a {
+                font-family: var(--second-font);
+                font-weight: var(--font-semi-bold);
+                color: var(--hf-yellow);
+            }
+
+            p {
+                margin: 0.5rem 0 0;
+            }
+        }
+    }
+
+    &__quote {
+        margin: 1rem 0 1.5rem;
+        padding: 1rem 1.25rem;
+        border-left: 6px solid var(--hf-yellow);
+        background-color: var(--hf-blue-light);
+        border-radius: 0 10px 10px 0;
+
+        p {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        cite {
+            color: var(--title-color);
+            font-style: normal;
+            font-size: var(--small-font-size);
+        }
+    }
+
+    &__related ul {
+        display: grid;
+        row-gap: 0.75rem;
+        padding-left: 1.25rem;
+        list-style: disc;
+        color: var(--text-color-light);
+    }
+
+    .answer-block p {
+        color: var(--white);
+        line-height: 2;
+        padding: 1rem 1.25rem;
+        background-color: var(--hf-blue-light);
+        border-radius: 10px;
+    }
+
+    .faq {
+        dt {
+            color: var(--white);
+            font-family: var(--second-font);
+            font-weight: var(--font-semi-bold);
+            margin-top: 1.25rem;
+        }
+
+        dd {
+            color: var(--text-color-light);
+            line-height: 2;
+            margin: 0.5rem 0 0;
+        }
+    }
+
+    .donate-cta {
+        margin: 2.5rem 0;
+        padding: 1.5rem;
+        text-align: center;
+        background-color: var(--hf-blue-light);
+        border-radius: 10px;
+
+        .button {
+            color: var(--white);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Donate item in the primary nav, styled as a compact button using existing
+   brand tokens. */
+.nav__link--cta {
+    padding: 0.4rem 1.1rem;
+    background-color: var(--hf-yellow);
+    color: var(--hf-blue);
+    border-radius: 5px;
+
+    &::after {
+        content: none;
+    }
+
+    &:hover {
+        background-color: var(--hf-red);
+        color: var(--white);
+    }
+}
+
+/* Organization identity line in the footer */
+.footer__org {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    text-align: center;
+    margin-bottom: 0.75rem;
+}

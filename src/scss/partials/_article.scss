@@ -130,7 +130,8 @@
                 font-style: italic;
             }
 
-            blockquote {
+            blockquote,
+            .article__pullquote {
                 position: relative;
                 margin: 10% auto;
                 padding: 1rem 10px 1.2rem 50px;

@@ -519,7 +519,8 @@ img {
 	font-weight: var(--font-semi-bold);
 	font-style: italic;
 }
-.article__section-area blockquote {
+.article__section-area blockquote,
+.article__section-area .article__pullquote {
 	position: relative;
 	margin: 10% auto 10% auto;
 	padding: 1rem 10px 1.2rem 50px;
@@ -535,16 +536,19 @@ img {
 	-ms-border-radius: 0 10px 10px 0;
 	-o-border-radius: 0 10px 10px 0;
 }
-.article__section-area blockquote span {
+.article__section-area blockquote span,
+.article__section-area .article__pullquote span {
 	padding-right: 0.2rem;
 	font-style: italic;
 	font-weight: var(--font-semi-bold);
 	color: var(--hf-red);
 }
-.article__section-area blockquote span.span-green {
+.article__section-area blockquote span.span-green,
+.article__section-area .article__pullquote span.span-green {
 	color: var(--hf-green);
 }
-.article__section-area blockquote::before {
+.article__section-area blockquote::before,
+.article__section-area .article__pullquote::before {
 	font-family: Arial;
 	content: '“';
 	color: var(--hf-red);
@@ -553,7 +557,8 @@ img {
 	left: 10px;
 	top: -30px;
 }
-.article__section-area blockquote::after {
+.article__section-area blockquote::after,
+.article__section-area .article__pullquote::after {
 	content: '';
 }
 .article__cards {
@@ -1263,7 +1268,7 @@ img {
 	font-size: var(--small-font-size);
 }
 .footer__data {
-	grid-template-columns: repeat(2, 150px);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .footer__title {
 	font-size: var(--h3-font-size);
@@ -2069,4 +2074,189 @@ img {
 	.donate__final-cta {
 		padding: 5rem 2rem;
 	}
+}
+
+/*=============== FOUNDATION ADDITIONS (compiled from _page.scss) ===============*/
+.page-heading {
+	display: flex;
+	flex-direction: column;
+}
+.page-heading .article__subtitle,
+.page-heading .home__subtitle,
+.page-heading .page__subtitle {
+	order: -1;
+}
+.breadcrumb {
+	position: absolute;
+	top: calc(var(--header-height) + 0.75rem);
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+.breadcrumb__list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 0.35rem;
+	max-width: 1120px;
+	margin-inline: 1.5rem;
+	list-style: none;
+	padding: 0;
+	font-size: var(--small-font-size);
+	color: var(--text-color-light);
+}
+.breadcrumb__item:not(:first-child)::before {
+	content: "/";
+	margin-right: 0.35rem;
+	color: var(--text-color-light);
+}
+.breadcrumb__link {
+	color: var(--hf-yellow);
+}
+.breadcrumb__link:hover {
+	text-decoration: underline;
+}
+.breadcrumb--flow {
+	position: static;
+	padding-top: calc(var(--header-height) + 1.25rem);
+}
+.article__updated,
+.page__updated {
+	font-size: var(--small-font-size);
+	color: var(--text-color-light);
+	margin-bottom: 0.75rem;
+}
+.page {
+	max-width: 900px;
+	margin-inline: auto;
+	padding: 2rem 1.5rem 4rem;
+}
+.page h1 {
+	font-size: var(--biggest-font-size);
+	color: var(--hf-yellow);
+	margin-bottom: 0.75rem;
+}
+.page__subtitle {
+	font-size: var(--h3-font-size);
+	color: var(--title-color);
+	margin-bottom: 0.5rem;
+}
+.page h2 {
+	color: var(--white);
+	margin: 2.5rem 0 1rem;
+}
+.page p {
+	color: var(--text-color-light);
+	line-height: 2;
+	margin-bottom: 1rem;
+}
+.page a {
+	color: var(--hf-yellow);
+}
+.page a:hover {
+	text-decoration: underline;
+}
+.page__facts {
+	display: grid;
+	row-gap: 0.75rem;
+	margin: 0 0 1rem;
+	padding-left: 1.25rem;
+	list-style: disc;
+	color: var(--text-color-light);
+	line-height: 1.8;
+}
+.page__cards {
+	grid-template-columns: 1fr;
+	margin-block: 1rem;
+}
+.page__cards li {
+	padding: 1.25rem;
+	background-color: var(--hf-blue-light);
+	border-radius: 10px;
+}
+.page__cards li a {
+	font-family: var(--second-font);
+	font-weight: var(--font-semi-bold);
+	color: var(--hf-yellow);
+}
+.page__cards li p {
+	margin: 0.5rem 0 0;
+}
+.page__quote {
+	margin: 1rem 0 1.5rem;
+	padding: 1rem 1.25rem;
+	border-left: 6px solid var(--hf-yellow);
+	background-color: var(--hf-blue-light);
+	border-radius: 0 10px 10px 0;
+}
+.page__quote p {
+	font-style: italic;
+	margin-bottom: 0.5rem;
+}
+.page__quote cite {
+	color: var(--title-color);
+	font-style: normal;
+	font-size: var(--small-font-size);
+}
+.page__related ul {
+	display: grid;
+	row-gap: 0.75rem;
+	padding-left: 1.25rem;
+	list-style: disc;
+	color: var(--text-color-light);
+}
+.page .answer-block p {
+	color: var(--white);
+	line-height: 2;
+	padding: 1rem 1.25rem;
+	background-color: var(--hf-blue-light);
+	border-radius: 10px;
+}
+.page .faq dt {
+	color: var(--white);
+	font-family: var(--second-font);
+	font-weight: var(--font-semi-bold);
+	margin-top: 1.25rem;
+}
+.page .faq dd {
+	color: var(--text-color-light);
+	line-height: 2;
+	margin: 0.5rem 0 0;
+}
+.page .donate-cta {
+	margin: 2.5rem 0;
+	padding: 1.5rem;
+	text-align: center;
+	background-color: var(--hf-blue-light);
+	border-radius: 10px;
+}
+.page .donate-cta .button {
+	color: var(--white);
+}
+@media screen and (min-width: 768px) {
+	.page__cards {
+		grid-template-columns: 1fr 1fr;
+	}
+	.footer__data {
+		grid-template-columns: repeat(4, max-content);
+		column-gap: 2.5rem;
+	}
+}
+.nav__link--cta {
+	padding: 0.4rem 1.1rem;
+	background-color: var(--hf-yellow);
+	color: var(--hf-blue);
+	border-radius: 5px;
+}
+.nav__link--cta::after {
+	content: none;
+}
+.nav__link--cta:hover {
+	background-color: var(--hf-red);
+	color: var(--white);
+}
+.footer__org {
+	font-size: var(--smaller-font-size);
+	color: var(--text-color-light);
+	text-align: center;
+	margin-bottom: 0.75rem;
 }
