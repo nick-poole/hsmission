@@ -105,6 +105,36 @@ Cannot be verified from this session (network blocked). List captured in `audit-
 4. **Zeffy → `/thank-you` success redirect** tracked as a README action item (dashboard-side).
 5. `mission.md` in the repo root is approved source content for now (used for `/about`).
 
+## 7b. Accessibility audit (Phase 5, manual — axe-core not runnable in-session)
+
+**Fixed in this branch:**
+- Visible focus indicators for keyboard users: global `:focus-visible` style (gold ring wrapped in a navy ring so it passes 3:1 on both navy and white surfaces). The pre-existing `outline: none` on buttons/inputs now has a compliant replacement.
+- `prefers-reduced-motion` honored: CSS media query disables smooth scrolling and transitions; the scroll-to-top JS switches to instant scrolling.
+- Heading order: eyebrow text now renders after the H1 in the DOM (visual position unchanged via CSS `order`), no skipped levels on any page.
+- Landmarks: every page except legal has exactly one `header`/`main`/`footer`; all `<nav>` elements uniquely labeled (Primary / Breadcrumb / Keep reading).
+- Link text: card "Learn More" spans are `aria-hidden` decoration inside links named by their card titles; no bare "click here"/"read more" links exist.
+- Alt text: preserved through the restructure on every image (re-verified: 0 missing).
+
+**Contrast measurements (WCAG 1.4.3), full brand-pair matrix computed:**
+
+| Pair | Ratio | Verdict |
+|---|---|---|
+| Gold `#f3b419` on navy `#002e5a` | 7.38 | ✅ |
+| White / near-white text on navy | 12.2–13.7 | ✅ |
+| Gray body text `hsl(0,0%,70%)` on navy | 6.51 | ✅ |
+| `--text-color-light` on navy / on `--hf-blue-light` | 8.29 / 5.37 | ✅ |
+| Navy on gold (nav Donate button) | 7.38 | ✅ |
+| White on red (scroll-up button) | 5.46 | ✅ |
+| **White on gold — mission-card "Learn More" chips** | **1.85** | ❌ report only |
+| **Gold on white — related-card "Learn More" text** | **1.85** | ❌ report only |
+| **Article link hover (gold→red on navy)** | **2.50** | ❌ report only |
+
+Per the brief, the three failures are **reported, not changed** — each needs a design decision (they involve the gold/red brand colors on light surfaces). Suggested fixes when you're ready: use navy text on the gold chips; use `--hf-blue-light` or underline-only for hover on navy.
+
+**Not verifiable offline (do before launch):**
+- Zeffy modal keyboard operability and focus management — the donation form is a script-injected modal, not an on-page iframe (see §3.3). Tab through the full donate flow on the live site; if the injected iframe lacks a `title`, raise it with Zeffy support.
+- Full axe-core/Pa11y run on the deployed site.
+
 ## 8. Residual issues / for human decision
 
 - **Gold `#f3b419` on white** and light-gray body text on white surfaces likely fail 4.5:1 — audited in Phase 5; reported, not changed (brief §8).

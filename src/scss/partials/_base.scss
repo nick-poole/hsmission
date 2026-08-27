@@ -27,6 +27,35 @@ input {
     border: none;
 }
 
+/* Visible focus indicator for keyboard users (WCAG 2.4.7). The gold ring is
+   wrapped in a thin navy ring so it stays visible on both navy and white
+   surfaces. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid var(--hf-yellow);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px rgba(0, 46, 90, 0.9);
+    border-radius: 4px;
+}
+
+/* Honor reduced-motion preferences (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
 h1,
 h2,
 h3,
