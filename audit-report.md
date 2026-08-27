@@ -135,6 +135,21 @@ Per the brief, the three failures are **reported, not changed** — each needs a
 - Zeffy modal keyboard operability and focus management — the donation form is a script-injected modal, not an on-page iframe (see §3.3). Tab through the full donate flow on the live site; if the injected iframe lacks a `title`, raise it with Zeffy support.
 - Full axe-core/Pa11y run on the deployed site.
 
+## 7c. Performance work (Phase 6)
+
+**Done in this branch:**
+- Explicit `width`/`height` attributes on all 177 raster `<img>` tags across the site, from measured intrinsic dimensions (CLS guard). Rendering verified pixel-identical before/after.
+- `fetchpriority="high"` on all 7 hero/LCP images; lazy-loading stripped from heroes.
+- `loading="lazy"` added to the ~60 below-fold footer images that lacked it (content images already had it from earlier work).
+- Google Fonts already load with `display=swap` and preconnect; Zeffy script is `defer`; both left as-is.
+- `scripts/optimize-images.mjs` (sharp) committed: generates WebP siblings and optionally downscales oversized sources (never upscales; originals backed up). `scripts/update-image-dimensions.py` re-syncs markup dimensions after any image change.
+
+**Blocked in this environment (npm/pip/downloads all 403):** actual image conversion could not run here — no sharp, cwebp, ImageMagick, or usable ffmpeg on the box. Two paths forward:
+1. Run `npm i -D sharp && npm run images:optimize -- --resize && npm run images:dimensions` locally, then switch heroes to `<picture>` with WebP sources; or
+2. After the planned Cloudflare Pages migration, enable **Polish (Lossy WebP)** + Brotli — edge conversion with zero markup changes. The `--resize` pass is still worth one run either way: `natural-disasters_cover.jpeg` is 6432px/3.1MB, `bill-hamway-madam-felix.jpg` 5760px/2.2MB, `3606.jpg` 5556px/1.8MB (and unreferenced `topsphere-media-MEGAHD.jpg` is 16000px/6.1MB — deletable).
+- Critical-CSS inlining skipped deliberately: it would fork the compiled stylesheet from the SASS build (brief §9 allows skipping in that case). The single 41KB stylesheet is cacheable and small.
+- PSI/Lighthouse must be measured on the deployed site (no external network here).
+
 ## 8. Residual issues / for human decision
 
 - **Gold `#f3b419` on white** and light-gray body text on white surfaces likely fail 4.5:1 — audited in Phase 5; reported, not changed (brief §8).
