@@ -1,0 +1,630 @@
+{
+ "pages": {
+  "index.html": {
+   "title": "Haiti Nonprofit Organization | Clean Water, Education & Relief | Haitian Sensation Mission",
+   "title_len": 90,
+   "canonical": "https://haitiansensationmission.org/",
+   "description_len": 189,
+   "robots": "index, follow",
+   "h1_count": 1,
+   "headings": [
+    "h1: Join Our Mission: Empowering Haiti",
+    "h2: Our Story",
+    "h2: Why Haiti Needs Support",
+    "h2: How We Help Haiti",
+    "h3: Disaster Relief",
+    "h3: Clean Water Initiatives",
+    "h3: Educational Outreach",
+    "h2: Support Our Haiti Nonprofit",
+    "h2: Be Part of the Mission",
+    "h3: Your Support Makes This Possible",
+    "h3: About",
+    "h3: Legal"
+   ],
+   "order_issues": [],
+   "jsonld": [
+    {
+     "top": [
+      "NGO",
+      "WebSite"
+     ],
+     "valid": true
+    }
+   ],
+   "navs": [
+    "Primary"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "footer"
+   ],
+   "imgs_total": 17,
+   "imgs_no_dims": [
+    "dist/assets/images/haiti-5323242.png",
+    "dist/assets/images/topsphere-media-2400.jpg",
+    "dist/assets/images/8_2000px-1024x682.jpg",
+    "dist/assets/images/48_2000px-1024x682.jpg",
+    "dist/assets/images/2019trip-mission-group1.jpg",
+    "dist/assets/images/30_2000px-1024x682.jpg",
+    "dist/assets/images/home-team-1024x512.jpg",
+    "dist/assets/images/bill-hamway-madam-felix.jpg",
+    "dist/assets/images/2019trip-hatian-boy.jpg",
+    "dist/assets/images/drinking-water.jpg",
+    "dist/assets/images/classroom-1024x682.jpg",
+    "dist/assets/images/27_2000px-1024x682.jpg",
+    "dist/assets/images/zach-vessels-schoolboy1.jpg",
+    "dist/assets/images/24_2000px-1024x682.jpg",
+    "dist/assets/images/haiti-5323242.png",
+    "dist/assets/logos/Logo-White.png",
+    "dist/assets/logos/Logo-White.png"
+   ],
+   "imgs_no_alt": [],
+   "imgs_lazy": 8,
+   "imgs_fetchpriority": 0,
+   "iframes": [],
+   "time_tags": 0,
+   "blockquotes": 0,
+   "skiplink": true
+  },
+  "donate.html": {
+   "title": "Donate to Help Haiti | Clean Water & Education | Haitian Sensation Mission",
+   "title_len": 74,
+   "canonical": "https://haitiansensationmission.org/donate.html",
+   "description_len": 203,
+   "robots": "index, follow",
+   "h1_count": 1,
+   "headings": [
+    "h1: Donate to Help Haiti",
+    "h2: How Your Donation Helps Communities in Haiti",
+    "h3: Clean Water Access",
+    "h3: Educational Programs",
+    "h3: Disaster Relief",
+    "h3: Community Empowerment",
+    "h2: A Trusted Haiti Nonprofit You Can Support With Confidence",
+    "h2: Direct Impact with Every Donation",
+    "h2: Complete Your Donation",
+    "h2: Frequently Asked Questions About Donating to Haiti",
+    "h2: Learn More About Our Work in Haiti",
+    "h2: Ready to Help Haiti?",
+    "h3: About",
+    "h3: Legal"
+   ],
+   "order_issues": [],
+   "jsonld": [
+    {
+     "top": "NGO",
+     "valid": true
+    },
+    {
+     "top": "FAQPage",
+     "valid": true
+    }
+   ],
+   "navs": [
+    "Primary"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "footer"
+   ],
+   "imgs_total": 8,
+   "imgs_no_dims": [
+    "dist/assets/images/haiti-5323242.png",
+    "dist/assets/images/topsphere-media-boy-zoom.jpg",
+    "dist/assets/images/small-boy.jpg",
+    "dist/assets/images/small-girl-1024x682.jpg",
+    "dist/assets/logos/zeffy.svg",
+    "dist/assets/images/haiti-5323242.png",
+    "dist/assets/logos/Logo-White.png",
+    "dist/assets/logos/Logo-White.png"
+   ],
+   "imgs_no_alt": [],
+   "imgs_lazy": 2,
+   "imgs_fetchpriority": 0,
+   "iframes": [],
+   "time_tags": 0,
+   "blockquotes": 0,
+   "skiplink": true
+  },
+  "articles/history.html": {
+   "title": "Understanding Haiti | Haitian Sensation Mission",
+   "title_len": 47,
+   "canonical": "https://haitiansensationmission.org/articles/history.html",
+   "description_len": 166,
+   "robots": "index, follow",
+   "h1_count": 1,
+   "headings": [
+    "h1: Understanding Haiti",
+    "h2: The Shadow of Colonization",
+    "h2: Soil Degradation",
+    "h2: Haiti's Price for Independence",
+    "h2: France's Persistent Economic Stranglehold",
+    "h2: US Occupation",
+    "h2: Diplomatic Neglect",
+    "h2: Marginalized in the Marketplace",
+    "h2: The Weight of a President's Loss",
+    "h2: A Nation Neglected",
+    "h3: History is written, but tomorrow's pages are blank.",
+    "h2: Related Articles",
+    "h3: From Wells to Wellness",
+    "h3: Aftershocks Continued",
+    "h3: Building Futures",
+    "h3: Behind the Mission",
+    "h3: Join our Mission",
+    "h3: About",
+    "h3: Legal"
+   ],
+   "order_issues": [],
+   "jsonld": [
+    {
+     "top": "NGO",
+     "valid": true
+    }
+   ],
+   "navs": [
+    "Primary"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "footer"
+   ],
+   "imgs_total": 21,
+   "imgs_no_dims": [
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/images/bill-hamway-madam-felix.jpg",
+    "../dist/assets/images/Flag_of_Haiti.svg.png",
+    "../dist/assets/images/haiti_rel99.jpg",
+    "../dist/assets/images/citadel-la-ferriere_1920.jpg",
+    "../dist/assets/images/claudia-altamimi-land.jpg",
+    "../dist/assets/images/Haitian_Revolution.webp",
+    "../dist/assets/images/petionville-reynaldo-mirault.jpg",
+    "../dist/assets/images/Merced_Sun-Star_-_Killing_of_Haitians_is_Admitted.jpg",
+    "../dist/assets/images/fence_1280.jpg",
+    "../dist/assets/images/basket-1024x731.jpg",
+    "../dist/assets/images/Jovenel_Moise.jpg",
+    "../dist/assets/images/3606.jpg",
+    "../dist/assets/images/wells-to-wellness_cover.jpg",
+    "../dist/assets/images/2019trip-hatian-boy.jpg",
+    "../dist/assets/images/school-bus-1024x576.jpg",
+    "../dist/assets/images/home-team-1024x512.jpg",
+    "../dist/assets/images/zach-vessels-rWEUBzbp2rc-unsplash.jpg",
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/logos/Logo-White.png",
+    "../dist/assets/logos/Logo-White.png"
+   ],
+   "imgs_no_alt": [],
+   "imgs_lazy": 15,
+   "imgs_fetchpriority": 0,
+   "iframes": [],
+   "time_tags": 0,
+   "blockquotes": 1,
+   "skiplink": true
+  },
+  "articles/education.html": {
+   "title": "Educational Outreach | Haitian Sensation Mission",
+   "title_len": 48,
+   "canonical": "https://haitiansensationmission.org/articles/education.html",
+   "description_len": 114,
+   "robots": "index, follow",
+   "h1_count": 1,
+   "headings": [
+    "h1: Educational Outreach",
+    "h2: A Nation of Children Left Behind",
+    "h2: Barriers to Learning",
+    "h2: Education as Emancipation",
+    "h2: A Hunger for More than Learning",
+    "h2: Foundations of Hope",
+    "h2: Tools for Tomorrow",
+    "h2: Nurturing Haiti's Future",
+    "h2: Your Pledge, Their Progress",
+    "h3: Invest in Haiti's Children",
+    "h2: Related Articles",
+    "h3: From Wells to Wellness",
+    "h3: Aftershocks Continued",
+    "h3: Building Futures",
+    "h3: Behind the Mission",
+    "h3: Join our Mission",
+    "h3: About",
+    "h3: Legal"
+   ],
+   "order_issues": [],
+   "jsonld": [
+    {
+     "top": "NGO",
+     "valid": true
+    }
+   ],
+   "navs": [
+    "Primary"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "footer"
+   ],
+   "imgs_total": 22,
+   "imgs_no_dims": [
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/images/zach-vessels-school-girls.jpg",
+    "../dist/assets/images/bus-group-1024x576.jpg",
+    "../dist/assets/images/left-behind-1024x891.jpg",
+    "../dist/assets/images/classroom-1024x682.jpg",
+    "../dist/assets/images/classroom-1024x576.jpg",
+    "../dist/assets/images/classroom-vertical2000px1024.jpg",
+    "../dist/assets/images/schoolyard-snack_2000px-768x1024.jpg",
+    "../dist/assets/images/haiti-kids.jpg",
+    "../dist/assets/images/pelerin-construction-2.jpg",
+    "../dist/assets/images/construct-1024x768.jpg",
+    "../dist/assets/images/school-supplies-1024x576.jpg",
+    "../dist/assets/images/lesson-768x1024.jpg",
+    "../dist/assets/images/school-bus-1024x576.jpg",
+    "../dist/assets/images/wells-to-wellness_cover.jpg",
+    "../dist/assets/images/2019trip-hatian-boy.jpg",
+    "../dist/assets/images/school-bus-1024x576.jpg",
+    "../dist/assets/images/home-team-1024x512.jpg",
+    "../dist/assets/images/zach-vessels-rWEUBzbp2rc-unsplash.jpg",
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/logos/Logo-White.png",
+    "../dist/assets/logos/Logo-White.png"
+   ],
+   "imgs_no_alt": [],
+   "imgs_lazy": 15,
+   "imgs_fetchpriority": 0,
+   "iframes": [],
+   "time_tags": 0,
+   "blockquotes": 4,
+   "skiplink": true
+  },
+  "articles/natural-disasters.html": {
+   "title": "Natural Disasters | Haitian Sensation Mission",
+   "title_len": 45,
+   "canonical": "https://haitiansensationmission.org/articles/natural-disasters.html",
+   "description_len": 155,
+   "robots": "index, follow",
+   "h1_count": 1,
+   "headings": [
+    "h1: Aftershocks Continued",
+    "h2: A Dual Threat",
+    "h2: A Way of Life Destroyed",
+    "h2: Back to Square One",
+    "h2: Relentless Challenges",
+    "h2: A Never-Ending Cycle",
+    "h2: A Need for Support",
+    "h3: The Ground in Haiti is Unstable.",
+    "h2: Related Articles",
+    "h3: From Wells to Wellness",
+    "h3: Aftershocks Continued",
+    "h3: Building Futures",
+    "h3: Behind the Mission",
+    "h3: Join our Mission",
+    "h3: About",
+    "h3: Legal"
+   ],
+   "order_issues": [],
+   "jsonld": [
+    {
+     "top": "NGO",
+     "valid": true
+    }
+   ],
+   "navs": [
+    "Primary"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "aside",
+    "footer"
+   ],
+   "imgs_total": 20,
+   "imgs_no_dims": [
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/images/natural-disasters_cover.jpeg",
+    "../dist/assets/images/PIXNIO-45818-1536x1028.jpeg",
+    "../dist/assets/images/PIXNIO-45669-364x544.jpeg",
+    "../dist/assets/images/PIXNIO-45667-408x544.jpeg",
+    "../dist/assets/images/susan-mohr-_jIu-3G4szI-unsplash.jpg",
+    "../dist/assets/images/PIXNIO-46240-725x544.jpeg",
+    "../dist/assets/images/PIXNIO-46244-725x544.jpeg",
+    "../dist/assets/images/haiti-heal_1920.jpg",
+    "../dist/assets/images/PIXNIO-46212-725x544.jpeg",
+    "../dist/assets/images/helping-people-1599806_1920.jpg",
+    "../dist/assets/images/topsphere-media-highlighter.jpg",
+    "../dist/assets/images/wells-to-wellness_cover.jpg",
+    "../dist/assets/images/2019trip-hatian-boy.jpg",
+    "../dist/assets/images/school-bus-1024x576.jpg",
+    "../dist/assets/images/home-team-1024x512.jpg",
+    "../dist/assets/images/zach-vessels-rWEUBzbp2rc-unsplash.jpg",
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/logos/Logo-White.png",
+    "../dist/assets/logos/Logo-White.png"
+   ],
+   "imgs_no_alt": [],
+   "imgs_lazy": 14,
+   "imgs_fetchpriority": 0,
+   "iframes": [],
+   "time_tags": 0,
+   "blockquotes": 2,
+   "skiplink": true
+  },
+  "articles/wells-to-wellness.html": {
+   "title": "Wells to Wellness | Haitian Sensation Mission",
+   "title_len": 45,
+   "canonical": "https://haitiansensationmission.org/articles/wells-to-wellness.html",
+   "description_len": 129,
+   "robots": "index, follow",
+   "h1_count": 1,
+   "headings": [
+    "h1: From Wells to Wellness",
+    "h2: A Thirst Unquenched",
+    "h2: The Cost of Water Insecurity",
+    "h2: The Urban / Rural Divide",
+    "h2: Water as a Human Right",
+    "h2: A Need for Wells",
+    "h3: Water is the Gift of Life",
+    "h2: Related Articles",
+    "h3: From Wells to Wellness",
+    "h3: Aftershocks Continued",
+    "h3: Building Futures",
+    "h3: Behind the Mission",
+    "h3: Join our Mission",
+    "h3: About",
+    "h3: Legal"
+   ],
+   "order_issues": [],
+   "jsonld": [
+    {
+     "top": "NGO",
+     "valid": true
+    }
+   ],
+   "navs": [
+    "Primary"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "footer"
+   ],
+   "imgs_total": 20,
+   "imgs_no_dims": [
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/images/wells-to-wellness_cover.jpg",
+    "../dist/assets/images/drinking-water.jpg",
+    "../dist/assets/images/pexels-deva-darshan-nyau-1446504.jpg",
+    "../dist/assets/images/pexels-safari-consoler-18304115.jpg",
+    "../dist/assets/images/pexels-levi-rotich-5954810.jpg",
+    "../dist/assets/images/heather-suggitt.jpg",
+    "../dist/assets/images/2019trip_village-on-hill.jpg",
+    "../dist/assets/images/pexels-kelly-3030316.jpg",
+    "../dist/assets/images/52_2000px-683x1024.jpg",
+    "../dist/assets/images/pexels-pexels-boss-5742575.jpg",
+    "../dist/assets/images/IMG_1010_2000px-768x1024.jpg",
+    "../dist/assets/images/wells-to-wellness_cover.jpg",
+    "../dist/assets/images/2019trip-hatian-boy.jpg",
+    "../dist/assets/images/school-bus-1024x576.jpg",
+    "../dist/assets/images/home-team-1024x512.jpg",
+    "../dist/assets/images/zach-vessels-rWEUBzbp2rc-unsplash.jpg",
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/logos/Logo-White.png",
+    "../dist/assets/logos/Logo-White.png"
+   ],
+   "imgs_no_alt": [],
+   "imgs_lazy": 13,
+   "imgs_fetchpriority": 0,
+   "iframes": [],
+   "time_tags": 0,
+   "blockquotes": 2,
+   "skiplink": true
+  },
+  "articles/our-story.html": {
+   "title": "Our Story | Haitian Sensation Mission",
+   "title_len": 37,
+   "canonical": "https://haitiansensationmission.org/articles/our-story.html",
+   "description_len": 113,
+   "robots": "index, follow",
+   "h1_count": 1,
+   "headings": [
+    "h1: Our Story",
+    "h2: Haitian Roots in Pennsylvania Soil",
+    "h2: Unfiltered Compassion",
+    "h2: A Call to Serve",
+    "h2: From Sensation to Service",
+    "h2: Our Family of Dedicated Staff",
+    "h2: Uniting Through Purpose",
+    "h2: A Mission Worth Fulfilling",
+    "h2: Joining Hands for a Greater Good",
+    "h3: Help Us Write the Next Chapter",
+    "h2: Related Articles",
+    "h3: From Wells to Wellness",
+    "h3: Aftershocks Continued",
+    "h3: Building Futures",
+    "h3: Behind the Mission",
+    "h3: Join our Mission",
+    "h3: About",
+    "h3: Legal"
+   ],
+   "order_issues": [],
+   "jsonld": [
+    {
+     "top": "NGO",
+     "valid": true
+    }
+   ],
+   "navs": [
+    "Primary"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "footer"
+   ],
+   "imgs_total": 19,
+   "imgs_no_dims": [
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/images/our-story_cover.jpg",
+    "../dist/assets/images/8_2000px-1024x682.jpg",
+    "../dist/assets/images/joe-coffee.jpg",
+    "../dist/assets/images/case-study.jpg",
+    "../dist/assets/images/joseph-kristine1.jpg",
+    "../dist/assets/images/sweet-sensation-cookie-display.jpg",
+    "../dist/assets/images/home-team-1024x512.jpg",
+    "../dist/assets/images/chair-ministry.jpg",
+    "../dist/assets/images/5_2000px-1024x682.jpg",
+    "../dist/assets/images/15_2000px-1024x682.jpg",
+    "../dist/assets/images/wells-to-wellness_cover.jpg",
+    "../dist/assets/images/2019trip-hatian-boy.jpg",
+    "../dist/assets/images/school-bus-1024x576.jpg",
+    "../dist/assets/images/home-team-1024x512.jpg",
+    "../dist/assets/images/zach-vessels-rWEUBzbp2rc-unsplash.jpg",
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/logos/Logo-White.png",
+    "../dist/assets/logos/Logo-White.png"
+   ],
+   "imgs_no_alt": [],
+   "imgs_lazy": 13,
+   "imgs_fetchpriority": 0,
+   "iframes": [],
+   "time_tags": 0,
+   "blockquotes": 1,
+   "skiplink": true
+  },
+  "legal/privacy.html": {
+   "title": "Privacy Policy | Haitian Sensation Mission",
+   "title_len": 42,
+   "canonical": "https://haitiansensationmission.org/legal/privacy.html",
+   "description_len": 74,
+   "robots": "noindex",
+   "h1_count": 1,
+   "headings": [
+    "h1: Privacy Policy",
+    "h2: Interpretation and Definitions",
+    "h3: Interpretation",
+    "h3: Definitions",
+    "h2: Collecting and Using Your Personal Data",
+    "h3: Types of Data Collected",
+    "h4: Personal Data",
+    "h4: Usage Data",
+    "h4: Tracking Technologies and Cookies",
+    "h2: Use of Your Personal Data",
+    "h2: Retention of Your Personal Data",
+    "h2: Transfer of Your Personal Data",
+    "h2: Delete Your Personal Data",
+    "h2: Disclosure of Your Personal Data",
+    "h3: Business Transactions",
+    "h3: Law enforcement",
+    "h3: Other legal requirements",
+    "h2: Security of Your Personal Data",
+    "h2: Children's Privacy",
+    "h2: Links to Other Websites",
+    "h2: Changes to this Privacy Policy",
+    "h2: Contact Us",
+    "h3: About",
+    "h3: Legal"
+   ],
+   "order_issues": [],
+   "jsonld": [],
+   "navs": [],
+   "landmarks": [
+    "main",
+    "footer"
+   ],
+   "imgs_total": 3,
+   "imgs_no_dims": [
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/logos/Logo-White.png",
+    "../dist/assets/logos/Logo-White.png"
+   ],
+   "imgs_no_alt": [],
+   "imgs_lazy": 0,
+   "imgs_fetchpriority": 0,
+   "iframes": [],
+   "time_tags": 0,
+   "blockquotes": 0,
+   "skiplink": true
+  },
+  "legal/terms.html": {
+   "title": "Terms & Conditions | Haitian Sensation Mission",
+   "title_len": 46,
+   "canonical": "https://haitiansensationmission.org/legal/terms.html",
+   "description_len": 80,
+   "robots": "noindex",
+   "h1_count": 1,
+   "headings": [
+    "h1: Terms and Conditions",
+    "h2: Interpretation and Definitions",
+    "h3: Interpretation",
+    "h3: Definitions",
+    "h2: Acknowledgment",
+    "h2: Links to Other Websites",
+    "h2: Termination",
+    "h2: Limitation of Liability",
+    "h2: \"AS IS\" and \"AS AVAILABLE\" Disclaimer",
+    "h2: Governing Law",
+    "h2: Disputes Resolution",
+    "h2: For European Union (EU) Users",
+    "h2: United States Legal Compliance",
+    "h2: Severability and Waiver",
+    "h3: Severability",
+    "h3: Waiver",
+    "h2: Translation Interpretation",
+    "h2: Changes to These Terms and Conditions",
+    "h2: Contact Us",
+    "h3: About",
+    "h3: Legal"
+   ],
+   "order_issues": [],
+   "jsonld": [],
+   "navs": [],
+   "landmarks": [
+    "main",
+    "footer"
+   ],
+   "imgs_total": 3,
+   "imgs_no_dims": [
+    "../dist/assets/images/haiti-5323242.png",
+    "../dist/assets/logos/Logo-White.png",
+    "../dist/assets/logos/Logo-White.png"
+   ],
+   "imgs_no_alt": [],
+   "imgs_lazy": 0,
+   "imgs_fetchpriority": 0,
+   "iframes": [],
+   "time_tags": 0,
+   "blockquotes": 0,
+   "skiplink": true
+  }
+ },
+ "broken_internal_links": [],
+ "external_links": [
+  "https://guides.loc.gov/latinx-civil-rights/cuban-adjustment-act",
+  "https://haitiansensationcoffee.com/",
+  "https://haitiansensationcoffee.com/gallery/",
+  "https://haitiansensationmission.org",
+  "https://nickpoole.dev/",
+  "https://pubmed.ncbi.nlm.nih.gov/31473576/",
+  "https://twitter.com/haitijoecoffee",
+  "https://worldpopulationreview.com/country-rankings/poorest-countries-in-north-america#:~:text=1.%20Haiti-,The%20poorest%20country%20in%20North%20America%2C,-Haiti%20is%20experiencing",
+  "https://www.bbc.com/news/world-latin-america-57762246",
+  "https://www.cfr.org/backgrounder/haitis-troubled-path-development",
+  "https://www.cnn.com/2023/06/03/world/haiti-president-assassination-rodolphe-jaar-sentenced/index.html",
+  "https://www.facebook.com/haitiansensationcoffee/",
+  "https://www.migrationpolicy.org/article/haitians-flee-collapse#:~:text=People%20are%20leaving%20Haiti%20as%20if%20their%20lives%20depend%20on%20it",
+  "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3795096/#:~:text=Haiti%20has%20the%20lowest%20rates,infrastructure%20in%20the%20western%20hemisphere.",
+  "https://www.npr.org/2021/08/16/1027990749/haiti-earthquake-why-deadly-explainer#:~:text=Haitians%20have%20focused%20on%20building%20their%20homes%20to%20withstand%20the%20bigger%20threat%20in%20the%20neighborhood%20%E2%80%94%20hurricanes.",
+  "https://www.nytimes.com/2022/05/20/world/haiti-wall-street-us-banks.html",
+  "https://www.nytimes.com/2023/10/06/world/americas/haiti-dominican-republic-deportation.html",
+  "https://www.researchgate.net/publication/352288004_Chemical_Pollution_of_Drinking_Water_in_Haiti_An_Important_Threat_to_Public_Health",
+  "https://www.reuters.com/business/environment/magnitude-7-quake-strikes-western-haiti-usgs-2021-08-14/",
+  "https://www.semanticscholar.org/paper/Climate-Change-Resilience%3A-The-case-of-Haiti-Cohen-Singh/ee7c51bf999848c912160d00c6fa948c4e719dc2",
+  "https://www.sharonherald.com/community/kids-campaign-spurs-haiti-native-to-start-nonprofit-relief-effort/article_137cd9ec-f924-5089-b1f8-37540df4c633.html",
+  "https://www.termsfeed.com/blog/cookies/#What_Are_Cookies",
+  "https://www.wfpusa.org/countries/haiti/",
+  "https://www.who.int/emergencies/disease-outbreak-news/item/2022-DON427",
+  "https://www.worldbank.org/en/news/feature/2016/05/25/building-toilets-and-changing-behaviors-can-save-lives-in-haiti",
+  "https://zeffy.com/"
+ ]
+}
