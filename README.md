@@ -14,6 +14,21 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 - **Interactive UI**: Engaging user interface to guide donors and provide them with insights about the mission.
 - **Responsive Design**: Optimized for various devices, ensuring a consistent user experience.
 
+## Action Items (post-foundation work)
+
+Owner tasks that could not be completed inside the foundation branch — roughly in priority order. See `audit-report.md` for full context and `content-manifest.md` for the content pipeline.
+
+1. **Configure Zeffy success redirect → `/thank-you`** (Zeffy dashboard). Point the donation form's post-payment redirect at `https://haitiansensationmission.org/thank-you`. This is a hard blocker for Google Ad Grant conversion tracking; if Zeffy can't redirect, flag it before the grant application.
+2. **Add GA4 + GDPR-compliant cookie consent** (owner decision to do post-operation). Fire a `donation_complete` conversion event on the `/thank-you` pageview. A comment marks the spot in `thank-you/index.html`.
+3. **Verify Zeffy modal accessibility on the live site**: tab through the entire donate flow keyboard-only; check the injected iframe has a `title`; raise with Zeffy support if not.
+4. **Run the image pipeline where npm works**: `npm i -D sharp && npm run images:optimize -- --resize && npm run images:dimensions` (remote sandbox couldn't install sharp). Or wait for the Cloudflare migration and enable Polish.
+5. **Cloudflare Pages migration** (planned post-operation): build command `npm run build`, output dir `.`; `_redirects` works unchanged; then enable Polish (Lossy WebP), Brotli, and immutable cache headers on `/dist/*`.
+6. **Content drop**: replace placeholders per `content-manifest.md`, flip those pages to `index, follow`, add them to `sitemap.xml`, then gate deploys with `STRICT=1 npm run guard:placeholders`.
+7. **Pre-launch validation** (needs open network): W3C validator, axe-core/Pa11y, Lighthouse/PSI (target mobile ≥ 85), external-link checker.
+8. **Design decisions on 3 contrast failures** (see audit-report §7b): "Learn More" chips (white-on-gold and gold-on-white) and the red link hover on navy — all below WCAG AA. Suggested: navy text on gold chips; blue-light or underline-only hover.
+9. **Verify the child-sponsorship claim** on `/programs/education` ("Sponsor a Child in Haiti — $5 Feeds 25 Students") matches a real offering before Ad Grant submission; the body copy still describes general education outreach.
+10. **Optional cleanup**: 48 unreferenced images (~13 MB, incl. the 16000px `topsphere-media-MEGAHD.jpg`) listed in `audit-data/image-tables.md` can be deleted or archived.
+
 ## Acknowledgments
 
 - Joseph Altenor, for the inspiration behind this mission.
