@@ -30,7 +30,7 @@ Verify with: `grep -rn "PLACEHOLDER" --include='*.html' .`
 
 | Page | Note |
 |---|---|
-| `/` | Civic rebuild: existing homepage prose preserved in the white band; founder quote marked CONTENT:VERIFY |
+| `/` | Civic rebuild: existing homepage prose preserved in the white band. Founder quote removed 2026-08-30 per Joseph — the site should not focus on him |
 | `/programs` | Now indexed: real answer block + program cards composed from existing homepage/mission copy |
 | `/donate` | Existing copy + FAQ preserved; FAQPage JSON-LD mirrors visible FAQ |
 | `/why-haiti-is-poor` | Prose moved intact from `/articles/history`; H1 retargeted to "Why Is Haiti So Poor?"; BLUF answer-block can be added when copy team delivers |
@@ -45,7 +45,7 @@ Verify with: `grep -rn "PLACEHOLDER" --include='*.html' .`
 ## CONTENT:VERIFY registry (brief v2 §9 — waiting on Joseph, do not resolve)
 
 Search the codebase for `CONTENT:VERIFY`. Currently marked:
-- Founder quote wording (`/`, `/about`)
+- Founder quote wording (`/about` only — removed from `/` per Joseph)
 - Education statistics from the design mockup: ~90% private schools, spending rank, 1-in-5 secondary enrollment, $30–43/mo sponsorship comparison (`/programs/education`)
 - Meal-cost benchmarks $0.09 / $0.13 (`/donate/where-your-money-goes`)
 - Tier-ladder amounts beyond the $5 anchor (`/programs/education`, `/donate`)

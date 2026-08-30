@@ -160,6 +160,30 @@ cite {
 .table-scroll {
 	overflow-x: auto;
 }
+/* Wider feel on medium and small screens: relax the reading measure and
+   trim gutter padding so content uses more of the viewport. */
+@media (max-width: 1023px) {
+	.wrap,
+	.narrow {
+		padding: 0 1.25rem;
+	}
+	p,
+	ul,
+	ol,
+	.answer,
+	.quote,
+	.callout,
+	.toc-box,
+	.faq .a {
+		max-width: none;
+	}
+}
+@media (max-width: 720px) {
+	.wrap,
+	.narrow {
+		padding: 0 1rem;
+	}
+}
 /*=============== HEADER / NAV ===============*/
 .hd {
 	background: var(--navy);
@@ -253,16 +277,16 @@ cite {
 	position: relative;
 	color: #fff;
 	background: var(--navy);
-	min-height: 52vh;
+	min-height: 62vh;
 	display: flex;
 	align-items: center;
 	overflow: hidden;
 }
 .hero--home {
-	min-height: 64vh;
+	min-height: 78vh;
 }
 .hero--short {
-	min-height: 34vh;
+	min-height: 42vh;
 }
 .hero > img {
 	position: absolute;
@@ -270,7 +294,6 @@ cite {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	opacity: 0.5;
 }
 .hero .slab {
 	position: relative;

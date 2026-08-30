@@ -3,16 +3,16 @@
 	position: relative;
 	color: #fff;
 	background: var(--navy);
-	min-height: 52vh;
+	min-height: 62vh;
 	display: flex;
 	align-items: center;
 	overflow: hidden;
 }
 .hero--home {
-	min-height: 64vh;
+	min-height: 78vh;
 }
 .hero--short {
-	min-height: 34vh;
+	min-height: 42vh;
 }
 .hero > img {
 	position: absolute;
@@ -20,7 +20,6 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	opacity: 0.5;
 }
 .hero .slab {
 	position: relative;
