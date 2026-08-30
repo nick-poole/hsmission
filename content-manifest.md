@@ -34,7 +34,7 @@ Verify with: `grep -rn "PLACEHOLDER" --include='*.html' .`
 | `/` | Existing copy preserved; no placeholders |
 | `/donate` | Existing copy + FAQ preserved; FAQPage JSON-LD mirrors visible FAQ |
 | `/why-haiti-is-poor` | Prose moved intact from `/articles/history`; H1 retargeted to "Why Is Haiti So Poor?"; BLUF answer-block can be added when copy team delivers |
-| `/programs/education` | Prose moved intact. ⚠ H1/title now say "Sponsor a Child in Haiti" per brief §4 — **verify a sponsorship offering actually exists** before Ad Grant submission; body copy still describes general education outreach |
+| `/programs/education` | Prose moved intact. Retitled per brief v2 §3 to "Education in Haiti: How to Help Students in Pelerin" — v2 confirms **no matched-child sponsorship exists**; the honest frame is "sponsor the classroom" and body copy must never imply individual child matching |
 | `/programs/clean-water` | Prose moved intact from `/articles/wells-to-wellness` |
 | `/programs/disaster-relief` | Prose moved intact; H1 retargeted to "Haiti Earthquake Relief" |
 | `/about` | Composed only from existing site copy + approved `mission.md` (mission statement, Pelerin village, founder quote, org facts) |

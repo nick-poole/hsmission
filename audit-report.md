@@ -156,3 +156,42 @@ Per the brief, the three failures are **reported, not changed** — each needs a
 - New scaffold pages ship with `noindex` + placeholders and are excluded from `sitemap.xml` until real copy lands (never index placeholders); flip robots + add to sitemap at content time. Tracked in `content-manifest.md`.
 - The placeholder build-guard is provided as `npm run guard:placeholders` but is **not** wired into the Netlify build yet — wiring it in would fail every deploy until all content lands. Wire it in once content is delivered (README action item).
 - Run before launch (outside this environment): W3C vnu, axe-core, Lighthouse/PSI, external link checker, `scripts/optimize-images.mjs`.
+
+
+---
+
+# Brief v2 delta audit (2026-08-30) — Civic redesign readiness
+
+Brief v2 supersedes v1 and authorizes a full visual redesign per three spec files
+(`hsm-civic-design-system.html`, `hsm-universal-page-template.html`,
+`mockup-B-civic-v2.html`). Phase 1 of the v2 work order: state check + gaps,
+**stop and report before proceeding**.
+
+## What the v1 foundation already satisfies (v2 §2, §5, §6, §8, §9)
+
+- URL architecture, `_redirects`, self-canonicalization, sitemap, robots — implemented and verified (identical map in v2 §2)
+- Four-column footer taxonomy (Learn/Programs/Give/Organization), zero orphans, org/EIN legal line — implemented (color changes to `#0c0e11` black in the redesign)
+- JSON-LD layer (NGO, WebSite, BreadcrumbList, Article ×5, DonateAction, FAQPage mirroring visible text) — implemented; v2 name-ordering tweak pending (name → "Haitian Sensation Missions Inc")
+- Placeholder convention, CONTENT regions, `content-manifest.md`, build guard — active
+- Skip link, landmarks, labeled navs, single H1s, heading order, reduced motion, `:focus-visible` (to be restyled as the v2 dual ring) — done
+- Image width/height, fetchpriority, lazy-loading — done; `/thank-you` — done
+
+## Changes applied in this delta pass
+
+- `/programs/education` retitled per v2 §3: title "Education in Haiti: How to Help Students in Pelerin", H1 "Education in Haiti", new meta description. v2 confirms **no matched-child sponsorship exists** — the previous "Sponsor a Child in Haiti" H1 (v1 §4's own target, flagged in the v1 report) implied individual matching and is now removed everywhere (title/OG/Twitter/H1/Article headline).
+- Founder quote on `/about` marked `<!-- CONTENT:VERIFY -->` (v2 §9 known-verify list).
+
+## Blockers / escalations before Phases 2–5 can start
+
+1. **The three spec files are missing.** Not in the repo (`/design-spec/` does not exist), not delivered alongside the brief. They are authoritative for: all component visuals, hero anatomy, the per-page hero/H1 table (≤22ch H1s), the §20 page recipes, and the DoD screenshot-match. Building the Civic system from §4's summary alone would violate the brief's own "verify before you trust" rule. **Need: the three HTML files.**
+2. **Font self-hosting is impossible from this environment.** All outbound downloads are blocked (403), so Libre Franklin / Source Sans 3 woff2 files cannot be fetched here. Options: (a) owner commits the subset woff2 files (or the spec files bundle them), (b) run the font step from a machine with network, (c) temporarily keep Google Fonts `<link>` and swap to self-hosted before launch — v2 forbids shipping that to production, so (a) or (b) is needed before the DoD.
+3. **Brand red mismatch.** v2 locks `--red: #C1272D`; the current compiled site uses `--hf-red: #d30731` throughout (buttons, hover states, scroll-up). Treating v2 as authoritative means a visible brand-red shift — flagging rather than assuming, since v1 called the flag red "~#C1272D" while the built site has always used `#d30731`. **Confirm #C1272D is intended.**
+4. **GA4 scope change.** v1 decision log (owner, 2026-08-27): GA4 + cookie consent added by owner post-operation. v2 §8 lists GA4 conversion wiring as P0 in-scope. **Confirm which stands** — and if in scope, provide the GA4 Measurement ID.
+5. **PR #14 is still open/unmerged.** v2 work continues on the same branch and will land in that PR unless it's merged first and a fresh branch cut. Either works; merging first gives a cleaner v2 diff. **Owner's call.**
+
+## Rebuild-plan notes once unblocked (v2 phases 2–8)
+
+- SASS will be rebuilt token-first from v2 §4 (new `--navy-deep/-700/-100/-050`, gold-ink, red pair, ink/soft/mist/line, black set, 4px radius) with the existing partial structure retired in favor of component partials matching the design-system file.
+- Fixed section rhythm (NAV → HERO → NAVY → WHITE → RED → WHITE FAQ → GOLD Zeffy → WHITE related → BLACK footer) replaces current page layouts; utility rhythm for contact/thank-you/legal.
+- Governance rules 1–5 (§4) become lint checks in the report: no gold text on white, ≤1 red band/page, gold tiles only in navy sections, no small red text on navy, dual-ring focus.
+- Hero images: 1600×900 WebP ≤110KB requires the image pipeline (sharp) — still blocked here; same resolution paths as v1 §7c (run locally or post-Cloudflare Polish, but hero ≤110KB needs actual conversion, so a local `npm run images:optimize` run is effectively a prerequisite for the v2 hero spec).
