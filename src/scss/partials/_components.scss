@@ -871,3 +871,50 @@ figure.photo figcaption {
 	color: var(--mist);
 	margin: var(--s3) 0;
 }
+/*=============== CITATIONS & SOURCES ===============*/
+.ref {
+	font-size: 0.7em;
+	font-weight: 700;
+	line-height: 0;
+	white-space: nowrap;
+	margin-left: 0.1em;
+}
+.ref a {
+	color: var(--red);
+	text-decoration: none;
+}
+.ref a:hover {
+	text-decoration: underline;
+}
+.sec-navy .ref a {
+	color: var(--gold);
+}
+/* Refs inside gold stat tiles use the approved on-gold ink (8.7:1), not gold */
+.tiles .ref a {
+	color: var(--gold-ink);
+	text-decoration: underline;
+}
+.sources {
+	font-size: var(--step--1);
+	color: var(--soft);
+	line-height: 1.6;
+	max-width: var(--measure);
+	padding-left: 1.4em;
+}
+.sources li {
+	margin-bottom: 0.8em;
+	scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+.sources li:target {
+	background: #fff8e3;
+	outline: 3px solid var(--gold);
+	outline-offset: 4px;
+	border-radius: var(--r);
+}
+.sources a {
+	word-break: break-word;
+}
+/* Anchor targets clear the sticky header */
+[id] {
+	scroll-margin-top: calc(var(--header-height) + 1rem);
+}

@@ -18,19 +18,20 @@ Haitian Sensation Mission is a website dedicated to the cause of supporting and 
 
 Owner tasks that could not be completed inside the foundation branch — roughly in priority order. See `audit-report.md` for full context and `content-manifest.md` for the content pipeline.
 
-1. **Configure Zeffy success redirect → `/thank-you`** (Zeffy dashboard). Point the donation form's post-payment redirect at `https://haitiansensationmission.org/thank-you`. This is a hard blocker for Google Ad Grant conversion tracking; if Zeffy can't redirect, flag it before the grant application.
-2. **Add GA4 + GDPR-compliant cookie consent** (owner decision to do post-operation). Fire a `donation_complete` conversion event on the `/thank-you` pageview. A comment marks the spot in `thank-you/index.html`.
-3. **Verify Zeffy modal accessibility on the live site**: tab through the entire donate flow keyboard-only; check the injected iframe has a `title`; raise with Zeffy support if not.
-4. **Run the image pipeline where npm works**: `npm i -D sharp && npm run images:optimize -- --resize && npm run images:dimensions` (remote sandbox couldn't install sharp). Or wait for the Cloudflare migration and enable Polish.
-5. **Cloudflare Pages migration** (planned post-operation): build command `npm run build`, output dir `.`; `_redirects` works unchanged; then enable Polish (Lossy WebP), Brotli, and immutable cache headers on `/dist/*`.
-6. **Content drop**: replace placeholders per `content-manifest.md`, flip those pages to `index, follow`, add them to `sitemap.xml`, then gate deploys with `STRICT=1 npm run guard:placeholders`.
-7. **Pre-launch validation** (needs open network): W3C validator, axe-core/Pa11y, Lighthouse/PSI (target mobile ≥ 85), external-link checker.
-8. ~~Design decisions on 3 contrast failures~~ — resolved by the Civic rebuild (2026-08-30): the failing components no longer exist; the Civic palette passes AA per design-spec §01.
-9. ~~Verify the child-sponsorship claim~~ — resolved by brief v2: no matched-child sponsorship exists; the site now uses the "sponsor the classroom" frame throughout.
-10. **Self-host the Civic fonts before launch** (design spec requirement): download Libre Franklin (400/600/700/900) and Source Sans 3 (400/600/700) as latin-subset woff2, place in `/dist/assets/fonts/`, add `@font-face` rules with `font-display: swap`, preload the two critical weights, and remove the Google Fonts `<link>` from every page head. (This sandbox cannot download files — Google Fonts links are the documented interim.)
-11. **Contact form**: the design spec includes a form component; a static site needs a form backend (Netlify Forms is the natural fit while hosted there). Owner decision — until then `/contact` lists direct contact details.
-12. **Verify design-mockup statistics** marked `CONTENT:VERIFY` (see the registry in `content-manifest.md`): education stats, meal-cost benchmarks, tier amounts beyond $5, founder quote, and hero-image stand-in selections.
-13. **Optional cleanup**: 48 unreferenced images (~13 MB, incl. the 16000px `topsphere-media-MEGAHD.jpg`) listed in `audit-data/image-tables.md` can be deleted or archived.
+1. 🔴 **Update the election sentence on `/why-haiti-is-poor`** (time-sensitive). Haiti's first general elections in a decade were scheduled for **August 30, 2026**, the day the verified copy landed. The published sentence stays accurate either way, but it must be updated with the actual outcome. Search the repo for `CONTENT:VERIFY — ELECTION OUTCOME`.
+2. **Configure Zeffy success redirect → `/thank-you`** (Zeffy dashboard). Point the donation form's post-payment redirect at `https://haitiansensationmission.org/thank-you`. This is a hard blocker for Google Ad Grant conversion tracking; if Zeffy can't redirect, flag it before the grant application.
+3. **Add GA4 + GDPR-compliant cookie consent** (owner decision to do post-operation). Fire a `donation_complete` conversion event on the `/thank-you` pageview. A comment marks the spot in `thank-you/index.html`.
+4. **Verify Zeffy modal accessibility on the live site**: tab through the entire donate flow keyboard-only; check the injected iframe has a `title`; raise with Zeffy support if not.
+5. **Run the image pipeline where npm works**: `npm i -D sharp && npm run images:optimize -- --resize && npm run images:dimensions` (remote sandbox couldn't install sharp). Or wait for the Cloudflare migration and enable Polish.
+6. **Cloudflare Pages migration** (planned post-operation): build command `npm run build`, output dir `.`; `_redirects` works unchanged; then enable Polish (Lossy WebP), Brotli, and immutable cache headers on `/dist/*`.
+7. **Content drop**: replace placeholders per `content-manifest.md`, flip those pages to `index, follow`, add them to `sitemap.xml`, then gate deploys with `STRICT=1 npm run guard:placeholders`.
+8. **Pre-launch validation** (needs open network): W3C validator, axe-core/Pa11y, Lighthouse/PSI (target mobile ≥ 85), external-link checker.
+9. ~~Design decisions on 3 contrast failures~~ — resolved by the Civic rebuild (2026-08-30): the failing components no longer exist; the Civic palette passes AA per design-spec §01.
+10. ~~Verify the child-sponsorship claim~~ — resolved by brief v2: no matched-child sponsorship exists; the site now uses the "sponsor the classroom" frame throughout.
+11. **Self-host the Civic fonts before launch** (design spec requirement): download Libre Franklin (400/600/700/900) and Source Sans 3 (400/600/700) as latin-subset woff2, place in `/dist/assets/fonts/`, add `@font-face` rules with `font-display: swap`, preload the two critical weights, and remove the Google Fonts `<link>` from every page head. (This sandbox cannot download files — Google Fonts links are the documented interim.)
+12. **Contact form**: the design spec includes a form component; a static site needs a form backend (Netlify Forms is the natural fit while hosted there). Owner decision — until then `/contact` lists direct contact details.
+13. **Verify design-mockup statistics** marked `CONTENT:VERIFY` (see the registry in `content-manifest.md`): education stats, meal-cost benchmarks, tier amounts beyond $5, founder quote, and hero-image stand-in selections.
+14. **Optional cleanup**: 48 unreferenced images (~13 MB, incl. the 16000px `topsphere-media-MEGAHD.jpg`) listed in `audit-data/image-tables.md` can be deleted or archived.
 
 ## Acknowledgments
 

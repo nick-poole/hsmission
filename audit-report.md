@@ -266,3 +266,29 @@ design system is implemented sitewide.
 - Wider layouts: `.narrow` 780→960px, reading measure 66→72ch; below 1024px measure caps lift and gutters tighten.
 - Classic site chrome restored on the Civic body: the original flag-logo nav (solid navy, now sticky, mobile slide-down menu) and the original dark footer (logo/tagline/contact list + social icons) carrying the new four-column link taxonomy and the EIN legal line. Remixicon reinstated for the nav/footer icons.
 - Note: the page generator now reads migrated prose from a git snapshot (commit 0acfb4f) rather than the working tree, so regeneration can never eat its own output.
+
+
+## Content drop: /why-haiti-is-poor (2026-08-30)
+
+Final verified copy (v2, Aug 2026 fact-check) replaced the migrated `/articles/history` prose.
+The legacy prose is preserved in git at commit `0acfb4f` if any of it is ever wanted back.
+
+Built to the page recipe in the design spec: navy answer block + 4 gold stat tiles (one `.lead` ring)
+→ white article with TOC box, 9-entry timeline, 6 question-form H2 sections, attributed NYT blockquote,
+4 figures reusing existing photography → one red CTA band (routed to `/programs/education`, not the
+donate anchor, per the copy) → FAQ → gold Zeffy band → related cards.
+
+Citation system added (new components): inline superscript `.ref` links resolve to a numbered
+`.sources` list at the article's end; list values are set explicitly so displayed numbers match the
+copy's S-numbers (the source list skips S4, so plain `<ol>` auto-numbering would have mis-pointed
+every citation from [5] onward — caught and fixed). Verified: 19 citations, 19 sources, zero dangling,
+zero orphaned. Refs inside gold tiles use `--gold-ink`, not gold, so they stay legible on the tile
+(caught in review — gold-on-gold rendered as empty brackets).
+
+FAQPage JSON-LD mirrors the seven visible Q&As exactly (same source strings, so they cannot drift).
+Title 48ch, meta description 150ch, dek per copy, `dateModified` 2026-08-30.
+
+**Outstanding on this page:** the Aug 30, 2026 election sentence. This session has no network access
+and the date is today, so the outcome could not be verified. The sentence is written to remain accurate
+either way and is flagged `CONTENT:VERIFY — ELECTION OUTCOME` in the markup, in the content manifest,
+and as README action item #1.
