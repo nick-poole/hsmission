@@ -7,11 +7,12 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-
-		<meta name="description" content="Why is Haiti so poor? Colonial debt, occupation, and disaster shaped Haiti's economy. Get a clear, honest look at the causes — and what actually helps." />
+		<link rel="preconnect" href="https://zeffy-scripts.s3.ca-central-1.amazonaws.com" crossorigin />
+		<link rel="preconnect" href="https://www.zeffy.com" crossorigin />
 
 		<title>Why Is Haiti So Poor? A Clear Look at the Causes</title>
+
+		<meta name="description" content="Why is Haiti so poor? Colonial debt, occupation, and disaster shaped Haiti's economy. Get a clear, honest look at the causes — and what actually helps." />
 
 		<!--========== FAVICON ==========-->
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
@@ -25,9 +26,7 @@
 		<!--========== OPEN GRAPH ==========-->
 		<meta property="og:title" content="Why Is Haiti So Poor? A Clear Look at the Causes" />
 		<meta property="og:description" content="Why is Haiti so poor? Colonial debt, occupation, and disaster shaped Haiti's economy. Get a clear, honest look at the causes — and what actually helps." />
-		<meta
-			property="og:image"
-			content="https://haitiansensationmission.org/dist/assets/images/bill-hamway-madam-felix.jpg" />
+		<meta property="og:image" content="https://haitiansensationmission.org/dist/assets/images/bill-hamway-madam-felix.jpg" />
 		<meta property="og:url" content="https://haitiansensationmission.org/why-haiti-is-poor" />
 		<meta property="og:type" content="article" />
 		<meta property="og:site_name" content="haitiansensationmission.org" />
@@ -36,21 +35,24 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Why Is Haiti So Poor? A Clear Look at the Causes" />
 		<meta name="twitter:description" content="Why is Haiti so poor? Colonial debt, occupation, and disaster shaped Haiti's economy. Get a clear, honest look at the causes — and what actually helps." />
-		<meta
-			name="twitter:image"
-			content="https://haitiansensationmission.org/dist/assets/images/bill-hamway-madam-felix.jpg" />
+		<meta name="twitter:image" content="https://haitiansensationmission.org/dist/assets/images/bill-hamway-madam-felix.jpg" />
 
 		<!--========== CANONICAL ==========-->
 		<link rel="canonical" href="https://haitiansensationmission.org/why-haiti-is-poor" />
 
-		<!--=============== REMIXICONS ===============-->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
+		<!--========== FONTS (production: self-host per design spec — see README action items) ==========-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" />
+
+		<!--========== LCP HERO PRELOAD ==========-->
+		<link rel="preload" as="image" href="/dist/assets/images/bill-hamway-madam-felix.jpg" fetchpriority="high" />
 
 		<!-- ===== CSS ===== -->
 		<link rel="stylesheet" href="/dist/css/main.output.css" />
 
-			<!--========== STRUCTURED DATA ==========-->
+		<!--=============== ZEFFY ===============-->
+		<script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js" defer></script>
+
+		<!--========== STRUCTURED DATA ==========-->
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -58,8 +60,8 @@
 				{
 					"@type": "NGO",
 					"@id": "https://haitiansensationmission.org/#organization",
-					"name": "Haitian Sensation Mission",
-					"alternateName": "Haitian Sensation Missions Inc",
+					"name": "Haitian Sensation Missions Inc",
+					"alternateName": "Haitian Sensation Mission",
 					"legalName": "Haitian Sensation Missions, Inc.",
 					"taxID": "82-3623088",
 					"nonprofitStatus": "Nonprofit501c3",
@@ -111,17 +113,17 @@
 						{
 							"@type": "ListItem",
 							"position": 2,
-							"name": "Why Is Haiti So Poor?",
+							"name": "Why Haiti",
 							"item": "https://haitiansensationmission.org/why-haiti-is-poor"
 						}
 					]
 				},
 				{
 					"@type": "Article",
-					"headline": "Why Is Haiti So Poor?",
+					"headline": "Why is Haiti so poor?",
 					"image": "https://haitiansensationmission.org/dist/assets/images/bill-hamway-madam-felix.jpg",
 					"datePublished": "2023-09-17",
-					"dateModified": "2026-08-27",
+					"dateModified": "2026-08-30",
 					"author": {
 						"@type": "Organization",
 						"name": "Haitian Sensation Missions Inc"
@@ -135,764 +137,392 @@
 		}
 		</script>
 	</head>
+	<body class="has-sticky">
+		<a class="skip-link" href="#main">Skip to main content</a>
 
-	<body id="history-page">
-		<a href="#main" class="skip-link">Skip to main content</a>
 		<!--========== HEADER ==========-->
-		<header class="header" id="header">
-			<nav class="nav container" aria-label="Primary">
-				<a href="/" class="nav__logo" aria-label="Haitian Sensation Mission home">
-					<div class="nav__logo-container flex">
-						<img src="/dist/assets/images/haiti-5323242.png" width="1920" height="1469" alt="" class="nav__logo-img" />
-						<div>
-							Haitian
-							<br />
-							Sensation
-							<br />
-							<span class="nav__logo-span">Mission</span>
-						</div>
-					</div>
-				</a>
-
-				<div class="nav__menu" id="nav-menu">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="/why-haiti-is-poor" class="nav__link active-link" aria-current="page">Why Haiti</a></li>
-						<li class="nav__item"><a href="/programs" class="nav__link">Programs</a></li>
-						<li class="nav__item"><a href="/about" class="nav__link">About</a></li>
-						<li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
-						<li class="nav__item"><a href="/donate" class="nav__link nav__link--cta">Donate</a></li>
-					</ul>
-
-					<button type="button" class="nav__close" id="nav-close" aria-label="Close navigation menu">
-						<i class="ri-close-circle-line" aria-hidden="true"></i>
-					</button>
-				</div>
-
-				<button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-controls="nav-menu">
-					<i class="ri-menu-3-line" aria-hidden="true"></i>
-				</button>
-			</nav>
+		<header class="hd">
+			<div class="bar">
+				<a class="brand" href="/" aria-label="Haitian Sensation Mission home">Haitian Sensation <span>MISSION</span></a>
+				<nav id="primary-nav" aria-label="Primary">
+				<a href="/why-haiti-is-poor" aria-current="page">Why Haiti</a>
+				<a href="/programs">Programs</a>
+				<a href="/about">About</a>
+				<a href="/contact">Contact</a>
+				</nav>
+				<a class="donate" href="/donate">Donate</a>
+				<button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Menu">&#9776;</button>
+			</div>
 		</header>
 
-		<!--========== MAIN ==========-->
-		<main class="main" id="main" tabindex="-1">
-			<!--========== Article ==========-->
-			<div class="article section" id="article">
-				<!--========== HERO BG IMG ==========-->
-				<img fetchpriority="high" src="/dist/assets/images/bill-hamway-madam-felix.jpg" width="5760" height="3840" alt="" class="article__bg" />
-				<div class="home__shadow"></div>
+		<main id="main" tabindex="-1">
 
-			<nav aria-label="Breadcrumb" class="breadcrumb">
-				<ol class="breadcrumb__list">
-					<li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
-					<li class="breadcrumb__item" aria-current="page">Why Is Haiti So Poor?</li>
-				</ol>
-			</nav>
-
-				<article class="article__container container grid">
-					<div class="article__data grid">
-						<div class="article__data-group">
-							<div class="page-heading">
-								<h1 class="article__title">Why Is Haiti So Poor?</h1>
-								<p class="article__subtitle">Learn Haiti's True Story</p>
-								<p class="article__updated"><time datetime="2026-08-27">Last updated August 2026</time></p>
-							</div>
-							<p class="article__description">
-								The true story of Haiti is one of the world's most glaring omissions in modern history,
-								a narrative many would rather forget, but one that demands to be told.
-							</p>
-						</div>
-
-						<img src="/dist/assets/images/Flag_of_Haiti.svg.png" width="1920" height="1152" alt="Flag of Haiti" />
-					</div>
-
-					<div class="article__content grid">
-						<!-- CONTENT:BODY -->
-						<!--========== PROLOGUE  ==========-->
-						<div class="article__section sect-1">
-							<div class="article__section-image">
-								<img src="/dist/assets/images/haiti_rel99.jpg" width="1530" height="1096" alt="Topographical map of Haiti" class="article__section-img" loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<p>
-									Haiti, nestled within the azure waters of the Caribbean, is far more than its
-									picturesque beaches and vibrant culture. It's history is a tumultuous tapestry woven
-									with the threads of indigenous legacies, brutal colonization, revolutions, and
-									rebirths. A land that bore the weight of chains only to break free and proclaim its
-									sovereignty, Haiti stands as a testament to resilience, defiance, and the
-									indomitable spirit of its people. However, beneath its surface lies a chronicle
-									riddled with pain, suppression, and the echoes of a past many choose to overlook.
-								</p>
-							</div>
-						</div>
-						<!--========== SECTION 2 ==========-->
-						<div class="article__section sect-2">
-							<div class="article__section-image">
-								<img
-									src="/dist/assets/images/citadel-la-ferriere_1920.jpg" width="1920" height="1280"
-									alt="Citadelle Laferrière fortress in Haiti"
-									class="article__section-img" loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<h2>The Shadow of Colonization</h2>
-
-								<p>
-									The French colonization of Haiti remains a chilling testament to the inhumane
-									extremes of human exploitation. The French subjected enslaved Africans in barbaric
-									treatment, unspeakable torture, and agonizingly long work hours in colonies
-									plantations. Their sadistic methods served dual purposes: maximizing productivity
-									while systematically breaking the spirit of those they enslaved. Death rates on
-									these plantations were staggering, leading to a constant influx of new slaves, thus
-									ensuring a perpetual cycle of suffering and brutality.
-								</p>
-							</div>
-						</div>
-
-						<!--========== SECTION 3 ==========-->
-						<div class="article__section sect-3">
-							<div class="article__section-image">
-								<img
-									src="/dist/assets/images/claudia-altamimi-land.jpg" width="2400" height="1384"
-									alt="Degraded farmland in Haiti"
-									loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<h2>Soil Degradation</h2>
-
-								<p>
-									The French, fixated on sugarcane and coffee, disrupted Haiti's environmental
-									balance. Their ceaseless cultivation and deforestation led to widespread soil
-									erosion, turning once fertile lands barren and undermining Haiti's agricultural
-									prospects. Today, the shadows of Haiti's soil degradation and deforestation,
-									remnants of France's colonial legacy, linger ominously, continuously hindering its
-									agricultural advancement and jeopardizing food security. Such a haunting past
-									underscores the profound repercussions of colonial exploitation that Haiti grapples
-									with in the present.
-								</p>
-							</div>
-						</div>
-
-						<!--========== SECTION 4 ==========-->
-						<div class="article__section sect-4">
-							<div class="article__section-image">
-								<img
-									src="/dist/assets/images/Haitian_Revolution.webp" width="1100" height="814"
-									alt=""
-									class="article__section-img" loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<h2>Haiti's Price for Independence</h2>
-								<p>
-									After Haiti gained its independence in 1804, the country faced intense international
-									pressures. By 1825, under threats from France, Haiti conceded to a staggering
-									indemnity of initially 150 million francs, later reduced, as compensation to the
-									French for the loss of slaves and property. This financial obligation burdened Haiti
-									with an immense debt. To service this debt, Haiti had to secure high-interest loans
-									that persisted well into the 20th century. This prolonged financial strain
-									significantly hampered the nation's economic growth and development.
-								</p>
-							</div>
-						</div>
-
-						<!--========== SECTION 5 ==========-->
-						<div class="article__section sect-5">
-							<div class="article__section-image">
-								<img src="/dist/assets/images/petionville-reynaldo-mirault.jpg" width="2400" height="1600" alt="Petionville, Haiti hillside community" loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<h2>France's Persistent Economic Stranglehold</h2>
-								<p>
-									Even after the debt was settled, France's economic influence over Haiti persisted.
-									The European nation retained significant commercial and economic interests in the
-									region. This neocolonial grip, coupled with internal political instability, hindered
-									Haiti's efforts to develop self-reliant and sustainable economic policies, leaving
-									the nation economically vulnerable.
-								</p>
-
-								<a
-									href="https://www.cfr.org/backgrounder/haitis-troubled-path-development"
-									class="text-bold aside-link">
-									Understand the full picture of Haiti's poverty
-								</a>
-							</div>
-						</div>
-
-						<!--========== SECTION 5 ==========-->
-						<div class="article__section sect-5">
-							<div class="article__section-image">
-								<img
-									src="/dist/assets/images/Merced_Sun-Star_-_Killing_of_Haitians_is_Admitted.jpg" width="355" height="533"
-									alt="Historical newspaper headline about US occupation of Haiti"
-									loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<h2>US Occupation</h2>
-								<p>
-									The US occupation of Haiti, spanning from 1915 to 1934, profoundly shaped the
-									nation's political and economic trajectory during the 20th century. Initiated under
-									the guise of stabilizing a tumultuous political climate, the American military
-									control not only undermined Haiti's sovereignty but also left an indelible mark on
-									its socio-economic fabric.
-								</p>
-
-								<p class="article__pullquote">
-									Beneath the pretense of order, the U.S. maneuvered Haiti's fate for its own gain.
-								</p>
-
-								<p>
-									During these years, the US wielded significant influence over Haitian policies,
-									favoring American interests and often sidelining the needs and aspirations of the
-									Haitian people. This period, marked by external control and internal resistance, has
-									left lasting reverberations in the nation's quest for autonomy and prosperity.
-								</p>
-
-								<a
-									href="https://www.nytimes.com/2022/05/20/world/haiti-wall-street-us-banks.html"
-									class="text-bold"
-									class="aside-link">
-									Read more about the US occupation.
-								</a>
-							</div>
-						</div>
-
-						<!--========== SECTION 6 ==========-->
-						<div class="article__section sect-6">
-							<div class="article__section-image">
-								<img src="/dist/assets/images/fence_1280.jpg" width="1280" height="1104" alt="Border fence between Haiti and Dominican Republic" loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<h2>Diplomatic Neglect</h2>
-								<p>
-									Haiti's challenges are also intensified by diplomatic isolation and targeted
-									sanctions. Notably, the palpable disdain from Caribbean neighbors, particularly
-									<a
-										href="https://www.nytimes.com/2023/10/06/world/americas/haiti-dominican-republic-deportation.html">
-										the Dominican Republic
-									</a>
-									, underscores regional tensions. However, the starkest difference in international
-									treatment is evident in U.S. immigration policies: while
-									<a href="https://guides.loc.gov/latinx-civil-rights/cuban-adjustment-act">
-										Cubans have historically been granted a path to residency
-									</a>
-									, Haitians often
-									<a
-										href="https://www.migrationpolicy.org/article/haitians-flee-collapse#:~:text=People%20are%20leaving%20Haiti%20as%20if%20their%20lives%20depend%20on%20it">
-										face rigorous detention and deportation
-									</a>
-									. Such disparities reveal the biases in global diplomacy, with Haiti bearing the
-									brunt of collective neglect. Such disparities in treatment underscore the selective
-									compassion and biases deeply rooted in international relations, with Haiti often
-									finding itself at the receiving end of the world's neglect and prejudice.
-								</p>
-							</div>
-						</div>
-
-						<!--========== SECTION 7 ==========-->
-						<div class="article__section sect-7">
-							<div class="article__section-image">
-								<img src="/dist/assets/images/basket-1024x731.jpg" width="1024" height="731" alt="Haitian market vendor carrying basket of goods" loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<h2>Marginalized in the Marketplace</h2>
-								<p>
-									In the grand theatre of global economics, Haiti has often been relegated to the
-									sidelines. Dominated by powerful economies and overshadowed by larger Caribbean and
-									Latin American markets, the nation has struggled to secure its rightful place. Such
-									systemic oversight isn't merely an abstract misfortune but has tangible
-									repercussions: diminished foreign investments, fewer trade opportunities, and
-									reduced access to global markets.
-								</p>
-
-								<p class="text-bold">
-									As world powers navigate trade routes and form economic alliances, Haiti remains an
-									afterthought, stunting its potential for growth and prosperity in the interconnected
-									global economy.
-								</p>
-							</div>
-						</div>
-
-						<!--========== SECTION 8 ==========-->
-						<div class="article__section sect-8">
-							<div class="article__section-image">
-								<img src="/dist/assets/images/Jovenel_Moise.jpg" width="413" height="607" alt="President Jovenel Moïse of Haiti" loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<h2>The Weight of a President's Loss</h2>
-
-								<p>
-									<a
-										href="https://www.cnn.com/2023/06/03/world/haiti-president-assassination-rodolphe-jaar-sentenced/index.html">
-										The assassination of President Jovenel Moïse
-									</a>
-									rattled Haiti's already fragile state. Beyond the immediate political fallout, the
-									event deepened feelings of vulnerability and distrust among its citizens. This
-									brazen act rekindled painful memories of past upheavals, reinforcing fears of
-									instability. For many Haitians, it's a stark reminder that security remains a
-									distant dream, further straining their mental and emotional well-being in an
-									environment of perpetual uncertainty.
-								</p>
-
-								<h2>A Nation Neglected</h2>
-
-								<p>
-									Haiti's struggles have been a mere footnote in global history and is often
-									overshadowed by larger geopolitical narratives. But for those who dare to look
-									closer, the intricate weave reveals a damning pattern of exploitation, indifference,
-									and betrayal. While nations pride themselves on their advancements and global
-									contributions, few stop to consider the costs borne by countries like Haiti. The
-									world may find it convenient to turn a blind eye, but as the repercussions of past
-									injustices continue to ripple through Haiti's present, the global community's
-									collective conscience must confront the harsh reality it has long chosen to neglect.
-								</p>
-							</div>
-						</div>
-
-						<!--========== SECTION 9 ==========-->
-						<div class="article__section sect-8">
-							<!-- <div class="article__section-image">
-                <img src="/dist/assets/images/3606.jpg" width="5556" height="5556" alt="">
-              </div> -->
-
-							<div class="article__section-area">
-								<p class="yellow-text">
-									Understanding Haiti is to recognize that the world, in many ways, contributed to its
-									litany of problems, yet conveniently turns its back when it's time to extend a hand.
-									It's a tale of global apathy to a nation's cries, where responsibility is evaded and
-									history's wrongs are repeatedly ignored.
-								</p>
-							</div>
-						</div>
-
-						<!--========== SECTION 10 ==========-->
-						<div class="article__section sect-9">
-							<div class="article__section-image">
-								<img src="/dist/assets/images/3606.jpg" width="5556" height="5556" alt="Haiti country outline with Haitian flag" loading="lazy" />
-							</div>
-
-							<div class="article__section-area">
-								<p>
-									<span class="text-bold">
-										Among the myriad challenges Haiti faces, perhaps the most profound is being
-										misunderstood.
-									</span>
-									The nuances of its history, the resilience of its people, and the vast potential of
-									its future are often overshadowed by simplified narratives. To truly support Haiti
-									is to take the time to understand its complexities, embrace its culture, and
-									advocate for its rightful place in the global community. Only then can we move
-									beyond mere sympathy to meaningful solidarity and action.
-								</p>
-
-								<p>
-									We encourage you to learn more about the
-									<a href="/programs/disaster-relief">impact of the 2010 earthquake</a>
-									. Find out how even the smallest of donations can go a long way in ensuring Haitian
-									children
-									<a href="/programs/education">receive a valuable education</a>
-									, or how a single well can
-									<a href="/programs/clean-water">provide a community with clean water.</a>
-								</p>
-
-								<p class="text-bold">
-									Together, we can shed light on Haiti's truths and champion its resurgence.
-									<a href="/donate">Support our mission</a>
-									and make a difference today.
-								</p>
-							</div>
-						</div>
-					<!-- /CONTENT:BODY -->
-					</div>
-				</article>
+		<section class="hero">
+			<img src="/dist/assets/images/bill-hamway-madam-felix.jpg" width="5760" height="3840" alt="Haitian elder woman in rural Haiti" fetchpriority="high" />
+			<div class="slab">
+				<nav class="crumbs" aria-label="Breadcrumb">
+					<ol><li><a href="/">Home</a></li><li aria-current="page">Why Haiti</li></ol>
+				</nav>
+				<p class="eyebrow">Learn · History</p>
+				<h1>Why is Haiti so poor?</h1>
+				<p class="dek">The honest history — colonial debt to today.</p>
+				<p class="meta">Last updated <time datetime="2026-08-30">August 2026</time></p>
 			</div>
+		</section>
 
-			<!--========== LINK TO DONATION PAGE==========-->
-			<div class="link-to-donate">
-				<h3 class="link-to-donate__hook">
-					History is written,
-					<br />
-					but tomorrow's pages are blank.
-				</h3>
+		<!--========== NAVY · ANSWER ==========-->
+		<section class="sec-navy">
+			<div class="narrow">
+				<!-- CONTENT:BLUF -->
+				<!-- CONTENT:VERIFY — BLUF is the page's existing lede as a stand-in; replace with a true 40-60 word answer when copy lands -->
+				<p class="answer"><span class="q">Why is Haiti so poor?</span>The true story of Haiti is one of the world's most glaring omissions in modern history, a narrative many would rather forget, but one that demands to be told.</p>
+				<!-- /CONTENT:BLUF -->
+			</div>
+		</section>
 
-				<p class="link-to-donate__line">Your donation today shapes a brighter chapter for the future.</p>
+		<section class="sec-white">
+			<div class="narrow">
+				<div class="toc-box">
+					<span class="t">On this page</span>
+					<ol><li><a href="#the-shadow-of-colonization">The Shadow of Colonization</a></li><li><a href="#soil-degradation">Soil Degradation</a></li><li><a href="#haiti-s-price-for-independence">Haiti's Price for Independence</a></li><li><a href="#france-s-persistent-economic-stranglehol">France's Persistent Economic Stranglehold</a></li><li><a href="#us-occupation">US Occupation</a></li><li><a href="#diplomatic-neglect">Diplomatic Neglect</a></li></ol>
+				</div>
+				<h2 id="timeline">Haiti's history, briefly</h2>
+				<ul class="timeline">
+					<li><span class="yr">1804</span><p>Haiti wins independence — the first free Black republic.</p></li>
+					<li><span class="yr">1825</span><p>France demands an indemnity; Haiti borrows to pay, entering a century of debt.</p></li>
+					<li><span class="yr">1915–1934</span><p>The United States occupies Haiti, shaping its politics and economy for decades.</p></li>
+					<li><span class="yr">2010</span><p>A catastrophic earthquake devastates Port-au-Prince.</p></li>
+				</ul>
 
-				<a href="/donate" class="link-to-donate__sinker">
-					Donate Now
-					<i class="ri-hand-coin-fill" aria-hidden="true"></i>
+				<!-- CONTENT:BODY (migrated intact from /articles/history) -->
+				<p>
+				Haiti, nestled within the azure waters of the Caribbean, is far more than its
+				picturesque beaches and vibrant culture. It's history is a tumultuous tapestry woven
+				with the threads of indigenous legacies, brutal colonization, revolutions, and
+				rebirths. A land that bore the weight of chains only to break free and proclaim its
+				sovereignty, Haiti stands as a testament to resilience, defiance, and the
+				indomitable spirit of its people. However, beneath its surface lies a chronicle
+				riddled with pain, suppression, and the echoes of a past many choose to overlook.
+				</p>
+				<figure class="photo"><img src="/dist/assets/images/haiti_rel99.jpg" width="1530" height="1096" alt="Topographical map of Haiti" loading="lazy" /></figure>
+
+				<h2 id="the-shadow-of-colonization">The Shadow of Colonization</h2>
+
+				<p>
+				The French colonization of Haiti remains a chilling testament to the inhumane
+				extremes of human exploitation. The French subjected enslaved Africans in barbaric
+				treatment, unspeakable torture, and agonizingly long work hours in colonies
+				plantations. Their sadistic methods served dual purposes: maximizing productivity
+				while systematically breaking the spirit of those they enslaved. Death rates on
+				these plantations were staggering, leading to a constant influx of new slaves, thus
+				ensuring a perpetual cycle of suffering and brutality.
+				</p>
+				<figure class="photo"><img src="/dist/assets/images/citadel-la-ferriere_1920.jpg" width="1920" height="1280" alt="Citadelle Laferrière fortress in Haiti" loading="lazy" /></figure>
+
+				<h2 id="soil-degradation">Soil Degradation</h2>
+
+				<p>
+				The French, fixated on sugarcane and coffee, disrupted Haiti's environmental
+				balance. Their ceaseless cultivation and deforestation led to widespread soil
+				erosion, turning once fertile lands barren and undermining Haiti's agricultural
+				prospects. Today, the shadows of Haiti's soil degradation and deforestation,
+				remnants of France's colonial legacy, linger ominously, continuously hindering its
+				agricultural advancement and jeopardizing food security. Such a haunting past
+				underscores the profound repercussions of colonial exploitation that Haiti grapples
+				with in the present.
+				</p>
+				<figure class="photo"><img src="/dist/assets/images/claudia-altamimi-land.jpg" width="2400" height="1384" alt="Degraded farmland in Haiti" loading="lazy" /></figure>
+
+				<h2 id="haiti-s-price-for-independence">Haiti's Price for Independence</h2>
+				<p>
+				After Haiti gained its independence in 1804, the country faced intense international
+				pressures. By 1825, under threats from France, Haiti conceded to a staggering
+				indemnity of initially 150 million francs, later reduced, as compensation to the
+				French for the loss of slaves and property. This financial obligation burdened Haiti
+				with an immense debt. To service this debt, Haiti had to secure high-interest loans
+				that persisted well into the 20th century. This prolonged financial strain
+				significantly hampered the nation's economic growth and development.
+				</p>
+				<figure class="photo"><img src="/dist/assets/images/Haitian_Revolution.webp" width="1100" height="814" alt="" loading="lazy" /></figure>
+
+				<h2 id="france-s-persistent-economic-stranglehol">France's Persistent Economic Stranglehold</h2>
+				<p>
+				Even after the debt was settled, France's economic influence over Haiti persisted.
+				The European nation retained significant commercial and economic interests in the
+				region. This neocolonial grip, coupled with internal political instability, hindered
+				Haiti's efforts to develop self-reliant and sustainable economic policies, leaving
+				the nation economically vulnerable.
+				</p>
+
+				<a
+				href="https://www.cfr.org/backgrounder/haitis-troubled-path-development">
+				Understand the full picture of Haiti's poverty
 				</a>
+				<figure class="photo"><img src="/dist/assets/images/petionville-reynaldo-mirault.jpg" width="2400" height="1600" alt="Petionville, Haiti hillside community" loading="lazy" /></figure>
+
+				<h2 id="us-occupation">US Occupation</h2>
+				<p>
+				The US occupation of Haiti, spanning from 1915 to 1934, profoundly shaped the
+				nation's political and economic trajectory during the 20th century. Initiated under
+				the guise of stabilizing a tumultuous political climate, the American military
+				control not only undermined Haiti's sovereignty but also left an indelible mark on
+				its socio-economic fabric.
+				</p>
+
+				<blockquote class="quote"><p>
+				Beneath the pretense of order, the U.S. maneuvered Haiti's fate for its own gain.
+				</p></blockquote>
+
+				<p>
+				During these years, the US wielded significant influence over Haitian policies,
+				favoring American interests and often sidelining the needs and aspirations of the
+				Haitian people. This period, marked by external control and internal resistance, has
+				left lasting reverberations in the nation's quest for autonomy and prosperity.
+				</p>
+
+				<a
+				href="https://www.nytimes.com/2022/05/20/world/haiti-wall-street-us-banks.html"
+				class="aside-link">
+				Read more about the US occupation.
+				</a>
+				<figure class="photo"><img src="/dist/assets/images/Merced_Sun-Star_-_Killing_of_Haitians_is_Admitted.jpg" width="355" height="533" alt="Historical newspaper headline about US occupation of Haiti" loading="lazy" /></figure>
+
+				<h2 id="diplomatic-neglect">Diplomatic Neglect</h2>
+				<p>
+				Haiti's challenges are also intensified by diplomatic isolation and targeted
+				sanctions. Notably, the palpable disdain from Caribbean neighbors, particularly
+				<a
+				href="https://www.nytimes.com/2023/10/06/world/americas/haiti-dominican-republic-deportation.html">
+				the Dominican Republic
+				</a>
+				, underscores regional tensions. However, the starkest difference in international
+				treatment is evident in U.S. immigration policies: while
+				<a href="https://guides.loc.gov/latinx-civil-rights/cuban-adjustment-act">
+				Cubans have historically been granted a path to residency
+				</a>
+				, Haitians often
+				<a
+				href="https://www.migrationpolicy.org/article/haitians-flee-collapse#:~:text=People%20are%20leaving%20Haiti%20as%20if%20their%20lives%20depend%20on%20it">
+				face rigorous detention and deportation
+				</a>
+				. Such disparities reveal the biases in global diplomacy, with Haiti bearing the
+				brunt of collective neglect. Such disparities in treatment underscore the selective
+				compassion and biases deeply rooted in international relations, with Haiti often
+				finding itself at the receiving end of the world's neglect and prejudice.
+				</p>
+				<figure class="photo"><img src="/dist/assets/images/fence_1280.jpg" width="1280" height="1104" alt="Border fence between Haiti and Dominican Republic" loading="lazy" /></figure>
+
+				<h2 id="marginalized-in-the-marketplace">Marginalized in the Marketplace</h2>
+				<p>
+				In the grand theatre of global economics, Haiti has often been relegated to the
+				sidelines. Dominated by powerful economies and overshadowed by larger Caribbean and
+				Latin American markets, the nation has struggled to secure its rightful place. Such
+				systemic oversight isn't merely an abstract misfortune but has tangible
+				repercussions: diminished foreign investments, fewer trade opportunities, and
+				reduced access to global markets.
+				</p>
+
+				<p>
+				As world powers navigate trade routes and form economic alliances, Haiti remains an
+				afterthought, stunting its potential for growth and prosperity in the interconnected
+				global economy.
+				</p>
+				<figure class="photo"><img src="/dist/assets/images/basket-1024x731.jpg" width="1024" height="731" alt="Haitian market vendor carrying basket of goods" loading="lazy" /></figure>
+
+				<h2 id="the-weight-of-a-president-s-loss">The Weight of a President's Loss</h2>
+
+				<p>
+				<a
+				href="https://www.cnn.com/2023/06/03/world/haiti-president-assassination-rodolphe-jaar-sentenced/index.html">
+				The assassination of President Jovenel Moïse
+				</a>
+				rattled Haiti's already fragile state. Beyond the immediate political fallout, the
+				event deepened feelings of vulnerability and distrust among its citizens. This
+				brazen act rekindled painful memories of past upheavals, reinforcing fears of
+				instability. For many Haitians, it's a stark reminder that security remains a
+				distant dream, further straining their mental and emotional well-being in an
+				environment of perpetual uncertainty.
+				</p>
+
+				<h2 id="a-nation-neglected">A Nation Neglected</h2>
+
+				<p>
+				Haiti's struggles have been a mere footnote in global history and is often
+				overshadowed by larger geopolitical narratives. But for those who dare to look
+				closer, the intricate weave reveals a damning pattern of exploitation, indifference,
+				and betrayal. While nations pride themselves on their advancements and global
+				contributions, few stop to consider the costs borne by countries like Haiti. The
+				world may find it convenient to turn a blind eye, but as the repercussions of past
+				injustices continue to ripple through Haiti's present, the global community's
+				collective conscience must confront the harsh reality it has long chosen to neglect.
+				</p>
+				<figure class="photo"><img src="/dist/assets/images/Jovenel_Moise.jpg" width="413" height="607" alt="President Jovenel Moïse of Haiti" loading="lazy" /></figure>
+
+				<p>
+				Understanding Haiti is to recognize that the world, in many ways, contributed to its
+				litany of problems, yet conveniently turns its back when it's time to extend a hand.
+				It's a tale of global apathy to a nation's cries, where responsibility is evaded and
+				history's wrongs are repeatedly ignored.
+				</p>
+				<figure class="photo"><img src="/dist/assets/images/3606.jpg" width="5556" height="5556" alt="" loading="lazy" /></figure>
+
+				<p>
+				<strong>
+				Among the myriad challenges Haiti faces, perhaps the most profound is being
+				misunderstood.
+				</strong>
+				The nuances of its history, the resilience of its people, and the vast potential of
+				its future are often overshadowed by simplified narratives. To truly support Haiti
+				is to take the time to understand its complexities, embrace its culture, and
+				advocate for its rightful place in the global community. Only then can we move
+				beyond mere sympathy to meaningful solidarity and action.
+				</p>
+
+				<p>
+				We encourage you to learn more about the
+				<a href="/programs/disaster-relief">impact of the 2010 earthquake</a>
+				. Find out how even the smallest of donations can go a long way in ensuring Haitian
+				children
+				<a href="/programs/education">receive a valuable education</a>
+				, or how a single well can
+				<a href="/programs/clean-water">provide a community with clean water.</a>
+				</p>
+
+				<p>
+				Together, we can shed light on Haiti's truths and champion its resurgence.
+				<a href="/donate">Support our mission</a>
+				and make a difference today.
+				</p>
+				<figure class="photo"><img src="/dist/assets/images/3606.jpg" width="5556" height="5556" alt="Haiti country outline with Haitian flag" loading="lazy" /></figure>
+				<!-- /CONTENT:BODY -->
 			</div>
+		</section>
 
-		<section class="related">
-			<h2 class="related__title">Related Articles</h2>
+		<!--========== RED · THE PIVOTAL ASK (one per page) ==========-->
+		<section class="sec-red">
+			<div class="wrap">
+				<h2>History is written, but tomorrow's pages are blank.</h2>
+				<p>Your donation today shapes a brighter chapter for Haiti's future. 100% of it reaches our programs.</p>
+				<a class="btn btn--white" href="#give">Donate now</a>
+			</div>
+		</section>
 
-			<ul class="related__cards grid">
-				<li id="clean-water">
-					<a href="/programs/clean-water" class="related__link">
-						<div class="related__card">
-							<div class="related__card-img-wrapper">
-								<img
-									src="/dist/assets/images/wells-to-wellness_cover.jpg" width="1920" height="981"
-									alt=""
-									class="related__card-img" loading="lazy" />
-								<div class="related__card-shadow"></div>
-							</div>
+		<!--========== GOLD · DONATE ==========-->
+		<section class="sec-gold" id="give">
+			<div class="narrow">
+				<h2>Give where it counts</h2>
+				<p>$5 covers meals for 25 students for a school day. 100% of your gift arrives.</p>
+				<button
+					type="button"
+					class="btn btn--navy zeffy-btn"
+					aria-label="Donate to Haitian Sensation Mission — opens the secure Zeffy donation form"
+					zeffy-form-link="https://www.zeffy.com/en-US/embed/donation-form/d63a0f78-eef6-4e29-8fb9-f90e4c7703a0?modal=true">
+					Donate now
+				</button>
+				<div class="chips" style="margin-top:1.5rem"><span>501(c)(3)</span><span>EIN 82-3623088</span><span>Tax-deductible</span><span>100% to programs</span></div>
+			</div>
+		</section>
 
-							<h3 class="related__card-title">From Wells to Wellness</h3>
-
-							<div class="related__card-area">
-								<p class="related__card-text">
-									Discover how the simple act of providing clean water can elevate the entire
-									well-being of a community.
-									<!-- leading them from mere survival to thriving success. -->
-								</p>
-								<span class="learn__more" aria-hidden="true">
-									Learn More
-									<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-								</span>
-							</div>
+		<!--========== WHITE · RELATED ==========-->
+		<section class="sec-white">
+			<div class="wrap">
+				<h2>Keep reading</h2>
+				<div class="cards">
+					<a class="card" href="/programs/disaster-relief">
+						<img src="/dist/assets/images/2019trip-hatian-boy.jpg" width="1024" height="698" alt="Young Haitian boy in earthquake-damaged building" loading="lazy" />
+						<div class="pad">
+							<p class="kick">Programs</p>
+							<h3>Haiti disaster relief</h3>
+							<p>Rebuilding after earthquakes and storms.</p>
 						</div>
 					</a>
-				</li>
-
-				<li id="earthquake">
-					<a href="/programs/disaster-relief" class="related__link">
-						<div class="related__card">
-							<div class="related__card-img-wrapper">
-								<img
-									src="/dist/assets/images/2019trip-hatian-boy.jpg" width="1024" height="698"
-									alt=""
-									class="related__card-img" loading="lazy" />
-								<div class="related__card-shadow"></div>
-							</div>
-
-							<h3 class="related__card-title">Aftershocks Continued</h3>
-
-							<div class="related__card-area">
-								<p class="related__card-text">
-									In 2010, Haiti suffered a devastating earthquake. Over a decade later, the nation
-									still struggles to pick up the pieces.
-								</p>
-								<span class="learn__more" aria-hidden="true">
-									Learn More
-									<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-								</span>
-							</div>
+					<a class="card" href="/programs/education">
+						<img src="/dist/assets/images/zach-vessels-schoolboy1.jpg" width="2400" height="1350" alt="Haitian schoolboy in uniform" loading="lazy" />
+						<div class="pad">
+							<p class="kick">Programs</p>
+							<h3>Education in Haiti</h3>
+							<p>School meals and supplies in Pelerin.</p>
 						</div>
 					</a>
-				</li>
-
-				<li id="education">
-					<a href="/programs/education" class="related__link">
-						<div class="related__card">
-							<div class="related__card-img-wrapper">
-								<img
-									src="/dist/assets/images/school-bus-1024x576.jpg" width="1024" height="576"
-									alt=""
-									class="related__card-img" loading="lazy" />
-								<div class="related__card-shadow"></div>
-							</div>
-
-							<h3 class="related__card-title">
-								<!-- Bridging Gaps, -->
-								Building Futures
-							</h3>
-
-							<div class="related__card-area">
-								<p class="related__card-text">
-									Explore our commitment to providing educational resources, shaping a brighter
-									horizon for Haiti's children.
-								</p>
-								<span class="learn__more" aria-hidden="true">
-									Learn More
-									<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-								</span>
-							</div>
+					<a class="card" href="/programs/clean-water">
+						<img src="/dist/assets/images/drinking-water.jpg" width="2400" height="1600" alt="Child drinking clean water in Haiti" loading="lazy" />
+						<div class="pad">
+							<p class="kick">Programs</p>
+							<h3>Clean water in Haiti</h3>
+							<p>Wells and safe water in the communities we serve.</p>
 						</div>
 					</a>
-				</li>
-
-				<li id="our-story">
-					<a href="/about/our-story" class="related__link">
-						<div class="related__card">
-							<div class="related__card-img-wrapper">
-								<img
-									src="/dist/assets/images/home-team-1024x512.jpg" width="1024" height="512"
-									alt=""
-									class="related__card-img" loading="lazy" />
-								<div class="related__card-shadow"></div>
-							</div>
-
-							<h3 class="related__card-title">Behind the Mission</h3>
-
-							<div class="related__card-area">
-								<p class="related__card-text">
-									A selfless act by young students ignited a mission of hope. Discover the heart and
-									origin of a restaurant dedicated to Haiti's resurgence.
-								</p>
-								<span class="learn__more" aria-hidden="true">
-									Learn More
-									<i class="ri-arrow-right-fill" aria-hidden="true"></i>
-								</span>
-							</div>
-						</div>
-					</a>
-				</li>
-
-				<li id="join">
-					<a href="/donate" class="related__link">
-						<div class="related__card">
-							<div class="related__card-img-wrapper">
-								<img
-									src="/dist/assets/images/zach-vessels-rWEUBzbp2rc-unsplash.jpg" width="2400" height="1350"
-									alt=""
-									class="related__card-img" loading="lazy" />
-								<div class="related__card-shadow"></div>
-							</div>
-
-							<h3 class="related__card-title">Join our Mission</h3>
-
-							<div class="related__card-area">
-								<p class="related__card-text">
-									You can be the turning point in Haiti's chapter of hope. Discover how you can make a
-									difference.
-								</p>
-								<div class="learn">
-									<span class="learn__more">
-										Donate
-										<i class="ri-hand-coin-fill" aria-hidden="true"></i>
-									</span>
-								</div>
-							</div>
-						</div>
-					</a>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</section>
 		</main>
 
-		<!--==================== FOOTER ====================-->
-		<footer class="footer">
-			<div class="footer__container container grid">
-				<div class="footer__content grid">
-					<div class="footer__info">
-						<div class="footer__plate">
-							<a href="/" class="footer__logo">
-								<div class="footer__logo-container flex">
-									<img
-										src="/dist/assets/images/haiti-5323242.png" width="1920" height="1469"
-										alt=""
-										class="footer__logo-img" />
-									<div class="footer__logo-text">
-										Haitian
-										<br />
-										Sensation
-										<br />
-										<span class="footer__logo-span">MISSION</span>
-									</div>
-								</div>
-							</a>
-
-							<p class="footer__description">Missionary Work Starts at Home</p>
-						</div>
-
-						<div class="footer__contact">
-							<ul class="footer__contact-list">
-								<li class="footer__contact-item">
-									<img
-										src="/dist/assets/logos/Logo-White.png" width="237" height="248"
-										alt="Haitian Sensation Restaurant logo"
-										class="footer__contact-hs_logo" />
-									<span class="footer__contact-value">
-										<a
-											href="https://haitiansensationcoffee.com/"
-											target="_blank" rel="noopener noreferrer"
-											class="footer__contact-link"
-											aria-label="Visit the Haitian Sensation Restaurant Website">
-											Haitian Sensation Restaurant
-										</a>
-									</span>
-								</li>
-
-								<li class="footer__contact-item">
-									<i class="ri-mail-send-fill" aria-hidden="true"></i>
-									<span class="footer__contact-value">
-										<a href="mailto:joseph@haitiansensationmission.org" class="footer__contact-link">
-											joseph@haitiansensationmission.org
-										</a>
-									</span>
-								</li>
-
-								<li class="footer__contact-item">
-									<i class="ri-phone-fill" aria-hidden="true"></i>
-									<span class="footer__contact-value">
-										<a href="tel:+17248130241" class="footer__contact-link">
-											(724) 813-0241
-										</a>
-									</span>
-								</li>
-							</ul>
-						</div>
+		<!--========== BLACK FOOTER ==========-->
+		<footer class="ft">
+			<div class="wrap">
+				<p class="brandline">Haitian Sensation <span>MISSION</span></p>
+				<p class="tag">Missionary Work Starts at Home</p>
+				<p class="contact-line">
+					<a href="mailto:joseph@haitiansensationmission.org">joseph@haitiansensationmission.org</a>
+					&nbsp;·&nbsp;
+					<a href="tel:+17248130241">(724) 813-0241</a>
+					&nbsp;·&nbsp;
+					<a href="https://www.facebook.com/haitiansensationcoffee/" target="_blank" rel="noopener noreferrer">Facebook</a>
+					&nbsp;·&nbsp;
+					<a href="https://twitter.com/haitijoecoffee" target="_blank" rel="noopener noreferrer">Twitter</a>
+				</p>
+				<div class="cols">
+					<div>
+						<h3>Learn</h3>
+						<ul>
+							<li><a href="/why-haiti-is-poor">Why Is Haiti Poor?</a></li>
+							<li><a href="/is-haiti-safe">Is Haiti Safe?</a></li>
+							<li><a href="/about/our-story">Our Story</a></li>
+							<li><a href="https://haitiansensationcoffee.com/gallery/" target="_blank" rel="noopener noreferrer">Photos</a></li>
+						</ul>
 					</div>
-
-					<div class="footer__data grid">
-						<div>
-							<h3 class="footer__title">Learn</h3>
-
-							<ul class="footer__links">
-								<li>
-									<a href="/why-haiti-is-poor" class="footer__link">Why Is Haiti Poor?</a>
-								</li>
-
-								<li>
-									<a href="/is-haiti-safe" class="footer__link">Is Haiti Safe?</a>
-								</li>
-
-								<li>
-									<a href="/about/our-story" class="footer__link">Our Story</a>
-								</li>
-
-								<li>
-									<a href="https://haitiansensationcoffee.com/gallery/" class="footer__link" target="_blank" rel="noopener noreferrer">Photos</a>
-								</li>
-							</ul>
-						</div>
-
-						<div>
-							<h3 class="footer__title">Programs</h3>
-
-							<ul class="footer__links">
-								<li>
-									<a href="/programs" class="footer__link">All Programs</a>
-								</li>
-
-								<li>
-									<a href="/programs/education" class="footer__link">Education</a>
-								</li>
-
-								<li>
-									<a href="/programs/clean-water" class="footer__link">Clean Water</a>
-								</li>
-
-								<li>
-									<a href="/programs/disaster-relief" class="footer__link">Disaster Relief</a>
-								</li>
-
-								<li>
-									<a href="/programs/community-outreach" class="footer__link">Community Outreach</a>
-								</li>
-							</ul>
-						</div>
-
-						<div>
-							<h3 class="footer__title">Give</h3>
-
-							<ul class="footer__links">
-								<li>
-									<a href="/donate" class="footer__link">Donate</a>
-								</li>
-
-								<li>
-									<a href="/donate/where-your-money-goes" class="footer__link">Where Your Money Goes</a>
-								</li>
-
-								<li>
-									<a href="/donate/send-money-to-haiti" class="footer__link">Send Money to Haiti</a>
-								</li>
-
-								<li>
-									<a href="/donate/memorial-giving" class="footer__link">Memorial Giving</a>
-								</li>
-
-								<li>
-									<a href="/get-involved" class="footer__link">Get Involved</a>
-								</li>
-
-								<li>
-									<a href="/get-involved/mission-trips" class="footer__link">Mission Trips</a>
-								</li>
-							</ul>
-						</div>
-
-						<div>
-							<h3 class="footer__title">Organization</h3>
-
-							<ul class="footer__links">
-								<li>
-									<a href="/about" class="footer__link">About Us</a>
-								</li>
-
-								<li>
-									<a href="/contact" class="footer__link">Contact</a>
-								</li>
-
-								<li>
-									<a href="/legal/privacy" class="footer__link">Privacy Policy</a>
-								</li>
-
-								<li>
-									<a href="/legal/terms" class="footer__link">Terms &amp; Conditions</a>
-								</li>
-
-								<li>
-									<a href="https://nickpoole.dev/" class="footer__link" target="_blank" rel="noopener noreferrer">Webmaster</a>
-								</li>
-
-								<li>
-									<a href="/sitemap.xml" class="footer__link">Sitemap</a>
-								</li>
-							</ul>
-						</div>
+					<div>
+						<h3>Programs</h3>
+						<ul>
+							<li><a href="/programs">All Programs</a></li>
+							<li><a href="/programs/education">Education</a></li>
+							<li><a href="/programs/clean-water">Clean Water</a></li>
+							<li><a href="/programs/disaster-relief">Disaster Relief</a></li>
+							<li><a href="/programs/community-outreach">Community Outreach</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Give</h3>
+						<ul>
+							<li><a href="/donate">Donate</a></li>
+							<li><a href="/donate/where-your-money-goes">Where Your Money Goes</a></li>
+							<li><a href="/donate/send-money-to-haiti">Send Money to Haiti</a></li>
+							<li><a href="/donate/memorial-giving">Memorial Giving</a></li>
+							<li><a href="/get-involved">Get Involved</a></li>
+							<li><a href="/get-involved/mission-trips">Mission Trips</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Organization</h3>
+						<ul>
+							<li><a href="/about">About Us</a></li>
+							<li><a href="/contact">Contact</a></li>
+							<li><a href="/legal/privacy">Privacy Policy</a></li>
+							<li><a href="/legal/terms">Terms &amp; Conditions</a></li>
+							<li><a href="https://nickpoole.dev/" target="_blank" rel="noopener noreferrer">Webmaster</a></li>
+							<li><a href="/sitemap.xml">Sitemap</a></li>
+						</ul>
 					</div>
 				</div>
-
-				<div class="footer__group">
-					<div class="footer__social">
-						<a
-							href="https://www.facebook.com/haitiansensationcoffee/"
-							target="_blank" rel="noopener noreferrer"
-							class="footer__social-link"
-							aria-label="Visit Haitian Sensation on Facebook">
-							<i class="ri-facebook-box-fill" aria-hidden="true"></i>
-						</a>
-
-						<a
-							href="https://twitter.com/haitijoecoffee"
-							target="_blank" rel="noopener noreferrer"
-							class="footer__social-link"
-							aria-label="Follow Haiti Joe Coffee on Twitter">
-							<i class="ri-twitter-x-fill" aria-hidden="true"></i>
-						</a>
-
-						<a
-							href="https://haitiansensationcoffee.com/"
-							target="_blank" rel="noopener noreferrer"
-							class="footer__social-link"
-							aria-label="Visit the Haitian Sensation Restaurant Website">
-							<img
-								src="/dist/assets/logos/Logo-White.png" width="237" height="248"
-								alt=""
-								class="footer__social-link hs-link" />
-						</a>
-					</div>
-
-					<p class="footer__org">Haitian Sensation Missions, Inc. — a 501(c)(3) nonprofit organization — EIN 82-3623088 — Sharon, Pennsylvania, USA</p>
-					<span class="footer__copy">&copy; <span id="current-year">2026</span> Haitian Sensation Missions, Inc. - All Rights Reserved</span>
-				</div>
+				<p class="legal">Haitian Sensation Missions, Inc. — a 501(c)(3) nonprofit organization — EIN 82-3623088 — Sharon, Pennsylvania, USA<br />&copy; <span id="current-year">2026</span> Haitian Sensation Missions, Inc. All rights reserved.</p>
 			</div>
 		</footer>
 
-		<!--========== SCROLL UP ==========-->
-		<button type="button" class="scrollup" id="scroll-up" aria-label="Return to the top of the page">
-			<i class="ri-arrow-up-fill" aria-hidden="true"></i>
-		</button>
-
+		<!--========== MOBILE STICKY DONATE ==========-->
+		<div class="sticky-donate">
+			<p><strong>$5 feeds 25 students.</strong> 100% reaches Haiti.</p>
+			<a class="btn btn--gold btn--sm" href="#give">Donate</a>
+		</div>
 
 		<!--=============== MAIN JS ===============-->
 		<script src="/dist/js/main.js" defer></script>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HSM · Universal Page Template Spec</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#002e5a;--gold:#f3b419;--red:#C1272D;--navy-050:#eef3f8;--navy-100:#d8e4f0;
+  --ink:#14273c;--soft:#3f5468;--mist:#b9c9dc;--line:#d9e2ec;--black:#0c0e11;
+  --gold-ink:#3a2e00;
+  --font-display:"Libre Franklin",system-ui,sans-serif;--font-body:"Source Sans 3",system-ui,sans-serif;
+  --r:4px;--s2:1rem;--s3:1.5rem;--s4:2.5rem;--s5:4rem;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font-body);font-size:1.02rem;line-height:1.6;color:var(--ink);background:#f4f6f8}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--navy);line-height:1.12;letter-spacing:-.01em;margin:0 0 .5em}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800}
+p{margin:0 0 1em;max-width:68ch}
+img{max-width:100%;display:block}
+a{color:var(--navy)}
+:focus-visible{outline:3px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 6px var(--gold)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
+.spec{padding:3rem 0;border-bottom:1px solid var(--line)}
+.spec>.wrap>h2{border-left:6px solid var(--gold);padding-left:.6em}
+.note{font-size:.9rem;color:var(--soft);max-width:70ch}
+.rule-list{max-width:70ch}
+.rule-list li{margin-bottom:.6em}
+.rule-list strong{color:var(--navy)}
+
+/* ===================== THE UNIVERSAL HERO ===================== */
+.hero{position:relative;color:#fff;background:var(--navy);min-height:52vh;display:flex;align-items:center;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+.hero .slab{position:relative;background:rgba(0,29,58,.93);max-width:620px;margin:2.5rem 1.5rem 2.5rem max(1.5rem,6vw);padding:2rem 2.2rem;border-left:6px solid var(--gold)}
+.crumbs{font-size:.78rem;margin:0 0 1rem;font-family:var(--font-display);font-weight:600}
+.crumbs ol{display:flex;gap:.5em;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.crumbs a{color:var(--mist);text-decoration:none}
+.crumbs a:hover{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.crumbs li+li::before{content:"›";margin-right:.5em;color:rgba(255,255,255,.45)}
+.crumbs [aria-current]{color:#fff}
+.eyebrow{display:inline-block;font-family:var(--font-display);font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border-left:4px solid var(--gold);padding-left:.6em;margin:0 0 .9rem}
+.hero h1{font-size:clamp(1.8rem,3.8vw,2.9rem);font-weight:900;color:#fff;max-width:22ch;margin:0 0 .35em}
+.hero .dek{color:#dce7f2;font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:46ch;margin:0 0 .9em}
+.hero .meta{color:var(--mist);font-size:.82rem;margin:0}
+.hero .actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.2rem}
+.btn{display:inline-block;font-family:var(--font-display);font-weight:800;text-decoration:none;border-radius:var(--r);padding:.8em 1.6em}
+.btn--gold{background:var(--gold);color:var(--navy)}
+.btn--ghost{background:transparent;color:#fff;border:2px solid #fff}
+@media(max-width:720px){
+  .hero{min-height:auto}
+  .hero .slab{margin:5.5rem 0 0;max-width:none;width:100%;padding:1.6rem 1.3rem;background:rgba(0,29,58,.96)}
+}
+
+/* annotation pins */
+.annotated{position:relative}
+.pin{position:absolute;width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;font-family:var(--font-display);font-weight:900;font-size:.85rem;display:grid;place-content:center;box-shadow:0 0 0 3px #fff;z-index:5}
+.legend{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:1.4rem;font-size:.9rem}
+.legend div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:.9rem 1rem}
+.legend b{display:inline-grid;place-content:center;width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-size:.78rem;margin-right:.5em}
+.legend strong{color:var(--navy)}
+
+/* skeleton wireframe */
+.skel{display:grid;gap:6px;max-width:560px}
+.skel div{border-radius:var(--r);padding:.7rem 1rem;font-size:.85rem;font-weight:700;font-family:var(--font-display)}
+.sk-fixed{position:relative}
+.sk-fixed::after{content:"FIXED";position:absolute;right:.8rem;top:50%;transform:translateY(-50%);font-size:.6rem;letter-spacing:.12em;opacity:.65}
+.sk-var::after{content:"PER-PAGE";position:absolute;right:.8rem;top:50%;transform:translateY(-50%);font-size:.6rem;letter-spacing:.12em;opacity:.65}
+.sk-var{position:relative}
+.sk-navy{background:var(--navy);color:#fff}
+.sk-white{background:#fff;border:1px solid var(--line);color:var(--navy)}
+.sk-red{background:var(--red);color:#fff}
+.sk-gold{background:var(--gold);color:var(--navy)}
+.sk-black{background:var(--black);color:#fff}
+.sk-img{background:linear-gradient(120deg,var(--navy-100),#c3d4e6);color:var(--navy)}
+
+/* per-page table */
+.pt{width:100%;border-collapse:collapse;font-size:.88rem;background:#fff}
+.pt th{text-align:left;background:var(--navy);color:#fff;padding:.65em .9em;font-family:var(--font-display);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;position:sticky;top:0}
+.pt td{padding:.75em .9em;border-bottom:1px solid var(--line);vertical-align:top}
+.pt tr:nth-child(even) td{background:var(--navy-050)}
+.pt .u{font-family:var(--font-display);font-weight:800;color:var(--navy);white-space:nowrap}
+.pt .h{font-weight:700;color:var(--navy)}
+.pt small{color:var(--soft)}
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r)}
+</style>
+</head>
+<body>
+
+<header class="wrap" style="padding-top:3rem">
+  <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900">Universal Page Template <span style="color:var(--red)">Spec</span></h1>
+  <p class="note">One hero pattern, three heights, every page. Stays faithful to the original site (full-bleed photo, text lower-left) — the slab just gives the text a home that never fights the photo.</p>
+</header>
+
+<!-- ============ 1 · HERO ANATOMY ============ -->
+<section class="spec"><div class="wrap">
+  <h2>1 · Hero anatomy — annotated</h2>
+  <div class="annotated">
+    <span class="pin" style="top:14px;left:10px">1</span>
+    <span class="pin" style="top:74px;left:calc(max(1.5rem,6vw) + 8px)">2</span>
+    <span class="pin" style="top:118px;left:calc(max(1.5rem,6vw) + 8px)">3</span>
+    <span class="pin" style="top:170px;left:calc(max(1.5rem,6vw) + 8px)">4</span>
+    <span class="pin" style="bottom:96px;left:calc(max(1.5rem,6vw) + 8px)">5</span>
+    <span class="pin" style="bottom:56px;left:calc(max(1.5rem,6vw) + 8px)">6</span>
+    <span class="pin" style="top:40%;right:8%">7</span>
+
+    <div class="hero" style="border-radius:var(--r)">
+      <img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/zach-vessels-schoolboy1.jpg" alt="Haitian schoolboy in uniform — subject sits right of center, clear of the slab">
+      <div class="slab">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol><li><a href="#">Home</a></li><li><a href="#">Programs</a></li><li aria-current="page">Education</li></ol>
+        </nav>
+        <p class="eyebrow">Programs · Education</p>
+        <h1 style="color:#fff">Education in Haiti — and how you can sponsor a classroom in Pelerin</h1>
+        <p class="dek">Most Haitian schools charge tuition. We make sure cost is never the reason a child stays home.</p>
+        <p class="meta">Last updated August 2026</p>
+      </div>
+    </div>
+  </div>
+  <div class="legend">
+    <div><b>1</b><strong>Nav sits above, always navy.</strong> Hero starts immediately below — no white gap.</div>
+    <div><b>2</b><strong>Breadcrumbs live at the top of the slab</strong>, first thing inside it. Franklin 600, .78rem, mist links → gold hover, white current page, "›" separators. Home is always the first crumb. Mirrored 1:1 in BreadcrumbList JSON-LD. Not rendered on the homepage.</div>
+    <div><b>3</b><strong>Eyebrow</strong> — gold tracked caps with gold tick. States the section (Programs · Education). Skipped on utility pages.</div>
+    <div><b>4</b><strong>H1 — always inside the slab, lower-left region of the hero</strong>, exactly where the original site put its headline. Franklin 900, white, ≤22ch, sentence case. One per page, contains the primary keyword.</div>
+    <div><b>5</b><strong>Dek</strong> — one supporting sentence, ≤46ch, ice-blue #dce7f2. This is the meta-description's cousin, not a paragraph.</div>
+    <div><b>6</b><strong>Meta line</strong> — "Last updated Month YYYY" in mist. Required on all article pages (freshness signal); omitted on utility pages. CTAs, when used (home + donate), sit below this.</div>
+    <div><b>7</b><strong>The image.</strong> 16:9 source, 1600×900, WebP ≤110KB, <code>fetchpriority="high"</code>, never lazy. Rendered at 50% opacity over navy — so every photo self-scrims and text contrast never depends on the picture. <strong>Compose focal subject right-of-center</strong>; the slab owns the left third. Real mission photos only, alt text always.</div>
+  </div>
+</div></section>
+
+<!-- ============ 2 · THREE HEIGHTS ============ -->
+<section class="spec"><div class="wrap">
+  <h2>2 · One hero, three heights</h2>
+  <p class="note"><strong>Article — 52vh</strong> (shown above): all content pages. <strong>Home — 64vh:</strong> same slab + dual CTA buttons, no breadcrumbs, eyebrow becomes "A 501(c)(3) Haiti Nonprofit". <strong>Short — 34vh:</strong> contact, thank-you, legal — breadcrumbs + H1 only, no dek/meta/eyebrow.</p>
+
+  <div class="hero" style="min-height:34vh;border-radius:var(--r)">
+    <img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/home-team-1024x512.jpg" alt="Mission team group photo">
+    <div class="slab" style="padding:1.5rem 2rem">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="#">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+      <h1 style="color:#fff;font-size:clamp(1.6rem,3vw,2.2rem)">Contact us</h1>
+    </div>
+  </div>
+  <p class="note" style="margin-top:1rem">Mobile (≤720px): slab widens to full-bleed and anchors to the hero's bottom edge at 96% opacity; hero height goes auto. Breadcrumbs stay — they wrap, never truncate to icons.</p>
+</div></section>
+
+<!-- ============ 3 · UNIVERSAL SKELETON ============ -->
+<section class="spec"><div class="wrap">
+  <h2>3 · The universal page skeleton</h2>
+  <p class="note">Fixed spine, per-page middle. Every page is this stack with sections toggled — nothing reordered, nothing invented per page.</p>
+  <div class="skel">
+    <div class="sk-navy sk-fixed">Nav (navy) + skip link</div>
+    <div class="sk-img sk-var">HERO — image + slab (breadcrumb → eyebrow → H1 → dek → meta)</div>
+    <div class="sk-navy sk-var">NAVY — answer block + gold stat tiles</div>
+    <div class="sk-white sk-var">WHITE — article body (TOC · figures · tables · timeline · steps · charts · map)</div>
+    <div class="sk-red sk-var">RED — the one pivotal CTA (omit on utility pages)</div>
+    <div class="sk-white sk-var">WHITE — FAQ (details/summary + FAQPage schema)</div>
+    <div class="sk-gold sk-fixed">GOLD — donate band + Zeffy + trust chips</div>
+    <div class="sk-white sk-fixed">WHITE — related article cards (3)</div>
+    <div class="sk-black sk-fixed">BLACK — footer + legal/EIN</div>
+  </div>
+  <p class="note" style="margin-top:1rem">Utility pages (contact, legal, thank-you) run: nav → short hero → white → footer. Thank-you is noindex and fires the GA4 conversion.</p>
+</div></section>
+
+<!-- ============ 4 · PER-PAGE EXPECTATIONS ============ -->
+<section class="spec" style="border-bottom:0"><div class="wrap">
+  <h2>4 · What to expect on each page</h2>
+  <p class="note">Hero image assignments use existing site photography (per the reuse rule); swap targets are noted. H1s carry the validated keywords.</p>
+  <div class="table-scroll">
+  <table class="pt">
+    <thead><tr><th>Page</th><th>Hero image (existing asset)</th><th>Breadcrumb trail</th><th>Eyebrow</th><th>H1 (≤22ch target)</th></tr></thead>
+    <tbody>
+      <tr><td class="u">/</td><td>topsphere-media boy portrait <small>(current hero)</small></td><td><small>— none —</small></td><td>A 501(c)(3) Haiti Nonprofit</td><td class="h">Real help for Haiti, delivered by hand</td></tr>
+      <tr><td class="u">/why-haiti-is-poor</td><td>Madam Félix portrait <small>(dignity, history)</small></td><td>Home › Why Haiti</td><td>Learn · History</td><td class="h">Why is Haiti so poor?</td></tr>
+      <tr><td class="u">/is-haiti-safe</td><td>street/community scene <small>(daily life — needs selection)</small></td><td>Home › Why Haiti › Safety</td><td>Learn · Safety</td><td class="h">Is Haiti safe right now? An honest answer</td></tr>
+      <tr><td class="u">/programs</td><td>team distributing supplies (48_2000px)</td><td>Home › Programs</td><td>What We Do</td><td class="h">Our programs in Haiti</td></tr>
+      <tr><td class="u">/programs/education</td><td>schoolboy in uniform (zach-vessels)</td><td>Home › Programs › Education</td><td>Programs · Education</td><td class="h">Education in Haiti — sponsor a classroom in Pelerin</td></tr>
+      <tr><td class="u">/programs/clean-water</td><td>wells/water asset <small>(existing wells imagery)</small></td><td>Home › Programs › Clean Water</td><td>Programs · Clean Water</td><td class="h">Clean water in Haiti</td></tr>
+      <tr><td class="u">/programs/disaster-relief</td><td>relief distribution scene</td><td>Home › Programs › Disaster Relief</td><td>Programs · Relief</td><td class="h">Haiti disaster relief</td></tr>
+      <tr><td class="u">/programs/community-outreach</td><td>community group photo (27_2000px)</td><td>Home › Programs › Community</td><td>Programs · Community</td><td class="h">Community outreach in Haiti</td></tr>
+      <tr><td class="u">/donate</td><td>volunteer with child (30_2000px) <small>· short-ish hero, form high</small></td><td>Home › Donate</td><td>Give</td><td class="h">Donate to Haiti — 100% goes to programs</td></tr>
+      <tr><td class="u">/donate/where-your-money-goes</td><td>supplies handoff close-up</td><td>Home › Donate › Where Your Money Goes</td><td>Give · Transparency</td><td class="h">Where your money goes</td></tr>
+      <tr><td class="u">/donate/send-money-to-haiti</td><td>diaspora/family-feel image <small>(needs selection)</small></td><td>Home › Donate › Send Money to Haiti</td><td>Give · Guide</td><td class="h">How to send money to Haiti</td></tr>
+      <tr><td class="u">/donate/memorial-giving</td><td>quiet landscape/candle-feel <small>(needs selection — somber)</small></td><td>Home › Donate › Memorial Giving</td><td>Give · In Memory</td><td class="h">Donate in memory of someone</td></tr>
+      <tr><td class="u">/get-involved/mission-trips</td><td>2019 trip group photo</td><td>Home › Get Involved › Mission Trips</td><td>Get Involved</td><td class="h">Mission trips to Haiti</td></tr>
+      <tr><td class="u">/about</td><td>team photo (home-team)</td><td>Home › About</td><td>Who We Are</td><td class="h">About Haitian Sensation Mission</td></tr>
+      <tr><td class="u">/about/our-story</td><td>Joseph / restaurant-origin image</td><td>Home › About › Our Story</td><td>Who We Are · Story</td><td class="h">Behind the mission</td></tr>
+      <tr><td class="u">/contact · /thank-you · /legal/*</td><td>team photo, short hero</td><td>Home › [Page]</td><td><small>— none —</small></td><td class="h">Contact us · Thank you · Privacy policy</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 style="margin-top:2rem">Hard rules</h3>
+  <ul class="rule-list">
+    <li><strong>H1 lives in the slab, nothing above it in the DOM</strong> — breadcrumbs and eyebrow are nav/paragraph elements, so heading order stays clean.</li>
+    <li><strong>Breadcrumb depth caps at 3</strong> (Home › Section › Page). Trail matches the URL path, and the JSON-LD matches the trail — never more, never fewer.</li>
+    <li><strong>One hero image per page, art-directed right</strong> — subject in the right two-thirds, no text baked into images, no stock.</li>
+    <li><strong>Same slab, three heights</strong> — 64vh home, 52vh article, 34vh utility. No bespoke heroes.</li>
+    <li><strong>Every article hero shows "Last updated"</strong> — matching Article JSON-LD dateModified.</li>
+    <li><strong>Hero is the LCP</strong>: preload it, WebP ≤110KB, explicit width/height, 50% opacity over navy so contrast is guaranteed regardless of photo.</li>
+  </ul>
+</div></section>
+
+<footer class="wrap" style="padding:2.5rem 1.5rem;color:var(--soft);font-size:.85rem">
+  <p>HSM Universal Page Template Spec · pairs with hsm-civic-design-system.html · hand both to Claude Code.</p>
+</footer>
+
+</body>
+</html>

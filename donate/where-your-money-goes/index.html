@@ -7,13 +7,14 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+		<link rel="preconnect" href="https://zeffy-scripts.s3.ca-central-1.amazonaws.com" crossorigin />
+		<link rel="preconnect" href="https://www.zeffy.com" crossorigin />
 
 		<title>Charities That Give 100% of Donations — How Ours Works</title>
 
 		<meta name="description" content="Looking for charities that give 100 percent of donations? See how our Zeffy-backed model sends every dollar you give directly to programs in Haiti." />
 
-<!--========== FAVICON ==========-->
+		<!--========== FAVICON ==========-->
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
@@ -25,7 +26,7 @@
 		<!--========== OPEN GRAPH ==========-->
 		<meta property="og:title" content="Charities That Give 100% of Donations — How Ours Works" />
 		<meta property="og:description" content="Looking for charities that give 100 percent of donations? See how our Zeffy-backed model sends every dollar you give directly to programs in Haiti." />
-		<meta property="og:image" content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
+		<meta property="og:image" content="https://haitiansensationmission.org/dist/assets/images/school-supplies-1024x576.jpg" />
 		<meta property="og:url" content="https://haitiansensationmission.org/donate/where-your-money-goes" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="haitiansensationmission.org" />
@@ -34,17 +35,22 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Charities That Give 100% of Donations — How Ours Works" />
 		<meta name="twitter:description" content="Looking for charities that give 100 percent of donations? See how our Zeffy-backed model sends every dollar you give directly to programs in Haiti." />
-		<meta name="twitter:image" content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
+		<meta name="twitter:image" content="https://haitiansensationmission.org/dist/assets/images/school-supplies-1024x576.jpg" />
 
 		<!--========== CANONICAL ==========-->
 		<link rel="canonical" href="https://haitiansensationmission.org/donate/where-your-money-goes" />
 
-		<!--=============== FONTS & ICONS ===============-->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
+		<!--========== FONTS (production: self-host per design spec — see README action items) ==========-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" />
+
+		<!--========== LCP HERO PRELOAD ==========-->
+		<link rel="preload" as="image" href="/dist/assets/images/school-supplies-1024x576.jpg" fetchpriority="high" />
 
 		<!-- ===== CSS ===== -->
 		<link rel="stylesheet" href="/dist/css/main.output.css" />
+
+		<!--=============== ZEFFY ===============-->
+		<script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js" defer></script>
 
 		<!--========== STRUCTURED DATA ==========-->
 		<script type="application/ld+json">
@@ -54,8 +60,8 @@
 				{
 					"@type": "NGO",
 					"@id": "https://haitiansensationmission.org/#organization",
-					"name": "Haitian Sensation Mission",
-					"alternateName": "Haitian Sensation Missions Inc",
+					"name": "Haitian Sensation Missions Inc",
+					"alternateName": "Haitian Sensation Mission",
 					"legalName": "Haitian Sensation Missions, Inc.",
 					"taxID": "82-3623088",
 					"nonprofitStatus": "Nonprofit501c3",
@@ -122,338 +128,233 @@
 		}
 		</script>
 	</head>
+	<body class="has-sticky">
+		<a class="skip-link" href="#main">Skip to main content</a>
 
-	<body id="money-page">
-		<a href="#main" class="skip-link">Skip to main content</a>
 		<!--========== HEADER ==========-->
-<header class="header" id="header">
-			<nav class="nav container" aria-label="Primary">
-				<a href="/" class="nav__logo" aria-label="Haitian Sensation Mission home">
-					<div class="nav__logo-container flex">
-						<img src="/dist/assets/images/haiti-5323242.png" width="1920" height="1469" alt="" class="nav__logo-img" />
-						<div>
-							Haitian
-							<br />
-							Sensation
-							<br />
-							<span class="nav__logo-span">MISSION</span>
-						</div>
-					</div>
-				</a>
-
-				<div class="nav__menu" id="nav-menu">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="/why-haiti-is-poor" class="nav__link">Why Haiti</a></li>
-						<li class="nav__item"><a href="/programs" class="nav__link">Programs</a></li>
-						<li class="nav__item"><a href="/about" class="nav__link">About</a></li>
-						<li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
-						<li class="nav__item"><a href="/donate" class="nav__link nav__link--cta active-link" aria-current="page">Donate</a></li>
-					</ul>
-
-					<button type="button" class="nav__close" id="nav-close" aria-label="Close navigation menu">
-						<i class="ri-close-circle-line" aria-hidden="true"></i>
-					</button>
-				</div>
-
-				<button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-controls="nav-menu">
-					<i class="ri-menu-3-line" aria-hidden="true"></i>
-				</button>
-			</nav>
+		<header class="hd">
+			<div class="bar">
+				<a class="brand" href="/" aria-label="Haitian Sensation Mission home">Haitian Sensation <span>MISSION</span></a>
+				<nav id="primary-nav" aria-label="Primary">
+				<a href="/why-haiti-is-poor">Why Haiti</a>
+				<a href="/programs">Programs</a>
+				<a href="/about">About</a>
+				<a href="/contact">Contact</a>
+				</nav>
+				<a class="donate" href="/donate">Donate</a>
+				<button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Menu">&#9776;</button>
+			</div>
 		</header>
 
-		<!--========== MAIN ==========-->
-		<main class="main" id="main" tabindex="-1">
-			<nav aria-label="Breadcrumb" class="breadcrumb breadcrumb--flow">
-				<ol class="breadcrumb__list">
-					<li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
-					<li class="breadcrumb__item"><a href="/donate" class="breadcrumb__link">Donate</a></li>
-					<li class="breadcrumb__item" aria-current="page">Where Your Money Goes</li>
-				</ol>
-			</nav>
+		<main id="main" tabindex="-1">
 
-			<article class="page">
-				<header>
-					<div class="page-heading">
-						<h1>Where Your Money Goes</h1>
-						<p class="page__subtitle">A charity that gives 100% of donations to programs</p>
-						
-					</div>
-				</header>
+		<!-- CONTENT:VERIFY — hero image is a stand-in; final selection pending (design spec: supplies handoff close-up — stand-in chosen from existing assets) -->
+		<section class="hero">
+			<img src="/dist/assets/images/school-supplies-1024x576.jpg" width="1024" height="576" alt="School supplies for students in Haiti" fetchpriority="high" />
+			<div class="slab">
+				<nav class="crumbs" aria-label="Breadcrumb">
+					<ol><li><a href="/">Home</a></li><li><a href="/donate">Donate</a></li><li aria-current="page">Where Your Money Goes</li></ol>
+				</nav>
+				<p class="eyebrow">Give · Transparency</p>
+				<h1>Where your money goes</h1>
+				<p class="dek">A charity that gives 100% of donations to programs.</p>
+			</div>
+		</section>
 
+		<!--========== NAVY · ANSWER ==========-->
+		<section class="sec-navy">
+			<div class="narrow">
 				<!-- CONTENT:BLUF -->
-				<div class="answer-block">
-					<p>[PLACEHOLDER: 40-60 word direct answer — how 100% of donations reach programs (Zeffy model)]</p>
-				</div>
+				<p class="answer"><span class="q">How can a charity give 100% of donations?</span>Our payment platform, Zeffy, is funded by optional donor tips — which you can set to $0 — so processing fees never come out of your gift. Every dollar you give funds clean water, education, and relief programs in Haiti.</p>
 				<!-- /CONTENT:BLUF -->
+			</div>
+		</section>
 
-				<!-- CONTENT:BODY -->
+		<section class="sec-white">
+			<div class="narrow">
+				<div class="chart-grid">
+					<figure class="chart">
+						<svg viewBox="0 0 120 120" role="img" aria-labelledby="dT dD" style="max-width:200px;margin:0 auto;display:block">
+							<title id="dT">Where donations go</title><desc id="dD">Full circle: 100 percent of donations fund programs.</desc>
+							<circle cx="60" cy="60" r="46" fill="none" stroke="#eef3f8" stroke-width="16"/>
+							<circle cx="60" cy="60" r="46" fill="none" stroke="#f3b419" stroke-width="16"/>
+							<text x="60" y="57" text-anchor="middle" font-size="22" font-weight="900" fill="#002e5a" font-family="Libre Franklin">100%</text>
+							<text x="60" y="74" text-anchor="middle" font-size="9" fill="#3f5468">to programs</text>
+						</svg>
+						<figcaption>100% of donations fund programs — Zeffy's optional donor tips cover processing fees.</figcaption>
+					</figure>
+					<figure class="chart bars">
+						<!-- CONTENT:VERIFY — benchmark figures ($0.09 national program, $0.13 Mary's Meals) supplied via design mockup; confirm sources before publishing -->
+						<div role="img" aria-label="Cost per school meal: national program 9 cents, Mary's Meals 13 cents, our program 20 cents.">
+							<div class="row"><span class="who">Haiti nat'l program</span><div class="bar soft" style="width:45%"></div><span class="val">$0.09</span></div>
+							<div class="row"><span class="who">Mary's Meals</span><div class="bar" style="width:65%"></div><span class="val">$0.13</span></div>
+							<div class="row"><span class="who">Our program</span><div class="bar gold" style="width:100%"></div><span class="val">$0.20</span></div>
+						</div>
+						<figcaption>Cost per school meal — honest benchmarking.</figcaption>
+					</figure>
+				</div>
 
 				<section aria-labelledby="s1">
-					<h2 id="s1">How can a charity give 100% of donations?</h2>
-					<p>[PLACEHOLDER: explain the Zeffy fee model — 100-150 words]</p>
+					<h2 id="s1">What your donation funds</h2>
+					<p>[PLACEHOLDER: break down program spending from real figures — 100-150 words]</p>
 				</section>
 
 				<section aria-labelledby="s2">
-					<h2 id="s2">What your donation funds</h2>
-					<p>[PLACEHOLDER: break down program spending categories from real figures — 100-150 words]</p>
-				</section>
-
-				<section aria-labelledby="s3">
-					<h2 id="s3">How we stay accountable</h2>
+					<h2 id="s2">How we stay accountable</h2>
 					<p>[PLACEHOLDER: transparency practices, EIN, receipts — 100-150 words]</p>
 				</section>
+			</div>
+		</section>
 
-				<!-- /CONTENT:BODY -->
+		<!--========== RED · THE PIVOTAL ASK (one per page) ==========-->
+		<section class="sec-red">
+			<div class="wrap">
+				<h2>Every cent. Every time.</h2>
+				<p>No administrative fees are deducted from your gift — 100% funds the programs.</p>
+				<a class="btn btn--white" href="#give">Give with confidence</a>
+			</div>
+		</section>
 
+		<!--========== WHITE · FAQ ==========-->
+		<section class="sec-white">
+			<div class="narrow">
+				<h2 id="faq">Frequently asked questions</h2>
+				<!-- NOTE: add FAQPage JSON-LD only after real FAQ copy lands (brief v2 §5) -->
 				<!-- CONTENT:FAQ -->
-				<section aria-labelledby="faq">
-					<h2 id="faq">Frequently Asked Questions</h2>
-					<dl class="faq">
-						<dt>[PLACEHOLDER: question 1 about how donations are used]</dt>
-						<dd>[PLACEHOLDER: 40-60 word answer to question 1]</dd>
-						<dt>[PLACEHOLDER: question 2 about how donations are used]</dt>
-						<dd>[PLACEHOLDER: 40-60 word answer to question 2]</dd>
-						<dt>[PLACEHOLDER: question 3 about how donations are used]</dt>
-						<dd>[PLACEHOLDER: 40-60 word answer to question 3]</dd>
-					</dl>
-				</section>
+				<div class="faq">
+					<details>
+						<summary>[PLACEHOLDER: question 1]</summary>
+						<div class="a"><p>[PLACEHOLDER: 40-60 word answer to question 1]</p></div>
+					</details>
+					<details>
+						<summary>[PLACEHOLDER: question 2]</summary>
+						<div class="a"><p>[PLACEHOLDER: 40-60 word answer to question 2]</p></div>
+					</details>
+					<details>
+						<summary>[PLACEHOLDER: question 3]</summary>
+						<div class="a"><p>[PLACEHOLDER: 40-60 word answer to question 3]</p></div>
+					</details>
+				</div>
 				<!-- /CONTENT:FAQ -->
-				<!-- NOTE: add FAQPage JSON-LD only after real FAQ copy lands (brief §6.5) -->
+			</div>
+		</section>
 
-				<!-- CONTENT:CTA -->
-				<aside class="donate-cta">
-					<p>[PLACEHOLDER: contextual donation appeal — giving with full transparency]</p>
-					<a class="button" href="/donate">[PLACEHOLDER: descriptive donate anchor]</a>
-				</aside>
-				<!-- /CONTENT:CTA -->
+		<!--========== GOLD · DONATE ==========-->
+		<section class="sec-gold" id="give">
+			<div class="narrow">
+				<h2>Give where it counts</h2>
+				<p>$5 covers meals for 25 students for a school day. 100% of your gift arrives.</p>
+				<button
+					type="button"
+					class="btn btn--navy zeffy-btn"
+					aria-label="Donate to Haitian Sensation Mission — opens the secure Zeffy donation form"
+					zeffy-form-link="https://www.zeffy.com/en-US/embed/donation-form/d63a0f78-eef6-4e29-8fb9-f90e4c7703a0?modal=true">
+					Donate now
+				</button>
+				<div class="chips" style="margin-top:1.5rem"><span>501(c)(3)</span><span>EIN 82-3623088</span><span>Tax-deductible</span><span>100% to programs</span></div>
+			</div>
+		</section>
 
-				<nav aria-labelledby="related-heading" class="page__related">
-					<h2 id="related-heading">Keep reading</h2>
-					<ul>
-						<li><a href="/donate">Donate to Haiti — 100% goes to programs</a></li>
-						<li><a href="/programs">Our programs in Haiti</a></li>
-						<li><a href="/donate/memorial-giving">Donate in memory of someone</a></li>
-					</ul>
-				</nav>
-			</article>
+		<!--========== WHITE · RELATED ==========-->
+		<section class="sec-white">
+			<div class="wrap">
+				<h2>Keep reading</h2>
+				<div class="cards">
+					<a class="card" href="/donate">
+						<img src="/dist/assets/images/30_2000px-1024x682.jpg" width="1024" height="682" alt="Volunteer holding a young Haitian boy" loading="lazy" />
+						<div class="pad">
+							<p class="kick">Give</p>
+							<h3>Donate to Haiti</h3>
+							<p>100% of your gift goes to programs.</p>
+						</div>
+					</a>
+					<a class="card" href="/donate/send-money-to-haiti">
+						<img src="/dist/assets/images/zach-vessels-mother-child.jpg" width="2400" height="1350" alt="Haitian mother and child" loading="lazy" />
+						<div class="pad">
+							<p class="kick">Give</p>
+							<h3>How to send money to Haiti</h3>
+							<p>Fees, options, and what reaches families.</p>
+						</div>
+					</a>
+					<a class="card" href="/donate/memorial-giving">
+						<img src="/dist/assets/images/claudia-altamimi-land.jpg" width="2400" height="1384" alt="Haitian landscape" loading="lazy" />
+						<div class="pad">
+							<p class="kick">Give</p>
+							<h3>Memorial giving</h3>
+							<p>A gift in memory of someone you love.</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
 		</main>
 
-		<!--==================== FOOTER ====================-->
-<footer class="footer">
-			<div class="footer__container container grid">
-				<div class="footer__content grid">
-					<div class="footer__info">
-						<div class="footer__plate">
-							<a href="/" class="footer__logo">
-								<div class="footer__logo-container flex">
-									<img loading="lazy" src="/dist/assets/images/haiti-5323242.png" width="1920" height="1469" alt="" class="footer__logo-img" />
-									<div class="footer__logo-text">
-										Haitian
-										<br />
-										Sensation
-										<br />
-										<span class="footer__logo-span">MISSION</span>
-									</div>
-								</div>
-							</a>
-
-							<p class="footer__description">Missionary Work Starts at Home</p>
-						</div>
-
-						<div class="footer__contact">
-							<ul class="footer__contact-list">
-								<li class="footer__contact-item">
-									<img
-										src="/dist/assets/logos/Logo-White.png" width="237" height="248"
-										alt="Haitian Sensation Restaurant logo"
-										class="footer__contact-hs_logo" />
-									<span class="footer__contact-value">
-										<a
-											href="https://haitiansensationcoffee.com/"
-											target="_blank" rel="noopener noreferrer"
-											class="footer__contact-link"
-											aria-label="Visit the Haitian Sensation Restaurant Website">
-											Haitian Sensation Restaurant
-										</a>
-									</span>
-								</li>
-
-								<li class="footer__contact-item">
-									<i class="ri-mail-send-fill" aria-hidden="true"></i>
-									<span class="footer__contact-value">
-										<a
-											href="mailto:joseph@haitiansensationmission.org"
-											class="footer__contact-link">
-											joseph@haitiansensationmission.org
-										</a>
-									</span>
-								</li>
-
-								<li class="footer__contact-item">
-									<i class="ri-phone-fill" aria-hidden="true"></i>
-									<span class="footer__contact-value">
-										<a
-											href="tel:+17248130241"
-											class="footer__contact-link">
-											(724) 813-0241
-										</a>
-									</span>
-								</li>
-							</ul>
-						</div>
+		<!--========== BLACK FOOTER ==========-->
+		<footer class="ft">
+			<div class="wrap">
+				<p class="brandline">Haitian Sensation <span>MISSION</span></p>
+				<p class="tag">Missionary Work Starts at Home</p>
+				<p class="contact-line">
+					<a href="mailto:joseph@haitiansensationmission.org">joseph@haitiansensationmission.org</a>
+					&nbsp;·&nbsp;
+					<a href="tel:+17248130241">(724) 813-0241</a>
+					&nbsp;·&nbsp;
+					<a href="https://www.facebook.com/haitiansensationcoffee/" target="_blank" rel="noopener noreferrer">Facebook</a>
+					&nbsp;·&nbsp;
+					<a href="https://twitter.com/haitijoecoffee" target="_blank" rel="noopener noreferrer">Twitter</a>
+				</p>
+				<div class="cols">
+					<div>
+						<h3>Learn</h3>
+						<ul>
+							<li><a href="/why-haiti-is-poor">Why Is Haiti Poor?</a></li>
+							<li><a href="/is-haiti-safe">Is Haiti Safe?</a></li>
+							<li><a href="/about/our-story">Our Story</a></li>
+							<li><a href="https://haitiansensationcoffee.com/gallery/" target="_blank" rel="noopener noreferrer">Photos</a></li>
+						</ul>
 					</div>
-
-					<div class="footer__data grid">
-						<div>
-							<h3 class="footer__title">Learn</h3>
-
-							<ul class="footer__links">
-								<li>
-									<a href="/why-haiti-is-poor" class="footer__link">Why Is Haiti Poor?</a>
-								</li>
-
-								<li>
-									<a href="/is-haiti-safe" class="footer__link">Is Haiti Safe?</a>
-								</li>
-
-								<li>
-									<a href="/about/our-story" class="footer__link">Our Story</a>
-								</li>
-
-								<li>
-									<a href="https://haitiansensationcoffee.com/gallery/" class="footer__link" target="_blank" rel="noopener noreferrer">Photos</a>
-								</li>
-							</ul>
-						</div>
-
-						<div>
-							<h3 class="footer__title">Programs</h3>
-
-							<ul class="footer__links">
-								<li>
-									<a href="/programs" class="footer__link">All Programs</a>
-								</li>
-
-								<li>
-									<a href="/programs/education" class="footer__link">Education</a>
-								</li>
-
-								<li>
-									<a href="/programs/clean-water" class="footer__link">Clean Water</a>
-								</li>
-
-								<li>
-									<a href="/programs/disaster-relief" class="footer__link">Disaster Relief</a>
-								</li>
-
-								<li>
-									<a href="/programs/community-outreach" class="footer__link">Community Outreach</a>
-								</li>
-							</ul>
-						</div>
-
-						<div>
-							<h3 class="footer__title">Give</h3>
-
-							<ul class="footer__links">
-								<li>
-									<a href="/donate" class="footer__link">Donate</a>
-								</li>
-
-								<li>
-									<a href="/donate/where-your-money-goes" class="footer__link">Where Your Money Goes</a>
-								</li>
-
-								<li>
-									<a href="/donate/send-money-to-haiti" class="footer__link">Send Money to Haiti</a>
-								</li>
-
-								<li>
-									<a href="/donate/memorial-giving" class="footer__link">Memorial Giving</a>
-								</li>
-
-								<li>
-									<a href="/get-involved" class="footer__link">Get Involved</a>
-								</li>
-
-								<li>
-									<a href="/get-involved/mission-trips" class="footer__link">Mission Trips</a>
-								</li>
-							</ul>
-						</div>
-
-						<div>
-							<h3 class="footer__title">Organization</h3>
-
-							<ul class="footer__links">
-								<li>
-									<a href="/about" class="footer__link">About Us</a>
-								</li>
-
-								<li>
-									<a href="/contact" class="footer__link">Contact</a>
-								</li>
-
-								<li>
-									<a href="/legal/privacy" class="footer__link">Privacy Policy</a>
-								</li>
-
-								<li>
-									<a href="/legal/terms" class="footer__link">Terms &amp; Conditions</a>
-								</li>
-
-								<li>
-									<a href="https://nickpoole.dev/" class="footer__link" target="_blank" rel="noopener noreferrer">Webmaster</a>
-								</li>
-
-								<li>
-									<a href="/sitemap.xml" class="footer__link">Sitemap</a>
-								</li>
-							</ul>
-						</div>
+					<div>
+						<h3>Programs</h3>
+						<ul>
+							<li><a href="/programs">All Programs</a></li>
+							<li><a href="/programs/education">Education</a></li>
+							<li><a href="/programs/clean-water">Clean Water</a></li>
+							<li><a href="/programs/disaster-relief">Disaster Relief</a></li>
+							<li><a href="/programs/community-outreach">Community Outreach</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Give</h3>
+						<ul>
+							<li><a href="/donate">Donate</a></li>
+							<li><a href="/donate/where-your-money-goes">Where Your Money Goes</a></li>
+							<li><a href="/donate/send-money-to-haiti">Send Money to Haiti</a></li>
+							<li><a href="/donate/memorial-giving">Memorial Giving</a></li>
+							<li><a href="/get-involved">Get Involved</a></li>
+							<li><a href="/get-involved/mission-trips">Mission Trips</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Organization</h3>
+						<ul>
+							<li><a href="/about">About Us</a></li>
+							<li><a href="/contact">Contact</a></li>
+							<li><a href="/legal/privacy">Privacy Policy</a></li>
+							<li><a href="/legal/terms">Terms &amp; Conditions</a></li>
+							<li><a href="https://nickpoole.dev/" target="_blank" rel="noopener noreferrer">Webmaster</a></li>
+							<li><a href="/sitemap.xml">Sitemap</a></li>
+						</ul>
 					</div>
 				</div>
-
-				<div class="footer__group">
-					<div class="footer__social">
-						<a
-							href="https://www.facebook.com/haitiansensationcoffee/"
-							target="_blank" rel="noopener noreferrer"
-							class="footer__social-link"
-							aria-label="Visit Haitian Sensation on Facebook">
-							<i class="ri-facebook-box-fill" aria-hidden="true"></i>
-						</a>
-
-						<a
-							href="https://twitter.com/haitijoecoffee"
-							target="_blank" rel="noopener noreferrer"
-							class="footer__social-link"
-							aria-label="Follow Haiti Joe Coffee on Twitter">
-							<i class="ri-twitter-x-fill" aria-hidden="true"></i>
-						</a>
-
-						<a
-							href="https://haitiansensationcoffee.com/"
-							target="_blank" rel="noopener noreferrer"
-							class="footer__social-link"
-							aria-label="Visit the Haitian Sensation Restaurant Website">
-							<img
-								src="/dist/assets/logos/Logo-White.png" width="237" height="248"
-								alt=""
-								class="footer__social-link hs-link" />
-						</a>
-					</div>
-
-					<p class="footer__org">Haitian Sensation Missions, Inc. — a 501(c)(3) nonprofit organization — EIN 82-3623088 — Sharon, Pennsylvania, USA</p>
-					<span class="footer__copy">&copy; <span id="current-year">2026</span> Haitian Sensation Missions, Inc. - All Rights Reserved</span>
-				</div>
+				<p class="legal">Haitian Sensation Missions, Inc. — a 501(c)(3) nonprofit organization — EIN 82-3623088 — Sharon, Pennsylvania, USA<br />&copy; <span id="current-year">2026</span> Haitian Sensation Missions, Inc. All rights reserved.</p>
 			</div>
 		</footer>
 
-		<!--========== SCROLL UP ==========-->
-		<button type="button" class="scrollup" id="scroll-up" aria-label="Return to the top of the page">
-			<i class="ri-arrow-up-fill" aria-hidden="true"></i>
-		</button>
+		<!--========== MOBILE STICKY DONATE ==========-->
+		<div class="sticky-donate">
+			<p><strong>$5 feeds 25 students.</strong> 100% reaches Haiti.</p>
+			<a class="btn btn--gold btn--sm" href="#give">Donate</a>
+		</div>
 
 		<!--=============== MAIN JS ===============-->
 		<script src="/dist/js/main.js" defer></script>

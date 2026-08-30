@@ -195,3 +195,65 @@ Brief v2 supersedes v1 and authorizes a full visual redesign per three spec file
 - Fixed section rhythm (NAV → HERO → NAVY → WHITE → RED → WHITE FAQ → GOLD Zeffy → WHITE related → BLACK footer) replaces current page layouts; utility rhythm for contact/thank-you/legal.
 - Governance rules 1–5 (§4) become lint checks in the report: no gold text on white, ≤1 red band/page, gold tiles only in navy sections, no small red text on navy, dual-ring focus.
 - Hero images: 1600×900 WebP ≤110KB requires the image pipeline (sharp) — still blocked here; same resolution paths as v1 §7c (run locally or post-Cloudflare Polish, but hero ≤110KB needs actual conversion, so a local `npm run images:optimize` run is effectively a prerequisite for the v2 hero spec).
+
+
+---
+
+# Civic rebuild report (2026-08-30) — brief v2 phases 2–8
+
+The three spec files were delivered and committed to `design-spec/`. The full Civic
+design system is implemented sitewide.
+
+## What was built
+- **SASS rebuilt token-first** from the design-system spec: 8 partials (tokens, base,
+  layout, header, hero, bands, components, footer), written as plain-CSS-in-SCSS so the
+  committed compiled stylesheet is equivalent to the Netlify sass build by construction.
+  All old partials retired. Compiled CSS: 25KB (was 41KB), zero Remixicon dependency.
+- **All 20 pages regenerated** on the universal template: navy nav (hamburger + Donate
+  always visible on mobile), slab hero in three heights (64vh home / 52vh article /
+  34vh utility) with breadcrumbs → eyebrow → H1 → dek → "Last updated" inside the slab,
+  hero image at 50% opacity (self-scrimming), fixed band rhythm navy → white → red →
+  white FAQ → gold Zeffy → white cards → black footer, mobile sticky donate bar.
+- **Content migrated intact**: every article's prose moved into the white band
+  (pull-quotes → `.quote`, images → captionless `figure.photo`, links preserved);
+  homepage about/history/join prose redistributed to the homepage white band and
+  `/get-involved`; legal prose re-shelled with nav + short hero (fixes the missing
+  banner landmark from v1). H1s/titles per v2 §3 and the template spec's table.
+- **Education page** built as the reference implementation from mockup-B, with the
+  legacy article prose preserved below it and every mockup-supplied statistic marked
+  `CONTENT:VERIFY` (registry in content-manifest.md). Red band carries the
+  "sponsor the classroom" reframe; FAQPage JSON-LD mirrors the visible FAQ.
+- **/programs hub now indexed** (real copy from existing mission text) and added to the
+  sitemap; the 7 placeholder scaffolds remain noindex with §9 placeholders.
+- **Schema updated**: org name → "Haitian Sensation Missions Inc" (alternateName
+  "Haitian Sensation Mission") per v2 §5; BreadcrumbList matches the new trails
+  (including Home › Why Haiti › Safety); Article dateModified 2026-08-30; DonateAction +
+  FAQPage on /donate; FAQPage on /programs/education.
+- **Governance rules verified in output**: gold never text-on-white; gold tiles only in
+  navy sections with one `.lead` ring; exactly one red band per page; dual-ring focus;
+  `prefers-reduced-motion`; native `<details>` FAQ; charts (donut/bars/map SVG) carry
+  role="img" + title/desc with data duplicated as text.
+- Zeffy: unchanged modal flow, button in the gold band sitewide (script deferred,
+  preconnects in place). Explicit width/height re-applied to all images
+  (scripts/update-image-dimensions.py); hero images preloaded with fetchpriority=high;
+  zero broken internal links; placeholder guard green.
+
+## Deviations from the spec (flagged, not guessed)
+1. **Fonts are Google-Fonts-linked, not self-hosted** — downloads are blocked in this
+   environment (spec itself marks its links "mockup-only"). README action item #11.
+2. **Hero images are existing JPEGs, not 1600×900 WebP ≤110KB** — conversion tooling
+   cannot run here; run `npm run images:optimize -- --resize` (action item #4). The 50%
+   navy overlay keeps contrast guaranteed meanwhile.
+3. **Hero stand-ins** for the six pages the spec marks "needs selection" chosen from
+   existing assets and marked `CONTENT:VERIFY`: disaster-relief (helping-people supplies
+   photo), our-story (joe-coffee), where-your-money-goes (school-supplies),
+   send-money-to-haiti (mother-child), memorial-giving (landscape), is-haiti-safe
+   (Pétionville hillside).
+4. **Brand red now #C1272D** per the spec files (previous builds used #d30731) — spec
+   wins on visuals per the brief's own precedence rule.
+5. **Contact form omitted** pending a form backend decision (README #12); homepage
+   photo-card collage from the old design not carried over (assets remain in repo).
+6. **GA4 not wired** — v1 owner decision ("after the operation") kept over v2 §8's P0
+   listing until the owner confirms and supplies a Measurement ID.
+7. Why-haiti-is-poor uses the timeline (spec recipe) but skips gold impact tiles —
+   impact stats felt wrong on a history page; safe org tiles available on request.

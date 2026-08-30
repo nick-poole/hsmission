@@ -1,0 +1,43 @@
+/*=============== CIVIC TOKENS (design-spec/hsm-civic-design-system.html) ===============*/
+:root {
+	/* Brand (locked) */
+	--navy: #002e5a;
+	--gold: #f3b419;
+	--red: #C1272D;
+	/* Derived */
+	--navy-deep: #022143;
+	--navy-700: #0b3f74;
+	--navy-100: #d8e4f0;
+	--navy-050: #eef3f8;
+	--gold-ink: #3a2e00;
+	--gold-deep: #4a3a00;
+	--red-dark: #a01e23;
+	--red-tint: #ffe3e4;
+	--ink: #14273c;
+	--soft: #3f5468;
+	--mist: #b9c9dc;
+	--line: #d9e2ec;
+	--black: #0c0e11;
+	--black-soft: #c8cdd4;
+	--black-mute: #8b929c;
+	/* Type */
+	--font-display: "Libre Franklin", system-ui, sans-serif;
+	--font-body: "Source Sans 3", system-ui, sans-serif;
+	--step--1: clamp(0.84rem, 0.8rem + 0.15vw, 0.9rem);
+	--step-0: clamp(1rem, 0.96rem + 0.25vw, 1.13rem);
+	--step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
+	--step-2: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+	--step-3: clamp(1.9rem, 1.5rem + 2vw, 2.7rem);
+	--step-4: clamp(2.3rem, 1.8rem + 2.8vw, 3.6rem);
+	/* Space / shape */
+	--s1: 0.5rem;
+	--s2: 1rem;
+	--s3: 1.5rem;
+	--s4: 2.5rem;
+	--s5: 4rem;
+	--s6: 6rem;
+	--r: 4px;
+	--shadow: 0 8px 22px rgba(0, 30, 60, 0.12);
+	--shadow-lift: 0 12px 28px rgba(0, 30, 60, 0.18);
+	--measure: 66ch;
+}

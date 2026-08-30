@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup B v2 · Civic — Education in Haiti | HSM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* MOCKUP B — "CIVIC" · Libre Franklin 900 + Source Sans 3 · squared corners, slab hero panel, angled red band. Voice: institutional, credible, built-to-last. */
+:root{
+  --navy:#002e5a; --gold:#f3b419; --red:#C1272D;
+  --navy-deep:#022143; --navy-050:#eef3f8; --ink:#14273c; --soft:#3f5468;
+  --mist:#b9c9dc; --line:#d9e2ec; --black:#0c0e11;
+  --font:"Source Sans 3",system-ui,sans-serif;--font-display:"Libre Franklin",system-ui,sans-serif;
+  --measure:66ch;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--font);font-size:1.05rem;line-height:1.65;color:var(--ink);background:#fff}
+h1,h2,h3{line-height:1.12;margin:0 0 .5em;letter-spacing:-.01em;font-family:var(--font-display)}
+p{margin:0 0 1em;max-width:var(--measure)}
+img{max-width:100%;display:block}
+a{color:var(--navy);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 6px var(--gold);border-radius:2px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:780px;margin:0 auto;padding:0 1.5rem}
+.eyebrow{font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin:0 0 1rem}
+.btn{display:inline-block;font-weight:800;text-decoration:none;border-radius:8px;padding:.85em 1.7em}
+.btn--gold{background:var(--gold);color:var(--navy)}
+.btn--gold:hover{background:#ffca3f}
+.btn--white{background:#fff;color:var(--red)}
+.btn--white:hover{background:#ffe9ea}
+
+/* NAV */
+.hd{background:var(--navy);color:#fff}
+.hd .bar{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.5rem;max-width:1060px;margin:0 auto;gap:1rem;flex-wrap:wrap}
+.hd .brand{color:#fff;font-weight:900;text-decoration:none}
+.hd .brand span{color:var(--gold);font-weight:400;letter-spacing:.2em;font-size:.78em}
+.hd nav{display:flex;gap:1.2rem;align-items:center;font-size:.9rem;font-weight:600}
+.hd nav a{color:#fff;text-decoration:none}
+.hd nav a:hover{color:var(--gold)}
+.hd .donate{background:var(--gold);color:var(--navy);padding:.45em 1.1em;border-radius:6px;font-weight:800}
+
+/* HERO */
+.hero{position:relative;color:#fff;background:var(--navy);min-height:56vh;display:flex;align-items:flex-end}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+.hero .in{position:relative;width:100%;background:linear-gradient(transparent,rgba(0,20,40,.85));padding:5rem 0 2.6rem}
+.hero h1{font-size:clamp(2rem,4.6vw,3.4rem);font-weight:900;color:#fff;max-width:22ch}
+.hero .dek{color:#dce7f2;font-size:1.15rem;max-width:52ch}
+.hero .meta{color:var(--mist);font-size:.85rem}
+.hero .eyebrow{color:var(--gold)}
+
+/* NAVY SECTION — answer + stats */
+.sec-navy{background:var(--navy);color:#fff;padding:3.4rem 0}
+.sec-navy h2{color:#fff;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800}
+.sec-navy .answer{font-size:1.2rem;line-height:1.55;color:#eaf1f8;border-left:5px solid var(--gold);padding-left:1.2rem;max-width:var(--measure)}
+.tiles{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));list-style:none;padding:0;margin:2.2rem 0 0}
+.tiles li{border:1px solid rgba(255,255,255,.22);border-top:4px solid var(--gold);border-radius:10px;padding:1.2rem}
+.tiles .n{display:block;font-size:1.9rem;font-weight:900;color:var(--gold)}
+.tiles .l{font-size:.85rem;color:var(--mist)}
+
+/* WHITE ARTICLE */
+.sec-white{background:#fff;padding:3.4rem 0}
+.sec-white h2{color:var(--navy);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800}
+.sec-white h2::after{content:"";display:block;width:56px;height:4px;background:var(--gold);border-radius:2px;margin-top:.5rem}
+.sec-white p{color:var(--ink)}
+.src{font-size:.85rem;color:var(--soft)}
+figure{margin:1.6rem 0}
+figure img{border-radius:12px;aspect-ratio:16/9;object-fit:cover;box-shadow:0 8px 22px rgba(0,30,60,.12)}
+figcaption{font-size:.85rem;color:var(--soft);padding:.6rem 2px .5rem;border-bottom:2px solid var(--gold);display:inline-block}
+.tier{width:100%;border-collapse:collapse;margin:1.4rem 0}
+.tier caption{text-align:left;font-weight:800;color:var(--navy);padding-bottom:.8rem;font-size:1.1rem}
+.tier th{text-align:left;background:var(--navy);color:#fff;padding:.7em 1em;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+.tier td{padding:.85em 1em;border-bottom:1px solid var(--line)}
+.tier tr:nth-child(even) td{background:var(--navy-050)}
+.tier .amt{font-weight:900;color:var(--navy);font-size:1.15rem;white-space:nowrap}
+.tier .hl td{background:#fff8e3;border-bottom-color:var(--gold)}
+.badge{background:var(--gold);color:var(--navy);font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;border-radius:999px;padding:.2em .7em}
+
+/* RED CTA BAND */
+.sec-red{background:var(--red);color:#fff;padding:3rem 0;text-align:center}
+.sec-red h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:900;max-width:26ch;margin-inline:auto}
+.sec-red p{color:#ffe3e4;max-width:52ch;margin:0 auto 1.5rem}
+
+/* FAQ (white) */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;padding:1.2rem .3rem;font-weight:700;color:var(--navy);font-size:1.08rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--red);font-size:1.5em;font-weight:400;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq .a{padding:0 .3rem 1.3rem;max-width:var(--measure)}
+
+/* GOLD DONATE BAND */
+.sec-gold{background:var(--gold);color:var(--navy);padding:3.4rem 0}
+.sec-gold h2{color:var(--navy);font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:900}
+.sec-gold p{color:#4a3a00}
+.zeffy{background:#fff;border-radius:12px;padding:1.4rem;margin-top:1.4rem;box-shadow:0 10px 26px rgba(74,58,0,.18)}
+.zeffy .ph{border:2px dashed var(--line);border-radius:10px;padding:2.6rem 1.4rem;text-align:center;color:var(--soft)}
+.zeffy .ph strong{display:block;color:var(--navy);font-size:1.1rem;margin-bottom:.3em}
+.trust{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem;font-size:.82rem;font-weight:700}
+.trust span{border:2px solid var(--navy);border-radius:999px;padding:.3em .9em}
+
+/* RELATED CARDS (white) */
+.sec-cards{background:#fff;padding:3.2rem 0}
+.sec-cards h2{color:var(--navy);font-weight:800}
+.cards{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;background:#fff;transition:box-shadow .15s}
+.card:hover{box-shadow:0 10px 24px rgba(0,30,60,.14)}
+.card img{aspect-ratio:16/10;object-fit:cover}
+.card .pad{padding:1.1rem}
+.card .kick{font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.card h3{color:var(--navy);font-size:1.1rem;font-weight:800;margin:.3em 0}
+.card p{color:var(--soft);font-size:.9rem;margin:0}
+
+/* BLACK FOOTER (current site) */
+.ft{background:var(--black);color:#c8cdd4;padding:3.2rem 0 2rem;font-size:.9rem}
+.ft a{color:#fff;text-decoration:none}
+.ft a:hover{color:var(--gold)}
+.ft .cols{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.ft h3{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;margin:0 0 .8em}
+.ft ul{list-style:none;margin:0;padding:0}
+.ft li{margin:0 0 .55em}
+.ft .brandline{font-weight:900;color:#fff;font-size:1.05rem}
+.ft .brandline span{color:var(--gold);font-weight:400;letter-spacing:.2em;font-size:.78em}
+.ft .legal{border-top:1px solid #23262b;margin-top:2.2rem;padding-top:1.4rem;color:#8b929c;font-size:.8rem}
+
+/* mobile sticky */
+.sticky{display:none}
+@media(max-width:720px){
+  .sticky{display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--navy);color:#fff;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 1.2rem;border-top:3px solid var(--gold);z-index:50;font-size:.85rem}
+  .sticky p{margin:0}body{padding-bottom:4.4rem}
+}
+
+/* ===== B · CIVIC overrides — institutional trust, squared, slab hero ===== */
+.btn{border-radius:4px}
+.hd .donate{border-radius:4px}
+.hero{align-items:center;min-height:60vh}
+.hero .in{background:none;padding:3rem 0}
+.hero .in .wrap{background:rgba(0,29,58,.93);max-width:600px;margin:0 0 0 max(1.5rem,6vw);padding:2.4rem 2.2rem;border-left:6px solid var(--gold)}
+.hero h1{font-size:clamp(1.9rem,4vw,3rem)}
+.sec-red{clip-path:polygon(0 7%,100% 0,100% 93%,0 100%);padding:4.6rem 0}
+.sec-white h2::after{width:100%;height:1px;background:var(--line);position:relative}
+.sec-white h2{border-left:5px solid var(--gold);padding-left:.7rem}
+.sec-white h2::after{display:none}
+.tiles li{border-radius:4px}
+.card,{border-radius:4px}
+.card{border-radius:4px}
+.card img{filter:none}
+figure img{border-radius:4px}
+.zeffy{border-radius:4px}
+.tier th{letter-spacing:.12em}
+
+
+/* ===== v2 TWEAKS ===== */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--navy);padding:.7em 1.2em;font-weight:800;z-index:100}
+.skip-link:focus{left:1rem}
+
+/* Gold stat tiles — navy text on gold, they now carry the navy section */
+.tiles li{background:var(--gold);border:0;border-radius:4px;box-shadow:0 6px 16px rgba(0,0,0,.28);padding:1.25rem}
+.tiles .n{color:var(--navy);font-size:2.1rem}
+.tiles .l{color:#3a2e00;font-weight:600}
+.tiles li:first-child{outline:3px solid #fff;outline-offset:3px} /* hero stat gets the ring */
+
+/* sticky bar matches */
+.sticky{border-top-color:#fff}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="hd">
+  <div class="bar">
+    <a class="brand" href="#">Haitian Sensation <span>MISSION</span></a>
+    <nav><a href="#">Why Haiti</a><a href="#">Programs</a><a href="#">About</a><a href="#">Contact</a><a class="donate" href="#give">Donate</a></nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/zach-vessels-schoolboy1.jpg" alt="Haitian schoolboy in uniform outside his school" fetchpriority="high">
+  <div class="in"><div class="wrap">
+    <p class="eyebrow">Programs · Education</p>
+    <h1>Education in Haiti — and how you can sponsor a classroom in Pelerin</h1>
+    <p class="dek">Most Haitian schools charge tuition. We make sure cost is never the reason a child stays home.</p>
+    <p class="meta">Last updated August 2026</p>
+  </div></div>
+</section>
+
+<!-- NAVY: answer + stats -->
+<section class="sec-navy">
+  <div class="narrow">
+    <h2>What is education like in Haiti?</h2>
+    <p class="answer">Roughly nine in ten schools in Haiti are privately run and charge tuition, so families pay for education most cannot afford. Adult literacy sits near 61%. In Pelerin, our partner classrooms provide daily meals and supplies so cost stops deciding who learns.</p>
+    <ul class="tiles">
+      <li><span class="n">$5</span><span class="l">feeds 25 students for a school day</span></li>
+      <li><span class="n">~61%</span><span class="l">adult literacy rate in Haiti</span></li>
+      <li><span class="n">~90%</span><span class="l">of schools charge tuition</span></li>
+      <li><span class="n">100%</span><span class="l">of your gift reaches programs</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHITE: article -->
+<section class="sec-white">
+  <div class="narrow">
+    <h2>Why is school so hard to afford in Haiti?</h2>
+    <p>Because in Haiti, public school is the exception. Around 90% of schools are privately operated — by churches, communities, and nonprofits — and nearly all charge tuition, plus uniforms, books, and exam fees. Haiti ranks near the bottom of the world in national education spending, so families carry the cost themselves.</p>
+    <p>For a family earning a few dollars a day, one child's school year can consume a month's income or more. When money runs out, children simply stop attending. Only about one in five eligible children is enrolled in secondary school.</p>
+    <p class="src">Sources: UNESCO / World Factbook; UNICEF enrollment data.</p>
+
+    <figure>
+      <img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/48_2000px-1024x682.jpg" alt="Mission team distributing supplies in rural Haiti" loading="lazy">
+      <figcaption>Distributing school supplies during our mission trip to Pelerin.</figcaption>
+    </figure>
+
+    <h2>What's happening in Pelerin?</h2>
+    <p>Pelerin is a hillside community in the Pétionville area above Port-au-Prince — and it's where our last mission trip worked directly with local classrooms. We fund school meals and supplies through people we know by name, and we go back.</p>
+
+    <table class="tier">
+      <caption>What your gift does</caption>
+      <thead><tr><th scope="col">Gift</th><th scope="col">What it provides in Pelerin</th></tr></thead>
+      <tbody>
+        <tr><td class="amt">$5</td><td>Feeds 25 students for one school day</td></tr>
+        <tr><td class="amt">$25</td><td>Feeds a classroom for a full school week</td></tr>
+        <tr class="hl"><td class="amt">$25/mo</td><td>Feeds a classroom every week, all year <span class="badge">Most impact</span></td></tr>
+        <tr><td class="amt">$100</td><td>Feeds a classroom for a month of school days</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- RED: important CTA -->
+<section class="sec-red">
+  <div class="wrap">
+    <h2>Can I sponsor one child? With us, you sponsor the classroom.</h2>
+    <p>Singling out one child divides a small village classroom. Your gift feeds every child in the room — no one chosen, no one left out.</p>
+    <a class="btn btn--white" href="#give">Feed the whole classroom</a>
+  </div>
+</section>
+
+<!-- WHITE: FAQ -->
+<section class="sec-white">
+  <div class="narrow">
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details><summary>How much does it cost to sponsor a child in Haiti?</summary><div class="a"><p>Traditional matched-child programs charge $30–$43 per month. Our model is different: any amount supports the whole classroom in Pelerin, starting at $5 — enough to feed 25 students for a school day.</p></div></details>
+      <details><summary>Is school free in Haiti?</summary><div class="a"><p>Mostly, no. Around nine in ten Haitian schools are privately run and charge tuition, plus uniforms and books. Cost is the main reason children in Haiti leave school early.</p></div></details>
+      <details><summary>How much of my donation actually reaches Haiti?</summary><div class="a"><p>100%. Our payment platform, Zeffy, is funded by optional donor tips — which you can set to $0 — so processing fees never come out of your gift.</p></div></details>
+      <details><summary>Can I give once instead of monthly?</summary><div class="a"><p>Yes. One-time gifts of any size go straight to meals and supplies. Monthly gifts matter most because they let the school plan ahead.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- GOLD: donate band -->
+<section class="sec-gold" id="give">
+  <div class="narrow">
+    <h2>Feed a classroom in Pelerin</h2>
+    <p>Pick any amount — $5 covers meals for 25 students for a school day. 100% of your gift arrives.</p>
+    <div class="zeffy">
+      <div class="ph"><strong>[ Zeffy donation form embeds here ]</strong>$5 · $25 · $50 · $100 · Other — one-time / monthly, monthly prominent.</div>
+    </div>
+    <div class="trust"><span>501(c)(3)</span><span>EIN 82-3623088</span><span>Tax-deductible</span><span>100% to programs</span></div>
+  </div>
+</section>
+
+<!-- WHITE: related cards -->
+<section class="sec-cards">
+  <div class="wrap">
+    <h2>Keep reading</h2>
+    <div class="cards">
+      <a class="card" href="#"><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/bill-hamway-madam-felix.jpg" alt="Haitian elder woman in rural Haiti" loading="lazy"><div class="pad"><p class="kick">Learn</p><h3>Why is Haiti so poor?</h3><p>The honest history, from the 1825 debt to today.</p></div></a>
+      <a class="card" href="#"><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/8_2000px-1024x682.jpg" alt="Mission volunteers traveling to a project site" loading="lazy"><div class="pad"><p class="kick">Give</p><h3>Where your money goes</h3><p>How 100% of your gift reaches Haiti.</p></div></a>
+      <a class="card" href="#"><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/30_2000px-1024x682.jpg" alt="Volunteer holding a young Haitian boy" loading="lazy"><div class="pad"><p class="kick">Programs</p><h3>Clean water in Haiti</h3><p>Wells and safe water in the communities we serve.</p></div></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- BLACK FOOTER -->
+<footer class="ft">
+  <div class="wrap">
+    <p class="brandline">Haitian Sensation <span>MISSION</span></p>
+    <p style="color:#8b929c;margin-top:.2rem">Missionary Work Starts at Home</p>
+    <div class="cols" style="margin-top:1.8rem">
+      <div><h3>Learn</h3><ul><li><a href="#">Why Is Haiti Poor?</a></li><li><a href="#">Is Haiti Safe?</a></li><li><a href="#">Our Story</a></li></ul></div>
+      <div><h3>Programs</h3><ul><li><a href="#">Education</a></li><li><a href="#">Clean Water</a></li><li><a href="#">Disaster Relief</a></li></ul></div>
+      <div><h3>Give</h3><ul><li><a href="#">Donate</a></li><li><a href="#">Where Your Money Goes</a></li><li><a href="#">Mission Trips</a></li></ul></div>
+      <div><h3>Organization</h3><ul><li><a href="#">About Us</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy</a></li></ul></div>
+    </div>
+    <p class="legal">Haitian Sensation Missions, Inc. — a 501(c)(3) nonprofit organization — EIN 82-3623088 — Sharon, Pennsylvania, USA<br>© 2026 Haitian Sensation Missions, Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="sticky"><p><strong>$5 feeds 25 students.</strong></p><a class="btn btn--gold" href="#give" style="padding:.55em 1.2em">Donate</a></div>
+
+</body>
+</html>

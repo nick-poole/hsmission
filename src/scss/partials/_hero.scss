@@ -1,0 +1,102 @@
+/*=============== UNIVERSAL HERO + BREADCRUMBS (template spec) ===============*/
+.hero {
+	position: relative;
+	color: #fff;
+	background: var(--navy);
+	min-height: 52vh;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+.hero--home {
+	min-height: 64vh;
+}
+.hero--short {
+	min-height: 34vh;
+}
+.hero > img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.hero .slab {
+	position: relative;
+	background: rgba(0, 29, 58, 0.93);
+	max-width: 620px;
+	margin: 2.5rem 1.5rem 2.5rem max(1.5rem, 6vw);
+	padding: 2rem 2.2rem;
+	border-left: 6px solid var(--gold);
+}
+.hero h1 {
+	font-size: clamp(1.8rem, 3.8vw, 2.9rem);
+	font-weight: 900;
+	color: #fff;
+	max-width: 22ch;
+	margin: 0 0 0.35em;
+}
+.hero .dek {
+	color: #dce7f2;
+	font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+	max-width: 46ch;
+	margin: 0 0 0.9em;
+}
+.hero .meta {
+	color: var(--mist);
+	font-size: 0.82rem;
+	margin: 0;
+}
+.hero .actions {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-top: 1.2rem;
+}
+.crumbs {
+	font-size: 0.78rem;
+	margin: 0 0 1rem;
+	font-family: var(--font-display);
+	font-weight: 600;
+}
+.crumbs ol {
+	display: flex;
+	gap: 0.5em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+}
+.crumbs li {
+	margin: 0;
+}
+.crumbs a {
+	color: var(--mist);
+	text-decoration: none;
+}
+.crumbs a:hover {
+	color: var(--gold);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+.crumbs li + li::before {
+	content: "\203A";
+	margin-right: 0.5em;
+	color: rgba(255, 255, 255, 0.45);
+}
+.crumbs [aria-current] {
+	color: #fff;
+}
+@media (max-width: 720px) {
+	.hero {
+		min-height: auto;
+	}
+	.hero .slab {
+		margin: 5.5rem 0 0;
+		max-width: none;
+		width: 100%;
+		padding: 1.6rem 1.3rem;
+		background: rgba(0, 29, 58, 0.96);
+	}
+}

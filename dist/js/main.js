@@ -1,67 +1,23 @@
-/* Haitian Sensation Mission - main.js */
+/* Haitian Sensation Mission — main.js (Civic)
+   The only JS on the site: mobile nav toggle + footer year. Everything else
+   is native HTML/CSS by design (see design-spec/). */
 (() => {
     "use strict";
 
-    const navMenu = document.getElementById("nav-menu");
-    const navToggle = document.getElementById("nav-toggle");
-    const navClose = document.getElementById("nav-close");
+    const toggle = document.getElementById("nav-toggle");
+    const nav = document.getElementById("primary-nav");
 
-    const setMenu = (open) => {
-        if (!navMenu) return;
-        navMenu.classList.toggle("show-menu", open);
-        if (navToggle) navToggle.setAttribute("aria-expanded", String(open));
-    };
-
-    if (navToggle) navToggle.addEventListener("click", () => setMenu(true));
-    if (navClose) navClose.addEventListener("click", () => setMenu(false));
-
-    document.querySelectorAll(".nav__link").forEach((link) => {
-        link.addEventListener("click", () => setMenu(false));
-    });
-
-    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
-
-    const header = document.getElementById("header");
-    const scrollUpEl = document.getElementById("scroll-up");
-    const sections = Array.from(document.querySelectorAll("section[id]"));
-
-    const navAnchorFor = (id) =>
-        document.querySelector(`.nav__menu a[href$="#${id}"]`);
-
-    const onScroll = () => {
-        const y = window.scrollY;
-
-        if (header) header.classList.toggle("blur-header", y >= 50);
-        if (scrollUpEl) scrollUpEl.classList.toggle("show-scroll", y >= 350);
-
-        sections.forEach((section) => {
-            const top = section.offsetTop - 58;
-            const bottom = top + section.offsetHeight;
-            const link = navAnchorFor(section.id);
-            if (!link) return;
-            link.classList.toggle("active-link", y > top && y <= bottom);
+    if (toggle && nav) {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.addEventListener("click", () => {
+            const open = nav.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", String(open));
         });
-    };
-
-    let ticking = false;
-    window.addEventListener(
-        "scroll",
-        () => {
-            if (ticking) return;
-            ticking = true;
-            window.requestAnimationFrame(() => {
-                onScroll();
-                ticking = false;
+        nav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+                toggle.setAttribute("aria-expanded", "false");
             });
-        },
-        { passive: true }
-    );
-    onScroll();
-
-    if (scrollUpEl && scrollUpEl.tagName === "BUTTON") {
-        scrollUpEl.addEventListener("click", () => {
-            const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
         });
     }
 

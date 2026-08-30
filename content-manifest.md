@@ -19,7 +19,6 @@ Verify with: `grep -rn "PLACEHOLDER" --include='*.html' .`
 | Page | Regions with placeholders | Target lengths | Status |
 |---|---|---|---|
 | `/is-haiti-safe` | BLUF, BODY ×4, FAQ ×3, CTA | BLUF 40–60w; sections 100–150w; FAQ answers 40–60w | ⬜ awaiting copy |
-| `/programs` | BLUF, CTA (program cards are real copy) | BLUF 40–60w | ⬜ awaiting copy |
 | `/programs/community-outreach` | BLUF, BODY ×3, FAQ ×3, CTA | as above | ⬜ awaiting copy |
 | `/donate/where-your-money-goes` | BLUF, BODY ×3, FAQ ×3, CTA | as above | ⬜ awaiting copy |
 | `/donate/send-money-to-haiti` | BLUF, BODY ×3, FAQ ×3, CTA | as above | ⬜ awaiting copy |
@@ -31,13 +30,24 @@ Verify with: `grep -rn "PLACEHOLDER" --include='*.html' .`
 
 | Page | Note |
 |---|---|
-| `/` | Existing copy preserved; no placeholders |
+| `/` | Civic rebuild: existing homepage prose preserved in the white band; founder quote marked CONTENT:VERIFY |
+| `/programs` | Now indexed: real answer block + program cards composed from existing homepage/mission copy |
 | `/donate` | Existing copy + FAQ preserved; FAQPage JSON-LD mirrors visible FAQ |
 | `/why-haiti-is-poor` | Prose moved intact from `/articles/history`; H1 retargeted to "Why Is Haiti So Poor?"; BLUF answer-block can be added when copy team delivers |
-| `/programs/education` | Prose moved intact. Retitled per brief v2 §3 to "Education in Haiti: How to Help Students in Pelerin" — v2 confirms **no matched-child sponsorship exists**; the honest frame is "sponsor the classroom" and body copy must never imply individual child matching |
+| `/programs/education` | Civic reference page built from mockup-B copy + legacy prose migrated intact below it (consolidate when final copy lands). CONTENT:VERIFY on: ~90% private-school stat, education-spending rank, 1-in-5 enrollment, $30–43 comparison, meal-cost benchmarks, tier amounts beyond $5. "Sponsor the classroom" framing per v2 — never imply individual child matching |
 | `/programs/clean-water` | Prose moved intact from `/articles/wells-to-wellness` |
 | `/programs/disaster-relief` | Prose moved intact; H1 retargeted to "Haiti Earthquake Relief" |
 | `/about` | Composed only from existing site copy + approved `mission.md` (mission statement, Pelerin village, founder quote, org facts) |
 | `/about/our-story` | Prose moved intact from `/articles/our-story` |
 | `/contact` | Contact details from existing footer + privacy policy address |
 | `/thank-you` | Transactional copy only; noindex permanently; GA4 conversion event to be added (README action items) |
+
+## CONTENT:VERIFY registry (brief v2 §9 — waiting on Joseph, do not resolve)
+
+Search the codebase for `CONTENT:VERIFY`. Currently marked:
+- Founder quote wording (`/`, `/about`)
+- Education statistics from the design mockup: ~90% private schools, spending rank, 1-in-5 secondary enrollment, $30–43/mo sponsorship comparison (`/programs/education`)
+- Meal-cost benchmarks $0.09 / $0.13 (`/donate/where-your-money-goes`)
+- Tier-ladder amounts beyond the $5 anchor (`/programs/education`, `/donate`)
+- BLUF answer blocks on migrated pages use each page's existing lede as a stand-in
+- Hero image stand-ins: disaster-relief, our-story, where-your-money-goes, send-money-to-haiti, memorial-giving, is-haiti-safe

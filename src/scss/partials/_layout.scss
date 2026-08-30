@@ -1,0 +1,14 @@
+/*=============== LAYOUT ===============*/
+.wrap {
+	max-width: 1060px;
+	margin: 0 auto;
+	padding: 0 var(--s3);
+}
+.narrow {
+	max-width: 780px;
+	margin: 0 auto;
+	padding: 0 var(--s3);
+}
+.table-scroll {
+	overflow-x: auto;
+}

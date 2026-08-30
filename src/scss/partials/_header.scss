@@ -1,0 +1,88 @@
+/*=============== HEADER / NAV ===============*/
+.hd {
+	background: var(--navy);
+	color: #fff;
+}
+.hd .bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.9rem var(--s3);
+	max-width: 1060px;
+	margin: 0 auto;
+	gap: var(--s2);
+	flex-wrap: wrap;
+}
+.hd .brand {
+	color: #fff;
+	font-family: var(--font-display);
+	font-weight: 900;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.hd .brand span {
+	color: var(--gold);
+	font-weight: 400;
+	letter-spacing: 0.2em;
+	font-size: 0.78em;
+}
+.hd nav {
+	display: flex;
+	gap: 1.2rem;
+	align-items: center;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+.hd nav a {
+	color: #fff;
+	text-decoration: none;
+}
+.hd nav a:hover,
+.hd nav a[aria-current="page"] {
+	color: var(--gold);
+}
+.hd nav a[aria-current="page"] {
+	border-bottom: 2px solid var(--gold);
+	padding-bottom: 2px;
+}
+.hd .donate {
+	background: var(--gold);
+	color: var(--navy);
+	padding: 0.45em 1.1em;
+	border-radius: var(--r);
+	font-weight: 800;
+	text-decoration: none;
+	font-family: var(--font-display);
+	font-size: 0.9rem;
+}
+.hd .donate:hover {
+	background: #ffca3f;
+	color: var(--navy);
+}
+.nav-toggle {
+	display: none;
+	background: none;
+	border: 0;
+	color: #fff;
+	font-size: 1.5rem;
+	line-height: 1;
+	cursor: pointer;
+	padding: 0.2em 0.4em;
+}
+@media (max-width: 720px) {
+	.nav-toggle {
+		display: block;
+	}
+	.hd nav {
+		display: none;
+		flex-basis: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.9rem;
+		padding: 0.4rem 0 1rem;
+		font-size: 1rem;
+	}
+	.hd nav.open {
+		display: flex;
+	}
+}

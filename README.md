@@ -25,9 +25,12 @@ Owner tasks that could not be completed inside the foundation branch — roughly
 5. **Cloudflare Pages migration** (planned post-operation): build command `npm run build`, output dir `.`; `_redirects` works unchanged; then enable Polish (Lossy WebP), Brotli, and immutable cache headers on `/dist/*`.
 6. **Content drop**: replace placeholders per `content-manifest.md`, flip those pages to `index, follow`, add them to `sitemap.xml`, then gate deploys with `STRICT=1 npm run guard:placeholders`.
 7. **Pre-launch validation** (needs open network): W3C validator, axe-core/Pa11y, Lighthouse/PSI (target mobile ≥ 85), external-link checker.
-8. **Design decisions on 3 contrast failures** (see audit-report §7b): "Learn More" chips (white-on-gold and gold-on-white) and the red link hover on navy — all below WCAG AA. Suggested: navy text on gold chips; blue-light or underline-only hover.
-9. **Verify the child-sponsorship claim** on `/programs/education` ("Sponsor a Child in Haiti — $5 Feeds 25 Students") matches a real offering before Ad Grant submission; the body copy still describes general education outreach.
-10. **Optional cleanup**: 48 unreferenced images (~13 MB, incl. the 16000px `topsphere-media-MEGAHD.jpg`) listed in `audit-data/image-tables.md` can be deleted or archived.
+8. ~~Design decisions on 3 contrast failures~~ — resolved by the Civic rebuild (2026-08-30): the failing components no longer exist; the Civic palette passes AA per design-spec §01.
+9. ~~Verify the child-sponsorship claim~~ — resolved by brief v2: no matched-child sponsorship exists; the site now uses the "sponsor the classroom" frame throughout.
+10. **Self-host the Civic fonts before launch** (design spec requirement): download Libre Franklin (400/600/700/900) and Source Sans 3 (400/600/700) as latin-subset woff2, place in `/dist/assets/fonts/`, add `@font-face` rules with `font-display: swap`, preload the two critical weights, and remove the Google Fonts `<link>` from every page head. (This sandbox cannot download files — Google Fonts links are the documented interim.)
+11. **Contact form**: the design spec includes a form component; a static site needs a form backend (Netlify Forms is the natural fit while hosted there). Owner decision — until then `/contact` lists direct contact details.
+12. **Verify design-mockup statistics** marked `CONTENT:VERIFY` (see the registry in `content-manifest.md`): education stats, meal-cost benchmarks, tier amounts beyond $5, founder quote, and hero-image stand-in selections.
+13. **Optional cleanup**: 48 unreferenced images (~13 MB, incl. the 16000px `topsphere-media-MEGAHD.jpg`) listed in `audit-data/image-tables.md` can be deleted or archived.
 
 ## Acknowledgments
 

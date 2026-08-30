@@ -1,146 +1,91 @@
-/*=============== FOOTER ===============*/
-.footer {
-    padding-block: 2.5rem;
-    background-color: var(--container-color);
-
-    &__container {
-        margin: 0 1rem;
-        max-width: 1600px;
-    }
-
-    &__content {
-        row-gap: 3.5rem;
-    }
-
-    &__info {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__plate {
-        width: 285px;
-    }
-
-    &__logo {
-        color: var(--title-color);
-        font-size: var(--h2-font-size);
-        font-family: var(--second-font);
-        font-weight: var(--font-semi-bold);
-        margin-bottom: 1rem;
-
-        &-container {
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-
-        &-img {
-            max-width: 160px;
-            width: auto;
-            height: auto;
-            margin-right: 0.5rem;
-        }
-
-        &-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            font-size: var(--h2-font-size);
-        }
-
-        &-span {
-            color: var(--hf-yellow);
-        }
-    }
-
-    &__contact {
-        &-list {
-            width: 100%;
-        }
-
-        &-hs_logo {
-            width: 25px;
-        }
-
-        &-item {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-            align-items: center;
-            margin: 1rem 0;
-
-            & i {
-                font-size: 1.5rem;
-            }
-        }
-
-        &-value {
-            margin-left: 1rem;
-        }
-
-        &-link {
-            color: var(--hf-yellow);
-            font-size: var(--small-font-size);
-        }
-    }
-
-    &__data {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    &__title {
-        font-size: var(--h3-font-size);
-        margin-bottom: 1rem;
-    }
-
-    &__links {
-        display: grid;
-        row-gap: 0.75rem;
-    }
-
-    &__link {
-        color: var(--text-color);
-        transition: color 0.4s;
-
-        &:hover {
-            color: var(--title-color);
-        }
-    }
-
-    &__group,
-    &__social {
-        display: flex;
-    }
-
-    &__group {
-        margin-top: 1rem;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 2rem;
-    }
-
-    &__social {
-        column-gap: 1.5rem;
-
-        &-link {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            transition: color 0.4s ease-in, transform 0.4s ease-in;
-
-            &:hover {
-                color: var(--title-color);
-                transform: translateY(-0.25rem);
-            }
-        }
-
-        &-link .hs-link {
-            width: 20px;
-            margin-top: 7px;
-        }
-    }
-
-    &__copy {
-        font-size: var(--smaller-font-size);
-        color: var(--text-color-light);
-        text-align: center;
-    }
+/*=============== FOOTER (black) + MOBILE STICKY DONATE ===============*/
+.ft {
+	background: var(--black);
+	color: var(--black-soft);
+	padding: var(--s5) 0 var(--s3);
+	font-size: 0.9rem;
+}
+.ft a {
+	color: #fff;
+	text-decoration: none;
+}
+.ft a:hover {
+	color: var(--gold);
+}
+.ft .cols {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	margin-top: 1.8rem;
+}
+.ft h3 {
+	color: #fff;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	margin: 0 0 0.8em;
+}
+.ft ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.ft li {
+	margin: 0 0 0.55em;
+}
+.ft .brandline {
+	font-family: var(--font-display);
+	font-weight: 900;
+	color: #fff;
+	font-size: 1.05rem;
+	margin: 0;
+}
+.ft .brandline span {
+	color: var(--gold);
+	font-weight: 400;
+	letter-spacing: 0.2em;
+	font-size: 0.78em;
+}
+.ft .tag {
+	color: var(--black-mute);
+	margin-top: 0.2rem;
+}
+.ft .contact-line {
+	margin-top: 1rem;
+	color: var(--black-soft);
+}
+.ft .legal {
+	border-top: 1px solid #23262b;
+	margin-top: 2.2rem;
+	padding-top: 1.4rem;
+	color: var(--black-mute);
+	font-size: 0.8rem;
+	max-width: none;
+}
+.sticky-donate {
+	display: none;
+}
+@media (max-width: 720px) {
+	.sticky-donate {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: var(--navy);
+		color: #fff;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--s2);
+		padding: 0.8rem 1.2rem;
+		border-top: 3px solid var(--gold);
+		z-index: 50;
+		font-size: 0.85rem;
+	}
+	.sticky-donate p {
+		margin: 0;
+	}
+	body.has-sticky {
+		padding-bottom: 4.4rem;
+	}
 }

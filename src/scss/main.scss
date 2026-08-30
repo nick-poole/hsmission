@@ -1,17 +1,11 @@
-@use 'partials/variables';
+// Civic design system — see design-spec/ for the authoritative visual reference.
+// Partials are intentionally plain CSS (valid SCSS) so the committed compiled
+// stylesheet stays byte-equivalent to the Netlify sass build.
+@use 'partials/tokens';
 @use 'partials/base';
-@use 'partials/utilities';
-@use 'partials/headernav';
-@use 'partials/home';
-@use 'partials/article';
-@use 'partials/related';
-@use 'partials/buttons';
-@use 'partials/about';
-@use 'partials/mission';
-@use 'partials/donate';
-@use 'partials/join';
-@use 'partials/legal';
+@use 'partials/layout';
+@use 'partials/header';
+@use 'partials/hero';
+@use 'partials/bands';
+@use 'partials/components';
 @use 'partials/footer';
-@use 'partials/media';
-@use 'partials/zeffy';
-@use 'partials/page';
