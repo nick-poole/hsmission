@@ -1,88 +1,139 @@
-/*=============== HEADER / NAV ===============*/
-.hd {
-	background: var(--navy);
-	color: #fff;
+/*=============== HEADER / NAV (classic site nav: solid navy, sticky) ===============*/
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--navy);
+	z-index: var(--z-fixed);
 }
-.hd .bar {
+.nav {
+	height: var(--header-height);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0.9rem var(--s3);
-	max-width: 1060px;
-	margin: 0 auto;
-	gap: var(--s2);
-	flex-wrap: wrap;
+	max-width: 1120px;
+	margin-inline: auto;
+	padding-inline: 1.5rem;
 }
-.hd .brand {
-	color: #fff;
-	font-family: var(--font-display);
-	font-weight: 900;
+.nav__logo {
+	color: var(--title-color);
+	font-family: var(--second-font);
+	font-weight: var(--font-semi-bold);
 	text-decoration: none;
-	white-space: nowrap;
+	font-size: 0.9rem;
+	line-height: 1.2;
 }
-.hd .brand span {
-	color: var(--gold);
-	font-weight: 400;
-	letter-spacing: 0.2em;
-	font-size: 0.78em;
+.nav__logo:hover {
+	color: var(--title-color);
 }
-.hd nav {
+.nav__logo-container {
 	display: flex;
-	gap: 1.2rem;
-	align-items: center;
-	font-size: 0.9rem;
-	font-weight: 600;
+	flex-direction: row;
 }
-.hd nav a {
-	color: #fff;
-	text-decoration: none;
+.nav__logo-img {
+	max-width: 56px;
+	max-height: 3.6rem;
+	width: auto;
+	height: auto;
+	margin-right: 0.5rem;
+	align-self: center;
 }
-.hd nav a:hover,
-.hd nav a[aria-current="page"] {
+.nav__logo-span {
 	color: var(--gold);
 }
-.hd nav a[aria-current="page"] {
-	border-bottom: 2px solid var(--gold);
-	padding-bottom: 2px;
-}
-.hd .donate {
-	background: var(--gold);
-	color: var(--navy);
-	padding: 0.45em 1.1em;
-	border-radius: var(--r);
-	font-weight: 800;
-	text-decoration: none;
-	font-family: var(--font-display);
-	font-size: 0.9rem;
-}
-.hd .donate:hover {
-	background: #ffca3f;
-	color: var(--navy);
-}
-.nav-toggle {
-	display: none;
-	background: none;
-	border: 0;
-	color: #fff;
-	font-size: 1.5rem;
-	line-height: 1;
+.nav__toggle,
+.nav__close {
+	display: flex;
+	font-size: 2rem;
+	color: var(--title-color);
 	cursor: pointer;
-	padding: 0.2em 0.4em;
+	background-color: transparent;
+	border: 0;
+	padding: 0;
 }
-@media (max-width: 720px) {
-	.nav-toggle {
-		display: block;
+.nav__close {
+	position: absolute;
+	top: 1rem;
+	right: 1.5rem;
+}
+.nav__list {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.5rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-width: none;
+}
+.nav__list li {
+	margin: 0;
+}
+.nav__link {
+	position: relative;
+	color: var(--title-color);
+	font-family: var(--second-font);
+	font-weight: var(--font-semi-bold);
+	text-decoration: none;
+}
+.nav__link:hover {
+	color: var(--title-color);
+}
+.nav__link::after {
+	content: "";
+	width: 0;
+	height: 2px;
+	background-color: var(--gold);
+	position: absolute;
+	left: 0;
+	bottom: -0.5rem;
+	transition: width 0.3s;
+}
+.nav__link:hover::after {
+	width: 70%;
+}
+.active-link::after {
+	width: 70%;
+}
+.nav__link--cta {
+	padding: 0.4rem 1.1rem;
+	background-color: var(--gold);
+	color: var(--navy);
+	border-radius: var(--r);
+}
+.nav__link--cta:hover {
+	background-color: #ffca3f;
+	color: var(--navy);
+}
+.nav__link--cta::after {
+	content: none;
+}
+/* Mobile: full-width menu slides down from the top (solid navy, no blur) */
+@media (max-width: 1022px) {
+	.nav__menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		background-color: var(--navy);
+		width: 100%;
+		padding-block: 4rem;
+		transition: top 0.4s;
+		z-index: var(--z-fixed);
+		box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
 	}
-	.hd nav {
+	.show-menu {
+		top: 0;
+	}
+}
+@media (min-width: 1023px) {
+	.nav__close,
+	.nav__toggle {
 		display: none;
-		flex-basis: 100%;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 0.9rem;
-		padding: 0.4rem 0 1rem;
-		font-size: 1rem;
 	}
-	.hd nav.open {
-		display: flex;
+	.nav__list {
+		flex-direction: row;
+		align-items: center;
+		column-gap: 4rem;
 	}
 }

@@ -257,3 +257,12 @@ design system is implemented sitewide.
    listing until the owner confirms and supplies a Measurement ID.
 7. Why-haiti-is-poor uses the timeline (spec recipe) but skips gold impact tiles —
    impact stats felt wrong on a history page; safe org tiles available on request.
+
+
+## Owner-directed refinements (2026-08-30, after the Civic rebuild)
+
+- Founder quote removed from the homepage (kept on /about) — the site should not center Joseph.
+- Hero images render full-color (scrim removed); heights raised (home 78vh / article 62vh / utility 42vh). Slab keeps contrast guaranteed.
+- Wider layouts: `.narrow` 780→960px, reading measure 66→72ch; below 1024px measure caps lift and gutters tighten.
+- Classic site chrome restored on the Civic body: the original flag-logo nav (solid navy, now sticky, mobile slide-down menu) and the original dark footer (logo/tagline/contact list + social icons) carrying the new four-column link taxonomy and the EIN legal line. Remixicon reinstated for the nav/footer icons.
+- Note: the page generator now reads migrated prose from a git snapshot (commit 0acfb4f) rather than the working tree, so regeneration can never eat its own output.

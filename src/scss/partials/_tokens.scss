@@ -39,5 +39,18 @@
 	--r: 4px;
 	--shadow: 0 8px 22px rgba(0, 30, 60, 0.12);
 	--shadow-lift: 0 12px 28px rgba(0, 30, 60, 0.18);
-	--measure: 66ch;
+	--measure: 72ch;
+	/* Legacy tokens for the classic header/footer components */
+	--header-height: 4.5rem;
+	--title-color: hsl(0, 0%, 95%);
+	--text-color: hsl(0, 0%, 70%);
+	--text-color-light: #c0cbd6;
+	--container-color: hsl(0, 0%, 8%);
+	--second-font: var(--font-display);
+	--font-semi-bold: 600;
+	--h2-font-size: 1.25rem;
+	--h3-font-size: 1rem;
+	--small-font-size: 0.813rem;
+	--smaller-font-size: 0.75rem;
+	--z-fixed: 100;
 }
