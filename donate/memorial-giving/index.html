@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content="noindex, follow" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,9 +11,9 @@
 		<link rel="preconnect" href="https://zeffy-scripts.s3.ca-central-1.amazonaws.com" crossorigin />
 		<link rel="preconnect" href="https://www.zeffy.com" crossorigin />
 
-		<title>Haitian Sensation Mission | Clean Water & Education for Haiti</title>
+		<title>Donate in Memory of Someone — Haiti Memorial Gifts</title>
 
-		<meta name="description" content="Haitian Sensation Mission is a 501(c)(3) Haiti nonprofit delivering clean water, education, and disaster relief. See how we create lasting change." />
+		<meta name="description" content="Donate in memory of someone you love. A Haiti memorial gift funds clean water and education in their honor — a legacy of hope that outlives us all." />
 
 		<!--========== FAVICON ==========-->
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
@@ -25,28 +25,28 @@
 		<meta name="theme-color" content="#002e5a" />
 
 		<!--========== OPEN GRAPH ==========-->
-		<meta property="og:title" content="Haitian Sensation Mission | Clean Water & Education for Haiti" />
-		<meta property="og:description" content="Haitian Sensation Mission is a 501(c)(3) Haiti nonprofit delivering clean water, education, and disaster relief. See how we create lasting change." />
-		<meta property="og:image" content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
-		<meta property="og:url" content="https://haitiansensationmission.org/" />
+		<meta property="og:title" content="Donate in Memory of Someone — Haiti Memorial Gifts" />
+		<meta property="og:description" content="Donate in memory of someone you love. A Haiti memorial gift funds clean water and education in their honor — a legacy of hope that outlives us all." />
+		<meta property="og:image" content="https://haitiansensationmission.org/dist/assets/images/claudia-altamimi-land.jpg" />
+		<meta property="og:url" content="https://haitiansensationmission.org/donate/memorial-giving" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="haitiansensationmission.org" />
 
 		<!--========== TWITTER CARD ==========-->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Haitian Sensation Mission | Clean Water & Education for Haiti" />
-		<meta name="twitter:description" content="Haitian Sensation Mission is a 501(c)(3) Haiti nonprofit delivering clean water, education, and disaster relief. See how we create lasting change." />
-		<meta name="twitter:image" content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
+		<meta name="twitter:title" content="Donate in Memory of Someone — Haiti Memorial Gifts" />
+		<meta name="twitter:description" content="Donate in memory of someone you love. A Haiti memorial gift funds clean water and education in their honor — a legacy of hope that outlives us all." />
+		<meta name="twitter:image" content="https://haitiansensationmission.org/dist/assets/images/claudia-altamimi-land.jpg" />
 
 		<!--========== CANONICAL ==========-->
-		<link rel="canonical" href="https://haitiansensationmission.org/" />
+		<link rel="canonical" href="https://haitiansensationmission.org/donate/memorial-giving" />
 
 		<!--========== FONTS (production: self-host per design spec — see README action items) ==========-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
 
 		<!--========== LCP HERO PRELOAD ==========-->
-		<link rel="preload" as="image" href="/dist/assets/images/topsphere-media-2400.jpg" fetchpriority="high" />
+		<link rel="preload" as="image" href="/dist/assets/images/claudia-altamimi-land.jpg" fetchpriority="high" />
 
 		<!-- ===== CSS ===== -->
 		<link rel="stylesheet" href="/dist/css/main.output.css" />
@@ -104,14 +104,27 @@
 					"email": "joseph@haitiansensationmission.org"
 				},
 				{
-					"@type": "WebSite",
-					"@id": "https://haitiansensationmission.org/#website",
-					"url": "https://haitiansensationmission.org",
-					"name": "Haitian Sensation Mission",
-					"description": "Official website of Haitian Sensation Mission, a 501(c)(3) Haiti nonprofit organization",
-					"publisher": {
-						"@id": "https://haitiansensationmission.org/#organization"
-					}
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://haitiansensationmission.org"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "Donate",
+							"item": "https://haitiansensationmission.org/donate"
+						},
+						{
+							"@type": "ListItem",
+							"position": 3,
+							"name": "Memorial Giving",
+							"item": "https://haitiansensationmission.org/donate/memorial-giving"
+						}
+					]
 				}
 			]
 		}
@@ -158,84 +171,71 @@
 
 		<main id="main" tabindex="-1">
 
-		<section class="hero hero--home">
-			<img src="/dist/assets/images/topsphere-media-2400.jpg" width="2400" height="1350" alt="Close-up side profile of a young Haitian boy" fetchpriority="high" />
+		<!-- CONTENT:VERIFY — hero image is a stand-in; final selection pending (design spec: somber, quiet image — needs final selection) -->
+		<section class="hero hero--short">
+			<img src="/dist/assets/images/claudia-altamimi-land.jpg" width="2400" height="1384" alt="Quiet Haitian landscape" fetchpriority="high" />
 			<div class="slab">
-				<p class="eyebrow">A 501(c)(3) Haiti Nonprofit</p>
-				<h1>Real help for Haiti, delivered by hand</h1>
-				<p class="dek">Clean water, education, and disaster relief in Haiti.</p>
-				<div class="actions"><a class="btn btn--gold" href="/donate">Donate</a><a class="btn btn--ghost" href="/programs">See our programs</a></div>
+				<nav class="crumbs" aria-label="Breadcrumb">
+					<ol><li><a href="/">Home</a></li><li><a href="/donate">Donate</a></li><li aria-current="page">Memorial Giving</li></ol>
+				</nav>
+				<p class="eyebrow">Give · In Memory</p>
+				<h1>Donate in memory of someone</h1>
+				<p class="dek">A legacy of hope, built in their name.</p>
 			</div>
 		</section>
 
-		<!--========== STAT BAND (overlaps hero) ==========-->
-		<div class="wrap" style="padding:0">
-			<div class="statband" role="img" aria-label="$5 feeds 25 students. 100% reaches programs. Founded 2023 in Sharon PA. 501(c)(3), EIN 82-3623088.">
-				<div><span class="n">$5</span><span class="l">feeds 25 students</span></div>
-				<div class="hl"><span class="n">100%</span><span class="l">reaches programs</span></div>
-				<div><span class="n">2023</span><span class="l">founded · Sharon PA</span></div>
-				<div><span class="n">501(c)(3)</span><span class="l">EIN 82-3623088</span></div>
+		<!--========== NAVY · ANSWER ==========-->
+		<section class="sec-navy">
+			<div class="narrow">
+				<!-- CONTENT:BLUF -->
+				<p class="answer"><span class="q">What is a memorial donation?</span>[PLACEHOLDER: 40-60 word answer — what a memorial donation is and how to make one here]</p>
+				<!-- /CONTENT:BLUF -->
 			</div>
-		</div>
+		</section>
 
 		<section class="sec-white">
 			<div class="narrow">
-				<h2>Missionary work starts at home</h2>
-				<!-- CONTENT:BODY (migrated homepage prose) -->
-				<p>Haitian Sensation Mission is a Haiti nonprofit organization dedicated to clean water, education, and disaster relief. We work directly with Haitian communities to create meaningful, lasting change.</p>
-				<p>
-					Haitian Sensation Mission is a 501(c)(3) nonprofit helping Haiti through direct community action.
-					We focus on what matters most: clean water access, quality education, and disaster recovery.
-					Every initiative we undertake is designed to create real, measurable impact in Haitian communities.
-					<a class="link-arrow" href="/about/our-story">Read our story</a>
-				</p>
-				<p>
-					Haiti's challenges run deep—rooted in colonial exploitation, economic isolation, and recurring
-					natural disasters. Understanding this context is essential to understanding why our work matters.
-					The Haitian people are resilient, but they need partners committed to long-term change.
-					<a class="link-arrow" href="/why-haiti-is-poor">Learn Haiti's history</a>
-				</p>
-				<!-- /CONTENT:BODY -->
+				<section aria-labelledby="s1">
+					<h2 id="s1">How to make a memorial donation</h2>
+					<p>[PLACEHOLDER: step-by-step through the Zeffy form's dedication option — 100-150 words]</p>
+				</section>
 
+				<section aria-labelledby="s2">
+					<h2 id="s2">What your memorial gift supports</h2>
+					<p>[PLACEHOLDER: programs the gift funds — 100-150 words]</p>
+				</section>
 			</div>
 		</section>
 
+		<!--========== WHITE · FAQ ==========-->
 		<section class="sec-white">
-			<div class="wrap">
-				<h2>How we help Haiti</h2>
-				<div class="cards">
-					<a class="card" href="/programs/disaster-relief">
-						<img src="/dist/assets/images/2019trip-hatian-boy.jpg" width="1024" height="698" alt="Young Haitian boy in earthquake-damaged building" loading="lazy" />
-						<div class="pad"><p class="kick">Programs</p><h3>Disaster relief</h3><p>Rebuilding after crisis.</p></div>
-					</a>
-					<a class="card" href="/programs/clean-water">
-						<img src="/dist/assets/images/drinking-water.jpg" width="2400" height="1600" alt="Child drinking clean water in Haiti" loading="lazy" />
-						<div class="pad"><p class="kick">Programs</p><h3>Clean water initiatives</h3><p>Safe water for Haitian families.</p></div>
-					</a>
-					<a class="card" href="/programs/education">
-						<img src="/dist/assets/images/classroom-1024x682.jpg" width="1024" height="682" alt="Haitian students in classroom" loading="lazy" />
-						<div class="pad"><p class="kick">Programs</p><h3>Educational outreach</h3><p>Opportunity through learning.</p></div>
-					</a>
+			<div class="narrow">
+				<h2 id="faq">Frequently asked questions</h2>
+				<!-- NOTE: add FAQPage JSON-LD only after real FAQ copy lands (brief v2 §5) -->
+				<!-- CONTENT:FAQ -->
+				<div class="faq">
+					<details>
+						<summary>[PLACEHOLDER: question 1]</summary>
+						<div class="a"><p>[PLACEHOLDER: 40-60 word answer to question 1]</p></div>
+					</details>
+					<details>
+						<summary>[PLACEHOLDER: question 2]</summary>
+						<div class="a"><p>[PLACEHOLDER: 40-60 word answer to question 2]</p></div>
+					</details>
+					<details>
+						<summary>[PLACEHOLDER: question 3]</summary>
+						<div class="a"><p>[PLACEHOLDER: 40-60 word answer to question 3]</p></div>
+					</details>
 				</div>
-				<p style="margin-top:1.5rem"><a class="link-arrow" href="/programs">See all programs</a></p>
-
-			</div>
-		</section>
-
-		<!--========== RED · THE PIVOTAL ASK (one per page) ==========-->
-		<section class="sec-red">
-			<div class="wrap">
-				<h2>100% of contributions go directly to our programs in Haiti.</h2>
-				<p>Your support funds clean water systems, school supplies, and emergency relief for families who need it most.</p>
-				<a class="btn btn--white" href="#give">Support our work</a>
+				<!-- /CONTENT:FAQ -->
 			</div>
 		</section>
 
 		<!--========== GOLD · DONATE ==========-->
 		<section class="sec-gold" id="give">
 			<div class="narrow">
-				<h2>Give where it counts</h2>
-				<p>$5 covers meals for 25 students for a school day. 100% of your gift arrives.</p>
+				<h2>Give in their memory</h2>
+				<p>A gift in someone's name brings clean water and education to Haiti — a legacy that lives on.</p>
 				<button
 					type="button"
 					class="btn btn--navy zeffy-btn"
@@ -252,20 +252,12 @@
 			<div class="wrap">
 				<h2>Keep reading</h2>
 				<div class="cards">
-					<a class="card" href="/why-haiti-is-poor">
-						<img src="/dist/assets/images/bill-hamway-madam-felix.jpg" width="5760" height="3840" alt="Haitian elder woman in rural Haiti" loading="lazy" />
+					<a class="card" href="/donate">
+						<img src="/dist/assets/images/30_2000px-1024x682.jpg" width="1024" height="682" alt="Volunteer holding a young Haitian boy" loading="lazy" />
 						<div class="pad">
-							<p class="kick">Learn</p>
-							<h3>Why is Haiti so poor?</h3>
-							<p>The honest history, from the 1825 debt to today.</p>
-						</div>
-					</a>
-					<a class="card" href="/about/our-story">
-						<img src="/dist/assets/images/joe-coffee.jpg" width="720" height="960" alt="Joseph Altenor at the Haitian Sensation coffee shop" loading="lazy" />
-						<div class="pad">
-							<p class="kick">About</p>
-							<h3>Behind the mission</h3>
-							<p>How a restaurant kitchen started a mission.</p>
+							<p class="kick">Give</p>
+							<h3>Donate to Haiti</h3>
+							<p>100% of your gift goes to programs.</p>
 						</div>
 					</a>
 					<a class="card" href="/donate/where-your-money-goes">
@@ -274,6 +266,14 @@
 							<p class="kick">Give</p>
 							<h3>Where your money goes</h3>
 							<p>How 100% of your gift reaches Haiti.</p>
+						</div>
+					</a>
+					<a class="card" href="/programs/clean-water">
+						<img src="/dist/assets/images/drinking-water.jpg" width="2400" height="1600" alt="Child drinking clean water in Haiti" loading="lazy" />
+						<div class="pad">
+							<p class="kick">Programs</p>
+							<h3>Clean water in Haiti</h3>
+							<p>Wells and safe water in the communities we serve.</p>
 						</div>
 					</a>
 				</div>

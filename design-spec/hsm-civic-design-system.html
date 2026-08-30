@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HSM Design System · Civic v1.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   HSM DESIGN SYSTEM — "CIVIC" v1.0
+   Fonts: Libre Franklin (display) · Source Sans 3 (body)
+   Production note: SELF-HOST both families, subset weights,
+   font-display: swap. Google Fonts links here are mockup-only.
+   Section rhythm: NAV → HERO → NAVY → WHITE → RED(cta) → GOLD(give)
+                   → WHITE(cards) → BLACK footer
+   ============================================================ */
+:root{
+  /* Brand (locked) */
+  --navy:#002e5a; --gold:#f3b419; --red:#C1272D;
+  /* Derived */
+  --navy-deep:#022143; --navy-700:#0b3f74; --navy-100:#d8e4f0; --navy-050:#eef3f8;
+  --gold-ink:#3a2e00;        /* text on gold surfaces — 8.7:1 on gold */
+  --gold-deep:#4a3a00;
+  --red-dark:#a01e23; --red-tint:#ffe3e4;
+  --ink:#14273c; --soft:#3f5468; --mist:#b9c9dc; --line:#d9e2ec;
+  --black:#0c0e11; --black-soft:#c8cdd4; --black-mute:#8b929c;
+  /* Type */
+  --font-display:"Libre Franklin",system-ui,sans-serif;
+  --font-body:"Source Sans 3",system-ui,sans-serif;
+  --step--1:clamp(.84rem,.8rem+.15vw,.9rem);
+  --step-0:clamp(1rem,.96rem+.25vw,1.13rem);
+  --step-1:clamp(1.2rem,1.1rem+.5vw,1.45rem);
+  --step-2:clamp(1.5rem,1.3rem+1vw,2rem);
+  --step-3:clamp(1.9rem,1.5rem+2vw,2.7rem);
+  --step-4:clamp(2.3rem,1.8rem+2.8vw,3.6rem);
+  /* Space / shape */
+  --s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2.5rem;--s5:4rem;--s6:6rem;
+  --r:4px;                   /* civic: squared */
+  --shadow:0 8px 22px rgba(0,30,60,.12);
+  --shadow-lift:0 12px 28px rgba(0,30,60,.18);
+  --measure:66ch;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--font-body);font-size:var(--step-0);line-height:1.65;color:var(--ink);background:#fff}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.12;letter-spacing:-.01em;margin:0 0 .5em;color:var(--navy)}
+h1{font-size:var(--step-4);font-weight:900}
+h2{font-size:var(--step-3);font-weight:800}
+h3{font-size:var(--step-1);font-weight:700}
+h4{font-size:var(--step-0);font-weight:700}
+p{margin:0 0 1em;max-width:var(--measure)}
+ul,ol{max-width:var(--measure);padding-left:1.3em}
+li{margin-bottom:.4em}
+a{color:var(--navy);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:var(--red)}
+img{max-width:100%;height:auto;display:block}
+strong{color:var(--navy)}
+code{background:var(--navy-050);padding:.1em .4em;border-radius:var(--r);font-size:.88em}
+/* A11y foundations */
+:focus-visible{outline:3px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 6px var(--gold);border-radius:2px}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--navy);padding:.7em 1.2em;font-weight:800;z-index:100}
+.skip-link:focus{left:1rem}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Layout */
+.wrap{max-width:1060px;margin:0 auto;padding:0 var(--s3)}
+.narrow{max-width:780px;margin:0 auto;padding:0 var(--s3)}
+/* Showcase scaffolding */
+.ds{padding:var(--s5) 0;border-bottom:1px solid var(--line)}
+.ds>.wrap>h2{border-left:6px solid var(--gold);padding-left:.6em}
+.ds-note{font-size:var(--step--1);color:var(--soft);max-width:var(--measure)}
+.ds-grid{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.ds-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:var(--s4) 0 var(--s2)}
+.toc{columns:2;gap:2rem;font-size:var(--step--1)}
+.toc a{display:block;margin-bottom:.4em;text-decoration:none;font-weight:600}
+.toc a:hover{text-decoration:underline}
+
+/* ============================================================
+   1 · EYEBROW
+   ============================================================ */
+.eyebrow{display:inline-block;font-family:var(--font-display);font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);border-left:4px solid var(--gold);padding-left:.6em;margin:0 0 var(--s2)}
+.on-dark .eyebrow{color:var(--gold);border-left-color:var(--gold)}
+.on-red .eyebrow{color:#fff;border-left-color:#fff}
+
+/* ============================================================
+   2 · BUTTONS
+   ============================================================ */
+.btn{display:inline-block;font-family:var(--font-display);font-weight:800;font-size:var(--step-0);text-decoration:none;border-radius:var(--r);padding:.85em 1.7em;border:2px solid transparent;cursor:pointer;text-align:center}
+.btn--gold{background:var(--gold);color:var(--navy)}
+.btn--gold:hover{background:#ffca3f;color:var(--navy)}
+.btn--navy{background:var(--navy);color:#fff}
+.btn--navy:hover{background:var(--navy-700);color:#fff}
+.btn--white{background:#fff;color:var(--red)}
+.btn--white:hover{background:var(--red-tint);color:var(--red-dark)}
+.btn--ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn--ghost:hover{color:var(--red);border-color:var(--red)}
+.on-dark .btn--ghost{color:#fff;border-color:#fff}
+.btn--sm{padding:.55em 1.2em;font-size:var(--step--1)}
+.link-arrow{font-weight:700;text-decoration:none;border-bottom:2px solid var(--gold)}
+.link-arrow::after{content:" →"}
+.link-arrow:hover{color:var(--red);border-color:var(--red)}
+
+/* ============================================================
+   3 · HEADER / NAV  (+ mobile pattern note in markup)
+   ============================================================ */
+.hd{background:var(--navy);color:#fff}
+.hd .bar{display:flex;justify-content:space-between;align-items:center;padding:.9rem var(--s3);max-width:1060px;margin:0 auto;gap:var(--s2);flex-wrap:wrap}
+.hd .brand{color:#fff;font-family:var(--font-display);font-weight:900;text-decoration:none}
+.hd .brand span{color:var(--gold);font-weight:400;letter-spacing:.2em;font-size:.78em}
+.hd nav{display:flex;gap:1.2rem;align-items:center;font-size:.9rem;font-weight:600}
+.hd nav a{color:#fff;text-decoration:none}
+.hd nav a:hover,.hd nav a[aria-current="page"]{color:var(--gold)}
+.hd nav a[aria-current="page"]{border-bottom:2px solid var(--gold);padding-bottom:2px}
+.hd .donate{background:var(--gold);color:var(--navy);padding:.45em 1.1em;border-radius:var(--r);font-weight:800}
+.hd .donate:hover{background:#ffca3f}
+
+/* ============================================================
+   4 · BREADCRUMBS
+   ============================================================ */
+.crumbs{padding:var(--s2) 0;font-size:var(--step--1)}
+.crumbs ol{display:flex;gap:.5em;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.crumbs li+li::before{content:"›";margin-right:.5em;color:var(--soft)}
+.crumbs a{text-decoration:none;font-weight:600}
+.crumbs [aria-current]{color:var(--soft)}
+
+/* ============================================================
+   5 · HEROES  (article / short / home)
+   ============================================================ */
+.hero{position:relative;color:#fff;background:var(--navy);min-height:52vh;display:flex;align-items:center}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+.hero .slab{position:relative;background:rgba(0,29,58,.93);max-width:620px;margin-left:max(var(--s3),6vw);padding:2.4rem 2.2rem;border-left:6px solid var(--gold)}
+.hero h1{color:#fff}
+.hero .dek{color:#dce7f2;font-size:var(--step-1);max-width:48ch}
+.hero .meta{color:var(--mist);font-size:var(--step--1);margin:0}
+.hero--short{min-height:34vh}
+.hero .actions{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s3)}
+
+/* ============================================================
+   6 · SECTION BANDS (the rhythm)
+   ============================================================ */
+.sec-navy{background:var(--navy);color:#fff;padding:var(--s5) 0}
+.sec-navy h2,.sec-navy h3{color:#fff}
+.sec-navy p{color:#eaf1f8}
+.sec-white{background:#fff;padding:var(--s5) 0}
+.sec-white h2{border-left:6px solid var(--gold);padding-left:.6em}
+.sec-red{background:var(--red);color:#fff;padding:var(--s5) 0;clip-path:polygon(0 6%,100% 0,100% 94%,0 100%);text-align:center}
+.sec-red h2{color:#fff;max-width:26ch;margin-inline:auto}
+.sec-red p{color:var(--red-tint);margin-inline:auto;max-width:52ch}
+.sec-gold{background:var(--gold);color:var(--gold-ink);padding:var(--s5) 0}
+.sec-gold h2{color:var(--navy)}
+.sec-gold p{color:var(--gold-deep)}
+
+/* ============================================================
+   7 · ANSWER BLOCK (BLUF) — light + dark variants
+   ============================================================ */
+.answer{font-size:var(--step-1);line-height:1.55;border-left:5px solid var(--gold);padding-left:1.2rem;max-width:var(--measure)}
+.answer .q{display:block;font-family:var(--font-display);font-weight:800;font-size:var(--step-0);margin-bottom:.35em}
+.sec-white .answer{background:var(--navy-050);border-radius:0 var(--r) var(--r) 0;padding:var(--s3);border-left-width:6px}
+.sec-white .answer .q{color:var(--navy)}
+.sec-navy .answer{color:#eaf1f8}
+.sec-navy .answer .q{color:var(--gold)}
+
+/* ============================================================
+   8 · STAT TILES — gold hero tiles (rationed!) + quiet variant
+   ============================================================ */
+.tiles{display:grid;gap:var(--s2);grid-template-columns:repeat(auto-fit,minmax(185px,1fr));list-style:none;padding:0;margin:var(--s3) 0 0}
+.tiles li{background:var(--gold);border-radius:var(--r);box-shadow:0 6px 16px rgba(0,0,0,.28);padding:1.25rem}
+.tiles .n{display:block;font-family:var(--font-display);font-size:2.1rem;font-weight:900;color:var(--navy);line-height:1.05}
+.tiles .l{font-size:var(--step--1);color:var(--gold-ink);font-weight:600}
+.tiles li.lead{outline:3px solid #fff;outline-offset:3px}
+/* quiet variant for white sections */
+.tiles--quiet li{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);box-shadow:none}
+.tiles--quiet .n{color:var(--navy)}
+.tiles--quiet .l{color:var(--soft);font-weight:400}
+
+/* ============================================================
+   9 · STAT BAND (homepage: overlaps hero bottom)
+   ============================================================ */
+.statband{position:relative;margin:-2.6rem var(--s3) 0;background:#fff;border-radius:var(--r);box-shadow:var(--shadow-lift);display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));overflow:hidden;z-index:2}
+.statband>div{padding:1.2rem;text-align:center;border-left:1px solid var(--line)}
+.statband>div:first-child{border-left:0}
+.statband .n{display:block;font-family:var(--font-display);font-size:1.7rem;font-weight:900;color:var(--navy)}
+.statband .l{font-size:.76rem;color:var(--soft);text-transform:uppercase;letter-spacing:.07em;font-weight:700}
+.statband .hl .n{color:var(--red)}
+
+/* ============================================================
+   10 · TABLES — tier table + plain data table
+   ============================================================ */
+.tier{width:100%;border-collapse:collapse;margin:var(--s3) 0}
+.tier caption{text-align:left;font-family:var(--font-display);font-weight:800;color:var(--navy);padding-bottom:.8rem;font-size:var(--step-1)}
+.tier th{text-align:left;background:var(--navy);color:#fff;padding:.7em 1em;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-family:var(--font-display)}
+.tier td{padding:.85em 1em;border-bottom:1px solid var(--line);vertical-align:top}
+.tier tr:nth-child(even) td{background:var(--navy-050)}
+.tier .amt{font-family:var(--font-display);font-weight:900;color:var(--navy);font-size:1.15rem;white-space:nowrap}
+.tier .hl td{background:#fff8e3;border-bottom-color:var(--gold)}
+.table-plain th{background:var(--navy-050);color:var(--navy)}
+.table-scroll{overflow-x:auto}
+
+/* ============================================================
+   11 · BADGES & CHIPS
+   ============================================================ */
+.badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;border-radius:999px;padding:.2em .7em;font-family:var(--font-display)}
+.badge--red{background:var(--red);color:#fff}
+.badge--navy{background:var(--navy);color:#fff}
+.chips{display:flex;gap:.8rem;flex-wrap:wrap;font-size:.82rem;font-weight:700}
+.chips span{border:2px solid currentColor;border-radius:999px;padding:.3em .9em}
+.sec-gold .chips span{border-color:var(--navy);color:var(--navy)}
+.sec-navy .chips span{border-color:rgba(255,255,255,.5);color:#fff}
+
+/* ============================================================
+   12 · FIGURES — photo, photo pair, gallery strip
+   ============================================================ */
+figure.photo{margin:var(--s3) 0}
+figure.photo img{border-radius:var(--r);aspect-ratio:16/9;object-fit:cover;box-shadow:var(--shadow)}
+figure.photo figcaption{font-size:var(--step--1);color:var(--soft);padding:.6rem 2px .5rem;border-bottom:2px solid var(--gold);display:inline-block}
+.photo-pair{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.photo-pair img{aspect-ratio:3/2}
+.gallery{display:grid;gap:var(--s2);grid-template-columns:repeat(auto-fit,minmax(180px,1fr));list-style:none;padding:0}
+.gallery img{aspect-ratio:1;object-fit:cover;border-radius:var(--r)}
+
+/* ============================================================
+   13 · BLOCKQUOTE / TESTIMONIAL
+   ============================================================ */
+.quote{border:0;margin:var(--s3) 0;padding:var(--s3) var(--s4);background:var(--red-tint);border-left:6px solid var(--red);border-radius:0 var(--r) var(--r) 0;max-width:var(--measure)}
+.quote p{font-family:var(--font-display);font-size:var(--step-1);font-weight:600;color:var(--navy);margin-bottom:.5em}
+.quote cite{font-style:normal;color:var(--soft);font-size:var(--step--1)}
+.sec-navy .quote{background:rgba(255,255,255,.06);border-left-color:var(--gold)}
+.sec-navy .quote p{color:#fff}
+.sec-navy .quote cite{color:var(--mist)}
+
+/* ============================================================
+   14 · CALLOUTS — info / advisory / success
+   ============================================================ */
+.callout{border:1px solid var(--line);border-left:6px solid var(--navy);border-radius:0 var(--r) var(--r) 0;padding:var(--s3);margin:var(--s3) 0;max-width:var(--measure);background:var(--navy-050)}
+.callout .t{font-family:var(--font-display);font-weight:800;color:var(--navy);display:block;margin-bottom:.3em}
+.callout--advisory{background:#fff8e3;border-left-color:var(--gold)}
+.callout--advisory .t{color:var(--gold-ink)}
+.callout--alert{background:var(--red-tint);border-left-color:var(--red)}
+.callout--alert .t{color:var(--red-dark)}
+
+/* ============================================================
+   15 · TIMELINE (why-haiti-is-poor)
+   ============================================================ */
+.timeline{list-style:none;padding:0;margin:var(--s3) 0;position:relative}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:3px;background:var(--navy-100)}
+.timeline li{position:relative;padding:0 0 var(--s3) var(--s4)}
+.timeline li::before{content:"";position:absolute;left:2px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--navy)}
+.timeline .yr{font-family:var(--font-display);font-weight:900;color:var(--red);display:block;font-size:var(--step-1)}
+.timeline p{margin:0;color:var(--soft)}
+
+/* ============================================================
+   16 · CHARTS — donut + comparison bars (SVG/CSS, text-backed)
+   ============================================================ */
+.chart{border:1px solid var(--line);border-radius:var(--r);padding:var(--s3);background:#fff;margin:0}
+.chart figcaption{font-size:var(--step--1);color:var(--soft);margin-top:var(--s2)}
+.bars .row{display:grid;grid-template-columns:minmax(8em,11em) 1fr 4em;align-items:center;gap:var(--s2);margin-bottom:var(--s2)}
+.bars .bar{height:1.5rem;border-radius:2px;background:var(--navy)}
+.bars .bar.gold{background:var(--gold)}
+.bars .bar.soft{background:var(--navy-100)}
+.bars .val{font-family:var(--font-display);font-weight:800;color:var(--navy)}
+.bars .who{font-size:var(--step--1)}
+
+/* ============================================================
+   17 · MAP FIGURE
+   ============================================================ */
+.map{margin:var(--s3) 0;background:var(--navy-050);border-radius:var(--r);padding:var(--s3)}
+.map svg{width:100%;height:auto;max-width:640px;margin:0 auto;display:block}
+.map figcaption{font-size:var(--step--1);color:var(--soft);margin-top:var(--s1);text-align:center}
+
+/* ============================================================
+   18 · FAQ — native details/summary
+   ============================================================ */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:var(--s2);padding:1.2rem .3rem;font-family:var(--font-display);font-weight:700;color:var(--navy);font-size:1.08rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--red);font-size:1.5em;font-weight:400;line-height:1;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq .a{padding:0 .3rem 1.3rem;max-width:var(--measure)}
+
+/* ============================================================
+   19 · STEPS (send-money, mission-trips how-tos)
+   ============================================================ */
+.steps{list-style:none;counter-reset:step;padding:0;margin:var(--s3) 0}
+.steps li{counter-increment:step;position:relative;padding:0 0 var(--s3) 3.4rem}
+.steps li::before{content:counter(step);position:absolute;left:0;top:0;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--navy);color:var(--gold);font-family:var(--font-display);font-weight:900;display:grid;place-content:center;font-size:1.1rem}
+.steps h4{margin-bottom:.2em}
+.steps p{margin:0;color:var(--soft)}
+
+/* ============================================================
+   20 · CHECKLIST
+   ============================================================ */
+.check{list-style:none;padding:0;margin:var(--s3) 0}
+.check li{position:relative;padding:0 0 .6em 2rem}
+.check li::before{content:"✓";position:absolute;left:0;top:0;width:1.4rem;height:1.4rem;border-radius:var(--r);background:var(--gold);color:var(--navy);font-weight:900;display:grid;place-content:center;font-size:.85rem}
+
+/* ============================================================
+   21 · CARDS — related article / program / person / giving level
+   ============================================================ */
+.cards{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;background:#fff;transition:box-shadow .15s,transform .15s;display:block}
+.card:hover{box-shadow:var(--shadow-lift)}
+.card img{aspect-ratio:16/10;object-fit:cover}
+.card .pad{padding:1.1rem}
+.card .kick{font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-family:var(--font-display)}
+.card h3{font-size:1.1rem;margin:.3em 0}
+.card p{color:var(--soft);font-size:.9rem;margin:0}
+.card--person img{aspect-ratio:1;object-fit:cover}
+.card--person .role{color:var(--red);font-weight:700;font-size:.82rem}
+.give-cards{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.give-card{border:2px solid var(--line);border-radius:var(--r);padding:var(--s3);text-align:center;background:#fff}
+.give-card.featured{border-color:var(--gold);box-shadow:var(--shadow);position:relative}
+.give-card.featured .badge{position:absolute;top:-0.8em;left:50%;transform:translateX(-50%)}
+.give-card .amt{font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--navy);display:block}
+.give-card .per{color:var(--soft);font-size:.85rem}
+.give-card p{font-size:.92rem;color:var(--soft)}
+
+/* ============================================================
+   22 · PROGRESS BAR (campaign goal)
+   ============================================================ */
+.progress{margin:var(--s3) 0;max-width:520px}
+.progress .track{background:var(--navy-050);border-radius:999px;height:1.2rem;overflow:hidden;border:1px solid var(--line)}
+.progress .fill{background:linear-gradient(90deg,var(--gold),#ffca3f);height:100%;border-radius:999px}
+.progress .meta{display:flex;justify-content:space-between;font-size:var(--step--1);color:var(--soft);margin-top:.4rem}
+.progress .meta strong{color:var(--navy)}
+
+/* ============================================================
+   23 · FORMS (newsletter, contact) + validation states
+   ============================================================ */
+.field{margin-bottom:var(--s3);max-width:440px}
+.field label{display:block;font-family:var(--font-display);font-weight:700;color:var(--navy);margin-bottom:.35em;font-size:var(--step--1)}
+.field input,.field textarea,.field select{width:100%;font:inherit;padding:.7em .9em;border:2px solid var(--line);border-radius:var(--r);background:#fff;color:var(--ink)}
+.field input:focus-visible,.field textarea:focus-visible{outline:3px solid var(--navy);box-shadow:0 0 0 6px var(--gold);border-color:var(--navy)}
+.field .hint{font-size:var(--step--1);color:var(--soft);margin-top:.3em}
+.field.error input{border-color:var(--red)}
+.field.error .msg{color:var(--red-dark);font-size:var(--step--1);font-weight:700;margin-top:.3em}
+.newsletter{display:flex;gap:var(--s2);flex-wrap:wrap;align-items:flex-end}
+.newsletter .field{margin:0;flex:1;min-width:220px}
+.alert{border-radius:var(--r);padding:var(--s2) var(--s3);font-weight:600;max-width:520px;margin:var(--s2) 0}
+.alert--ok{background:#e7f5ec;color:#0a5c2b;border:1px solid #bfe3cc}
+.alert--err{background:var(--red-tint);color:var(--red-dark);border:1px solid #f2b9bc}
+
+/* ============================================================
+   24 · INLINE DONATE ASIDE (mid-article)
+   ============================================================ */
+.donate-inline{background:var(--navy);color:#fff;border-radius:var(--r);padding:var(--s3) var(--s4);margin:var(--s4) 0;display:flex;gap:var(--s3);align-items:center;justify-content:space-between;flex-wrap:wrap;border-left:6px solid var(--gold)}
+.donate-inline p{margin:0;color:#eaf1f8;font-family:var(--font-display);font-weight:700}
+
+/* ============================================================
+   25 · ZEFFY SHELL + TRUST
+   ============================================================ */
+.zeffy{background:#fff;border-radius:var(--r);padding:var(--s3);box-shadow:0 10px 26px rgba(74,58,0,.18)}
+.zeffy .ph{border:2px dashed var(--line);border-radius:var(--r);padding:2.6rem var(--s3);text-align:center;color:var(--soft)}
+.zeffy .ph strong{display:block;color:var(--navy);font-size:1.1rem;margin-bottom:.3em;font-family:var(--font-display)}
+
+/* ============================================================
+   26 · TOC (long articles)
+   ============================================================ */
+.toc-box{border:1px solid var(--line);border-radius:var(--r);padding:var(--s3);background:var(--navy-050);max-width:var(--measure);margin:var(--s3) 0}
+.toc-box .t{font-family:var(--font-display);font-weight:800;color:var(--navy);display:block;margin-bottom:.5em;font-size:var(--step--1);text-transform:uppercase;letter-spacing:.1em}
+.toc-box ol{margin:0;padding-left:1.2em}
+.toc-box a{font-weight:600;text-decoration:none}
+.toc-box a:hover{text-decoration:underline}
+
+/* ============================================================
+   27 · VIDEO EMBED SHELL
+   ============================================================ */
+.video{aspect-ratio:16/9;background:var(--navy);border-radius:var(--r);display:grid;place-content:center;color:var(--mist);margin:var(--s3) 0}
+.video .play{width:64px;height:64px;border-radius:50%;background:var(--gold);display:grid;place-content:center;color:var(--navy);font-size:1.4rem;margin:0 auto .6rem}
+
+/* ============================================================
+   28 · STICKY DONATE (mobile)
+   ============================================================ */
+.sticky{display:flex;background:var(--navy);color:#fff;justify-content:space-between;align-items:center;gap:var(--s2);padding:.8rem 1.2rem;border-top:3px solid var(--gold);font-size:.85rem;border-radius:var(--r)}
+.sticky p{margin:0}
+/* production: position:fixed;bottom:0 under @media(max-width:720px) */
+
+/* ============================================================
+   29 · FOOTER (black, current site)
+   ============================================================ */
+.ft{background:var(--black);color:var(--black-soft);padding:var(--s5) 0 var(--s3);font-size:.9rem}
+.ft a{color:#fff;text-decoration:none}
+.ft a:hover{color:var(--gold)}
+.ft .cols{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:1.8rem}
+.ft h3{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;margin:0 0 .8em}
+.ft ul{list-style:none;margin:0;padding:0}
+.ft li{margin:0 0 .55em}
+.ft .brandline{font-family:var(--font-display);font-weight:900;color:#fff;font-size:1.05rem;margin:0}
+.ft .brandline span{color:var(--gold);font-weight:400;letter-spacing:.2em;font-size:.78em}
+.ft .legal{border-top:1px solid #23262b;margin-top:2.2rem;padding-top:1.4rem;color:var(--black-mute);font-size:.8rem}
+
+/* swatches for the color section */
+.swatches{display:grid;gap:var(--s2);grid-template-columns:repeat(auto-fit,minmax(140px,1fr));list-style:none;padding:0}
+.sw{border-radius:var(--r);border:1px solid var(--line);overflow:hidden}
+.sw .chip{height:64px}
+.sw .meta{padding:.6em .8em;font-size:.78rem}
+.sw .meta strong{display:block;color:var(--navy)}
+.ctable td,.ctable th{padding:.5em .8em;border-bottom:1px solid var(--line);text-align:left;font-size:var(--step--1)}
+.ok{color:#0a6b2d;font-weight:700}.no{color:var(--red);font-weight:700}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="wrap" style="padding-top:var(--s5)">
+  <p class="eyebrow">Haitian Sensation Mission</p>
+  <h1>Civic Design System <span style="color:var(--red)">v1.0</span></h1>
+  <p class="ds-note">The complete component inventory for all nine pages. Libre Franklin + Source Sans 3 (self-host in production). Section rhythm: <strong>nav → hero → navy → white → red CTA → gold give → white cards → black footer</strong>. Every component is static, crawlable HTML — zero JS required.</p>
+  <nav class="toc" aria-label="Contents" style="margin-top:var(--s3)">
+    <a href="#f1">01 Color &amp; contrast</a><a href="#f2">02 Typography</a><a href="#f3">03 Buttons &amp; links</a><a href="#f4">04 Nav &amp; wayfinding</a><a href="#f5">05 Heroes</a><a href="#f6">06 Section bands</a><a href="#f7">07 Answer blocks</a><a href="#f8">08 Stat tiles &amp; band</a><a href="#f9">09 Tables</a><a href="#f10">10 Figures &amp; gallery</a><a href="#f11">11 Quotes &amp; callouts</a><a href="#f12">12 Timeline</a><a href="#f13">13 Charts &amp; map</a><a href="#f14">14 FAQ / steps / checklist</a><a href="#f15">15 Cards</a><a href="#f16">16 Giving &amp; progress</a><a href="#f17">17 Forms &amp; alerts</a><a href="#f18">18 Donate components</a><a href="#f19">19 Footer &amp; sticky</a><a href="#f20">20 Page recipes</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="ds" id="f1"><div class="wrap">
+  <h2>01 · Color &amp; contrast</h2>
+  <p class="ds-note">The palette is the flag family: your gold sits inside the range used for the coat-of-arms golds; navy and red run deeper than the flag's bands for AA text contrast. Gold is <strong>never text on white</strong> — fills and rules only.</p>
+  <ul class="swatches">
+    <li class="sw"><div class="chip" style="background:var(--navy)"></div><div class="meta"><strong>--navy #002e5a</strong>structure, bands, headings</div></li>
+    <li class="sw"><div class="chip" style="background:var(--gold)"></div><div class="meta"><strong>--gold #f3b419</strong>tiles, CTAs, rules</div></li>
+    <li class="sw"><div class="chip" style="background:var(--red)"></div><div class="meta"><strong>--red #C1272D</strong>CTA band, kickers, accents</div></li>
+    <li class="sw"><div class="chip" style="background:var(--black)"></div><div class="meta"><strong>--black #0c0e11</strong>footer only</div></li>
+    <li class="sw"><div class="chip" style="background:var(--ink)"></div><div class="meta"><strong>--ink #14273c</strong>body text</div></li>
+    <li class="sw"><div class="chip" style="background:var(--gold-ink)"></div><div class="meta"><strong>--gold-ink #3a2e00</strong>text on gold</div></li>
+    <li class="sw"><div class="chip" style="background:var(--navy-050);border-bottom:1px solid var(--line)"></div><div class="meta"><strong>--navy-050 #eef3f8</strong>washes, callouts</div></li>
+    <li class="sw"><div class="chip" style="background:var(--red-tint)"></div><div class="meta"><strong>--red-tint #ffe3e4</strong>quote &amp; alert wash</div></li>
+  </ul>
+  <table class="ctable" style="margin-top:var(--s3)">
+    <tr><th>Pair</th><th>Ratio</th><th>Use</th></tr>
+    <tr><td>Ink / white</td><td class="ok">13:1 ✓</td><td>Body</td></tr>
+    <tr><td>White / navy · mist / navy</td><td class="ok">12:1 · 7:1 ✓</td><td>Navy bands</td></tr>
+    <tr><td>Gold / navy · navy / gold</td><td class="ok">6.8:1 ✓</td><td>Accents, buttons, tiles</td></tr>
+    <tr><td>Gold-ink / gold</td><td class="ok">8.7:1 ✓</td><td>Tile labels, gold band copy</td></tr>
+    <tr><td>White / red · red-tint / red</td><td class="ok">5.9:1 · 4.7:1 ✓</td><td>Red band</td></tr>
+    <tr><td>Red / white</td><td class="ok">5.8:1 ✓</td><td>Kickers, FAQ toggle</td></tr>
+    <tr><td>Gold / white (text)</td><td class="no">1.5:1 ✗</td><td>Forbidden — fills only</td></tr>
+    <tr><td>Focus: navy ring + gold halo</td><td class="ok">✓ on all grounds</td><td>Every interactive element</td></tr>
+  </table>
+</div></section>
+
+<section class="ds" id="f2"><div class="wrap">
+  <h2>02 · Typography</h2>
+  <p class="ds-note"><strong>Libre Franklin</strong> 700/800/900 for display, <strong>Source Sans 3</strong> 400/600/700 for body. Fluid clamp() scale, 66ch measure. Self-host, subset, <code>font-display: swap</code>.</p>
+  <div style="border:1px solid var(--line);border-radius:var(--r);padding:var(--s4)">
+    <p class="eyebrow">Eyebrow · Franklin 700 · tracked caps · gold rule</p>
+    <h1 style="margin-bottom:.15em">H1 Franklin 900 — the answer voice</h1>
+    <h2 style="margin-bottom:.15em;border:0;padding:0">H2 Franklin 800 — section questions</h2>
+    <h3>H3 Franklin 700 — components</h3>
+    <p>Body — Source Sans 3, step-0, 1.65 leading. Comfortable across 1,500-word answer pages.</p>
+    <p class="ds-note" style="margin:0">Meta / captions / sources — step--1, soft ink.</p>
+  </div>
+</div></section>
+
+<section class="ds" id="f3"><div class="wrap">
+  <h2>03 · Buttons &amp; links</h2>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
+    <a class="btn btn--gold" href="#">Primary — gold</a>
+    <a class="btn btn--navy" href="#">Navy</a>
+    <a class="btn btn--ghost" href="#">Ghost</a>
+    <a class="btn btn--gold btn--sm" href="#">Small</a>
+    <a class="link-arrow" href="#">Arrow link</a>
+  </div>
+  <div style="background:var(--red);padding:var(--s3);border-radius:var(--r);margin-top:var(--s2);display:flex;gap:1rem;flex-wrap:wrap">
+    <a class="btn btn--white" href="#">White on red — CTA band only</a>
+    <a class="btn btn--gold" href="#">Gold on red</a>
+  </div>
+  <p class="ds-note" style="margin-top:var(--s2)">One primary button per band. Never gold text on white.</p>
+</div></section>
+
+<section class="ds" id="f4"><div class="wrap">
+  <h2>04 · Navigation &amp; wayfinding</h2>
+  <p class="ds-label">Header (desktop) — mobile collapses to hamburger <code>&lt;button aria-expanded&gt;</code> + slide-down list; Donate stays visible</p>
+  <div class="hd" style="border-radius:var(--r)"><div class="bar">
+    <a class="brand" href="#">Haitian Sensation <span>MISSION</span></a>
+    <nav aria-label="Primary"><a href="#">Why Haiti</a> <a href="#" aria-current="page">Programs</a> <a href="#">About</a> <a href="#">Contact</a> <a class="donate" href="#">Donate</a></nav>
+  </div></div>
+  <p class="ds-label">Breadcrumbs (all non-home pages, mirrored in BreadcrumbList JSON-LD)</p>
+  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="#">Home</a></li><li><a href="#">Programs</a></li><li aria-current="page">Education</li></ol></nav>
+  <p class="ds-label">In-article table of contents (articles &gt; 1,000 words)</p>
+  <div class="toc-box"><span class="t">On this page</span><ol><li><a href="#">Why is school so hard to afford?</a></li><li><a href="#">What's happening in Pelerin?</a></li><li><a href="#">What your gift does</a></li></ol></div>
+</div></section>
+
+<section class="ds" id="f5"><div class="wrap">
+  <h2>05 · Heroes</h2>
+  <p class="ds-note">Every page gets a hero image. Article hero (slab left, gold border) shown below; <strong>short variant</strong> (34vh) for utility pages (contact, legal, thank-you); homepage adds dual CTAs in the slab. LCP image: <code>fetchpriority="high"</code>, never lazy.</p>
+  <div class="hero" style="border-radius:var(--r);overflow:hidden;min-height:44vh">
+    <img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/zach-vessels-schoolboy1.jpg" alt="Haitian schoolboy in uniform">
+    <div class="slab">
+      <p class="eyebrow" style="color:var(--gold);border-left-color:var(--gold)">Programs · Education</p>
+      <h1 style="font-size:var(--step-3)">Education in Haiti — and how you can sponsor a classroom in Pelerin</h1>
+      <p class="dek">Most Haitian schools charge tuition. We make sure cost is never the reason a child stays home.</p>
+      <p class="meta">Last updated August 2026</p>
+      <div class="actions"><a class="btn btn--gold" href="#">Give $5</a><a class="btn btn--ghost" href="#">Learn more</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="ds" id="f6"><div class="wrap">
+  <h2>06 · Section bands — the rhythm</h2>
+  <p class="ds-note">Order is fixed sitewide: navy carries the answer + proof, white carries the article, red carries ONE pivotal ask, gold carries the form, white carries related reading, black closes. Red band is clipped on a 6% diagonal.</p>
+  <div style="display:grid;gap:6px">
+    <div style="background:var(--navy);color:#fff;padding:1rem 1.4rem;border-radius:var(--r)">NAVY — answer block + gold stat tiles</div>
+    <div style="background:#fff;border:1px solid var(--line);padding:1rem 1.4rem;border-radius:var(--r)">WHITE — article, tables, figures, FAQ</div>
+    <div style="background:var(--red);color:#fff;padding:1rem 1.4rem;border-radius:var(--r)">RED — the pivotal CTA (one per page)</div>
+    <div style="background:var(--gold);color:var(--navy);padding:1rem 1.4rem;border-radius:var(--r);font-weight:700">GOLD — donate band with Zeffy</div>
+    <div style="background:#fff;border:1px solid var(--line);padding:1rem 1.4rem;border-radius:var(--r)">WHITE — related article cards</div>
+    <div style="background:var(--black);color:#fff;padding:1rem 1.4rem;border-radius:var(--r)">BLACK — footer</div>
+  </div>
+</div></section>
+
+<section class="ds" id="f7"><div class="wrap">
+  <h2>07 · Answer blocks (BLUF)</h2>
+  <p class="ds-label">On navy (page-opening answer)</p>
+  <div class="sec-navy" style="border-radius:var(--r);padding:var(--s3)"><div style="padding:0 var(--s2)">
+    <p class="answer"><span class="q">What is education like in Haiti?</span>Roughly nine in ten schools in Haiti are privately run and charge tuition. Adult literacy sits near 61%. In Pelerin, our partner classrooms provide daily meals and supplies so cost stops deciding who learns.</p>
+  </div></div>
+  <p class="ds-label">On white (mid-article answers)</p>
+  <p class="answer" style="background:var(--navy-050);border-radius:0 var(--r) var(--r) 0;padding:var(--s3)"><span class="q" style="color:var(--navy)">How much does it cost to feed a child in Haiti?</span>In our Pelerin program, about $0.20 per meal — $5 covers 25 students for a school day.</p>
+</div></section>
+
+<section class="ds" id="f8"><div class="wrap">
+  <h2>08 · Stat tiles &amp; stat band</h2>
+  <p class="ds-label">Gold hero tiles — impact stats ONLY, one .lead ring per set, rationed to navy sections</p>
+  <div class="sec-navy" style="border-radius:var(--r);padding:var(--s3)"><ul class="tiles" style="margin:0">
+    <li class="lead"><span class="n">$5</span><span class="l">feeds 25 students for a school day</span></li>
+    <li><span class="n">~61%</span><span class="l">adult literacy in Haiti</span></li>
+    <li><span class="n">~90%</span><span class="l">of schools charge tuition</span></li>
+    <li><span class="n">100%</span><span class="l">of your gift reaches programs</span></li>
+  </ul></div>
+  <p class="ds-label">Quiet tiles — white sections, secondary stats</p>
+  <ul class="tiles tiles--quiet" style="margin-top:0"><li><span class="n">2023</span><span class="l">founded, Sharon PA</span></li><li><span class="n">3</span><span class="l">program areas</span></li><li><span class="n">1</span><span class="l">village we know by name</span></li></ul>
+  <p class="ds-label">Stat band — homepage, overlaps hero bottom (margin-top −2.6rem)</p>
+  <div class="statband" style="margin:0" role="img" aria-label="$5 feeds 25 students. 100% reaches programs. Founded 2023. EIN 82-3623088.">
+    <div><span class="n">$5</span><span class="l">feeds 25 students</span></div>
+    <div class="hl"><span class="n">100%</span><span class="l">reaches programs</span></div>
+    <div><span class="n">2023</span><span class="l">founded · Sharon PA</span></div>
+    <div><span class="n">501(c)(3)</span><span class="l">EIN 82-3623088</span></div>
+  </div>
+</div></section>
+
+<section class="ds" id="f9"><div class="wrap">
+  <h2>09 · Tables</h2>
+  <div class="table-scroll">
+  <table class="tier">
+    <caption>Tier table — gift → outcome</caption>
+    <thead><tr><th scope="col">Gift</th><th scope="col">What it provides in Pelerin</th></tr></thead>
+    <tbody>
+      <tr><td class="amt">$5</td><td>Feeds 25 students for one school day</td></tr>
+      <tr class="hl"><td class="amt">$25/mo</td><td>Feeds a classroom every week, all year <span class="badge">Most impact</span></td></tr>
+      <tr><td class="amt">$100</td><td>Feeds a classroom for a month of school days</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="ds-note">Plain data variant: <code>.tier.table-plain</code> (navy-050 header) for stats/comparison data. Wide tables wrap in <code>.table-scroll</code>.</p>
+</div></section>
+
+<section class="ds" id="f10"><div class="wrap">
+  <h2>10 · Figures &amp; gallery</h2>
+  <div class="photo-pair">
+    <figure class="photo"><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/48_2000px-1024x682.jpg" alt="Mission team distributing supplies" loading="lazy"><figcaption>Captioned figure — who, what, where, on a gold baseline.</figcaption></figure>
+    <figure class="photo"><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/27_2000px-1024x682.jpg" alt="Group of young Haitian children" loading="lazy"><figcaption>Photo pair grid for side-by-side storytelling.</figcaption></figure>
+  </div>
+  <p class="ds-label">Gallery strip (about / mission-trips)</p>
+  <ul class="gallery">
+    <li><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/30_2000px-1024x682.jpg" alt="Volunteer holding a young boy" loading="lazy"></li>
+    <li><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/8_2000px-1024x682.jpg" alt="Volunteers traveling to a site" loading="lazy"></li>
+    <li><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/bill-hamway-madam-felix.jpg" alt="Madam Félix" loading="lazy"></li>
+    <li><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/home-team-1024x512.jpg" alt="Mission team group photo" loading="lazy"></li>
+  </ul>
+</div></section>
+
+<section class="ds" id="f11"><div class="wrap">
+  <h2>11 · Quotes &amp; callouts</h2>
+  <blockquote class="quote"><p>"Missionary work starts at home. It started in a kitchen in Sharon, Pennsylvania."</p><cite>— Joseph Altenor, founder</cite></blockquote>
+  <div class="callout"><span class="t">Good to know</span>Info callout — context, definitions, program notes.</div>
+  <div class="callout callout--advisory"><span class="t">Current advisory</span>Advisory callout — travel status on /is-haiti-safe, date-stamped.</div>
+  <div class="callout callout--alert"><span class="t">Important</span>Alert callout — rare; deadlines, urgent relief appeals.</div>
+</div></section>
+
+<section class="ds" id="f12"><div class="wrap">
+  <h2>12 · Timeline (why-haiti-is-poor)</h2>
+  <ul class="timeline">
+    <li><span class="yr">1804</span><p>Haiti wins independence — the first free Black republic.</p></li>
+    <li><span class="yr">1825</span><p>France demands an indemnity; Haiti borrows to pay, entering a century of debt.</p></li>
+    <li><span class="yr">2010</span><p>A 7.0 earthquake devastates Port-au-Prince.</p></li>
+  </ul>
+</div></section>
+
+<section class="ds" id="f13"><div class="wrap">
+  <h2>13 · Charts &amp; map</h2>
+  <div class="ds-grid">
+    <figure class="chart">
+      <svg viewBox="0 0 120 120" role="img" aria-labelledby="dT dD" style="max-width:200px;margin:0 auto;display:block">
+        <title id="dT">Where donations go</title><desc id="dD">Full circle: 100 percent of donations fund programs.</desc>
+        <circle cx="60" cy="60" r="46" fill="none" stroke="#eef3f8" stroke-width="16"/>
+        <circle cx="60" cy="60" r="46" fill="none" stroke="#f3b419" stroke-width="16"/>
+        <text x="60" y="57" text-anchor="middle" font-size="22" font-weight="900" fill="#002e5a" font-family="Libre Franklin">100%</text>
+        <text x="60" y="74" text-anchor="middle" font-size="9" fill="#3f5468">to programs</text>
+      </svg>
+      <figcaption>Donut — the 100% story. Data always duplicated in visible text.</figcaption>
+    </figure>
+    <figure class="chart bars">
+      <div role="img" aria-label="Cost per school meal: national program 9 cents, Mary's Meals 13 cents, our program 20 cents.">
+        <div class="row"><span class="who">Haiti nat'l program</span><div class="bar soft" style="width:45%"></div><span class="val">$0.09</span></div>
+        <div class="row"><span class="who">Mary's Meals</span><div class="bar" style="width:65%"></div><span class="val">$0.13</span></div>
+        <div class="row"><span class="who">Our program</span><div class="bar gold" style="width:100%"></div><span class="val">$0.20</span></div>
+      </div>
+      <figcaption>Comparison bars — honest benchmarking.</figcaption>
+    </figure>
+  </div>
+  <figure class="map">
+    <svg viewBox="0 0 640 300" role="img" aria-labelledby="mT mD">
+      <title id="mT">Map showing Pelerin, Haiti</title><desc id="mD">Schematic map of Haiti with a marker at Pelerin, southeast of Port-au-Prince.</desc>
+      <rect width="640" height="300" fill="#d8e4f0"/>
+      <path d="M 95 100 L 190 82 L 300 90 L 400 78 L 470 92 L 468 132 L 420 140 L 380 132 L 350 152 L 390 177 L 470 172 L 540 187 L 545 222 L 470 234 L 380 228 L 300 240 L 210 250 L 120 234 L 60 244 L 40 218 L 90 204 L 170 200 L 240 190 L 300 178 L 280 152 L 220 142 L 150 132 Z" fill="#fff" stroke="#002e5a" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="352" cy="187" r="5" fill="#002e5a"/><text x="240" y="214" font-size="12" fill="#14273c">Port-au-Prince</text>
+      <path d="M 382 160 c -10 -14 10 -30 20 -14 c 6 9 -4 16 -10 26 c -6 -10 -8 -6 -10 -12 z" fill="#C1272D"/><circle cx="392" cy="153" r="4" fill="#fff"/>
+      <text x="404" y="158" font-size="14" font-weight="800" fill="#C1272D">Pelerin</text>
+    </svg>
+    <figcaption>Schematic map — not to scale.</figcaption>
+  </figure>
+</div></section>
+
+<section class="ds" id="f14"><div class="wrap">
+  <h2>14 · FAQ · Steps · Checklist</h2>
+  <div class="faq" style="margin-bottom:var(--s4)">
+    <details><summary>FAQ — native details/summary, crawlable, mirrored in FAQPage JSON-LD</summary><div class="a"><p>Answers stay in the DOM; find-in-page auto-opens matches; keyboard works free.</p></div></details>
+    <details open><summary>Shown open by default?</summary><div class="a"><p>First item may ship <code>open</code> so a visible answer greets scanners.</p></div></details>
+  </div>
+  <ol class="steps">
+    <li><h4>Steps — how-to pages (send-money, mission trips)</h4><p>Numbered navy coins; maps to HowTo content when appropriate.</p></li>
+    <li><h4>One action per step</h4><p>Short imperative headline + one supporting line.</p></li>
+  </ol>
+  <ul class="check"><li>Checklist — packing lists, eligibility, pre-donation checks</li><li>Gold check coins, plain text</li></ul>
+</div></section>
+
+<section class="ds" id="f15"><div class="wrap">
+  <h2>15 · Cards</h2>
+  <p class="ds-label">Related article / program cards (red kicker, hover lift)</p>
+  <div class="cards">
+    <a class="card" href="#"><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/bill-hamway-madam-felix.jpg" alt="" loading="lazy"><div class="pad"><p class="kick">Learn</p><h3>Why is Haiti so poor?</h3><p>The honest history, from the 1825 debt to today.</p></div></a>
+    <a class="card" href="#"><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/8_2000px-1024x682.jpg" alt="" loading="lazy"><div class="pad"><p class="kick">Give</p><h3>Where your money goes</h3><p>How 100% of your gift reaches Haiti.</p></div></a>
+    <a class="card card--person" href="#"><img src="https://deploy-preview-14--hsmission.netlify.app/dist/assets/images/home-team-1024x512.jpg" alt="" loading="lazy"><div class="pad"><p class="kick" style="color:var(--navy)">Founder</p><h3>Joseph Altenor</h3><p class="role">Founder &amp; Director</p></div></a>
+  </div>
+</div></section>
+
+<section class="ds" id="f16"><div class="wrap">
+  <h2>16 · Giving levels &amp; progress</h2>
+  <div class="give-cards">
+    <div class="give-card"><span class="amt">$5</span><span class="per">one-time</span><p>Feeds 25 students for a school day.</p><a class="btn btn--ghost btn--sm" href="#">Give $5</a></div>
+    <div class="give-card featured"><span class="badge">Most impact</span><span class="amt">$25</span><span class="per">per month</span><p>Feeds a classroom every week, all year.</p><a class="btn btn--gold btn--sm" href="#">Give monthly</a></div>
+    <div class="give-card"><span class="amt">$100</span><span class="per">one-time</span><p>A month of school-day meals.</p><a class="btn btn--ghost btn--sm" href="#">Give $100</a></div>
+  </div>
+  <div class="progress">
+    <div class="track"><div class="fill" style="width:62%"></div></div>
+    <div class="meta"><span><strong>$3,100</strong> raised</span><span>Goal: $5,000</span></div>
+  </div>
+  <p class="ds-note">Progress bar for campaign moments (relief appeals, matching drives). Include the numbers as text — never bar-only.</p>
+</div></section>
+
+<section class="ds" id="f17"><div class="wrap">
+  <h2>17 · Forms &amp; alerts</h2>
+  <form class="newsletter" action="#" method="post">
+    <div class="field"><label for="em">Email address</label><input id="em" name="email" type="email" autocomplete="email" required><p class="hint">Updates from Pelerin, a few times a year. No spam.</p></div>
+    <button class="btn btn--navy" type="submit">Subscribe</button>
+  </form>
+  <div class="field error" style="margin-top:var(--s3)"><label for="em2">Email address</label><input id="em2" type="email" aria-describedby="em2m" aria-invalid="true"><p class="msg" id="em2m">Enter a valid email, like name@example.com.</p></div>
+  <div class="alert alert--ok">✓ You're subscribed — mèsi anpil!</div>
+  <div class="alert alert--err">Something went wrong. Please try again.</div>
+</div></section>
+
+<section class="ds" id="f18"><div class="wrap">
+  <h2>18 · Donate components</h2>
+  <p class="ds-label">Red CTA band — ONE per page, the pivotal ask (shown un-clipped here)</p>
+  <div style="background:var(--red);color:#fff;padding:var(--s4);border-radius:var(--r);text-align:center">
+    <h3 style="color:#fff;font-size:var(--step-2);max-width:26ch;margin-inline:auto">Can I sponsor one child? With us, you sponsor the classroom.</h3>
+    <p style="color:var(--red-tint);max-width:52ch;margin-inline:auto">Your gift feeds every child in the room — no one chosen, no one left out.</p>
+    <a class="btn btn--white" href="#">Feed the whole classroom</a>
+  </div>
+  <p class="ds-label">Inline donate aside — mid-article, quiet</p>
+  <div class="donate-inline"><p>$5 feeds 25 students in Pelerin for a school day.</p><a class="btn btn--gold btn--sm" href="#">Donate</a></div>
+  <p class="ds-label">Gold donate band + Zeffy shell + trust chips</p>
+  <div class="sec-gold" style="border-radius:var(--r);padding:var(--s4)">
+    <h3 style="font-size:var(--step-2)">Feed a classroom in Pelerin</h3>
+    <p>$5 covers meals for 25 students. 100% of your gift arrives.</p>
+    <div class="zeffy"><div class="ph"><strong>[ Zeffy form embeds here ]</strong>$5 · $25 · $50 · $100 · Other — monthly prominent · iframe title required · success → /thank-you</div></div>
+    <div class="chips" style="margin-top:var(--s3)"><span>501(c)(3)</span><span>EIN 82-3623088</span><span>Tax-deductible</span><span>100% to programs</span></div>
+  </div>
+  <p class="ds-label">Video shell (future founder video)</p>
+  <div class="video"><div><div class="play" aria-hidden="true">▶</div><p style="margin:0;text-align:center">Video embed placeholder — poster image + native controls</p></div></div>
+</div></section>
+
+<section class="ds" id="f19"><div class="wrap">
+  <h2>19 · Footer &amp; sticky donate</h2>
+  <div class="ft" style="border-radius:var(--r)"><div style="padding:0 var(--s3)">
+    <p class="brandline">Haitian Sensation <span>MISSION</span></p>
+    <p style="color:var(--black-mute);margin-top:.2rem">Missionary Work Starts at Home</p>
+    <div class="cols">
+      <div><h3>Learn</h3><ul><li><a href="#">Why Is Haiti Poor?</a></li><li><a href="#">Is Haiti Safe?</a></li><li><a href="#">Our Story</a></li></ul></div>
+      <div><h3>Programs</h3><ul><li><a href="#">Education</a></li><li><a href="#">Clean Water</a></li><li><a href="#">Disaster Relief</a></li></ul></div>
+      <div><h3>Give</h3><ul><li><a href="#">Donate</a></li><li><a href="#">Where Your Money Goes</a></li><li><a href="#">Mission Trips</a></li></ul></div>
+      <div><h3>Organization</h3><ul><li><a href="#">About</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy</a></li></ul></div>
+    </div>
+    <p class="legal">Haitian Sensation Missions, Inc. — a 501(c)(3) nonprofit — EIN 82-3623088 — Sharon, Pennsylvania, USA<br>© 2026 Haitian Sensation Missions, Inc.</p>
+  </div></div>
+  <p class="ds-label">Mobile sticky donate (fixed bottom ≤720px, anchors to gold band)</p>
+  <div class="sticky"><p><strong>$5 feeds 25 students.</strong> 100% reaches Haiti.</p><a class="btn btn--gold btn--sm" href="#">Donate</a></div>
+</div></section>
+
+<section class="ds" id="f20" style="border-bottom:0"><div class="wrap">
+  <h2>20 · Page recipes — which components each page uses</h2>
+  <div class="table-scroll">
+  <table class="tier table-plain">
+    <thead><tr><th scope="col">Page</th><th scope="col">Component stack (top → bottom)</th></tr></thead>
+    <tbody>
+      <tr><td class="amt" style="font-size:.95rem">Home</td><td>Hero (dual CTA) → stat band overlap → program cards → quote → red CTA → gold band → cards → footer</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/programs/education</td><td>Hero → navy: answer + gold tiles → white: article, figures, tier table, charts → red CTA (reframe) → white: FAQ → gold band → cards → footer</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/why-haiti-is-poor</td><td>Hero → navy: answer + tiles → white: TOC, article, <strong>timeline</strong>, figures → red CTA → FAQ → gold band → cards</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/is-haiti-safe</td><td>Hero → navy: answer → white: <strong>advisory callout</strong> (dated), article, map → red CTA → FAQ → gold band → cards</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/donate</td><td>Short hero → navy: answer + tiles → <strong>giving-level cards</strong> → gold band (form high on page) → FAQ → cards</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/donate/where-your-money-goes</td><td>Hero → navy: answer → white: <strong>donut + bars</strong>, article, steps → red CTA → FAQ → gold band → cards</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/donate/send-money-to-haiti</td><td>Hero → navy: answer → white: <strong>comparison table + steps</strong> → callout → red CTA → FAQ → gold band → cards</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/donate/memorial-giving</td><td>Short hero → navy: answer → white: article, quote, steps → gold band → FAQ → cards</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/get-involved/mission-trips</td><td>Hero → navy: answer → white: gallery, <strong>checklist</strong>, steps, map → red CTA → FAQ → gold band → cards</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/about · /about/our-story</td><td>Hero → navy: answer → white: article, <strong>person cards</strong>, timeline (short), gallery → quote → gold band → cards</td></tr>
+      <tr><td class="amt" style="font-size:.95rem">/contact · /thank-you · /legal</td><td>Short hero → white: <strong>form / confirmation alert</strong> / prose → footer (thank-you: noindex, GA4 conversion)</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div></section>
+
+</main>
+
+<footer class="wrap" style="padding:var(--s4) var(--s3);color:var(--soft);font-size:var(--step--1)">
+  <p>HSM Civic Design System v1.0 · All components static HTML/CSS, WCAG 2.1 AA, zero-JS. Hand this file + mockup-B-civic-v2 to Claude Code as the visual spec.</p>
+</footer>
+
+</body>
+</html>

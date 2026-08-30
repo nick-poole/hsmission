@@ -1,0 +1,39 @@
+/*=============== LAYOUT ===============*/
+.wrap {
+	max-width: 1060px;
+	margin: 0 auto;
+	padding: 0 var(--s3);
+}
+.narrow {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 var(--s3);
+}
+.table-scroll {
+	overflow-x: auto;
+}
+
+/* Wider feel on medium and small screens: relax the reading measure and
+   trim gutter padding so content uses more of the viewport. */
+@media (max-width: 1023px) {
+	.wrap,
+	.narrow {
+		padding: 0 1.25rem;
+	}
+	p,
+	ul,
+	ol,
+	.answer,
+	.quote,
+	.callout,
+	.toc-box,
+	.faq .a {
+		max-width: none;
+	}
+}
+@media (max-width: 720px) {
+	.wrap,
+	.narrow {
+		padding: 0 1rem;
+	}
+}

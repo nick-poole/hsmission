@@ -1,0 +1,53 @@
+/*=============== SECTION BANDS — the rhythm ===============*/
+.sec-navy {
+	background: var(--navy);
+	color: #fff;
+	padding: var(--s5) 0;
+}
+.sec-navy h2,
+.sec-navy h3 {
+	color: #fff;
+}
+.sec-navy p {
+	color: #eaf1f8;
+}
+.sec-white {
+	background: #fff;
+	padding: var(--s5) 0;
+}
+.sec-white h2 {
+	border-left: 6px solid var(--gold);
+	padding-left: 0.6em;
+}
+.sec-red {
+	background: var(--red);
+	color: #fff;
+	padding: var(--s5) 0;
+	clip-path: polygon(0 6%, 100% 0, 100% 94%, 0 100%);
+	text-align: center;
+}
+.sec-red h2 {
+	color: #fff;
+	max-width: 26ch;
+	margin-inline: auto;
+	border: 0;
+	padding: 0;
+}
+.sec-red p {
+	color: var(--red-tint);
+	margin-inline: auto;
+	max-width: 52ch;
+}
+.sec-gold {
+	background: var(--gold);
+	color: var(--gold-ink);
+	padding: var(--s5) 0;
+}
+.sec-gold h2 {
+	color: var(--navy);
+	border: 0;
+	padding: 0;
+}
+.sec-gold p {
+	color: var(--gold-deep);
+}

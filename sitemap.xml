@@ -2,30 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://haitiansensationmission.org/</loc>
+        <lastmod>2026-08-30</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://haitiansensationmission.org/donate.html</loc>
+        <loc>https://haitiansensationmission.org/donate</loc>
+        <lastmod>2026-08-30</lastmod>
         <priority>0.90</priority>
     </url>
     <url>
-        <loc>https://haitiansensationmission.org/articles/our-story.html</loc>
+        <loc>https://haitiansensationmission.org/why-haiti-is-poor</loc>
+        <lastmod>2026-08-30</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://haitiansensationmission.org/articles/natural-disasters.html</loc>
+        <loc>https://haitiansensationmission.org/programs</loc>
+        <lastmod>2026-08-30</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://haitiansensationmission.org/articles/wells-to-wellness.html</loc>
+        <loc>https://haitiansensationmission.org/programs/education</loc>
+        <lastmod>2026-08-30</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://haitiansensationmission.org/articles/education.html</loc>
+        <loc>https://haitiansensationmission.org/programs/clean-water</loc>
+        <lastmod>2026-08-30</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://haitiansensationmission.org/articles/history.html</loc>
+        <loc>https://haitiansensationmission.org/programs/disaster-relief</loc>
+        <lastmod>2026-08-30</lastmod>
         <priority>0.80</priority>
     </url>
+    <url>
+        <loc>https://haitiansensationmission.org/about</loc>
+        <lastmod>2026-08-30</lastmod>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://haitiansensationmission.org/about/our-story</loc>
+        <lastmod>2026-08-30</lastmod>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://haitiansensationmission.org/contact</loc>
+        <lastmod>2026-08-30</lastmod>
+        <priority>0.60</priority>
+    </url>
+    <!--
+      Pages awaiting real copy are intentionally noindex and excluded until content lands
+      (see content-manifest.md): /is-haiti-safe, /programs/community-outreach,
+      /donate/where-your-money-goes, /donate/send-money-to-haiti, /donate/memorial-giving,
+      /get-involved, /get-involved/mission-trips. /thank-you and /legal/* stay noindex.
+    -->
 </urlset>

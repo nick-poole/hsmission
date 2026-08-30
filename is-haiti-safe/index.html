@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content="noindex, follow" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,9 +11,9 @@
 		<link rel="preconnect" href="https://zeffy-scripts.s3.ca-central-1.amazonaws.com" crossorigin />
 		<link rel="preconnect" href="https://www.zeffy.com" crossorigin />
 
-		<title>Haitian Sensation Mission | Clean Water & Education for Haiti</title>
+		<title>Is Haiti Safe in 2026? An Honest Answer</title>
 
-		<meta name="description" content="Haitian Sensation Mission is a 501(c)(3) Haiti nonprofit delivering clean water, education, and disaster relief. See how we create lasting change." />
+		<meta name="description" content="Is Haiti safe to visit or support in 2026? An honest look at security conditions, travel advisories, and how aid still reaches Haitian communities." />
 
 		<!--========== FAVICON ==========-->
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
@@ -25,28 +25,28 @@
 		<meta name="theme-color" content="#002e5a" />
 
 		<!--========== OPEN GRAPH ==========-->
-		<meta property="og:title" content="Haitian Sensation Mission | Clean Water & Education for Haiti" />
-		<meta property="og:description" content="Haitian Sensation Mission is a 501(c)(3) Haiti nonprofit delivering clean water, education, and disaster relief. See how we create lasting change." />
-		<meta property="og:image" content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
-		<meta property="og:url" content="https://haitiansensationmission.org/" />
+		<meta property="og:title" content="Is Haiti Safe in 2026? An Honest Answer" />
+		<meta property="og:description" content="Is Haiti safe to visit or support in 2026? An honest look at security conditions, travel advisories, and how aid still reaches Haitian communities." />
+		<meta property="og:image" content="https://haitiansensationmission.org/dist/assets/images/petionville-reynaldo-mirault.jpg" />
+		<meta property="og:url" content="https://haitiansensationmission.org/is-haiti-safe" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="haitiansensationmission.org" />
 
 		<!--========== TWITTER CARD ==========-->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Haitian Sensation Mission | Clean Water & Education for Haiti" />
-		<meta name="twitter:description" content="Haitian Sensation Mission is a 501(c)(3) Haiti nonprofit delivering clean water, education, and disaster relief. See how we create lasting change." />
-		<meta name="twitter:image" content="https://haitiansensationmission.org/dist/assets/images/topsphere-media-2400.jpg" />
+		<meta name="twitter:title" content="Is Haiti Safe in 2026? An Honest Answer" />
+		<meta name="twitter:description" content="Is Haiti safe to visit or support in 2026? An honest look at security conditions, travel advisories, and how aid still reaches Haitian communities." />
+		<meta name="twitter:image" content="https://haitiansensationmission.org/dist/assets/images/petionville-reynaldo-mirault.jpg" />
 
 		<!--========== CANONICAL ==========-->
-		<link rel="canonical" href="https://haitiansensationmission.org/" />
+		<link rel="canonical" href="https://haitiansensationmission.org/is-haiti-safe" />
 
 		<!--========== FONTS (production: self-host per design spec — see README action items) ==========-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
 
 		<!--========== LCP HERO PRELOAD ==========-->
-		<link rel="preload" as="image" href="/dist/assets/images/topsphere-media-2400.jpg" fetchpriority="high" />
+		<link rel="preload" as="image" href="/dist/assets/images/petionville-reynaldo-mirault.jpg" fetchpriority="high" />
 
 		<!-- ===== CSS ===== -->
 		<link rel="stylesheet" href="/dist/css/main.output.css" />
@@ -104,14 +104,27 @@
 					"email": "joseph@haitiansensationmission.org"
 				},
 				{
-					"@type": "WebSite",
-					"@id": "https://haitiansensationmission.org/#website",
-					"url": "https://haitiansensationmission.org",
-					"name": "Haitian Sensation Mission",
-					"description": "Official website of Haitian Sensation Mission, a 501(c)(3) Haiti nonprofit organization",
-					"publisher": {
-						"@id": "https://haitiansensationmission.org/#organization"
-					}
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://haitiansensationmission.org"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "Why Haiti",
+							"item": "https://haitiansensationmission.org/why-haiti-is-poor"
+						},
+						{
+							"@type": "ListItem",
+							"position": 3,
+							"name": "Safety",
+							"item": "https://haitiansensationmission.org/is-haiti-safe"
+						}
+					]
 				}
 			]
 		}
@@ -138,7 +151,7 @@
 
 				<div class="nav__menu" id="nav-menu">
 					<ul class="nav__list">
-						<li class="nav__item"><a href="/why-haiti-is-poor" class="nav__link">Why Haiti</a></li>
+						<li class="nav__item"><a href="/why-haiti-is-poor" class="nav__link active-link" aria-current="page">Why Haiti</a></li>
 						<li class="nav__item"><a href="/programs" class="nav__link">Programs</a></li>
 						<li class="nav__item"><a href="/about" class="nav__link">About</a></li>
 						<li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
@@ -158,66 +171,57 @@
 
 		<main id="main" tabindex="-1">
 
-		<section class="hero hero--home">
-			<img src="/dist/assets/images/topsphere-media-2400.jpg" width="2400" height="1350" alt="Close-up side profile of a young Haitian boy" fetchpriority="high" />
+		<!-- CONTENT:VERIFY — hero image is a stand-in; final selection pending (design spec: street/daily-life scene — needs final selection) -->
+		<section class="hero">
+			<img src="/dist/assets/images/petionville-reynaldo-mirault.jpg" width="2400" height="1600" alt="Hillside community in Pétionville, Haiti" fetchpriority="high" />
 			<div class="slab">
-				<p class="eyebrow">A 501(c)(3) Haiti Nonprofit</p>
-				<h1>Real help for Haiti, delivered by hand</h1>
-				<p class="dek">Clean water, education, and disaster relief in Haiti.</p>
-				<div class="actions"><a class="btn btn--gold" href="/donate">Donate</a><a class="btn btn--ghost" href="/programs">See our programs</a></div>
+				<nav class="crumbs" aria-label="Breadcrumb">
+					<ol><li><a href="/">Home</a></li><li><a href="/why-haiti-is-poor">Why Haiti</a></li><li aria-current="page">Safety</li></ol>
+				</nav>
+				<p class="eyebrow">Learn · Safety</p>
+				<h1>Is Haiti safe right now? An honest answer</h1>
+				<p class="dek">What travelers, donors, and friends of Haiti should know.</p>
 			</div>
 		</section>
 
-		<!--========== STAT BAND (overlaps hero) ==========-->
-		<div class="wrap" style="padding:0">
-			<div class="statband" role="img" aria-label="$5 feeds 25 students. 100% reaches programs. Founded 2023 in Sharon PA. 501(c)(3), EIN 82-3623088.">
-				<div><span class="n">$5</span><span class="l">feeds 25 students</span></div>
-				<div class="hl"><span class="n">100%</span><span class="l">reaches programs</span></div>
-				<div><span class="n">2023</span><span class="l">founded · Sharon PA</span></div>
-				<div><span class="n">501(c)(3)</span><span class="l">EIN 82-3623088</span></div>
+		<!--========== NAVY · ANSWER ==========-->
+		<section class="sec-navy">
+			<div class="narrow">
+				<!-- CONTENT:BLUF -->
+				<p class="answer"><span class="q">Is Haiti safe?</span>[PLACEHOLDER: 40-60 word answer — honest, sourced summary of current conditions — never leading with crisis framing (brief v2 §1)]</p>
+				<!-- /CONTENT:BLUF -->
 			</div>
-		</div>
+		</section>
 
 		<section class="sec-white">
 			<div class="narrow">
-				<h2>Missionary work starts at home</h2>
-				<!-- CONTENT:BODY (migrated homepage prose) -->
-				<p>Haitian Sensation Mission is a Haiti nonprofit organization dedicated to clean water, education, and disaster relief. We work directly with Haitian communities to create meaningful, lasting change.</p>
-				<p>
-					Haitian Sensation Mission is a 501(c)(3) nonprofit helping Haiti through direct community action.
-					We focus on what matters most: clean water access, quality education, and disaster recovery.
-					Every initiative we undertake is designed to create real, measurable impact in Haitian communities.
-					<a class="link-arrow" href="/about/our-story">Read our story</a>
-				</p>
-				<p>
-					Haiti's challenges run deep—rooted in colonial exploitation, economic isolation, and recurring
-					natural disasters. Understanding this context is essential to understanding why our work matters.
-					The Haitian people are resilient, but they need partners committed to long-term change.
-					<a class="link-arrow" href="/why-haiti-is-poor">Learn Haiti's history</a>
-				</p>
-				<!-- /CONTENT:BODY -->
+				<div class="callout callout--advisory"><span class="t">Current advisory</span>[PLACEHOLDER: date-stamped summary of the current travel advisory, with source]</div>
+				<section aria-labelledby="s1">
+					<h2 id="s1">What do official travel advisories say?</h2>
+					<p>[PLACEHOLDER: summarize current advisories with sources — 100-150 words]</p>
+				</section>
 
-			</div>
-		</section>
+				<section aria-labelledby="s2">
+					<h2 id="s2">Is it safe to visit Haiti right now?</h2>
+					<p>[PLACEHOLDER: honest answer on travel safety — 100-150 words]</p>
+				</section>
 
-		<section class="sec-white">
-			<div class="wrap">
-				<h2>How we help Haiti</h2>
-				<div class="cards">
-					<a class="card" href="/programs/disaster-relief">
-						<img src="/dist/assets/images/2019trip-hatian-boy.jpg" width="1024" height="698" alt="Young Haitian boy in earthquake-damaged building" loading="lazy" />
-						<div class="pad"><p class="kick">Programs</p><h3>Disaster relief</h3><p>Rebuilding after crisis.</p></div>
-					</a>
-					<a class="card" href="/programs/clean-water">
-						<img src="/dist/assets/images/drinking-water.jpg" width="2400" height="1600" alt="Child drinking clean water in Haiti" loading="lazy" />
-						<div class="pad"><p class="kick">Programs</p><h3>Clean water initiatives</h3><p>Safe water for Haitian families.</p></div>
-					</a>
-					<a class="card" href="/programs/education">
-						<img src="/dist/assets/images/classroom-1024x682.jpg" width="1024" height="682" alt="Haitian students in classroom" loading="lazy" />
-						<div class="pad"><p class="kick">Programs</p><h3>Educational outreach</h3><p>Opportunity through learning.</p></div>
-					</a>
-				</div>
-				<p style="margin-top:1.5rem"><a class="link-arrow" href="/programs">See all programs</a></p>
+				<section aria-labelledby="s3">
+					<h2 id="s3">Is it safe to send aid to Haiti?</h2>
+					<p>[PLACEHOLDER: how vetted local partnerships keep aid delivery working — 100-150 words]</p>
+				</section>
+
+				<figure class="map">
+					<svg viewBox="0 0 640 300" role="img" aria-labelledby="mT mD">
+						<title id="mT">Map showing Pelerin, Haiti</title><desc id="mD">Schematic map of Haiti with a marker at Pelerin, southeast of Port-au-Prince.</desc>
+						<rect width="640" height="300" fill="#d8e4f0"/>
+						<path d="M 95 100 L 190 82 L 300 90 L 400 78 L 470 92 L 468 132 L 420 140 L 380 132 L 350 152 L 390 177 L 470 172 L 540 187 L 545 222 L 470 234 L 380 228 L 300 240 L 210 250 L 120 234 L 60 244 L 40 218 L 90 204 L 170 200 L 240 190 L 300 178 L 280 152 L 220 142 L 150 132 Z" fill="#fff" stroke="#002e5a" stroke-width="3" stroke-linejoin="round"/>
+						<circle cx="352" cy="187" r="5" fill="#002e5a"/><text x="240" y="214" font-size="12" fill="#14273c">Port-au-Prince</text>
+						<path d="M 382 160 c -10 -14 10 -30 20 -14 c 6 9 -4 16 -10 26 c -6 -10 -8 -6 -10 -12 z" fill="#C1272D"/><circle cx="392" cy="153" r="4" fill="#fff"/>
+						<text x="404" y="158" font-size="14" font-weight="800" fill="#C1272D">Pelerin</text>
+					</svg>
+					<figcaption>Schematic map — not to scale.</figcaption>
+				</figure>
 
 			</div>
 		</section>
@@ -225,9 +229,33 @@
 		<!--========== RED · THE PIVOTAL ASK (one per page) ==========-->
 		<section class="sec-red">
 			<div class="wrap">
-				<h2>100% of contributions go directly to our programs in Haiti.</h2>
-				<p>Your support funds clean water systems, school supplies, and emergency relief for families who need it most.</p>
-				<a class="btn btn--white" href="#give">Support our work</a>
+				<h2>You don't have to travel to make a difference.</h2>
+				<p>Giving from home is the safest way to help — and 100% of your gift reaches our programs in Haiti.</p>
+				<a class="btn btn--white" href="#give">Help from home</a>
+			</div>
+		</section>
+
+		<!--========== WHITE · FAQ ==========-->
+		<section class="sec-white">
+			<div class="narrow">
+				<h2 id="faq">Frequently asked questions</h2>
+				<!-- NOTE: add FAQPage JSON-LD only after real FAQ copy lands (brief v2 §5) -->
+				<!-- CONTENT:FAQ -->
+				<div class="faq">
+					<details>
+						<summary>[PLACEHOLDER: question 1]</summary>
+						<div class="a"><p>[PLACEHOLDER: 40-60 word answer to question 1]</p></div>
+					</details>
+					<details>
+						<summary>[PLACEHOLDER: question 2]</summary>
+						<div class="a"><p>[PLACEHOLDER: 40-60 word answer to question 2]</p></div>
+					</details>
+					<details>
+						<summary>[PLACEHOLDER: question 3]</summary>
+						<div class="a"><p>[PLACEHOLDER: 40-60 word answer to question 3]</p></div>
+					</details>
+				</div>
+				<!-- /CONTENT:FAQ -->
 			</div>
 		</section>
 
@@ -260,20 +288,20 @@
 							<p>The honest history, from the 1825 debt to today.</p>
 						</div>
 					</a>
-					<a class="card" href="/about/our-story">
-						<img src="/dist/assets/images/joe-coffee.jpg" width="720" height="960" alt="Joseph Altenor at the Haitian Sensation coffee shop" loading="lazy" />
+					<a class="card" href="/programs/disaster-relief">
+						<img src="/dist/assets/images/2019trip-hatian-boy.jpg" width="1024" height="698" alt="Young Haitian boy in earthquake-damaged building" loading="lazy" />
 						<div class="pad">
-							<p class="kick">About</p>
-							<h3>Behind the mission</h3>
-							<p>How a restaurant kitchen started a mission.</p>
+							<p class="kick">Programs</p>
+							<h3>Haiti disaster relief</h3>
+							<p>Rebuilding after earthquakes and storms.</p>
 						</div>
 					</a>
-					<a class="card" href="/donate/where-your-money-goes">
-						<img src="/dist/assets/images/48_2000px-1024x682.jpg" width="1024" height="682" alt="Mission team distributing supplies in rural Haiti" loading="lazy" />
+					<a class="card" href="/donate/send-money-to-haiti">
+						<img src="/dist/assets/images/zach-vessels-mother-child.jpg" width="2400" height="1350" alt="Haitian mother and child" loading="lazy" />
 						<div class="pad">
 							<p class="kick">Give</p>
-							<h3>Where your money goes</h3>
-							<p>How 100% of your gift reaches Haiti.</p>
+							<h3>How to send money to Haiti</h3>
+							<p>Fees, options, and what reaches families.</p>
 						</div>
 					</a>
 				</div>

@@ -9,9 +9,12 @@
   },
   "author": "Nick Poole <napoole@protonmail.com>",
   "scripts": {
-    "build": "sass src/scss/main.scss dist/css/main.output.css --style=compressed --no-source-map",
+    "build": "sass src/scss/main.scss dist/css/main.output.css --style=compressed --no-source-map && npm run guard:placeholders",
     "watch": "sass --watch src/scss/main.scss:dist/css/main.output.css --no-source-map",
-    "dev": "npx http-server -p 8080 -c-1"
+    "dev": "npx http-server -p 8080 -c-1",
+    "guard:placeholders": "sh scripts/check-placeholders.sh",
+    "images:optimize": "node scripts/optimize-images.mjs",
+    "images:dimensions": "python3 scripts/update-image-dimensions.py"
   },
   "devDependencies": {
     "sass": "^1.66.1"
